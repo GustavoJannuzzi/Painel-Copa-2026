@@ -33,6 +33,7 @@ STEPS = [
     ("Dixon-Coles", ROOT / "models" / "wc_dixoncoles.py"),
     ("Ensemble + previsões", ROOT / "models" / "wc_predict.py"),
     ("Backtest / acurácia", ROOT / "models" / "wc_backtest.py"),
+    ("Stats auxiliares (escanteios, faltas, artilheiros)", ROOT / "models" / "wc_aux_stats.py"),
     ("Dashboard index.html", ROOT / "output" / "build_dashboard.py"),
 ]
 

@@ -1,0 +1,5571 @@
+{
+  "2026-06-11_Mexico_South Africa": {
+    "home": "Mexico",
+    "away": "South Africa",
+    "date": "2026-06-11",
+    "corners": {
+      "home": 5.8,
+      "away": 4.5,
+      "total": 10.3
+    },
+    "fouls": {
+      "home": 10.9,
+      "away": 11.0,
+      "total": 21.9
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 2.1,
+      "total": 4.2
+    },
+    "penalty_prob": 0.269,
+    "btts": 0.3589,
+    "over_2_5": 0.3175,
+    "xg": {
+      "home": 1.32,
+      "away": 0.66
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Julián Quiñones",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Raúl Jiménez",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Luis Romo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Teboho Mokoena",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Mexico",
+        "name": "Julián Quiñones",
+        "minute": "9",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Mexico",
+        "name": "Raúl Jiménez",
+        "minute": "67",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-11_South Korea_Czech Republic": {
+    "home": "South Korea",
+    "away": "Czech Republic",
+    "date": "2026-06-11",
+    "corners": {
+      "home": 6.0,
+      "away": 5.5,
+      "total": 11.5
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 10.0,
+      "total": 20.0
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.9,
+      "total": 3.8
+    },
+    "penalty_prob": 0.245,
+    "btts": 0.5026,
+    "over_2_5": 0.449,
+    "xg": {
+      "home": 1.38,
+      "away": 1.09
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Hwang In-Beom",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Oh Hyeon-Gyu",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ladislav Krejcí",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Michal Sadílek",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Czech Republic",
+        "name": "Ladislav Krejcí",
+        "minute": "59",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "South Korea",
+        "name": "Hwang In-Beom",
+        "minute": "67",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "South Korea",
+        "name": "Oh Hyeon-Gyu",
+        "minute": "80",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-12_Canada_Bosnia and Herzegovina": {
+    "home": "Canada",
+    "away": "Bosnia and Herzegovina",
+    "date": "2026-06-12",
+    "corners": {
+      "home": 6.2,
+      "away": 4.6,
+      "total": 10.8
+    },
+    "fouls": {
+      "home": 10.1,
+      "away": 10.8,
+      "total": 20.9
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.1,
+      "total": 4.0
+    },
+    "penalty_prob": 0.256,
+    "btts": 0.4391,
+    "over_2_5": 0.4374,
+    "xg": {
+      "home": 1.66,
+      "away": 0.77
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Jonathan David",
+          "goals": 3,
+          "goals_per_game": 1.5,
+          "pen": 0
+        },
+        {
+          "name": "Cyle Larin",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Nathan Saliba",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohamed Manai",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Jovo Lukić",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ermin Mahmic",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Bosnia and Herzegovina",
+        "name": "Jovo Lukić",
+        "minute": "21",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Canada",
+        "name": "Cyle Larin",
+        "minute": "78",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-12_United States_Paraguay": {
+    "home": "United States",
+    "away": "Paraguay",
+    "date": "2026-06-12",
+    "corners": {
+      "home": 5.5,
+      "away": 5.1,
+      "total": 10.6
+    },
+    "fouls": {
+      "home": 10.2,
+      "away": 11.4,
+      "total": 21.6
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.2,
+      "total": 4.1
+    },
+    "penalty_prob": 0.265,
+    "btts": 0.3843,
+    "over_2_5": 0.2991,
+    "xg": {
+      "home": 0.96,
+      "away": 0.95
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Folarin Balogun",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Damian Bobadilla",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Giovanni Reyna",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Cameron Burgess",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Mauricio",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Matías Galarza",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "United States",
+        "name": "Damian Bobadilla",
+        "minute": "7",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "United States",
+        "name": "Folarin Balogun",
+        "minute": "31",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "United States",
+        "name": "Folarin Balogun",
+        "minute": "45+5",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Paraguay",
+        "name": "Mauricio",
+        "minute": "73",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "United States",
+        "name": "Giovanni Reyna",
+        "minute": "90+8",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-13_Qatar_Switzerland": {
+    "home": "Qatar",
+    "away": "Switzerland",
+    "date": "2026-06-13",
+    "corners": {
+      "home": 5.0,
+      "away": 7.1,
+      "total": 12.1
+    },
+    "fouls": {
+      "home": 9.7,
+      "away": 9.6,
+      "total": 19.3
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 1.8,
+      "total": 3.6
+    },
+    "penalty_prob": 0.237,
+    "btts": 0.5213,
+    "over_2_5": 0.6131,
+    "xg": {
+      "home": 0.85,
+      "away": 2.31
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Miro Muheim",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Johan Manzambi",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Breel Embolo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        },
+        {
+          "name": "Rubén Vargas",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Granit Xhaka",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Switzerland",
+        "name": "Breel Embolo",
+        "minute": "17",
+        "penalty": true,
+        "own_goal": false
+      },
+      {
+        "team": "Qatar",
+        "name": "Miro Muheim",
+        "minute": "90+4",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-13_Brazil_Morocco": {
+    "home": "Brazil",
+    "away": "Morocco",
+    "date": "2026-06-13",
+    "corners": {
+      "home": 6.3,
+      "away": 5.3,
+      "total": 11.6
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 11.8,
+      "total": 21.8
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.2,
+      "total": 4.1
+    },
+    "penalty_prob": 0.267,
+    "btts": 0.3231,
+    "over_2_5": 0.2378,
+    "xg": {
+      "home": 0.95,
+      "away": 0.73
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Vinícius Júnior",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Matheus Cunha",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ismael Saibari",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Morocco",
+        "name": "Ismael Saibari",
+        "minute": "21",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Brazil",
+        "name": "Vinícius Júnior",
+        "minute": "32",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-13_Haiti_Scotland": {
+    "home": "Haiti",
+    "away": "Scotland",
+    "date": "2026-06-13",
+    "corners": {
+      "home": 5.1,
+      "away": 6.2,
+      "total": 11.3
+    },
+    "fouls": {
+      "home": 9.6,
+      "away": 10.2,
+      "total": 19.8
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 1.9,
+      "total": 3.7
+    },
+    "penalty_prob": 0.243,
+    "btts": 0.5268,
+    "over_2_5": 0.5291,
+    "xg": {
+      "home": 0.98,
+      "away": 1.82
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Duckens Nazon",
+          "goals": 11,
+          "goals_per_game": 0.204,
+          "pen": 0
+        },
+        {
+          "name": "Frantzdy Pierrot",
+          "goals": 8,
+          "goals_per_game": 0.148,
+          "pen": 0
+        },
+        {
+          "name": "Carnejy Antoine",
+          "goals": 4,
+          "goals_per_game": 0.074,
+          "pen": 0
+        },
+        {
+          "name": "Danley Jean Jacques",
+          "goals": 3,
+          "goals_per_game": 0.056,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "John McGinn",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Scotland",
+        "name": "John McGinn",
+        "minute": "28",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-13_Australia_Turkey": {
+    "home": "Australia",
+    "away": "Turkey",
+    "date": "2026-06-13",
+    "corners": {
+      "home": 6.0,
+      "away": 5.9,
+      "total": 11.9
+    },
+    "fouls": {
+      "home": 10.5,
+      "away": 9.3,
+      "total": 19.8
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 1.8,
+      "total": 3.8
+    },
+    "penalty_prob": 0.243,
+    "btts": 0.5034,
+    "over_2_5": 0.4505,
+    "xg": {
+      "home": 1.39,
+      "away": 1.09
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Nestory Irankunda",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Connor Metcalfe",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Kerem Aktürkoğlu",
+          "goals": 14,
+          "goals_per_game": 0.184,
+          "pen": 0
+        },
+        {
+          "name": "Hakan Çalhanoğlu",
+          "goals": 10,
+          "goals_per_game": 0.132,
+          "pen": 0
+        },
+        {
+          "name": "Cengiz Ünder",
+          "goals": 6,
+          "goals_per_game": 0.079,
+          "pen": 0
+        },
+        {
+          "name": "Burak Yılmaz",
+          "goals": 6,
+          "goals_per_game": 0.079,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Australia",
+        "name": "Nestory Irankunda",
+        "minute": "27",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Australia",
+        "name": "Connor Metcalfe",
+        "minute": "75",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-14_Germany_Curaçao": {
+    "home": "Germany",
+    "away": "Curaçao",
+    "date": "2026-06-14",
+    "corners": {
+      "home": 8.0,
+      "away": 4.2,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 8.9,
+      "away": 10.9,
+      "total": 19.8
+    },
+    "yellow_cards": {
+      "home": 1.7,
+      "away": 2.1,
+      "total": 3.8
+    },
+    "penalty_prob": 0.243,
+    "btts": 0.4321,
+    "over_2_5": 0.6507,
+    "xg": {
+      "home": 2.74,
+      "away": 0.62
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Deniz Undav",
+          "goals": 3,
+          "goals_per_game": 1.5,
+          "pen": 0
+        },
+        {
+          "name": "Kai Havertz",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 1
+        },
+        {
+          "name": "Felix Nmecha",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nico Schlotterbeck",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Livano Comenencia",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Germany",
+        "name": "Felix Nmecha",
+        "minute": "6",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Curaçao",
+        "name": "Livano Comenencia",
+        "minute": "21",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Nico Schlotterbeck",
+        "minute": "38",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Kai Havertz",
+        "minute": "45+5",
+        "penalty": true,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Jamal Musiala",
+        "minute": "47",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Nathaniel Brown",
+        "minute": "68",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Deniz Undav",
+        "minute": "78",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Kai Havertz",
+        "minute": "88",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-14_Ivory Coast_Ecuador": {
+    "home": "Ivory Coast",
+    "away": "Ecuador",
+    "date": "2026-06-14",
+    "corners": {
+      "home": 4.7,
+      "away": 5.4,
+      "total": 10.1
+    },
+    "fouls": {
+      "home": 11.1,
+      "away": 11.9,
+      "total": 23.0
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 2.3,
+      "total": 4.4
+    },
+    "penalty_prob": 0.282,
+    "btts": 0.2901,
+    "over_2_5": 0.2148,
+    "xg": {
+      "home": 0.61,
+      "away": 0.99
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Amad Diallo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Franck Kessié",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Enner Valencia",
+          "goals": 13,
+          "goals_per_game": 0.169,
+          "pen": 0
+        },
+        {
+          "name": "Michael Estrada",
+          "goals": 6,
+          "goals_per_game": 0.078,
+          "pen": 0
+        },
+        {
+          "name": "Gonzalo Plata",
+          "goals": 6,
+          "goals_per_game": 0.078,
+          "pen": 0
+        },
+        {
+          "name": "Ángel Mena",
+          "goals": 4,
+          "goals_per_game": 0.052,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Ivory Coast",
+        "name": "Amad Diallo",
+        "minute": "90",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-14_Netherlands_Japan": {
+    "home": "Netherlands",
+    "away": "Japan",
+    "date": "2026-06-14",
+    "corners": {
+      "home": 6.7,
+      "away": 6.3,
+      "total": 13.0
+    },
+    "fouls": {
+      "home": 9.2,
+      "away": 9.9,
+      "total": 19.1
+    },
+    "yellow_cards": {
+      "home": 1.7,
+      "away": 1.9,
+      "total": 3.6
+    },
+    "penalty_prob": 0.234,
+    "btts": 0.5297,
+    "over_2_5": 0.4757,
+    "xg": {
+      "home": 1.32,
+      "away": 1.26
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Crysencio Summerville",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Brian Brobbey",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Cody Gakpo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Virgil van Dijk",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Daichi Kamada",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Ayase Ueda",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Keito Nakamura",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Junya Ito",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Netherlands",
+        "name": "Virgil van Dijk",
+        "minute": "51",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Japan",
+        "name": "Keito Nakamura",
+        "minute": "57",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Netherlands",
+        "name": "Crysencio Summerville",
+        "minute": "64",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Japan",
+        "name": "Daichi Kamada",
+        "minute": "88",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-14_Sweden_Tunisia": {
+    "home": "Sweden",
+    "away": "Tunisia",
+    "date": "2026-06-14",
+    "corners": {
+      "home": 5.8,
+      "away": 5.2,
+      "total": 11.0
+    },
+    "fouls": {
+      "home": 9.5,
+      "away": 11.4,
+      "total": 20.9
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.2,
+      "total": 4.0
+    },
+    "penalty_prob": 0.256,
+    "btts": 0.446,
+    "over_2_5": 0.3721,
+    "xg": {
+      "home": 1.13,
+      "away": 1.05
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Yasin Ayari",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Alexander Isak",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Viktor Gyökeres",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mattias Svanberg",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Omar Rekik",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Sweden",
+        "name": "Yasin Ayari",
+        "minute": "7",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Sweden",
+        "name": "Alexander Isak",
+        "minute": "30",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Tunisia",
+        "name": "Omar Rekik",
+        "minute": "43",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Sweden",
+        "name": "Viktor Gyökeres",
+        "minute": "59",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Sweden",
+        "name": "Mattias Svanberg",
+        "minute": "84",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Sweden",
+        "name": "Yasin Ayari",
+        "minute": "90+6",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-15_Belgium_Egypt": {
+    "home": "Belgium",
+    "away": "Egypt",
+    "date": "2026-06-15",
+    "corners": {
+      "home": 6.5,
+      "away": 4.8,
+      "total": 11.3
+    },
+    "fouls": {
+      "home": 9.6,
+      "away": 11.6,
+      "total": 21.2
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.2,
+      "total": 4.0
+    },
+    "penalty_prob": 0.26,
+    "btts": 0.3916,
+    "over_2_5": 0.3476,
+    "xg": {
+      "home": 1.35,
+      "away": 0.74
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Mohamed Hany",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Emam Ashour",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mostafa Zico",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohamed Salah",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Trézéguet",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Egypt",
+        "name": "Emam Ashour",
+        "minute": "19",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Belgium",
+        "name": "Mohamed Hany",
+        "minute": "66",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-15_Iran_New Zealand": {
+    "home": "Iran",
+    "away": "New Zealand",
+    "date": "2026-06-15",
+    "corners": {
+      "home": 6.2,
+      "away": 5.1,
+      "total": 11.3
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 10.5,
+      "total": 20.5
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.0,
+      "total": 3.9
+    },
+    "penalty_prob": 0.252,
+    "btts": 0.4617,
+    "over_2_5": 0.4208,
+    "xg": {
+      "home": 1.46,
+      "away": 0.9
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ramin Rezaeian",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohammad Mohebbi",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Elijah Just",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Finn Surman",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "New Zealand",
+        "name": "Elijah Just",
+        "minute": "7",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Iran",
+        "name": "Ramin Rezaeian",
+        "minute": "32",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "New Zealand",
+        "name": "Elijah Just",
+        "minute": "54",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Iran",
+        "name": "Mohammad Mohebbi",
+        "minute": "64",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-15_Spain_Cape Verde": {
+    "home": "Spain",
+    "away": "Cape Verde",
+    "date": "2026-06-15",
+    "corners": {
+      "home": 8.3,
+      "away": 4.0,
+      "total": 12.3
+    },
+    "fouls": {
+      "home": 9.3,
+      "away": 11.2,
+      "total": 20.5
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.1,
+      "total": 3.9
+    },
+    "penalty_prob": 0.252,
+    "btts": 0.3473,
+    "over_2_5": 0.6006,
+    "xg": {
+      "home": 2.64,
+      "away": 0.46
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Mikel Oyarzabal",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Lamine Yamal",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Hassan Al-Tambakti",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Kevin Pina",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Hélio Varela",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-15_Saudi Arabia_Uruguay": {
+    "home": "Saudi Arabia",
+    "away": "Uruguay",
+    "date": "2026-06-15",
+    "corners": {
+      "home": 4.1,
+      "away": 6.0,
+      "total": 10.1
+    },
+    "fouls": {
+      "home": 11.6,
+      "away": 11.4,
+      "total": 23.0
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 2.2,
+      "total": 4.4
+    },
+    "penalty_prob": 0.282,
+    "btts": 0.2807,
+    "over_2_5": 0.2635,
+    "xg": {
+      "home": 0.48,
+      "away": 1.3
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Abdulelah Al-Amri",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Maxi Araújo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Agustín Cano",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Saudi Arabia",
+        "name": "Abdulelah Al-Amri",
+        "minute": "41",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Uruguay",
+        "name": "Maxi Araújo",
+        "minute": "80",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-16_France_Senegal": {
+    "home": "France",
+    "away": "Senegal",
+    "date": "2026-06-16",
+    "corners": {
+      "home": 6.8,
+      "away": 5.4,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 9.7,
+      "away": 10.6,
+      "total": 20.3
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.0,
+      "total": 3.8
+    },
+    "penalty_prob": 0.249,
+    "btts": 0.4318,
+    "over_2_5": 0.3853,
+    "xg": {
+      "home": 1.39,
+      "away": 0.84
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Kylian Mbappé",
+          "goals": 4,
+          "goals_per_game": 2.0,
+          "pen": 0
+        },
+        {
+          "name": "Bradley Barcola",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ismaïla Sarr",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Ibrahim Mbaye",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "France",
+        "name": "Kylian Mbappé",
+        "minute": "66",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "France",
+        "name": "Bradley Barcola",
+        "minute": "82",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "France",
+        "name": "Kylian Mbappé",
+        "minute": "90+6",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Senegal",
+        "name": "Ibrahim Mbaye",
+        "minute": "90+5",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-16_Iraq_Norway": {
+    "home": "Iraq",
+    "away": "Norway",
+    "date": "2026-06-16",
+    "corners": {
+      "home": 4.7,
+      "away": 6.8,
+      "total": 11.5
+    },
+    "fouls": {
+      "home": 11.3,
+      "away": 9.2,
+      "total": 20.5
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 1.7,
+      "total": 3.8
+    },
+    "penalty_prob": 0.252,
+    "btts": 0.4457,
+    "over_2_5": 0.4436,
+    "xg": {
+      "home": 0.78,
+      "away": 1.67
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Aymen Hussein",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Erling Haaland",
+          "goals": 4,
+          "goals_per_game": 2.0,
+          "pen": 0
+        },
+        {
+          "name": "Leo Østigard",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Aymen Hussein",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Marcus Holmgren Pedersen",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Norway",
+        "name": "Erling Haaland",
+        "minute": "29",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Iraq",
+        "name": "Aymen Hussein",
+        "minute": "39",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Norway",
+        "name": "Erling Haaland",
+        "minute": "43",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Norway",
+        "name": "Leo Østigard",
+        "minute": "76",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Norway",
+        "name": "Aymen Hussein",
+        "minute": "90+6",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-16_Argentina_Algeria": {
+    "home": "Argentina",
+    "away": "Algeria",
+    "date": "2026-06-16",
+    "corners": {
+      "home": 7.3,
+      "away": 5.2,
+      "total": 12.5
+    },
+    "fouls": {
+      "home": 10.3,
+      "away": 9.8,
+      "total": 20.1
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 1.9,
+      "total": 3.9
+    },
+    "penalty_prob": 0.247,
+    "btts": 0.4055,
+    "over_2_5": 0.4492,
+    "xg": {
+      "home": 1.82,
+      "away": 0.65
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Lionel Messi",
+          "goals": 5,
+          "goals_per_game": 2.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Nadhir Benbouali",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Amine Gouiri",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Argentina",
+        "name": "Lionel Messi",
+        "minute": "17",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Argentina",
+        "name": "Lionel Messi",
+        "minute": "60",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Argentina",
+        "name": "Lionel Messi",
+        "minute": "76",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-16_Austria_Jordan": {
+    "home": "Austria",
+    "away": "Jordan",
+    "date": "2026-06-16",
+    "corners": {
+      "home": 6.1,
+      "away": 5.3,
+      "total": 11.4
+    },
+    "fouls": {
+      "home": 10.1,
+      "away": 10.0,
+      "total": 20.1
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.9,
+      "total": 3.8
+    },
+    "penalty_prob": 0.247,
+    "btts": 0.4885,
+    "over_2_5": 0.4474,
+    "xg": {
+      "home": 1.49,
+      "away": 0.98
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Romano Schmid",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Yazan Al-Arab",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Marko Arnautovic",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ],
+      "away": [
+        {
+          "name": "Ali Olwan",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nizar Al-Rashdan",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Austria",
+        "name": "Romano Schmid",
+        "minute": "21",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Jordan",
+        "name": "Ali Olwan",
+        "minute": "50",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Austria",
+        "name": "Yazan Al-Arab",
+        "minute": "76",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Austria",
+        "name": "Marko Arnautovic",
+        "minute": "90+12",
+        "penalty": true,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-17_Portugal_DR Congo": {
+    "home": "Portugal",
+    "away": "DR Congo",
+    "date": "2026-06-17",
+    "corners": {
+      "home": 7.1,
+      "away": 4.4,
+      "total": 11.5
+    },
+    "fouls": {
+      "home": 9.3,
+      "away": 11.9,
+      "total": 21.2
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.3,
+      "total": 4.1
+    },
+    "penalty_prob": 0.26,
+    "btts": 0.3722,
+    "over_2_5": 0.3888,
+    "xg": {
+      "home": 1.63,
+      "away": 0.61
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Cristiano Ronaldo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "João Neves",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nuno Mendes",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Abduvohid Nematov",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Yoane Wissa",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Portugal",
+        "name": "João Neves",
+        "minute": "6",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "DR Congo",
+        "name": "Yoane Wissa",
+        "minute": "45+5",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-17_Uzbekistan_Colombia": {
+    "home": "Uzbekistan",
+    "away": "Colombia",
+    "date": "2026-06-17",
+    "corners": {
+      "home": 4.6,
+      "away": 6.7,
+      "total": 11.3
+    },
+    "fouls": {
+      "home": 11.6,
+      "away": 9.9,
+      "total": 21.5
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 1.9,
+      "total": 4.1
+    },
+    "penalty_prob": 0.264,
+    "btts": 0.3556,
+    "over_2_5": 0.331,
+    "xg": {
+      "home": 0.63,
+      "away": 1.4
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Abbosbek Fayzullaev",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Daniel Muñoz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Luis Díaz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Jáminton Campaz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Colombia",
+        "name": "Daniel Muñoz",
+        "minute": "40",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Uzbekistan",
+        "name": "Abbosbek Fayzullaev",
+        "minute": "60",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Colombia",
+        "name": "Luis Díaz",
+        "minute": "65",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Colombia",
+        "name": "Jáminton Campaz",
+        "minute": "90+9",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-17_England_Croatia": {
+    "home": "England",
+    "away": "Croatia",
+    "date": "2026-06-17",
+    "corners": {
+      "home": 6.7,
+      "away": 5.6,
+      "total": 12.3
+    },
+    "fouls": {
+      "home": 10.3,
+      "away": 10.0,
+      "total": 20.3
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 1.9,
+      "total": 3.9
+    },
+    "penalty_prob": 0.249,
+    "btts": 0.4185,
+    "over_2_5": 0.3746,
+    "xg": {
+      "home": 1.39,
+      "away": 0.8
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Harry Kane",
+          "goals": 2,
+          "goals_per_game": 2.0,
+          "pen": 1
+        },
+        {
+          "name": "Jude Bellingham",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Marcus Rashford",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Martin Baturina",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Petar Musa",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "England",
+        "name": "Harry Kane",
+        "minute": "12",
+        "penalty": true,
+        "own_goal": false
+      },
+      {
+        "team": "Croatia",
+        "name": "Martin Baturina",
+        "minute": "36",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "England",
+        "name": "Harry Kane",
+        "minute": "42",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Croatia",
+        "name": "Petar Musa",
+        "minute": "45+5",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "England",
+        "name": "Jude Bellingham",
+        "minute": "47",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "England",
+        "name": "Marcus Rashford",
+        "minute": "85",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-17_Ghana_Panama": {
+    "home": "Ghana",
+    "away": "Panama",
+    "date": "2026-06-17",
+    "corners": {
+      "home": 5.3,
+      "away": 5.5,
+      "total": 10.8
+    },
+    "fouls": {
+      "home": 10.5,
+      "away": 9.9,
+      "total": 20.4
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 1.9,
+      "total": 3.9
+    },
+    "penalty_prob": 0.25,
+    "btts": 0.5102,
+    "over_2_5": 0.451,
+    "xg": {
+      "home": 1.21,
+      "away": 1.27
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Caleb Yirenkyi",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ismael Díaz",
+          "goals": 12,
+          "goals_per_game": 0.124,
+          "pen": 0
+        },
+        {
+          "name": "Cecilio Waterman",
+          "goals": 9,
+          "goals_per_game": 0.093,
+          "pen": 0
+        },
+        {
+          "name": "José Fajardo",
+          "goals": 8,
+          "goals_per_game": 0.082,
+          "pen": 0
+        },
+        {
+          "name": "Rolando Blackburn",
+          "goals": 6,
+          "goals_per_game": 0.062,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Ghana",
+        "name": "Caleb Yirenkyi",
+        "minute": "90+5",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-18_Czech Republic_South Africa": {
+    "home": "Czech Republic",
+    "away": "South Africa",
+    "date": "2026-06-18",
+    "corners": {
+      "home": 5.7,
+      "away": 4.9,
+      "total": 10.6
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 11.0,
+      "total": 21.0
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.1,
+      "total": 4.0
+    },
+    "penalty_prob": 0.258,
+    "btts": 0.4473,
+    "over_2_5": 0.3827,
+    "xg": {
+      "home": 1.26,
+      "away": 0.96
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ladislav Krejcí",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Michal Sadílek",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Teboho Mokoena",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Czech Republic",
+        "name": "Michal Sadílek",
+        "minute": "6",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "South Africa",
+        "name": "Teboho Mokoena",
+        "minute": "83",
+        "penalty": true,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-18_Mexico_South Korea": {
+    "home": "Mexico",
+    "away": "South Korea",
+    "date": "2026-06-18",
+    "corners": {
+      "home": 5.6,
+      "away": 5.5,
+      "total": 11.1
+    },
+    "fouls": {
+      "home": 10.9,
+      "away": 10.0,
+      "total": 20.9
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 1.9,
+      "total": 4.0
+    },
+    "penalty_prob": 0.256,
+    "btts": 0.4233,
+    "over_2_5": 0.3479,
+    "xg": {
+      "home": 1.14,
+      "away": 0.95
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Julián Quiñones",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Raúl Jiménez",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Luis Romo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Hwang In-Beom",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Oh Hyeon-Gyu",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Mexico",
+        "name": "Luis Romo",
+        "minute": "50",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-18_Switzerland_Bosnia and Herzegovina": {
+    "home": "Switzerland",
+    "away": "Bosnia and Herzegovina",
+    "date": "2026-06-18",
+    "corners": {
+      "home": 6.9,
+      "away": 4.5,
+      "total": 11.4
+    },
+    "fouls": {
+      "home": 9.6,
+      "away": 10.8,
+      "total": 20.4
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.1,
+      "total": 3.9
+    },
+    "penalty_prob": 0.25,
+    "btts": 0.4458,
+    "over_2_5": 0.5116,
+    "xg": {
+      "home": 2.01,
+      "away": 0.71
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Johan Manzambi",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Breel Embolo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        },
+        {
+          "name": "Rubén Vargas",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Granit Xhaka",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ],
+      "away": [
+        {
+          "name": "Jovo Lukić",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ermin Mahmic",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Switzerland",
+        "name": "Johan Manzambi",
+        "minute": "74",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Switzerland",
+        "name": "Rubén Vargas",
+        "minute": "84",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Switzerland",
+        "name": "Johan Manzambi",
+        "minute": "90",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Switzerland",
+        "name": "Granit Xhaka",
+        "minute": "90+7",
+        "penalty": true,
+        "own_goal": false
+      },
+      {
+        "team": "Bosnia and Herzegovina",
+        "name": "Ermin Mahmic",
+        "minute": "90+3",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-18_Canada_Qatar": {
+    "home": "Canada",
+    "away": "Qatar",
+    "date": "2026-06-18",
+    "corners": {
+      "home": 6.4,
+      "away": 5.0,
+      "total": 11.4
+    },
+    "fouls": {
+      "home": 10.1,
+      "away": 9.7,
+      "total": 19.8
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.8,
+      "total": 3.7
+    },
+    "penalty_prob": 0.243,
+    "btts": 0.5169,
+    "over_2_5": 0.5378,
+    "xg": {
+      "home": 1.91,
+      "away": 0.92
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Jonathan David",
+          "goals": 3,
+          "goals_per_game": 1.5,
+          "pen": 0
+        },
+        {
+          "name": "Cyle Larin",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Nathan Saliba",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohamed Manai",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Miro Muheim",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Canada",
+        "name": "Cyle Larin",
+        "minute": "16",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Canada",
+        "name": "Jonathan David",
+        "minute": "29",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Canada",
+        "name": "Jonathan David",
+        "minute": "45+3",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Canada",
+        "name": "Nathan Saliba",
+        "minute": "64",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Canada",
+        "name": "Mohamed Manai",
+        "minute": "75",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Canada",
+        "name": "Jonathan David",
+        "minute": "90+2",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-19_Scotland_Morocco": {
+    "home": "Scotland",
+    "away": "Morocco",
+    "date": "2026-06-19",
+    "corners": {
+      "home": 4.8,
+      "away": 6.0,
+      "total": 10.8
+    },
+    "fouls": {
+      "home": 10.2,
+      "away": 11.8,
+      "total": 22.0
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.2,
+      "total": 4.1
+    },
+    "penalty_prob": 0.27,
+    "btts": 0.3276,
+    "over_2_5": 0.2938,
+    "xg": {
+      "home": 0.58,
+      "away": 1.31
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "John McGinn",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ismael Saibari",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Morocco",
+        "name": "Ismael Saibari",
+        "minute": "2",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-19_Brazil_Haiti": {
+    "home": "Brazil",
+    "away": "Haiti",
+    "date": "2026-06-19",
+    "corners": {
+      "home": 8.1,
+      "away": 4.5,
+      "total": 12.6
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 9.6,
+      "total": 19.6
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.8,
+      "total": 3.7
+    },
+    "penalty_prob": 0.24,
+    "btts": 0.3996,
+    "over_2_5": 0.6814,
+    "xg": {
+      "home": 2.97,
+      "away": 0.54
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Vinícius Júnior",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Matheus Cunha",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Duckens Nazon",
+          "goals": 11,
+          "goals_per_game": 0.204,
+          "pen": 0
+        },
+        {
+          "name": "Frantzdy Pierrot",
+          "goals": 8,
+          "goals_per_game": 0.148,
+          "pen": 0
+        },
+        {
+          "name": "Carnejy Antoine",
+          "goals": 4,
+          "goals_per_game": 0.074,
+          "pen": 0
+        },
+        {
+          "name": "Danley Jean Jacques",
+          "goals": 3,
+          "goals_per_game": 0.056,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Brazil",
+        "name": "Matheus Cunha",
+        "minute": "23",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Brazil",
+        "name": "Matheus Cunha",
+        "minute": "36",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Brazil",
+        "name": "Vinícius Júnior",
+        "minute": "45+3",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-19_United States_Australia": {
+    "home": "United States",
+    "away": "Australia",
+    "date": "2026-06-19",
+    "corners": {
+      "home": 5.4,
+      "away": 5.8,
+      "total": 11.2
+    },
+    "fouls": {
+      "home": 10.2,
+      "away": 10.5,
+      "total": 20.7
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.0,
+      "total": 3.9
+    },
+    "penalty_prob": 0.254,
+    "btts": 0.4318,
+    "over_2_5": 0.3609,
+    "xg": {
+      "home": 0.95,
+      "away": 1.19
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Folarin Balogun",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Damian Bobadilla",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Giovanni Reyna",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Cameron Burgess",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Nestory Irankunda",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Connor Metcalfe",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "United States",
+        "name": "Cameron Burgess",
+        "minute": "11",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "United States",
+        "name": "Alex Freeman",
+        "minute": "43",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-19_Turkey_Paraguay": {
+    "home": "Turkey",
+    "away": "Paraguay",
+    "date": "2026-06-19",
+    "corners": {
+      "home": 5.9,
+      "away": 5.3,
+      "total": 11.2
+    },
+    "fouls": {
+      "home": 9.3,
+      "away": 11.4,
+      "total": 20.7
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.2,
+      "total": 4.0
+    },
+    "penalty_prob": 0.254,
+    "btts": 0.4534,
+    "over_2_5": 0.3804,
+    "xg": {
+      "home": 1.11,
+      "away": 1.1
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Kerem Aktürkoğlu",
+          "goals": 14,
+          "goals_per_game": 0.184,
+          "pen": 0
+        },
+        {
+          "name": "Hakan Çalhanoğlu",
+          "goals": 10,
+          "goals_per_game": 0.132,
+          "pen": 0
+        },
+        {
+          "name": "Cengiz Ünder",
+          "goals": 6,
+          "goals_per_game": 0.079,
+          "pen": 0
+        },
+        {
+          "name": "Burak Yılmaz",
+          "goals": 6,
+          "goals_per_game": 0.079,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Mauricio",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Matías Galarza",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Paraguay",
+        "name": "Matías Galarza",
+        "minute": "2",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-20_Germany_Ivory Coast": {
+    "home": "Germany",
+    "away": "Ivory Coast",
+    "date": "2026-06-20",
+    "corners": {
+      "home": 7.1,
+      "away": 5.1,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 8.9,
+      "away": 11.1,
+      "total": 20.0
+    },
+    "yellow_cards": {
+      "home": 1.7,
+      "away": 2.1,
+      "total": 3.8
+    },
+    "penalty_prob": 0.245,
+    "btts": 0.47,
+    "over_2_5": 0.4562,
+    "xg": {
+      "home": 1.64,
+      "away": 0.86
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Deniz Undav",
+          "goals": 3,
+          "goals_per_game": 1.5,
+          "pen": 0
+        },
+        {
+          "name": "Kai Havertz",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 1
+        },
+        {
+          "name": "Felix Nmecha",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nico Schlotterbeck",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Amad Diallo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Franck Kessié",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Ivory Coast",
+        "name": "Franck Kessié",
+        "minute": "30",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Deniz Undav",
+        "minute": "68",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Germany",
+        "name": "Deniz Undav",
+        "minute": "90+4",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-20_Ecuador_Curaçao": {
+    "home": "Ecuador",
+    "away": "Curaçao",
+    "date": "2026-06-20",
+    "corners": {
+      "home": 6.0,
+      "away": 3.9,
+      "total": 9.9
+    },
+    "fouls": {
+      "home": 11.9,
+      "away": 10.9,
+      "total": 22.8
+    },
+    "yellow_cards": {
+      "home": 2.3,
+      "away": 2.1,
+      "total": 4.4
+    },
+    "penalty_prob": 0.28,
+    "btts": 0.2873,
+    "over_2_5": 0.3452,
+    "xg": {
+      "home": 1.65,
+      "away": 0.43
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Enner Valencia",
+          "goals": 13,
+          "goals_per_game": 0.169,
+          "pen": 0
+        },
+        {
+          "name": "Michael Estrada",
+          "goals": 6,
+          "goals_per_game": 0.078,
+          "pen": 0
+        },
+        {
+          "name": "Gonzalo Plata",
+          "goals": 6,
+          "goals_per_game": 0.078,
+          "pen": 0
+        },
+        {
+          "name": "Ángel Mena",
+          "goals": 4,
+          "goals_per_game": 0.052,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Livano Comenencia",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-20_Netherlands_Sweden": {
+    "home": "Netherlands",
+    "away": "Sweden",
+    "date": "2026-06-20",
+    "corners": {
+      "home": 7.3,
+      "away": 5.7,
+      "total": 13.0
+    },
+    "fouls": {
+      "home": 9.2,
+      "away": 9.5,
+      "total": 18.7
+    },
+    "yellow_cards": {
+      "home": 1.7,
+      "away": 1.8,
+      "total": 3.5
+    },
+    "penalty_prob": 0.229,
+    "btts": 0.5644,
+    "over_2_5": 0.5802,
+    "xg": {
+      "home": 1.96,
+      "away": 1.06
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Crysencio Summerville",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Brian Brobbey",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Cody Gakpo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Virgil van Dijk",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Yasin Ayari",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Alexander Isak",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Viktor Gyökeres",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mattias Svanberg",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Netherlands",
+        "name": "Brian Brobbey",
+        "minute": "5",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Netherlands",
+        "name": "Brian Brobbey",
+        "minute": "17",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Netherlands",
+        "name": "Cody Gakpo",
+        "minute": "47",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Netherlands",
+        "name": "Cody Gakpo",
+        "minute": "54",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Sweden",
+        "name": "Anthony Elanga",
+        "minute": "59",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Netherlands",
+        "name": "Crysencio Summerville",
+        "minute": "89",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-20_Tunisia_Japan": {
+    "home": "Tunisia",
+    "away": "Japan",
+    "date": "2026-06-20",
+    "corners": {
+      "home": 4.7,
+      "away": 6.4,
+      "total": 11.1
+    },
+    "fouls": {
+      "home": 11.4,
+      "away": 9.9,
+      "total": 21.3
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 1.9,
+      "total": 4.1
+    },
+    "penalty_prob": 0.261,
+    "btts": 0.3804,
+    "over_2_5": 0.3378,
+    "xg": {
+      "home": 0.71,
+      "away": 1.35
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Omar Rekik",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Daichi Kamada",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Ayase Ueda",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Keito Nakamura",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Junya Ito",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Japan",
+        "name": "Daichi Kamada",
+        "minute": "4",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Japan",
+        "name": "Ayase Ueda",
+        "minute": "31",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Japan",
+        "name": "Junya Ito",
+        "minute": "69",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Japan",
+        "name": "Ayase Ueda",
+        "minute": "83",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-21_Belgium_Iran": {
+    "home": "Belgium",
+    "away": "Iran",
+    "date": "2026-06-21",
+    "corners": {
+      "home": 6.6,
+      "away": 5.7,
+      "total": 12.3
+    },
+    "fouls": {
+      "home": 9.6,
+      "away": 10.0,
+      "total": 19.6
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 1.9,
+      "total": 3.7
+    },
+    "penalty_prob": 0.24,
+    "btts": 0.4964,
+    "over_2_5": 0.4526,
+    "xg": {
+      "home": 1.47,
+      "away": 1.01
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Mohamed Hany",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ramin Rezaeian",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohammad Mohebbi",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-21_New Zealand_Egypt": {
+    "home": "New Zealand",
+    "away": "Egypt",
+    "date": "2026-06-21",
+    "corners": {
+      "home": 5.0,
+      "away": 5.2,
+      "total": 10.2
+    },
+    "fouls": {
+      "home": 10.5,
+      "away": 11.6,
+      "total": 22.1
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 2.2,
+      "total": 4.2
+    },
+    "penalty_prob": 0.271,
+    "btts": 0.3742,
+    "over_2_5": 0.2936,
+    "xg": {
+      "home": 0.83,
+      "away": 1.06
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Elijah Just",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Finn Surman",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Emam Ashour",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mostafa Zico",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohamed Salah",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Trézéguet",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "New Zealand",
+        "name": "Finn Surman",
+        "minute": "15",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Egypt",
+        "name": "Mostafa Zico",
+        "minute": "58",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Egypt",
+        "name": "Mohamed Salah",
+        "minute": "67",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Egypt",
+        "name": "Trézéguet",
+        "minute": "82",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-21_Spain_Saudi Arabia": {
+    "home": "Spain",
+    "away": "Saudi Arabia",
+    "date": "2026-06-21",
+    "corners": {
+      "home": 8.0,
+      "away": 4.2,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 9.3,
+      "away": 11.6,
+      "total": 20.9
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.2,
+      "total": 4.0
+    },
+    "penalty_prob": 0.256,
+    "btts": 0.3478,
+    "over_2_5": 0.5029,
+    "xg": {
+      "home": 2.19,
+      "away": 0.49
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Mikel Oyarzabal",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Lamine Yamal",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Hassan Al-Tambakti",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Abdulelah Al-Amri",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Spain",
+        "name": "Lamine Yamal",
+        "minute": "10",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Spain",
+        "name": "Mikel Oyarzabal",
+        "minute": "21",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Spain",
+        "name": "Mikel Oyarzabal",
+        "minute": "24",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Spain",
+        "name": "Hassan Al-Tambakti",
+        "minute": "49",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-21_Uruguay_Cape Verde": {
+    "home": "Uruguay",
+    "away": "Cape Verde",
+    "date": "2026-06-21",
+    "corners": {
+      "home": 6.2,
+      "away": 4.0,
+      "total": 10.2
+    },
+    "fouls": {
+      "home": 11.4,
+      "away": 11.2,
+      "total": 22.6
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 2.1,
+      "total": 4.3
+    },
+    "penalty_prob": 0.277,
+    "btts": 0.2916,
+    "over_2_5": 0.3283,
+    "xg": {
+      "home": 1.57,
+      "away": 0.45
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Maxi Araújo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Agustín Cano",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Kevin Pina",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Hélio Varela",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Cape Verde",
+        "name": "Kevin Pina",
+        "minute": "21",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Uruguay",
+        "name": "Maxi Araújo",
+        "minute": "44",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Uruguay",
+        "name": "Agustín Cano",
+        "minute": "45+6",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Cape Verde",
+        "name": "Hélio Varela",
+        "minute": "61",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-22_France_Iraq": {
+    "home": "France",
+    "away": "Iraq",
+    "date": "2026-06-22",
+    "corners": {
+      "home": 7.2,
+      "away": 4.3,
+      "total": 11.5
+    },
+    "fouls": {
+      "home": 9.7,
+      "away": 11.3,
+      "total": 21.0
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.1,
+      "total": 3.9
+    },
+    "penalty_prob": 0.258,
+    "btts": 0.3684,
+    "over_2_5": 0.4369,
+    "xg": {
+      "home": 1.86,
+      "away": 0.56
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Kylian Mbappé",
+          "goals": 4,
+          "goals_per_game": 2.0,
+          "pen": 0
+        },
+        {
+          "name": "Bradley Barcola",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Aymen Hussein",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "France",
+        "name": "Kylian Mbappé",
+        "minute": "14",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "France",
+        "name": "Kylian Mbappé",
+        "minute": "54",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "France",
+        "name": "Ousmane Dembélé",
+        "minute": "66",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-22_Norway_Senegal": {
+    "home": "Norway",
+    "away": "Senegal",
+    "date": "2026-06-22",
+    "corners": {
+      "home": 6.4,
+      "away": 5.8,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 9.2,
+      "away": 10.6,
+      "total": 19.8
+    },
+    "yellow_cards": {
+      "home": 1.7,
+      "away": 2.0,
+      "total": 3.7
+    },
+    "penalty_prob": 0.243,
+    "btts": 0.4957,
+    "over_2_5": 0.4332,
+    "xg": {
+      "home": 1.25,
+      "away": 1.16
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Erling Haaland",
+          "goals": 4,
+          "goals_per_game": 2.0,
+          "pen": 0
+        },
+        {
+          "name": "Leo Østigard",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Aymen Hussein",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Marcus Holmgren Pedersen",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ismaïla Sarr",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Ibrahim Mbaye",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Norway",
+        "name": "Marcus Holmgren Pedersen",
+        "minute": "43",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Norway",
+        "name": "Erling Haaland",
+        "minute": "48",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Senegal",
+        "name": "Ismaïla Sarr",
+        "minute": "53",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Norway",
+        "name": "Erling Haaland",
+        "minute": "58",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Senegal",
+        "name": "Ismaïla Sarr",
+        "minute": "90+3",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-22_Argentina_Austria": {
+    "home": "Argentina",
+    "away": "Austria",
+    "date": "2026-06-22",
+    "corners": {
+      "home": 7.2,
+      "away": 5.0,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 10.3,
+      "away": 10.1,
+      "total": 20.4
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 1.9,
+      "total": 3.9
+    },
+    "penalty_prob": 0.25,
+    "btts": 0.3844,
+    "over_2_5": 0.414,
+    "xg": {
+      "home": 1.72,
+      "away": 0.62
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Lionel Messi",
+          "goals": 5,
+          "goals_per_game": 2.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Romano Schmid",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Yazan Al-Arab",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Marko Arnautovic",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Argentina",
+        "name": "Lionel Messi",
+        "minute": "38",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Argentina",
+        "name": "Lionel Messi",
+        "minute": "90+5",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-22_Jordan_Algeria": {
+    "home": "Jordan",
+    "away": "Algeria",
+    "date": "2026-06-22",
+    "corners": {
+      "home": 5.4,
+      "away": 6.3,
+      "total": 11.7
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 9.8,
+      "total": 19.8
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.9,
+      "total": 3.8
+    },
+    "penalty_prob": 0.243,
+    "btts": 0.5151,
+    "over_2_5": 0.4804,
+    "xg": {
+      "home": 1.04,
+      "away": 1.56
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ali Olwan",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nizar Al-Rashdan",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Nadhir Benbouali",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Amine Gouiri",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Jordan",
+        "name": "Nizar Al-Rashdan",
+        "minute": "36",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Algeria",
+        "name": "Nadhir Benbouali",
+        "minute": "69",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Algeria",
+        "name": "Amine Gouiri",
+        "minute": "82",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-23_Portugal_Uzbekistan": {
+    "home": "Portugal",
+    "away": "Uzbekistan",
+    "date": "2026-06-23",
+    "corners": {
+      "home": 7.0,
+      "away": 4.7,
+      "total": 11.7
+    },
+    "fouls": {
+      "home": 9.3,
+      "away": 11.6,
+      "total": 20.9
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 2.2,
+      "total": 4.0
+    },
+    "penalty_prob": 0.256,
+    "btts": 0.3901,
+    "over_2_5": 0.383,
+    "xg": {
+      "home": 1.55,
+      "away": 0.67
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Cristiano Ronaldo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "João Neves",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nuno Mendes",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Abduvohid Nematov",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Abbosbek Fayzullaev",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": [
+      {
+        "team": "Portugal",
+        "name": "Cristiano Ronaldo",
+        "minute": "6",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Portugal",
+        "name": "Nuno Mendes",
+        "minute": "17",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Portugal",
+        "name": "Cristiano Ronaldo",
+        "minute": "39",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Portugal",
+        "name": "Abduvohid Nematov",
+        "minute": "60",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Portugal",
+        "name": "Rafael Leão",
+        "minute": "87",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
+  },
+  "2026-06-23_Colombia_DR Congo": {
+    "home": "Colombia",
+    "away": "DR Congo",
+    "date": "2026-06-23",
+    "corners": {
+      "home": 6.7,
+      "away": 4.4,
+      "total": 11.1
+    },
+    "fouls": {
+      "home": 9.9,
+      "away": 11.9,
+      "total": 21.8
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.3,
+      "total": 4.2
+    },
+    "penalty_prob": 0.267,
+    "btts": 0.3395,
+    "over_2_5": 0.3358,
+    "xg": {
+      "home": 1.48,
+      "away": 0.57
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Daniel Muñoz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Luis Díaz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Jáminton Campaz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Yoane Wissa",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-23_England_Ghana": {
+    "home": "England",
+    "away": "Ghana",
+    "date": "2026-06-23",
+    "corners": {
+      "home": 7.3,
+      "away": 4.4,
+      "total": 11.7
+    },
+    "fouls": {
+      "home": 10.3,
+      "away": 10.5,
+      "total": 20.8
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 2.0,
+      "total": 4.0
+    },
+    "penalty_prob": 0.255,
+    "btts": 0.3555,
+    "over_2_5": 0.4904,
+    "xg": {
+      "home": 2.12,
+      "away": 0.51
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Harry Kane",
+          "goals": 2,
+          "goals_per_game": 2.0,
+          "pen": 1
+        },
+        {
+          "name": "Jude Bellingham",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Marcus Rashford",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Caleb Yirenkyi",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-23_Panama_Croatia": {
+    "home": "Panama",
+    "away": "Croatia",
+    "date": "2026-06-23",
+    "corners": {
+      "home": 5.0,
+      "away": 6.7,
+      "total": 11.7
+    },
+    "fouls": {
+      "home": 9.9,
+      "away": 10.0,
+      "total": 19.9
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.9,
+      "total": 3.8
+    },
+    "penalty_prob": 0.244,
+    "btts": 0.4838,
+    "over_2_5": 0.5124,
+    "xg": {
+      "home": 0.83,
+      "away": 1.89
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ismael Díaz",
+          "goals": 12,
+          "goals_per_game": 0.124,
+          "pen": 0
+        },
+        {
+          "name": "Cecilio Waterman",
+          "goals": 9,
+          "goals_per_game": 0.093,
+          "pen": 0
+        },
+        {
+          "name": "José Fajardo",
+          "goals": 8,
+          "goals_per_game": 0.082,
+          "pen": 0
+        },
+        {
+          "name": "Rolando Blackburn",
+          "goals": 6,
+          "goals_per_game": 0.062,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Martin Baturina",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Petar Musa",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-24_Czech Republic_Mexico": {
+    "home": "Czech Republic",
+    "away": "Mexico",
+    "date": "2026-06-24",
+    "corners": {
+      "home": 5.2,
+      "away": 5.8,
+      "total": 11.0
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 10.9,
+      "total": 20.9
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.1,
+      "total": 4.0
+    },
+    "penalty_prob": 0.256,
+    "btts": 0.4231,
+    "over_2_5": 0.3641,
+    "xg": {
+      "home": 0.86,
+      "away": 1.29
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ladislav Krejcí",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Michal Sadílek",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Julián Quiñones",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Raúl Jiménez",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Luis Romo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-24_South Africa_South Korea": {
+    "home": "South Africa",
+    "away": "South Korea",
+    "date": "2026-06-24",
+    "corners": {
+      "home": 4.8,
+      "away": 6.0,
+      "total": 10.8
+    },
+    "fouls": {
+      "home": 11.0,
+      "away": 10.0,
+      "total": 21.0
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 1.9,
+      "total": 4.0
+    },
+    "penalty_prob": 0.258,
+    "btts": 0.4345,
+    "over_2_5": 0.3901,
+    "xg": {
+      "home": 0.84,
+      "away": 1.41
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Teboho Mokoena",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ],
+      "away": [
+        {
+          "name": "Hwang In-Beom",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Oh Hyeon-Gyu",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-24_Switzerland_Canada": {
+    "home": "Switzerland",
+    "away": "Canada",
+    "date": "2026-06-24",
+    "corners": {
+      "home": 6.4,
+      "away": 5.7,
+      "total": 12.1
+    },
+    "fouls": {
+      "home": 9.6,
+      "away": 10.1,
+      "total": 19.7
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 1.9,
+      "total": 3.7
+    },
+    "penalty_prob": 0.242,
+    "btts": 0.5094,
+    "over_2_5": 0.4597,
+    "xg": {
+      "home": 1.42,
+      "away": 1.09
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Johan Manzambi",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Breel Embolo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        },
+        {
+          "name": "Rubén Vargas",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Granit Xhaka",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ],
+      "away": [
+        {
+          "name": "Jonathan David",
+          "goals": 3,
+          "goals_per_game": 1.5,
+          "pen": 0
+        },
+        {
+          "name": "Cyle Larin",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Nathan Saliba",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohamed Manai",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-24_Bosnia and Herzegovina_Qatar": {
+    "home": "Bosnia and Herzegovina",
+    "away": "Qatar",
+    "date": "2026-06-24",
+    "corners": {
+      "home": 5.1,
+      "away": 5.4,
+      "total": 10.5
+    },
+    "fouls": {
+      "home": 10.8,
+      "away": 9.7,
+      "total": 20.5
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 1.8,
+      "total": 3.9
+    },
+    "penalty_prob": 0.252,
+    "btts": 0.5242,
+    "over_2_5": 0.4686,
+    "xg": {
+      "home": 1.25,
+      "away": 1.3
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Jovo Lukić",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ermin Mahmic",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Miro Muheim",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-24_Scotland_Brazil": {
+    "home": "Scotland",
+    "away": "Brazil",
+    "date": "2026-06-24",
+    "corners": {
+      "home": 4.9,
+      "away": 7.3,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 10.2,
+      "away": 10.0,
+      "total": 20.2
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.9,
+      "total": 3.8
+    },
+    "penalty_prob": 0.248,
+    "btts": 0.405,
+    "over_2_5": 0.4619,
+    "xg": {
+      "home": 0.64,
+      "away": 1.88
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "John McGinn",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Vinícius Júnior",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Matheus Cunha",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-24_Morocco_Haiti": {
+    "home": "Morocco",
+    "away": "Haiti",
+    "date": "2026-06-24",
+    "corners": {
+      "home": 6.6,
+      "away": 4.4,
+      "total": 11.0
+    },
+    "fouls": {
+      "home": 11.8,
+      "away": 9.6,
+      "total": 21.4
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 1.8,
+      "total": 4.0
+    },
+    "penalty_prob": 0.263,
+    "btts": 0.3443,
+    "over_2_5": 0.4708,
+    "xg": {
+      "home": 2.06,
+      "away": 0.5
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ismael Saibari",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Duckens Nazon",
+          "goals": 11,
+          "goals_per_game": 0.204,
+          "pen": 0
+        },
+        {
+          "name": "Frantzdy Pierrot",
+          "goals": 8,
+          "goals_per_game": 0.148,
+          "pen": 0
+        },
+        {
+          "name": "Carnejy Antoine",
+          "goals": 4,
+          "goals_per_game": 0.074,
+          "pen": 0
+        },
+        {
+          "name": "Danley Jean Jacques",
+          "goals": 3,
+          "goals_per_game": 0.056,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-25_Turkey_United States": {
+    "home": "Turkey",
+    "away": "United States",
+    "date": "2026-06-25",
+    "corners": {
+      "home": 6.1,
+      "away": 5.8,
+      "total": 11.9
+    },
+    "fouls": {
+      "home": 9.3,
+      "away": 10.2,
+      "total": 19.5
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 1.9,
+      "total": 3.7
+    },
+    "penalty_prob": 0.239,
+    "btts": 0.5346,
+    "over_2_5": 0.4816,
+    "xg": {
+      "home": 1.29,
+      "away": 1.31
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Kerem Aktürkoğlu",
+          "goals": 14,
+          "goals_per_game": 0.184,
+          "pen": 0
+        },
+        {
+          "name": "Hakan Çalhanoğlu",
+          "goals": 10,
+          "goals_per_game": 0.132,
+          "pen": 0
+        },
+        {
+          "name": "Cengiz Ünder",
+          "goals": 6,
+          "goals_per_game": 0.079,
+          "pen": 0
+        },
+        {
+          "name": "Burak Yılmaz",
+          "goals": 6,
+          "goals_per_game": 0.079,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Folarin Balogun",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Damian Bobadilla",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Giovanni Reyna",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Cameron Burgess",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-25_Paraguay_Australia": {
+    "home": "Paraguay",
+    "away": "Australia",
+    "date": "2026-06-25",
+    "corners": {
+      "home": 5.0,
+      "away": 5.6,
+      "total": 10.6
+    },
+    "fouls": {
+      "home": 11.4,
+      "away": 10.5,
+      "total": 21.9
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 2.0,
+      "total": 4.2
+    },
+    "penalty_prob": 0.269,
+    "btts": 0.3578,
+    "over_2_5": 0.2751,
+    "xg": {
+      "home": 0.8,
+      "away": 1.02
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Mauricio",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Matías Galarza",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Nestory Irankunda",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Connor Metcalfe",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-25_Curaçao_Ivory Coast": {
+    "home": "Curaçao",
+    "away": "Ivory Coast",
+    "date": "2026-06-25",
+    "corners": {
+      "home": 4.2,
+      "away": 5.7,
+      "total": 9.9
+    },
+    "fouls": {
+      "home": 10.9,
+      "away": 11.1,
+      "total": 22.0
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 2.1,
+      "total": 4.2
+    },
+    "penalty_prob": 0.27,
+    "btts": 0.3674,
+    "over_2_5": 0.3541,
+    "xg": {
+      "home": 0.63,
+      "away": 1.48
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Livano Comenencia",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Amad Diallo",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Franck Kessié",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-25_Ecuador_Germany": {
+    "home": "Ecuador",
+    "away": "Germany",
+    "date": "2026-06-25",
+    "corners": {
+      "home": 5.4,
+      "away": 6.6,
+      "total": 12.0
+    },
+    "fouls": {
+      "home": 11.9,
+      "away": 8.9,
+      "total": 20.8
+    },
+    "yellow_cards": {
+      "home": 2.3,
+      "away": 1.7,
+      "total": 4.0
+    },
+    "penalty_prob": 0.255,
+    "btts": 0.4208,
+    "over_2_5": 0.3442,
+    "xg": {
+      "home": 0.96,
+      "away": 1.12
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Enner Valencia",
+          "goals": 13,
+          "goals_per_game": 0.169,
+          "pen": 0
+        },
+        {
+          "name": "Michael Estrada",
+          "goals": 6,
+          "goals_per_game": 0.078,
+          "pen": 0
+        },
+        {
+          "name": "Gonzalo Plata",
+          "goals": 6,
+          "goals_per_game": 0.078,
+          "pen": 0
+        },
+        {
+          "name": "Ángel Mena",
+          "goals": 4,
+          "goals_per_game": 0.052,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Deniz Undav",
+          "goals": 3,
+          "goals_per_game": 1.5,
+          "pen": 0
+        },
+        {
+          "name": "Kai Havertz",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 1
+        },
+        {
+          "name": "Felix Nmecha",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nico Schlotterbeck",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-25_Japan_Sweden": {
+    "home": "Japan",
+    "away": "Sweden",
+    "date": "2026-06-25",
+    "corners": {
+      "home": 6.8,
+      "away": 5.6,
+      "total": 12.4
+    },
+    "fouls": {
+      "home": 9.9,
+      "away": 9.5,
+      "total": 19.4
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.8,
+      "total": 3.7
+    },
+    "penalty_prob": 0.238,
+    "btts": 0.5134,
+    "over_2_5": 0.5025,
+    "xg": {
+      "home": 1.72,
+      "away": 0.97
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Daichi Kamada",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Ayase Ueda",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Keito Nakamura",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Junya Ito",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Yasin Ayari",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Alexander Isak",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Viktor Gyökeres",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mattias Svanberg",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-25_Tunisia_Netherlands": {
+    "home": "Tunisia",
+    "away": "Netherlands",
+    "date": "2026-06-25",
+    "corners": {
+      "home": 4.8,
+      "away": 6.9,
+      "total": 11.7
+    },
+    "fouls": {
+      "home": 11.4,
+      "away": 9.2,
+      "total": 20.6
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 1.7,
+      "total": 3.9
+    },
+    "penalty_prob": 0.253,
+    "btts": 0.4272,
+    "over_2_5": 0.4063,
+    "xg": {
+      "home": 0.77,
+      "away": 1.54
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Omar Rekik",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Crysencio Summerville",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Brian Brobbey",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Cody Gakpo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Virgil van Dijk",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-26_Egypt_Iran": {
+    "home": "Egypt",
+    "away": "Iran",
+    "date": "2026-06-26",
+    "corners": {
+      "home": 4.9,
+      "away": 5.8,
+      "total": 10.7
+    },
+    "fouls": {
+      "home": 11.6,
+      "away": 10.0,
+      "total": 21.6
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 1.9,
+      "total": 4.1
+    },
+    "penalty_prob": 0.265,
+    "btts": 0.3878,
+    "over_2_5": 0.3089,
+    "xg": {
+      "home": 0.86,
+      "away": 1.09
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Emam Ashour",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mostafa Zico",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohamed Salah",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Trézéguet",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ramin Rezaeian",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Mohammad Mohebbi",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-26_New Zealand_Belgium": {
+    "home": "New Zealand",
+    "away": "Belgium",
+    "date": "2026-06-26",
+    "corners": {
+      "home": 4.9,
+      "away": 7.0,
+      "total": 11.9
+    },
+    "fouls": {
+      "home": 10.5,
+      "away": 9.6,
+      "total": 20.1
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 1.8,
+      "total": 3.8
+    },
+    "penalty_prob": 0.247,
+    "btts": 0.4555,
+    "over_2_5": 0.4795,
+    "xg": {
+      "home": 0.77,
+      "away": 1.82
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Elijah Just",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Finn Surman",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Mohamed Hany",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-26_Cape Verde_Saudi Arabia": {
+    "home": "Cape Verde",
+    "away": "Saudi Arabia",
+    "date": "2026-06-26",
+    "corners": {
+      "home": 4.5,
+      "away": 4.8,
+      "total": 9.3
+    },
+    "fouls": {
+      "home": 11.2,
+      "away": 11.6,
+      "total": 22.8
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 2.2,
+      "total": 4.3
+    },
+    "penalty_prob": 0.28,
+    "btts": 0.3468,
+    "over_2_5": 0.2624,
+    "xg": {
+      "home": 0.78,
+      "away": 0.99
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Kevin Pina",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Hélio Varela",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Abdulelah Al-Amri",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-26_Uruguay_Spain": {
+    "home": "Uruguay",
+    "away": "Spain",
+    "date": "2026-06-26",
+    "corners": {
+      "home": 5.3,
+      "away": 7.1,
+      "total": 12.4
+    },
+    "fouls": {
+      "home": 11.4,
+      "away": 9.3,
+      "total": 20.7
+    },
+    "yellow_cards": {
+      "home": 2.2,
+      "away": 1.8,
+      "total": 4.0
+    },
+    "penalty_prob": 0.254,
+    "btts": 0.393,
+    "over_2_5": 0.3353,
+    "xg": {
+      "home": 0.77,
+      "away": 1.27
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Maxi Araújo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Agustín Cano",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Mikel Oyarzabal",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Lamine Yamal",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Hassan Al-Tambakti",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-26_Norway_France": {
+    "home": "Norway",
+    "away": "France",
+    "date": "2026-06-26",
+    "corners": {
+      "home": 6.1,
+      "away": 7.0,
+      "total": 13.1
+    },
+    "fouls": {
+      "home": 9.2,
+      "away": 9.7,
+      "total": 18.9
+    },
+    "yellow_cards": {
+      "home": 1.7,
+      "away": 1.8,
+      "total": 3.5
+    },
+    "penalty_prob": 0.232,
+    "btts": 0.5327,
+    "over_2_5": 0.5078,
+    "xg": {
+      "home": 1.06,
+      "away": 1.64
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Erling Haaland",
+          "goals": 4,
+          "goals_per_game": 2.0,
+          "pen": 0
+        },
+        {
+          "name": "Leo Østigard",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Aymen Hussein",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Marcus Holmgren Pedersen",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Kylian Mbappé",
+          "goals": 4,
+          "goals_per_game": 2.0,
+          "pen": 0
+        },
+        {
+          "name": "Bradley Barcola",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-26_Senegal_Iraq": {
+    "home": "Senegal",
+    "away": "Iraq",
+    "date": "2026-06-26",
+    "corners": {
+      "home": 6.0,
+      "away": 4.5,
+      "total": 10.5
+    },
+    "fouls": {
+      "home": 10.6,
+      "away": 11.3,
+      "total": 21.9
+    },
+    "yellow_cards": {
+      "home": 2.0,
+      "away": 2.1,
+      "total": 4.1
+    },
+    "penalty_prob": 0.269,
+    "btts": 0.3602,
+    "over_2_5": 0.3181,
+    "xg": {
+      "home": 1.32,
+      "away": 0.66
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ismaïla Sarr",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Ibrahim Mbaye",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Aymen Hussein",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-27_Algeria_Austria": {
+    "home": "Algeria",
+    "away": "Austria",
+    "date": "2026-06-27",
+    "corners": {
+      "home": 5.9,
+      "away": 5.8,
+      "total": 11.7
+    },
+    "fouls": {
+      "home": 9.8,
+      "away": 10.1,
+      "total": 19.9
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.9,
+      "total": 3.8
+    },
+    "penalty_prob": 0.244,
+    "btts": 0.4949,
+    "over_2_5": 0.4315,
+    "xg": {
+      "home": 1.19,
+      "away": 1.21
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Nadhir Benbouali",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Amine Gouiri",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Romano Schmid",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Yazan Al-Arab",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Marko Arnautovic",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 1
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-27_Jordan_Argentina": {
+    "home": "Jordan",
+    "away": "Argentina",
+    "date": "2026-06-27",
+    "corners": {
+      "home": 4.6,
+      "away": 7.6,
+      "total": 12.2
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 10.3,
+      "total": 20.3
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.0,
+      "total": 3.9
+    },
+    "penalty_prob": 0.249,
+    "btts": 0.3729,
+    "over_2_5": 0.5235,
+    "xg": {
+      "home": 0.53,
+      "away": 2.24
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ali Olwan",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nizar Al-Rashdan",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Lionel Messi",
+          "goals": 5,
+          "goals_per_game": 2.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-27_Colombia_Portugal": {
+    "home": "Colombia",
+    "away": "Portugal",
+    "date": "2026-06-27",
+    "corners": {
+      "home": 6.4,
+      "away": 6.7,
+      "total": 13.1
+    },
+    "fouls": {
+      "home": 9.9,
+      "away": 9.3,
+      "total": 19.2
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 1.8,
+      "total": 3.7
+    },
+    "penalty_prob": 0.236,
+    "btts": 0.5054,
+    "over_2_5": 0.4448,
+    "xg": {
+      "home": 1.21,
+      "away": 1.25
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Daniel Muñoz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Luis Díaz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Jáminton Campaz",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Cristiano Ronaldo",
+          "goals": 2,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "João Neves",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Nuno Mendes",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Abduvohid Nematov",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-27_DR Congo_Uzbekistan": {
+    "home": "DR Congo",
+    "away": "Uzbekistan",
+    "date": "2026-06-27",
+    "corners": {
+      "home": 4.6,
+      "away": 4.9,
+      "total": 9.5
+    },
+    "fouls": {
+      "home": 11.9,
+      "away": 11.6,
+      "total": 23.5
+    },
+    "yellow_cards": {
+      "home": 2.3,
+      "away": 2.2,
+      "total": 4.5
+    },
+    "penalty_prob": 0.288,
+    "btts": 0.2892,
+    "over_2_5": 0.1981,
+    "xg": {
+      "home": 0.71,
+      "away": 0.82
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Yoane Wissa",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Abbosbek Fayzullaev",
+          "goals": 1,
+          "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-27_Panama_England": {
+    "home": "Panama",
+    "away": "England",
+    "date": "2026-06-27",
+    "corners": {
+      "home": 4.6,
+      "away": 7.4,
+      "total": 12.0
+    },
+    "fouls": {
+      "home": 9.9,
+      "away": 10.3,
+      "total": 20.2
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.0,
+      "total": 3.9
+    },
+    "penalty_prob": 0.248,
+    "btts": 0.3937,
+    "over_2_5": 0.5404,
+    "xg": {
+      "home": 0.57,
+      "away": 2.27
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Ismael Díaz",
+          "goals": 12,
+          "goals_per_game": 0.124,
+          "pen": 0
+        },
+        {
+          "name": "Cecilio Waterman",
+          "goals": 9,
+          "goals_per_game": 0.093,
+          "pen": 0
+        },
+        {
+          "name": "José Fajardo",
+          "goals": 8,
+          "goals_per_game": 0.082,
+          "pen": 0
+        },
+        {
+          "name": "Rolando Blackburn",
+          "goals": 6,
+          "goals_per_game": 0.062,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Harry Kane",
+          "goals": 2,
+          "goals_per_game": 2.0,
+          "pen": 1
+        },
+        {
+          "name": "Jude Bellingham",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Marcus Rashford",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-27_Croatia_Ghana": {
+    "home": "Croatia",
+    "away": "Ghana",
+    "date": "2026-06-27",
+    "corners": {
+      "home": 6.6,
+      "away": 4.7,
+      "total": 11.3
+    },
+    "fouls": {
+      "home": 10.0,
+      "away": 10.5,
+      "total": 20.5
+    },
+    "yellow_cards": {
+      "home": 1.9,
+      "away": 2.0,
+      "total": 3.9
+    },
+    "penalty_prob": 0.252,
+    "btts": 0.4395,
+    "over_2_5": 0.4599,
+    "xg": {
+      "home": 1.77,
+      "away": 0.74
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Martin Baturina",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Petar Musa",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Caleb Yirenkyi",
+          "goals": 1,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  }
+}

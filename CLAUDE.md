@@ -72,14 +72,15 @@ Depois abra `output/index.html`.
 - `models/wc_predict.py` — ensemble + previsões → `analysis/wc2026_predictions.json`
 - `models/wc_backtest.py` — RPS/acerto/calibração → `analysis/wc2026_backtest.json`
 - `output/build_dashboard.py` → `output/index.html`
+- `models/wc_aux_stats.py` — escanteios, faltas, cartões, BTTS, O/U, artilheiros → `analysis/wc2026_aux_stats.json`
 - `data/collectors/` — coletores (openfootball, kaggle, api_football, odds, newsdata, statsbomb)
 
-**Resultado atual (41 jogos de grupo disputados):** RPS **0.171** · acerto 1X2 **56%** · (bom modelo ≈ 0.18-0.21).
+**Resultado atual (45 jogos de grupo disputados):** RPS **0.165** · acerto 1X2 **60%** · (bom modelo ≈ 0.18-0.21).
 **Métrica de avaliação:** RPS (padrão científico; Constantinou & Fenton 2012).
 
 ## Contexto Técnico
 - **Escopo**: Copa do Mundo 2026 — todas as 48 seleções (fase de grupos prevista; mata-mata conforme definido)
-- **Data atual**: 22/06/2026
+- **Data atual**: 23/06/2026
 - **Língua**: Português (BR)
 
 ## Metodologias Alvo

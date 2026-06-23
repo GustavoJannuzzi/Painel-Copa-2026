@@ -1,0 +1,383 @@
+{
+  "n_played": 44,
+  "mean_rps": 0.1676,
+  "mean_logloss": 0.9118,
+  "hit_rate_1x2": 0.5909,
+  "exact_score_hit_rate": 0.0455,
+  "baselines": {
+    "rps_naive_uniform": 0.2285,
+    "rps_elo_only": 0.178,
+    "rps_dixon_coles_only": 0.1663
+  },
+  "interpretation": {
+    "rps_ref_bom_modelo": "0.18-0.21",
+    "rps_ingenuo": "~0.22",
+    "rps_bate_mercado": "<0.19"
+  },
+  "calibration_bins": [
+    {
+      "bin": "0.0-0.1",
+      "n": 7,
+      "pred_mean": 0.054,
+      "obs_freq": 0.0
+    },
+    {
+      "bin": "0.1-0.2",
+      "n": 25,
+      "pred_mean": 0.148,
+      "obs_freq": 0.16
+    },
+    {
+      "bin": "0.2-0.3",
+      "n": 47,
+      "pred_mean": 0.254,
+      "obs_freq": 0.234
+    },
+    {
+      "bin": "0.3-0.4",
+      "n": 14,
+      "pred_mean": 0.344,
+      "obs_freq": 0.357
+    },
+    {
+      "bin": "0.4-0.5",
+      "n": 10,
+      "pred_mean": 0.444,
+      "obs_freq": 0.5
+    },
+    {
+      "bin": "0.5-0.6",
+      "n": 11,
+      "pred_mean": 0.548,
+      "obs_freq": 0.727
+    },
+    {
+      "bin": "0.6-0.7",
+      "n": 11,
+      "pred_mean": 0.641,
+      "obs_freq": 0.636
+    },
+    {
+      "bin": "0.7-0.8",
+      "n": 3,
+      "pred_mean": 0.757,
+      "obs_freq": 0.333
+    },
+    {
+      "bin": "0.8-0.9",
+      "n": 4,
+      "pred_mean": 0.842,
+      "obs_freq": 0.75
+    }
+  ],
+  "rps_timeline": [
+    {
+      "date": "2026-06-11",
+      "home": "Mexico",
+      "away": "South Africa",
+      "rps": 0.0895,
+      "cum_rps": 0.0895
+    },
+    {
+      "date": "2026-06-11",
+      "home": "South Korea",
+      "away": "Czech Republic",
+      "rps": 0.1963,
+      "cum_rps": 0.1429
+    },
+    {
+      "date": "2026-06-12",
+      "home": "Canada",
+      "away": "Bosnia and Herzegovina",
+      "rps": 0.1993,
+      "cum_rps": 0.1617
+    },
+    {
+      "date": "2026-06-12",
+      "home": "United States",
+      "away": "Paraguay",
+      "rps": 0.2972,
+      "cum_rps": 0.1956
+    },
+    {
+      "date": "2026-06-13",
+      "home": "Qatar",
+      "away": "Switzerland",
+      "rps": 0.2817,
+      "cum_rps": 0.2128
+    },
+    {
+      "date": "2026-06-13",
+      "home": "Brazil",
+      "away": "Morocco",
+      "rps": 0.1218,
+      "cum_rps": 0.1976
+    },
+    {
+      "date": "2026-06-13",
+      "home": "Haiti",
+      "away": "Scotland",
+      "rps": 0.1098,
+      "cum_rps": 0.1851
+    },
+    {
+      "date": "2026-06-13",
+      "home": "Australia",
+      "away": "Turkey",
+      "rps": 0.2512,
+      "cum_rps": 0.1934
+    },
+    {
+      "date": "2026-06-14",
+      "home": "Germany",
+      "away": "Curaçao",
+      "rps": 0.0149,
+      "cum_rps": 0.1735
+    },
+    {
+      "date": "2026-06-14",
+      "home": "Ivory Coast",
+      "away": "Ecuador",
+      "rps": 0.4503,
+      "cum_rps": 0.2012
+    },
+    {
+      "date": "2026-06-14",
+      "home": "Netherlands",
+      "away": "Japan",
+      "rps": 0.1339,
+      "cum_rps": 0.1951
+    },
+    {
+      "date": "2026-06-14",
+      "home": "Sweden",
+      "away": "Tunisia",
+      "rps": 0.2413,
+      "cum_rps": 0.1989
+    },
+    {
+      "date": "2026-06-15",
+      "home": "Belgium",
+      "away": "Egypt",
+      "rps": 0.159,
+      "cum_rps": 0.1959
+    },
+    {
+      "date": "2026-06-15",
+      "home": "Iran",
+      "away": "New Zealand",
+      "rps": 0.1638,
+      "cum_rps": 0.1936
+    },
+    {
+      "date": "2026-06-15",
+      "home": "Spain",
+      "away": "Cape Verde",
+      "rps": 0.3773,
+      "cum_rps": 0.2058
+    },
+    {
+      "date": "2026-06-15",
+      "home": "Saudi Arabia",
+      "away": "Uruguay",
+      "rps": 0.1989,
+      "cum_rps": 0.2054
+    },
+    {
+      "date": "2026-06-16",
+      "home": "France",
+      "away": "Senegal",
+      "rps": 0.1209,
+      "cum_rps": 0.2004
+    },
+    {
+      "date": "2026-06-16",
+      "home": "Iraq",
+      "away": "Norway",
+      "rps": 0.086,
+      "cum_rps": 0.1941
+    },
+    {
+      "date": "2026-06-16",
+      "home": "Argentina",
+      "away": "Algeria",
+      "rps": 0.0548,
+      "cum_rps": 0.1867
+    },
+    {
+      "date": "2026-06-16",
+      "home": "Austria",
+      "away": "Jordan",
+      "rps": 0.1544,
+      "cum_rps": 0.1851
+    },
+    {
+      "date": "2026-06-17",
+      "home": "Portugal",
+      "away": "DR Congo",
+      "rps": 0.2234,
+      "cum_rps": 0.1869
+    },
+    {
+      "date": "2026-06-17",
+      "home": "Uzbekistan",
+      "away": "Colombia",
+      "rps": 0.0934,
+      "cum_rps": 0.1827
+    },
+    {
+      "date": "2026-06-17",
+      "home": "England",
+      "away": "Croatia",
+      "rps": 0.1428,
+      "cum_rps": 0.181
+    },
+    {
+      "date": "2026-06-17",
+      "home": "Ghana",
+      "away": "Panama",
+      "rps": 0.3706,
+      "cum_rps": 0.1889
+    },
+    {
+      "date": "2026-06-18",
+      "home": "Czech Republic",
+      "away": "South Africa",
+      "rps": 0.1421,
+      "cum_rps": 0.187
+    },
+    {
+      "date": "2026-06-18",
+      "home": "Mexico",
+      "away": "South Korea",
+      "rps": 0.2107,
+      "cum_rps": 0.1879
+    },
+    {
+      "date": "2026-06-18",
+      "home": "Switzerland",
+      "away": "Bosnia and Herzegovina",
+      "rps": 0.0575,
+      "cum_rps": 0.1831
+    },
+    {
+      "date": "2026-06-18",
+      "home": "Canada",
+      "away": "Qatar",
+      "rps": 0.0741,
+      "cum_rps": 0.1792
+    },
+    {
+      "date": "2026-06-19",
+      "home": "Scotland",
+      "away": "Morocco",
+      "rps": 0.122,
+      "cum_rps": 0.1772
+    },
+    {
+      "date": "2026-06-19",
+      "home": "Brazil",
+      "away": "Haiti",
+      "rps": 0.012,
+      "cum_rps": 0.1717
+    },
+    {
+      "date": "2026-06-19",
+      "home": "United States",
+      "away": "Australia",
+      "rps": 0.3343,
+      "cum_rps": 0.1769
+    },
+    {
+      "date": "2026-06-19",
+      "home": "Turkey",
+      "away": "Paraguay",
+      "rps": 0.3011,
+      "cum_rps": 0.1808
+    },
+    {
+      "date": "2026-06-20",
+      "home": "Germany",
+      "away": "Ivory Coast",
+      "rps": 0.1142,
+      "cum_rps": 0.1788
+    },
+    {
+      "date": "2026-06-20",
+      "home": "Ecuador",
+      "away": "Curaçao",
+      "rps": 0.2696,
+      "cum_rps": 0.1815
+    },
+    {
+      "date": "2026-06-20",
+      "home": "Netherlands",
+      "away": "Sweden",
+      "rps": 0.1004,
+      "cum_rps": 0.1792
+    },
+    {
+      "date": "2026-06-20",
+      "home": "Tunisia",
+      "away": "Japan",
+      "rps": 0.0898,
+      "cum_rps": 0.1767
+    },
+    {
+      "date": "2026-06-21",
+      "home": "Belgium",
+      "away": "Iran",
+      "rps": 0.1438,
+      "cum_rps": 0.1758
+    },
+    {
+      "date": "2026-06-21",
+      "home": "New Zealand",
+      "away": "Egypt",
+      "rps": 0.2015,
+      "cum_rps": 0.1765
+    },
+    {
+      "date": "2026-06-21",
+      "home": "Spain",
+      "away": "Saudi Arabia",
+      "rps": 0.0179,
+      "cum_rps": 0.1724
+    },
+    {
+      "date": "2026-06-21",
+      "home": "Uruguay",
+      "away": "Cape Verde",
+      "rps": 0.2288,
+      "cum_rps": 0.1738
+    },
+    {
+      "date": "2026-06-22",
+      "home": "France",
+      "away": "Iraq",
+      "rps": 0.0227,
+      "cum_rps": 0.1701
+    },
+    {
+      "date": "2026-06-22",
+      "home": "Norway",
+      "away": "Senegal",
+      "rps": 0.2115,
+      "cum_rps": 0.1711
+    },
+    {
+      "date": "2026-06-22",
+      "home": "Argentina",
+      "away": "Austria",
+      "rps": 0.0625,
+      "cum_rps": 0.1686
+    },
+    {
+      "date": "2026-06-22",
+      "home": "Jordan",
+      "away": "Algeria",
+      "rps": 0.1254,
+      "cum_rps": 0.1676
+    }
+  ]
+}

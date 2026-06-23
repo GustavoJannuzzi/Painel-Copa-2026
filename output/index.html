@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copa 2026 — Painel Preditivo</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+/* ── RESET & BASE ───────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#020810;
+  color:#d0dff0;
+  font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.5;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+/* ── BACKGROUND GRID ────────────────────────────── */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(0,180,255,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,180,255,.04) 1px,transparent 1px);
+  background-size:40px 40px;
+  pointer-events:none;z-index:0;
+}
+body::after{
+  content:'';
+  position:fixed;inset:0;
+  background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(0,100,255,.12),transparent),
+             radial-gradient(ellipse 50% 40% at 100% 80%,rgba(120,0,255,.08),transparent),
+             radial-gradient(ellipse 50% 40% at 0% 60%,rgba(0,200,100,.06),transparent);
+  pointer-events:none;z-index:0;
+}
+
+/* ── GLASS MIXIN ────────────────────────────────── */
+.glass{
+  background:rgba(8,18,40,.65);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+}
+.glass-bright{
+  background:rgba(10,24,55,.75);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;
+}
+
+/* ── HEADER ─────────────────────────────────────── */
+.site-header{
+  position:sticky;top:0;z-index:200;
+  background:rgba(2,8,16,.85);
+  backdrop-filter:blur(24px);
+  -webkit-backdrop-filter:blur(24px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.header-inner{
+  max-width:1320px;margin:0 auto;
+  padding:16px 24px 0;
+}
+.header-top{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+}
+.logo{
+  font-size:32px;
+  filter:drop-shadow(0 0 18px rgba(250,200,20,.6));
+  flex-shrink:0;
+}
+.header-text h1{
+  font-size:20px;font-weight:800;letter-spacing:-.025em;
+  background:linear-gradient(100deg,#f0c030 0%,#ff9500 50%,#ff4060 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.header-text .tagline{font-size:11px;color:#5a7090;margin-top:2px}
+.header-pills{
+  margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;
+}
+.hpill{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:4px 12px;border-radius:20px;
+  font-size:11px;font-weight:700;
+  border:1px solid;backdrop-filter:blur(8px);
+  transition:all .2s;
+}
+.hpill:hover{transform:translateY(-1px)}
+.hpill-g{background:rgba(0,255,130,.07);border-color:rgba(0,255,130,.25);color:#00e57a}
+.hpill-y{background:rgba(240,192,48,.07);border-color:rgba(240,192,48,.25);color:#f0c030}
+.hpill-b{background:rgba(0,180,255,.07);border-color:rgba(0,180,255,.25);color:#00b4ff}
+
+/* ── TABS ───────────────────────────────────────── */
+.tab-bar{
+  display:flex;gap:4px;padding:14px 0 0;
+  overflow-x:auto;scrollbar-width:none;
+}
+.tab-bar::-webkit-scrollbar{display:none}
+.tab-btn{
+  position:relative;
+  background:transparent;border:none;
+  color:#4a6080;cursor:pointer;
+  font-size:12px;font-weight:700;
+  padding:8px 16px;border-radius:10px 10px 0 0;
+  white-space:nowrap;letter-spacing:.01em;
+  transition:all .2s;
+}
+.tab-btn::after{
+  content:'';position:absolute;bottom:0;left:50%;right:50%;
+  height:2px;background:linear-gradient(90deg,#f0c030,#ff9500);
+  border-radius:2px;transition:all .25s;
+}
+.tab-btn:hover{color:#90a8c0}
+.tab-btn.active{color:#f0c030}
+.tab-btn.active::after{left:12px;right:12px}
+
+/* ── LAYOUT ─────────────────────────────────────── */
+.wrap{
+  max-width:1320px;margin:0 auto;
+  padding:28px 20px 100px;
+  position:relative;z-index:1;
+}
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+.section{margin-bottom:28px}
+.section-title{
+  font-size:16px;font-weight:800;
+  color:#d0dff0;letter-spacing:-.01em;
+  margin-bottom:18px;
+  display:flex;align-items:center;gap:8px;
+}
+.section-title::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,rgba(255,255,255,.1),transparent);
+  margin-left:8px;
+}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1024px){.grid4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
+
+/* ── KPI CARDS ──────────────────────────────────── */
+.kpi-row{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:14px;margin-bottom:28px;
+}
+.kpi{
+  position:relative;overflow:hidden;
+  background:rgba(8,18,40,.7);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  padding:20px;
+  cursor:default;
+  transition:transform .2s,border-color .2s,box-shadow .2s;
+}
+.kpi:hover{
+  transform:translateY(-3px);
+  border-color:rgba(255,255,255,.18);
+  box-shadow:0 8px 40px rgba(0,0,0,.4),0 0 0 1px rgba(255,255,255,.06);
+}
+.kpi .glow{
+  position:absolute;top:-30px;right:-30px;
+  width:100px;height:100px;border-radius:50%;
+  opacity:.12;blur(30px);
+  transition:opacity .2s;
+}
+.kpi:hover .glow{opacity:.22}
+.kpi .icon{font-size:20px;margin-bottom:10px;display:block}
+.kpi .num{
+  font-size:34px;font-weight:900;
+  letter-spacing:-.04em;line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.kpi .num.c-gold{color:#f0c030;text-shadow:0 0 30px rgba(240,192,48,.3)}
+.kpi .num.c-green{color:#00e57a;text-shadow:0 0 30px rgba(0,229,122,.25)}
+.kpi .num.c-cyan{color:#00d4ff;text-shadow:0 0 30px rgba(0,212,255,.25)}
+.kpi .num.c-purple{color:#b070ff;text-shadow:0 0 30px rgba(176,112,255,.25)}
+.kpi .num.c-orange{color:#ff9030;text-shadow:0 0 30px rgba(255,144,48,.25)}
+.kpi .label{font-size:12px;font-weight:700;color:#90a8c0;margin-top:8px;text-transform:uppercase;letter-spacing:.06em}
+.kpi .explain{font-size:11px;color:#3a5070;margin-top:4px;line-height:1.4}
+.kpi .quality-bar{
+  height:3px;margin-top:12px;border-radius:2px;
+  background:rgba(255,255,255,.07);overflow:hidden;
+}
+.kpi .quality-fill{height:100%;border-radius:2px;transition:width 1s ease}
+
+/* ── TOOLTIP ────────────────────────────────────── */
+.tip{
+  position:relative;display:inline-block;
+  width:14px;height:14px;border-radius:50%;
+  background:rgba(255,255,255,.08);
+  color:#5a7090;font-size:9px;font-weight:700;
+  text-align:center;line-height:14px;cursor:help;
+  border:1px solid rgba(255,255,255,.12);
+  vertical-align:middle;margin-left:4px;
+}
+.tip::before{
+  content:attr(data-tip);
+  position:absolute;bottom:calc(100% + 8px);left:50%;
+  transform:translateX(-50%);
+  background:rgba(5,15,35,.95);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:8px;padding:8px 12px;
+  width:220px;font-size:11px;color:#90a8c0;
+  line-height:1.5;white-space:normal;
+  pointer-events:none;opacity:0;transition:opacity .15s;
+  z-index:999;
+}
+.tip:hover::before{opacity:1}
+
+/* ── CHART CONTAINERS ───────────────────────────── */
+.chart-box{
+  position:relative;
+  padding:20px;
+}
+.chart-box .ch-title{
+  font-size:13px;font-weight:700;color:#90a8c0;
+  margin-bottom:14px;display:flex;align-items:center;gap:6px;
+}
+.chart-box .ch-sub{font-size:11px;color:#3a5070;margin-top:-10px;margin-bottom:12px}
+.ch{position:relative;height:230px}
+.ch-sm{position:relative;height:190px}
+
+/* ── TABLES ─────────────────────────────────────── */
+.tbl-wrap{
+  overflow-x:auto;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.07);
+}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+thead th{
+  background:rgba(5,14,32,.8);
+  color:#4a6080;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.07em;
+  padding:11px 14px;white-space:nowrap;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  cursor:pointer;user-select:none;
+  transition:color .15s;
+}
+thead th:hover{color:#90a8c0}
+thead th .sort-arrow{opacity:.4;margin-left:3px}
+tbody td{
+  padding:11px 14px;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  vertical-align:middle;white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:none}
+tbody tr{transition:background .12s}
+tbody tr:hover td{background:rgba(255,255,255,.03)}
+
+/* ── PROB BAR ───────────────────────────────────── */
+.pbar{display:flex;height:6px;border-radius:3px;overflow:hidden;gap:1px}
+.pbar .ph{background:#3b82f6}
+.pbar .pd{background:#9060e0}
+.pbar .pa{background:#f04060}
+.pnums{font-size:10px;color:#4a6080;margin-top:3px;font-variant-numeric:tabular-nums}
+
+/* ── PILLS ──────────────────────────────────────── */
+.pill{
+  display:inline-flex;align-items:center;gap:3px;
+  padding:2px 9px;border-radius:20px;
+  font-size:10px;font-weight:700;border:1px solid;
+}
+.pill-win{background:rgba(0,229,122,.1);color:#00e57a;border-color:rgba(0,229,122,.3)}
+.pill-lose{background:rgba(240,64,96,.1);color:#f04060;border-color:rgba(240,64,96,.25)}
+.pill-score{background:rgba(240,192,48,.1);color:#f0c030;border-color:rgba(240,192,48,.3)}
+.pill-pend{background:rgba(90,112,144,.1);color:#5a7090;border-color:rgba(90,112,144,.25)}
+
+/* ── FILTERS ────────────────────────────────────── */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.fbtn{
+  background:rgba(8,18,40,.8);color:#4a6080;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:8px;padding:6px 14px;
+  cursor:pointer;font-size:11px;font-weight:700;
+  transition:all .15s;letter-spacing:.03em;
+}
+.fbtn:hover{color:#90a8c0;border-color:rgba(255,255,255,.14)}
+.fbtn.active{
+  background:rgba(240,192,48,.1);
+  color:#f0c030;border-color:rgba(240,192,48,.35);
+}
+
+/* ── GAME CARDS (próximos) ──────────────────────── */
+.gcards{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+  gap:14px;
+}
+.gcard{
+  position:relative;overflow:hidden;
+  background:rgba(8,18,40,.7);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;padding:18px;
+  transition:transform .2s,border-color .2s,box-shadow .2s;
+}
+.gcard:hover{
+  transform:translateY(-3px);
+  border-color:rgba(240,192,48,.3);
+  box-shadow:0 10px 40px rgba(0,0,0,.5),0 0 30px rgba(240,192,48,.05);
+}
+.gcard::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.03),transparent 60%);
+  pointer-events:none;
+}
+.gc-meta{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:14px;
+}
+.gc-group{font-size:10px;font-weight:700;color:#4a6080;text-transform:uppercase;letter-spacing:.07em}
+.gc-date{font-size:11px;color:#2e4060}
+.gc-matchup{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.gc-team{flex:1;text-align:center}
+.gc-team .tc-name{font-size:14px;font-weight:800;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gc-team .tc-xg{font-size:10px;color:#4a6080;margin-top:2px}
+.gc-vs{color:#2e4060;font-size:13px;font-weight:700;flex-shrink:0}
+.gc-score{
+  text-align:center;
+  font-size:28px;font-weight:900;letter-spacing:-.03em;
+  color:#f0c030;
+  text-shadow:0 0 24px rgba(240,192,48,.4);
+  margin:4px 0 10px;
+  font-variant-numeric:tabular-nums;
+}
+.gc-pbar{display:flex;height:5px;border-radius:3px;overflow:hidden;margin-bottom:6px;gap:1px}
+.gc-pnums{
+  display:flex;justify-content:space-between;
+  font-size:10px;font-variant-numeric:tabular-nums;
+  color:#4a6080;
+}
+.gc-pnums .pn-h{color:#3b82f6;font-weight:700}
+.gc-pnums .pn-a{color:#f04060;font-weight:700}
+.gc-mkt{
+  font-size:10px;color:#3a5070;margin-top:8px;
+  display:flex;align-items:center;gap:4px;
+}
+
+/* ── STANDINGS ──────────────────────────────────── */
+.sgrids{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(255px,1fr));
+  gap:14px;
+}
+.sgroup{
+  background:rgba(8,18,40,.7);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;overflow:hidden;
+  transition:border-color .2s;
+}
+.sgroup:hover{border-color:rgba(255,255,255,.13)}
+.sg-head{
+  background:rgba(5,12,30,.8);padding:10px 14px;
+  font-size:10px;font-weight:700;color:#4a6080;
+  text-transform:uppercase;letter-spacing:.08em;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.sg-tbl{width:100%;border-collapse:collapse;font-size:11.5px}
+.sg-tbl td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.04)}
+.sg-tbl tr:last-child td{border:none}
+.sg-tbl .rank{color:#2e4060;width:16px;font-weight:700}
+.sg-tbl .qual{border-left:3px solid #00e57a}
+.sg-tbl .bubble{border-left:3px solid #f0c030}
+.sg-tbl .pts{font-weight:800;color:#d0dff0;text-align:center;width:24px}
+.sg-tbl .gd{color:#4a6080;text-align:center;width:28px;font-size:10.5px}
+.form-pills{display:flex;gap:2px}
+.fp{width:13px;height:13px;border-radius:3px;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.fp-w{background:rgba(0,229,122,.2);color:#00e57a;border:1px solid rgba(0,229,122,.3)}
+.fp-d{background:rgba(144,96,224,.15);color:#9060e0;border:1px solid rgba(144,96,224,.3)}
+.fp-l{background:rgba(240,64,96,.15);color:#f04060;border:1px solid rgba(240,64,96,.25)}
+
+/* ── BRACKET ────────────────────────────────────── */
+.bracket-scroll{overflow-x:auto;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent}
+.bracket{display:flex;gap:12px;min-width:1200px;align-items:stretch}
+.b-col{flex:1;display:flex;flex-direction:column;gap:0}
+.b-col-narrow{flex:.55}
+.b-rnd-title{
+  font-size:9px;font-weight:800;color:#3a5070;
+  text-transform:uppercase;letter-spacing:.1em;
+  text-align:center;padding:8px 0 10px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  margin-bottom:6px;
+}
+.b-match{
+  background:rgba(5,14,32,.7);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;padding:8px 10px;
+  margin:3px 0;
+  transition:border-color .15s;
+  position:relative;overflow:hidden;
+}
+.b-match:hover{border-color:rgba(240,192,48,.3)}
+.b-match::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,transparent,rgba(240,192,48,.3),transparent);
+}
+.b-team{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:4px 0;font-size:11px;
+}
+.b-team:first-child{border-bottom:1px solid rgba(255,255,255,.05)}
+.b-name{font-weight:700;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.b-tag{font-size:9px;color:#2e4060;margin-right:4px;flex-shrink:0}
+.b-prob{font-size:10px;color:#4a6080;font-variant-numeric:tabular-nums;flex-shrink:0}
+.b-fav .b-name{color:#f0c030}
+.b-fav .b-prob{color:#f0c030;font-weight:700}
+
+/* ── FRAMEWORK CARDS ────────────────────────────── */
+.fw-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:14px;margin-bottom:28px;
+}
+.fw-card{
+  background:rgba(8,18,40,.65);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;padding:20px;
+  transition:border-color .2s,transform .2s;
+  position:relative;overflow:hidden;
+}
+.fw-card:hover{border-color:rgba(240,192,48,.25);transform:translateY(-2px)}
+.fw-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.02),transparent);pointer-events:none;
+}
+.fw-num{
+  width:32px;height:32px;border-radius:50%;
+  background:linear-gradient(135deg,#f0c030,#ff9030);
+  color:#000;font-weight:900;font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:12px;
+  box-shadow:0 4px 14px rgba(240,192,48,.3);
+}
+.fw-card h4{font-size:14px;font-weight:800;color:#d0dff0;margin-bottom:8px}
+.fw-card p{font-size:12px;color:#4a6080;line-height:1.65}
+.fw-card code{
+  background:rgba(240,192,48,.1);padding:1px 5px;
+  border-radius:4px;font-size:11px;color:#f0c030;
+  border:1px solid rgba(240,192,48,.2);
+}
+
+/* ── METRIC BARS ────────────────────────────────── */
+.mbar-row{
+  display:flex;align-items:center;gap:12px;
+  padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);
+  font-size:12px;
+}
+.mbar-row:last-child{border:none}
+.mbar-name{width:130px;flex-shrink:0;color:#5a7090}
+.mbar-bg{
+  flex:1;height:6px;border-radius:3px;
+  background:rgba(255,255,255,.06);overflow:hidden;
+}
+.mbar-fill{height:100%;border-radius:3px;transition:width .8s ease}
+.mbar-val{width:52px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;color:#90a8c0}
+
+/* ── DATA SOURCES ───────────────────────────────── */
+.ds-list{list-style:none}
+.ds-item{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:11px 0;border-bottom:1px solid rgba(255,255,255,.05);
+}
+.ds-item:last-child{border:none}
+.ds-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.ds-info strong{font-size:13px;color:#90a8c0;font-weight:700}
+.ds-info p{font-size:11px;color:#3a5070;margin-top:2px;line-height:1.5}
+
+/* ── CALIBRATION BINS ───────────────────────────── */
+.calbins{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.calbin{
+  flex:1;min-width:58px;
+  background:rgba(5,14,32,.7);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:10px;padding:10px 6px;
+  text-align:center;font-size:10.5px;
+  transition:border-color .15s;
+}
+.calbin:hover{border-color:rgba(255,255,255,.15)}
+.calbin .cbl{color:#3a5070;margin-bottom:6px;font-size:9px;text-transform:uppercase;letter-spacing:.05em}
+.calbin .cbars{height:56px;display:flex;align-items:flex-end;justify-content:center;gap:4px;margin-bottom:4px}
+.calbin .cbar{width:12px;border-radius:3px 3px 0 0}
+.calbin .cval{font-weight:800;font-size:12px}
+.calbin .cn{font-size:9px;color:#2e4060}
+
+/* ── RANKING ────────────────────────────────────── */
+.rank-bar-bg{width:100px;height:5px;background:rgba(255,255,255,.06);border-radius:3px;overflow:hidden;display:inline-block;vertical-align:middle}
+.rank-bar-fill{height:100%;border-radius:3px;background:linear-gradient(90deg,#3b82f6,#f0c030)}
+
+/* ── MISC ───────────────────────────────────────── */
+.mono{font-variant-numeric:tabular-nums}
+.muted{color:#4a6080}
+.small{font-size:11px}
+.score-big{font-size:22px;font-weight:900;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.scroll-y{overflow-y:auto;max-height:500px;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.1) transparent}
+.divider{border:none;border-top:1px solid rgba(255,255,255,.06);margin:18px 0}
+.empty{color:#2e4060;text-align:center;padding:48px;font-size:14px}
+.footer{
+  color:#2e4060;font-size:11px;
+  margin-top:40px;padding:16px 0;
+  border-top:1px solid rgba(255,255,255,.05);
+  line-height:1.7;
+}
+.fade-in{animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ── SHIMMER ANIMATION ──────────────────────────── */
+@keyframes shimmer{
+  0%{background-position:200% center}
+  100%{background-position:-200% center}
+}
+.shimmer-text{
+  background:linear-gradient(90deg,#4a6080 0%,#d0dff0 50%,#4a6080 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:shimmer 3s linear infinite;
+}
+
+/* ── PULSE DOT ──────────────────────────────────── */
+.pulse-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#00e57a;display:inline-block;
+  box-shadow:0 0 0 0 rgba(0,229,122,.4);
+  animation:pulseDot 2s infinite;
+}
+@keyframes pulseDot{
+  0%{box-shadow:0 0 0 0 rgba(0,229,122,.4)}
+  70%{box-shadow:0 0 0 6px rgba(0,229,122,0)}
+  100%{box-shadow:0 0 0 0 rgba(0,229,122,0)}
+}
+
+/* ── RECENT RESULT ROWS ─────────────────────────── */
+.rr-row{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);
+  font-size:12px;
+  transition:background .12s;
+}
+.rr-row:last-child{border:none}
+.rr-row:hover{background:rgba(255,255,255,.02);border-radius:8px;padding-left:6px}
+
+/* ── COUNT UP ANIMATION ─────────────────────────── */
+.countup{display:inline-block}
+</style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<div class="site-header">
+  <div class="header-inner">
+    <div class="header-top">
+      <div class="logo">⚽</div>
+      <div class="header-text">
+        <h1>Copa do Mundo 2026 — Painel Preditivo</h1>
+        <div class="tagline" id="tagline">Carregando dados…</div>
+      </div>
+      <div class="header-pills">
+        <div class="hpill hpill-y" id="pill-rps"></div>
+        <div class="hpill hpill-g" id="pill-acc"></div>
+        <div class="hpill hpill-b" id="pill-games"></div>
+      </div>
+    </div>
+    <nav class="tab-bar" id="tab-bar">
+      <button class="tab-btn active" data-tab="overview">🏆 Visão Geral</button>
+      <button class="tab-btn" data-tab="played">⚽ Jogos Disputados</button>
+      <button class="tab-btn" data-tab="upcoming">🔮 Próximos Jogos</button>
+      <button class="tab-btn" data-tab="bracket">🌳 Chaveamento</button>
+      <button class="tab-btn" data-tab="framework">🔬 Como Funciona</button>
+      <button class="tab-btn" data-tab="ranking">📈 Ranking de Força</button>
+    </nav>
+  </div>
+</div>
+
+<!-- ══ MAIN ══ -->
+<div class="wrap">
+
+  <!-- ══════════════════ VISÃO GERAL ══════════════════ -->
+  <div class="tab-pane active fade-in" id="tab-overview">
+
+    <div class="kpi-row" id="kpi-cards"></div>
+
+    <div class="grid2 section">
+      <div class="glass chart-box">
+        <div class="ch-title">📉 Evolução da Precisão ao longo da Copa<span class="tip" data-tip="Linha dourada = precisão acumulada do modelo. Quanto mais próxima da linha verde (meta), melhor. Cada ponto cinza = erro num jogo individual.">?</span></div>
+        <div class="ch-sub">RPS acumulado — quanto mais baixo, mais preciso. Meta: abaixo da linha verde.</div>
+        <div class="ch"><canvas id="chart-rps"></canvas></div>
+      </div>
+      <div class="glass chart-box">
+        <div class="ch-title">🏅 Comparação com outras abordagens<span class="tip" data-tip="Compara o ensemble (combinação de modelos) com cada modelo individualmente e com uma previsão aleatória. Barra menor = modelo melhor.">?</span></div>
+        <div class="ch-sub">Nosso ensemble vs métodos isolados. Barra menor = mais preciso.</div>
+        <div class="ch"><canvas id="chart-models"></canvas></div>
+      </div>
+    </div>
+
+    <div class="grid2 section">
+      <div class="glass chart-box">
+        <div class="ch-title">⚖️ Confiabilidade das previsões<span class="tip" data-tip="Pontos próximos da diagonal = modelo bem calibrado. Exemplo: quando prevemos 70%, o time venceu de fato ~70% das vezes.">?</span></div>
+        <div class="ch-sub">Quando prevemos X% de chance, isso acontece de fato X% das vezes?</div>
+        <div class="ch"><canvas id="chart-calib"></canvas></div>
+      </div>
+      <div class="glass chart-box">
+        <div class="ch-title">💪 Seleções mais fortes da Copa<span class="tip" data-tip="Rating Elo: calculado sobre 49 mil jogos históricos. Quanto maior, mais forte. As 3 primeiras têm barra dourada.">?</span></div>
+        <div class="ch-sub">Top 12 seleções por rating Elo (calculado em 49 mil jogos históricos).</div>
+        <div class="ch"><canvas id="chart-elo"></canvas></div>
+      </div>
+    </div>
+
+    <div class="glass section" style="padding:20px">
+      <div class="section-title">⏱️ Últimos Resultados</div>
+      <div id="recent-results"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ JOGOS DISPUTADOS ══════════════════ -->
+  <div class="tab-pane fade-in" id="tab-played">
+    <div class="filters" id="played-filters">
+      <button class="fbtn active" data-gf="all">Todos os grupos</button>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr>
+          <th data-sk="date">Data</th>
+          <th data-sk="group">Grupo</th>
+          <th>Jogo</th>
+          <th>Resultado</th>
+          <th>Placar Previsto</th>
+          <th>Probabilidades</th>
+          <th data-sk="rps">Precisão<span class="sort-arrow">↕</span></th>
+          <th>Acertou?</th>
+          <th>Placar Exato?</th>
+        </tr></thead>
+        <tbody id="played-body"></tbody>
+      </table>
+    </div>
+    <div class="muted small" style="margin-top:10px;padding-left:4px" id="played-count"></div>
+  </div>
+
+  <!-- ══════════════════ PRÓXIMOS JOGOS ══════════════════ -->
+  <div class="tab-pane fade-in" id="tab-upcoming">
+    <div class="filters" id="upcoming-filters">
+      <button class="fbtn active" data-uf="all">Todos</button>
+    </div>
+    <div class="gcards" id="upcoming-grid"></div>
+    <div class="empty" id="upcoming-empty" style="display:none">Nenhum jogo futuro encontrado.</div>
+  </div>
+
+  <!-- ══════════════════ CHAVEAMENTO ══════════════════ -->
+  <div class="tab-pane fade-in" id="tab-bracket">
+    <div class="section">
+      <div class="section-title">📋 Classificação por Grupo</div>
+      <p class="small muted" style="margin-bottom:18px">
+        <span style="color:#00e57a">■</span> Verde = classificado ou virtual classificado &nbsp;
+        <span style="color:#f0c030">■</span> Amarelo = na briga por 3° lugar &nbsp;
+        Calculado sobre resultados reais + projeção dos jogos restantes.
+      </p>
+      <div class="sgrids" id="standings-grid"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">🏆 Projeção do Chaveamento — Oitavas de Final</div>
+      <p class="small muted" style="margin-bottom:18px">
+        Baseado nos prováveis classificados de cada grupo. WC 2026: 32 equipes nas oitavas.
+        Probabilidades calculadas pelo modelo Elo. Percentual = chance de avançar no confronto.
+      </p>
+      <div class="bracket-scroll">
+        <div class="bracket" id="bracket-view"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ COMO FUNCIONA ══════════════════ -->
+  <div class="tab-pane fade-in" id="tab-framework">
+    <div class="section">
+      <div class="section-title">🔬 Como o Modelo Prevê os Jogos</div>
+      <div class="fw-cards" id="fw-cards-container"></div>
+    </div>
+
+    <div class="grid2 section">
+      <div class="glass" style="padding:20px">
+        <div class="section-title" style="font-size:14px">🗂️ De onde vêm os dados</div>
+        <ul class="ds-list" id="ds-list"></ul>
+      </div>
+      <div class="glass" style="padding:20px">
+        <div class="section-title" style="font-size:14px">⚙️ Configuração Atual do Modelo</div>
+        <div id="model-params"></div>
+      </div>
+    </div>
+
+    <div class="glass section" style="padding:20px">
+      <div class="section-title" style="font-size:14px">📏 Resultados Detalhados de Acurácia</div>
+      <div id="accuracy-detail"></div>
+      <div class="divider"></div>
+      <p class="small muted" style="margin-bottom:12px">
+        <b style="color:#90a8c0">Calibração por faixa:</b> cada par de barras compara a probabilidade que prevemos (azul) com o que realmente aconteceu (verde). Ideal = iguais.
+      </p>
+      <div class="calbins" id="calib-bins"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════ RANKING ══════════════════ -->
+  <div class="tab-pane fade-in" id="tab-ranking">
+    <div class="section">
+      <div class="section-title">📈 Ranking de Força — Copa 2026</div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr>
+            <th>#</th>
+            <th>Seleção</th>
+            <th data-rk="elo">Rating Elo<span class="sort-arrow">↓</span></th>
+            <th data-rk="att">Potencial de Ataque</th>
+            <th data-rk="def">Solidez Defensiva</th>
+            <th data-rk="net">Força Total</th>
+            <th>Barra</th>
+          </tr></thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /wrap -->
+
+<div style="max-width:1320px;margin:0 auto;padding:0 20px;position:relative;z-index:1">
+  <div class="footer">
+    ⚽ Copa do Mundo 2026 — Framework Preditivo &nbsp;·&nbsp;
+    Elo + Dixon-Coles + Mercado de Apostas &nbsp;·&nbsp;
+    Avaliado por RPS (Constantinou &amp; Fenton, 2012) &nbsp;·&nbsp;
+    Fontes: Kaggle/martj42 · OpenFootball · The Odds API · StatsBomb &nbsp;·&nbsp;
+    <code style="background:rgba(240,192,48,.1);padding:1px 5px;border-radius:4px;color:#f0c030;font-size:10px">output/build_dashboard.py</code>
+  </div>
+</div>
+
+<!-- ══ DATA ══ -->
+<script id="pred-data" type="application/json">{"generated_at": "2026-06-23T12:12:29", "method": "Ensemble Elo + Dixon-Coles ponderado + Mercado (sem vig)", "weights": {"elo": 0.22, "dixon_coles": 0.43, "market": 0.35, "sem_mercado": {"elo": 0.35, "dixon_coles": 0.65}, "matriz_elo": 0.32}, "elo_calibration": {"beta_sup_per_elo": 0.005486835831071526, "mean_total_goals": 2.7301428441452096, "n_calib": 10991}, "dc_params": {"intercept": 0.1603367234812791, "gamma": 0.24566192150266208, "rho": -0.04266010878921974}, "n_matches": 72, "matches": [{"date": "2026-06-11", "round": "Matchday 1", "group": "Group A", "home": "Mexico", "away": "South Africa", "played": true, "actual": [2, 0], "elo_ratings": {"home": 1963.3, "away": 1663.2}, "models": {"elo": {"xg_home": 2.19, "xg_away": 0.54, "p": [0.7539, 0.1687, 0.0774]}, "dixon_coles": {"xg_home": 1.32, "xg_away": 0.66, "p": [0.521, 0.2977, 0.1814]}, "market": null}, "prediction": {"p_home": 0.6025, "p_draw": 0.2525, "p_away": 0.145, "xg_home": 1.61, "xg_away": 0.62, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1681}, {"score": "2-0", "prob": 0.1333}, {"score": "0-0", "prob": 0.1166}, {"score": "1-1", "prob": 0.1084}, {"score": "2-1", "prob": 0.082}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0895}}, {"date": "2026-06-11", "round": "Matchday 1", "group": "Group A", "home": "South Korea", "away": "Czech Republic", "played": true, "actual": [2, 1], "elo_ratings": {"home": 1876.2, "away": 1801.9}, "models": {"elo": {"xg_home": 1.57, "xg_away": 1.16, "p": [0.4677, 0.2504, 0.2819]}, "dixon_coles": {"xg_home": 1.38, "xg_away": 1.09, "p": [0.4302, 0.2791, 0.2907]}, "market": null}, "prediction": {"p_home": 0.4433, "p_draw": 0.2691, "p_away": 0.2876, "xg_home": 1.44, "xg_away": 1.11, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1278}, {"score": "1-0", "prob": 0.1087}, {"score": "2-1", "prob": 0.0898}, {"score": "0-1", "prob": 0.083}, {"score": "0-0", "prob": 0.0817}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1963}}, {"date": "2026-06-12", "round": "Matchday 2", "group": "Group B", "home": "Canada", "away": "Bosnia and Herzegovina", "played": true, "actual": [1, 1], "elo_ratings": {"home": 1890.1, "away": 1660.3}, "models": {"elo": {"xg_home": 2.0, "xg_away": 0.73, "p": [0.6699, 0.2021, 0.128]}, "dixon_coles": {"xg_home": 1.66, "xg_away": 0.77, "p": [0.5815, 0.2518, 0.1667]}, "market": null}, "prediction": {"p_home": 0.6125, "p_draw": 0.2344, "p_away": 0.1531, "xg_home": 1.77, "xg_away": 0.76, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1385}, {"score": "2-0", "prob": 0.1247}, {"score": "1-1", "prob": 0.1097}, {"score": "2-1", "prob": 0.0944}, {"score": "0-0", "prob": 0.0836}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.1993}}, {"date": "2026-06-12", "round": "Matchday 2", "group": "Group D", "home": "United States", "away": "Paraguay", "played": true, "actual": [4, 1], "elo_ratings": {"home": 1843.0, "away": 1903.2}, "models": {"elo": {"xg_home": 1.2, "xg_away": 1.53, "p": [0.2983, 0.2525, 0.4492]}, "dixon_coles": {"xg_home": 0.96, "xg_away": 0.95, "p": [0.3397, 0.3287, 0.3316]}, "market": null}, "prediction": {"p_home": 0.3252, "p_draw": 0.302, "p_away": 0.3728, "xg_home": 1.04, "xg_away": 1.14, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1331}, {"score": "0-1", "prob": 0.1246}, {"score": "0-0", "prob": 0.1245}, {"score": "1-0", "prob": 0.1176}, {"score": "1-2", "prob": 0.0735}]}, "eval": {"outcome": "home", "predicted": "away", "correct_1x2": false, "exact_score_hit": false, "rps": 0.2972}}, {"date": "2026-06-13", "round": "Matchday 3", "group": "Group B", "home": "Qatar", "away": "Switzerland", "played": true, "actual": [1, 1], "elo_ratings": {"home": 1576.4, "away": 1952.8}, "models": {"elo": {"xg_home": 0.33, "xg_away": 2.4, "p": [0.0367, 0.1285, 0.8347]}, "dixon_coles": {"xg_home": 0.85, "xg_away": 2.31, "p": [0.119, 0.1839, 0.697]}, "market": null}, "prediction": {"p_home": 0.0902, "p_draw": 0.1646, "p_away": 0.7452, "xg_home": 0.68, "xg_away": 2.35, "most_likely": "0-2", "top_scores": [{"score": "0-2", "prob": 0.1373}, {"score": "0-1", "prob": 0.1145}, {"score": "0-3", "prob": 0.1075}, {"score": "1-2", "prob": 0.0859}, {"score": "1-1", "prob": 0.0749}]}, "eval": {"outcome": "draw", "predicted": "away", "correct_1x2": false, "exact_score_hit": false, "rps": 0.2817}}, {"date": "2026-06-13", "round": "Matchday 3", "group": "Group C", "home": "Brazil", "away": "Morocco", "played": true, "actual": [1, 1], "elo_ratings": {"home": 2052.5, "away": 1988.5}, "models": {"elo": {"xg_home": 1.54, "xg_away": 1.19, "p": [0.4541, 0.252, 0.2939]}, "dixon_coles": {"xg_home": 0.95, "xg_away": 0.73, "p": [0.3886, 0.3505, 0.2609]}, "market": null}, "prediction": {"p_home": 0.4115, "p_draw": 0.316, "p_away": 0.2725, "xg_home": 1.14, "xg_away": 0.88, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.15}, {"score": "0-0", "prob": 0.1498}, {"score": "1-1", "prob": 0.1286}, {"score": "0-1", "prob": 0.1135}, {"score": "2-0", "prob": 0.0828}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.1218}}, {"date": "2026-06-13", "round": "Matchday 3", "group": "Group C", "home": "Haiti", "away": "Scotland", "played": true, "actual": [0, 1], "elo_ratings": {"home": 1681.7, "away": 1844.8}, "models": {"elo": {"xg_home": 0.92, "xg_away": 1.81, "p": [0.1874, 0.228, 0.5845]}, "dixon_coles": {"xg_home": 0.98, "xg_away": 1.82, "p": [0.1956, 0.2378, 0.5665]}, "market": null}, "prediction": {"p_home": 0.1928, "p_draw": 0.2344, "p_away": 0.5728, "xg_home": 0.96, "xg_away": 1.82, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1116}, {"score": "0-1", "prob": 0.1104}, {"score": "0-2", "prob": 0.1031}, {"score": "1-2", "prob": 0.0986}, {"score": "0-0", "prob": 0.0655}]}, "eval": {"outcome": "away", "predicted": "away", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1098}}, {"date": "2026-06-13", "round": "Matchday 3", "group": "Group D", "home": "Australia", "away": "Turkey", "played": true, "actual": [2, 0], "elo_ratings": {"home": 1894.8, "away": 1961.8}, "models": {"elo": {"xg_home": 1.18, "xg_away": 1.55, "p": [0.2903, 0.2515, 0.4581]}, "dixon_coles": {"xg_home": 1.39, "xg_away": 1.09, "p": [0.4322, 0.2785, 0.2892]}, "market": null}, "prediction": {"p_home": 0.3826, "p_draw": 0.2691, "p_away": 0.3483, "xg_home": 1.32, "xg_away": 1.24, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1278}, {"score": "1-0", "prob": 0.0991}, {"score": "0-1", "prob": 0.0921}, {"score": "2-1", "prob": 0.0816}, {"score": "0-0", "prob": 0.0814}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.2513}}, {"date": "2026-06-14", "round": "Matchday 4", "group": "Group E", "home": "Germany", "away": "Curaçao", "played": true, "actual": [7, 1], "elo_ratings": {"home": 2008.0, "away": 1595.6}, "models": {"elo": {"xg_home": 2.5, "xg_away": 0.23, "p": [0.8684, 0.1092, 0.0225]}, "dixon_coles": {"xg_home": 2.74, "xg_away": 0.62, "p": [0.8143, 0.129, 0.0566]}, "market": null}, "prediction": {"p_home": 0.8333, "p_draw": 0.1221, "p_away": 0.0447, "xg_home": 2.66, "xg_away": 0.49, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1545}, {"score": "3-0", "prob": 0.1357}, {"score": "1-0", "prob": 0.1158}, {"score": "4-0", "prob": 0.0896}, {"score": "2-1", "prob": 0.0702}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0149}}, {"date": "2026-06-14", "round": "Matchday 4", "group": "Group E", "home": "Ivory Coast", "away": "Ecuador", "played": true, "actual": [1, 0], "elo_ratings": {"home": 1814.4, "away": 2011.2}, "models": {"elo": {"xg_home": 0.83, "xg_away": 1.91, "p": [0.156, 0.2158, 0.6282]}, "dixon_coles": {"xg_home": 0.61, "xg_away": 0.99, "p": [0.2138, 0.3547, 0.4315]}, "market": null}, "prediction": {"p_home": 0.1936, "p_draw": 0.306, "p_away": 0.5003, "xg_home": 0.67, "xg_away": 1.29, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1749}, {"score": "0-0", "prob": 0.1605}, {"score": "1-1", "prob": 0.1174}, {"score": "0-2", "prob": 0.1066}, {"score": "1-0", "prob": 0.0965}]}, "eval": {"outcome": "home", "predicted": "away", "correct_1x2": false, "exact_score_hit": false, "rps": 0.4503}}, {"date": "2026-06-14", "round": "Matchday 4", "group": "Group F", "home": "Netherlands", "away": "Japan", "played": true, "actual": [2, 2], "elo_ratings": {"home": 2009.2, "away": 1991.3}, "models": {"elo": {"xg_home": 1.41, "xg_away": 1.32, "p": [0.3945, 0.2562, 0.3494]}, "dixon_coles": {"xg_home": 1.32, "xg_away": 1.26, "p": [0.3758, 0.2759, 0.3482]}, "market": null}, "prediction": {"p_home": 0.3824, "p_draw": 0.269, "p_away": 0.3486, "xg_home": 1.35, "xg_away": 1.28, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.128}, {"score": "1-0", "prob": 0.0941}, {"score": "0-1", "prob": 0.0889}, {"score": "2-1", "prob": 0.0841}, {"score": "1-2", "prob": 0.0795}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.1339}}, {"date": "2026-06-14", "round": "Matchday 4", "group": "Group F", "home": "Sweden", "away": "Tunisia", "played": true, "actual": [5, 1], "elo_ratings": {"home": 1772.0, "away": 1731.5}, "models": {"elo": {"xg_home": 1.48, "xg_away": 1.25, "p": [0.4235, 0.2547, 0.3218]}, "dixon_coles": {"xg_home": 1.13, "xg_away": 1.05, "p": [0.367, 0.304, 0.3289]}, "market": null}, "prediction": {"p_home": 0.3868, "p_draw": 0.2868, "p_away": 0.3264, "xg_home": 1.24, "xg_away": 1.12, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.133}, {"score": "1-0", "prob": 0.1141}, {"score": "0-1", "prob": 0.1031}, {"score": "0-0", "prob": 0.1011}, {"score": "2-1", "prob": 0.0803}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.2413}}, {"date": "2026-06-15", "round": "Matchday 5", "group": "Group G", "home": "Belgium", "away": "Egypt", "played": true, "actual": [1, 1], "elo_ratings": {"home": 1945.4, "away": 1803.0}, "models": {"elo": {"xg_home": 1.76, "xg_away": 0.97, "p": [0.5574, 0.2346, 0.208]}, "dixon_coles": {"xg_home": 1.35, "xg_away": 0.74, "p": [0.5103, 0.2918, 0.1979]}, "market": null}, "prediction": {"p_home": 0.5268, "p_draw": 0.2718, "p_away": 0.2015, "xg_home": 1.48, "xg_away": 0.81, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1474}, {"score": "1-1", "prob": 0.1223}, {"score": "2-0", "prob": 0.1096}, {"score": "0-0", "prob": 0.1079}, {"score": "2-1", "prob": 0.0883}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.159}}, {"date": "2026-06-15", "round": "Matchday 5", "group": "Group G", "home": "Iran", "away": "New Zealand", "played": true, "actual": [2, 2], "elo_ratings": {"home": 1890.6, "away": 1716.5}, "models": {"elo": {"xg_home": 1.84, "xg_away": 0.89, "p": [0.599, 0.2242, 0.1768]}, "dixon_coles": {"xg_home": 1.46, "xg_away": 0.9, "p": [0.497, 0.276, 0.227]}, "market": null}, "prediction": {"p_home": 0.5327, "p_draw": 0.2579, "p_away": 0.2094, "xg_home": 1.59, "xg_away": 0.89, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1291}, {"score": "1-1", "prob": 0.1213}, {"score": "2-0", "prob": 0.1044}, {"score": "2-1", "prob": 0.0936}, {"score": "0-0", "prob": 0.0879}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.1638}}, {"date": "2026-06-15", "round": "Matchday 5", "group": "Group H", "home": "Spain", "away": "Cape Verde", "played": true, "actual": [0, 0], "elo_ratings": {"home": 2206.7, "away": 1650.6}, "models": {"elo": {"xg_home": 2.89, "xg_away": 0.08, "p": [0.9314, 0.0638, 0.0048]}, "dixon_coles": {"xg_home": 2.64, "xg_away": 0.46, "p": [0.8342, 0.1235, 0.0423]}, "market": null}, "prediction": {"p_home": 0.8682, "p_draw": 0.1026, "p_away": 0.0291, "xg_home": 2.73, "xg_away": 0.34, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1754}, {"score": "3-0", "prob": 0.1602}, {"score": "1-0", "prob": 0.1266}, {"score": "4-0", "prob": 0.11}, {"score": "5-0", "prob": 0.0605}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.3773}}, {"date": "2026-06-15", "round": "Matchday 5", "group": "Group H", "home": "Saudi Arabia", "away": "Uruguay", "played": true, "actual": [1, 1], "elo_ratings": {"home": 1693.4, "away": 1959.1}, "models": {"elo": {"xg_home": 0.64, "xg_away": 2.09, "p": [0.1006, 0.1857, 0.7137]}, "dixon_coles": {"xg_home": 0.48, "xg_away": 1.3, "p": [0.1315, 0.3003, 0.5682]}, "market": null}, "prediction": {"p_home": 0.1207, "p_draw": 0.2602, "p_away": 0.6191, "xg_home": 0.53, "xg_away": 1.56, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1914}, {"score": "0-2", "prob": 0.144}, {"score": "0-0", "prob": 0.137}, {"score": "1-1", "prob": 0.1008}, {"score": "1-2", "prob": 0.076}]}, "eval": {"outcome": "draw", "predicted": "away", "correct_1x2": false, "exact_score_hit": false, "rps": 0.1989}}, {"date": "2026-06-16", "round": "Matchday 6", "group": "Group I", "home": "France", "away": "Senegal", "played": true, "actual": [3, 1], "elo_ratings": {"home": 2113.5, "away": 1900.7}, "models": {"elo": {"xg_home": 1.95, "xg_away": 0.78, "p": [0.6484, 0.2094, 0.1422]}, "dixon_coles": {"xg_home": 1.39, "xg_away": 0.84, "p": [0.4938, 0.2854, 0.2208]}, "market": null}, "prediction": {"p_home": 0.5479, "p_draw": 0.2588, "p_away": 0.1933, "xg_home": 1.58, "xg_away": 0.82, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.14}, {"score": "1-1", "prob": 0.1197}, {"score": "2-0", "prob": 0.1114}, {"score": "0-0", "prob": 0.0968}, {"score": "2-1", "prob": 0.0911}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1209}}, {"date": "2026-06-16", "round": "Matchday 6", "group": "Group I", "home": "Iraq", "away": "Norway", "played": true, "actual": [1, 4], "elo_ratings": {"home": 1733.0, "away": 1970.4}, "models": {"elo": {"xg_home": 0.71, "xg_away": 2.02, "p": [0.122, 0.1988, 0.6793]}, "dixon_coles": {"xg_home": 0.78, "xg_away": 1.67, "p": [0.1694, 0.2511, 0.5795]}, "market": null}, "prediction": {"p_home": 0.1528, "p_draw": 0.2328, "p_away": 0.6144, "xg_home": 0.76, "xg_away": 1.78, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1372}, {"score": "0-2", "prob": 0.1245}, {"score": "1-1", "prob": 0.1092}, {"score": "1-2", "prob": 0.0946}, {"score": "0-0", "prob": 0.0822}]}, "eval": {"outcome": "away", "predicted": "away", "correct_1x2": true, "exact_score_hit": false, "rps": 0.086}}, {"date": "2026-06-16", "round": "Matchday 6", "group": "Group J", "home": "Argentina", "away": "Algeria", "played": true, "actual": [3, 0], "elo_ratings": {"home": 2174.2, "away": 1874.3}, "models": {"elo": {"xg_home": 2.19, "xg_away": 0.54, "p": [0.7537, 0.1688, 0.0775]}, "dixon_coles": {"xg_home": 1.82, "xg_away": 0.65, "p": [0.6505, 0.2269, 0.1226]}, "market": null}, "prediction": {"p_home": 0.6866, "p_draw": 0.2065, "p_away": 0.1068, "xg_home": 1.94, "xg_away": 0.61, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1479}, {"score": "2-0", "prob": 0.1457}, {"score": "1-1", "prob": 0.0949}, {"score": "3-0", "prob": 0.0946}, {"score": "2-1", "prob": 0.0895}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0548}}, {"date": "2026-06-16", "round": "Matchday 6", "group": "Group J", "home": "Austria", "away": "Jordan", "played": true, "actual": [3, 1], "elo_ratings": {"home": 1885.5, "away": 1767.2}, "models": {"elo": {"xg_home": 1.69, "xg_away": 1.04, "p": [0.5256, 0.2413, 0.2331]}, "dixon_coles": {"xg_home": 1.49, "xg_away": 0.98, "p": [0.4844, 0.2721, 0.2435]}, "market": null}, "prediction": {"p_home": 0.4988, "p_draw": 0.2613, "p_away": 0.2399, "xg_home": 1.55, "xg_away": 1.0, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1239}, {"score": "1-0", "prob": 0.1178}, {"score": "2-0", "prob": 0.0939}, {"score": "2-1", "prob": 0.0937}, {"score": "0-0", "prob": 0.0819}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1544}}, {"date": "2026-06-17", "round": "Matchday 7", "group": "Group K", "home": "Portugal", "away": "DR Congo", "played": true, "actual": [1, 1], "elo_ratings": {"home": 2036.2, "away": 1754.3}, "models": {"elo": {"xg_home": 2.14, "xg_away": 0.59, "p": [0.7329, 0.1778, 0.0893]}, "dixon_coles": {"xg_home": 1.63, "xg_away": 0.61, "p": [0.6178, 0.2505, 0.1317]}, "market": null}, "prediction": {"p_home": 0.6581, "p_draw": 0.225, "p_away": 0.1169, "xg_home": 1.8, "xg_away": 0.6, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1602}, {"score": "2-0", "prob": 0.1446}, {"score": "1-1", "prob": 0.1005}, {"score": "0-0", "prob": 0.0952}, {"score": "2-1", "prob": 0.0874}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.2234}}, {"date": "2026-06-17", "round": "Matchday 7", "group": "Group K", "home": "Uzbekistan", "away": "Colombia", "played": true, "actual": [1, 3], "elo_ratings": {"home": 1818.9, "away": 2048.5}, "models": {"elo": {"xg_home": 0.74, "xg_away": 1.99, "p": [0.1282, 0.2022, 0.6696]}, "dixon_coles": {"xg_home": 0.63, "xg_away": 1.4, "p": [0.1611, 0.2848, 0.5541]}, "market": null}, "prediction": {"p_home": 0.1496, "p_draw": 0.2559, "p_away": 0.5945, "xg_home": 0.66, "xg_away": 1.6, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1647}, {"score": "0-2", "prob": 0.1303}, {"score": "0-0", "prob": 0.1126}, {"score": "1-1", "prob": 0.1114}, {"score": "1-2", "prob": 0.0861}]}, "eval": {"outcome": "away", "predicted": "away", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0934}}, {"date": "2026-06-17", "round": "Matchday 7", "group": "Group L", "home": "England", "away": "Croatia", "played": true, "actual": [4, 2], "elo_ratings": {"home": 2082.8, "away": 1963.7}, "models": {"elo": {"xg_home": 1.69, "xg_away": 1.04, "p": [0.5268, 0.241, 0.2322]}, "dixon_coles": {"xg_home": 1.39, "xg_away": 0.8, "p": [0.504, 0.286, 0.2099]}, "market": null}, "prediction": {"p_home": 0.512, "p_draw": 0.2703, "p_away": 0.2177, "xg_home": 1.49, "xg_away": 0.88, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1378}, {"score": "1-1", "prob": 0.1242}, {"score": "2-0", "prob": 0.1037}, {"score": "0-0", "prob": 0.1001}, {"score": "2-1", "prob": 0.09}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1428}}, {"date": "2026-06-17", "round": "Matchday 7", "group": "Group L", "home": "Ghana", "away": "Panama", "played": true, "actual": [1, 0], "elo_ratings": {"home": 1624.8, "away": 1830.4}, "models": {"elo": {"xg_home": 0.8, "xg_away": 1.93, "p": [0.1484, 0.2123, 0.6393]}, "dixon_coles": {"xg_home": 1.21, "xg_away": 1.27, "p": [0.3451, 0.2822, 0.3727]}, "market": null}, "prediction": {"p_home": 0.2762, "p_draw": 0.2577, "p_away": 0.466, "xg_home": 1.07, "xg_away": 1.49, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1225}, {"score": "0-1", "prob": 0.1107}, {"score": "1-2", "prob": 0.0881}, {"score": "0-2", "prob": 0.0861}, {"score": "0-0", "prob": 0.0809}]}, "eval": {"outcome": "home", "predicted": "away", "correct_1x2": false, "exact_score_hit": false, "rps": 0.3705}}, {"date": "2026-06-18", "round": "Matchday 8", "group": "Group A", "home": "Czech Republic", "away": "South Africa", "played": true, "actual": [1, 1], "elo_ratings": {"home": 1778.2, "away": 1649.7}, "models": {"elo": {"xg_home": 1.72, "xg_away": 1.01, "p": [0.5391, 0.2386, 0.2223]}, "dixon_coles": {"xg_home": 1.26, "xg_away": 0.96, "p": [0.4286, 0.2964, 0.2749]}, "market": null}, "prediction": {"p_home": 0.4673, "p_draw": 0.2762, "p_away": 0.2565, "xg_home": 1.41, "xg_away": 0.97, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1285}, {"score": "1-0", "prob": 0.1263}, {"score": "0-0", "prob": 0.0979}, {"score": "2-0", "prob": 0.0904}, {"score": "2-1", "prob": 0.0882}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": true, "rps": 0.1421}}, {"date": "2026-06-18", "round": "Matchday 8", "group": "Group A", "home": "Mexico", "away": "South Korea", "played": true, "actual": [1, 0], "elo_ratings": {"home": 1976.9, "away": 1899.9}, "models": {"elo": {"xg_home": 1.58, "xg_away": 1.15, "p": [0.4713, 0.25, 0.2788]}, "dixon_coles": {"xg_home": 1.14, "xg_away": 0.95, "p": [0.3921, 0.3101, 0.2978]}, "market": null}, "prediction": {"p_home": 0.4198, "p_draw": 0.289, "p_away": 0.2911, "xg_home": 1.28, "xg_away": 1.02, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1321}, {"score": "1-0", "prob": 0.1253}, {"score": "0-0", "prob": 0.1081}, {"score": "0-1", "prob": 0.1001}, {"score": "2-1", "prob": 0.0822}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.2107}}, {"date": "2026-06-18", "round": "Matchday 8", "group": "Group B", "home": "Switzerland", "away": "Bosnia and Herzegovina", "played": true, "actual": [4, 1], "elo_ratings": {"home": 1929.0, "away": 1677.6}, "models": {"elo": {"xg_home": 2.05, "xg_away": 0.68, "p": [0.6964, 0.1924, 0.1112]}, "dixon_coles": {"xg_home": 2.01, "xg_away": 0.71, "p": [0.6733, 0.2078, 0.1188]}, "market": null}, "prediction": {"p_home": 0.6814, "p_draw": 0.2024, "p_away": 0.1162, "xg_home": 2.02, "xg_away": 0.7, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1343}, {"score": "1-0", "prob": 0.1301}, {"score": "1-1", "prob": 0.0956}, {"score": "2-1", "prob": 0.0942}, {"score": "3-0", "prob": 0.0905}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0575}}, {"date": "2026-06-18", "round": "Matchday 8", "group": "Group B", "home": "Canada", "away": "Qatar", "played": true, "actual": [6, 0], "elo_ratings": {"home": 1872.7, "away": 1600.2}, "models": {"elo": {"xg_home": 2.11, "xg_away": 0.62, "p": [0.7218, 0.1824, 0.0958]}, "dixon_coles": {"xg_home": 1.91, "xg_away": 0.92, "p": [0.6013, 0.227, 0.1716]}, "market": null}, "prediction": {"p_home": 0.6435, "p_draw": 0.2114, "p_away": 0.1451, "xg_home": 1.98, "xg_away": 0.82, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1204}, {"score": "1-0", "prob": 0.1184}, {"score": "1-1", "prob": 0.1001}, {"score": "2-1", "prob": 0.0966}, {"score": "3-0", "prob": 0.0798}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0741}}, {"date": "2026-06-19", "round": "Matchday 9", "group": "Group C", "home": "Scotland", "away": "Morocco", "played": true, "actual": [0, 1], "elo_ratings": {"home": 1861.7, "away": 1993.9}, "models": {"elo": {"xg_home": 1.0, "xg_away": 1.73, "p": [0.2184, 0.2375, 0.544]}, "dixon_coles": {"xg_home": 0.58, "xg_away": 1.31, "p": [0.1615, 0.2999, 0.5386]}, "market": null}, "prediction": {"p_home": 0.1814, "p_draw": 0.2781, "p_away": 0.5405, "xg_home": 0.72, "xg_away": 1.44, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1669}, {"score": "0-0", "prob": 0.126}, {"score": "0-2", "prob": 0.1188}, {"score": "1-1", "prob": 0.117}, {"score": "1-2", "prob": 0.0824}]}, "eval": {"outcome": "away", "predicted": "away", "correct_1x2": true, "exact_score_hit": true, "rps": 0.122}}, {"date": "2026-06-19", "round": "Matchday 9", "group": "Group C", "home": "Brazil", "away": "Haiti", "played": true, "actual": [3, 0], "elo_ratings": {"home": 2047.0, "away": 1664.9}, "models": {"elo": {"xg_home": 2.41, "xg_away": 0.32, "p": [0.8403, 0.1254, 0.0343]}, "dixon_coles": {"xg_home": 2.97, "xg_away": 0.54, "p": [0.8549, 0.1053, 0.0399]}, "market": null}, "prediction": {"p_home": 0.8498, "p_draw": 0.1123, "p_away": 0.0379, "xg_home": 2.79, "xg_away": 0.47, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1501}, {"score": "3-0", "prob": 0.1373}, {"score": "1-0", "prob": 0.1091}, {"score": "4-0", "prob": 0.0952}, {"score": "2-1", "prob": 0.0678}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.012}}, {"date": "2026-06-19", "round": "Matchday 9", "group": "Group D", "home": "United States", "away": "Australia", "played": true, "actual": [2, 0], "elo_ratings": {"home": 1904.5, "away": 1948.4}, "models": {"elo": {"xg_home": 1.24, "xg_away": 1.49, "p": [0.3178, 0.2544, 0.4278]}, "dixon_coles": {"xg_home": 0.95, "xg_away": 1.19, "p": [0.2849, 0.3046, 0.4105]}, "market": null}, "prediction": {"p_home": 0.2964, "p_draw": 0.287, "p_away": 0.4166, "xg_home": 1.04, "xg_away": 1.29, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1321}, {"score": "0-1", "prob": 0.1228}, {"score": "0-0", "prob": 0.1043}, {"score": "1-0", "prob": 0.0982}, {"score": "1-2", "prob": 0.0827}]}, "eval": {"outcome": "home", "predicted": "away", "correct_1x2": false, "exact_score_hit": false, "rps": 0.3343}}, {"date": "2026-06-19", "round": "Matchday 9", "group": "Group D", "home": "Turkey", "away": "Paraguay", "played": true, "actual": [0, 1], "elo_ratings": {"home": 1908.3, "away": 1841.7}, "models": {"elo": {"xg_home": 1.55, "xg_away": 1.18, "p": [0.4574, 0.2516, 0.291]}, "dixon_coles": {"xg_home": 1.11, "xg_away": 1.1, "p": [0.3504, 0.3018, 0.3478]}, "market": null}, "prediction": {"p_home": 0.3878, "p_draw": 0.2843, "p_away": 0.3279, "xg_home": 1.25, "xg_away": 1.13, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1324}, {"score": "1-0", "prob": 0.1119}, {"score": "0-1", "prob": 0.1024}, {"score": "0-0", "prob": 0.0987}, {"score": "2-1", "prob": 0.0807}]}, "eval": {"outcome": "away", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.3011}}, {"date": "2026-06-20", "round": "Matchday 10", "group": "Group E", "home": "Germany", "away": "Ivory Coast", "played": true, "actual": [2, 1], "elo_ratings": {"home": 2018.9, "away": 1859.8}, "models": {"elo": {"xg_home": 1.8, "xg_away": 0.93, "p": [0.5794, 0.2293, 0.1913]}, "dixon_coles": {"xg_home": 1.64, "xg_away": 0.86, "p": [0.553, 0.2556, 0.1914]}, "market": null}, "prediction": {"p_home": 0.5622, "p_draw": 0.2464, "p_away": 0.1914, "xg_home": 1.69, "xg_away": 0.88, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1259}, {"score": "1-1", "prob": 0.1166}, {"score": "2-0", "prob": 0.109}, {"score": "2-1", "prob": 0.0961}, {"score": "0-0", "prob": 0.0798}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1141}}, {"date": "2026-06-20", "round": "Matchday 10", "group": "Group E", "home": "Ecuador", "away": "Curaçao", "played": true, "actual": [0, 0], "elo_ratings": {"home": 1965.8, "away": 1584.8}, "models": {"elo": {"xg_home": 2.41, "xg_away": 0.32, "p": [0.8393, 0.126, 0.0347]}, "dixon_coles": {"xg_home": 1.65, "xg_away": 0.43, "p": [0.6727, 0.2385, 0.0888]}, "market": null}, "prediction": {"p_home": 0.731, "p_draw": 0.1992, "p_away": 0.0698, "xg_home": 1.9, "xg_away": 0.39, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1889}, {"score": "2-0", "prob": 0.1772}, {"score": "3-0", "prob": 0.1129}, {"score": "0-0", "prob": 0.1065}, {"score": "1-1", "prob": 0.0778}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.2696}}, {"date": "2026-06-20", "round": "Matchday 10", "group": "Group F", "home": "Netherlands", "away": "Sweden", "played": true, "actual": [5, 1], "elo_ratings": {"home": 2007.7, "away": 1821.7}, "models": {"elo": {"xg_home": 1.88, "xg_away": 0.86, "p": [0.6142, 0.2199, 0.1659]}, "dixon_coles": {"xg_home": 1.96, "xg_away": 1.06, "p": [0.5798, 0.2253, 0.195]}, "market": null}, "prediction": {"p_home": 0.5918, "p_draw": 0.2234, "p_away": 0.1848, "xg_home": 1.93, "xg_away": 0.99, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1053}, {"score": "1-0", "prob": 0.1017}, {"score": "2-0", "prob": 0.1009}, {"score": "2-1", "prob": 0.0991}, {"score": "3-0", "prob": 0.0649}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1004}}, {"date": "2026-06-20", "round": "Matchday 10", "group": "Group F", "home": "Tunisia", "away": "Japan", "played": true, "actual": [0, 4], "elo_ratings": {"home": 1681.8, "away": 1992.8}, "models": {"elo": {"xg_home": 0.51, "xg_away": 2.22, "p": [0.0707, 0.1631, 0.7662]}, "dixon_coles": {"xg_home": 0.71, "xg_away": 1.35, "p": [0.1912, 0.2932, 0.5155]}, "market": null}, "prediction": {"p_home": 0.1491, "p_draw": 0.2477, "p_away": 0.6033, "xg_home": 0.64, "xg_away": 1.64, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1622}, {"score": "0-2", "prob": 0.132}, {"score": "0-0", "prob": 0.1099}, {"score": "1-1", "prob": 0.1086}, {"score": "1-2", "prob": 0.0832}]}, "eval": {"outcome": "away", "predicted": "away", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0898}}, {"date": "2026-06-21", "round": "Matchday 11", "group": "Group G", "home": "Belgium", "away": "Iran", "played": true, "actual": [0, 0], "elo_ratings": {"home": 1933.8, "away": 1876.7}, "models": {"elo": {"xg_home": 1.52, "xg_away": 1.21, "p": [0.445, 0.2529, 0.3021]}, "dixon_coles": {"xg_home": 1.47, "xg_away": 1.01, "p": [0.4718, 0.2729, 0.2552]}, "market": null}, "prediction": {"p_home": 0.4625, "p_draw": 0.2659, "p_away": 0.2716, "xg_home": 1.49, "xg_away": 1.08, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1262}, {"score": "1-0", "prob": 0.1113}, {"score": "2-1", "prob": 0.0912}, {"score": "2-0", "prob": 0.0853}, {"score": "0-0", "prob": 0.0809}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.1438}}, {"date": "2026-06-21", "round": "Matchday 11", "group": "Group G", "home": "New Zealand", "away": "Egypt", "played": true, "actual": [1, 3], "elo_ratings": {"home": 1730.3, "away": 1814.7}, "models": {"elo": {"xg_home": 1.13, "xg_away": 1.6, "p": [0.2705, 0.2487, 0.4808]}, "dixon_coles": {"xg_home": 0.83, "xg_away": 1.06, "p": [0.2744, 0.3275, 0.398]}, "market": null}, "prediction": {"p_home": 0.2731, "p_draw": 0.2999, "p_away": 0.427, "xg_home": 0.93, "xg_away": 1.24, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1392}, {"score": "1-1", "prob": 0.131}, {"score": "0-0", "prob": 0.1265}, {"score": "1-0", "prob": 0.105}, {"score": "0-2", "prob": 0.0849}]}, "eval": {"outcome": "away", "predicted": "away", "correct_1x2": true, "exact_score_hit": false, "rps": 0.2014}}, {"date": "2026-06-21", "round": "Matchday 11", "group": "Group H", "home": "Spain", "away": "Saudi Arabia", "played": true, "actual": [4, 0], "elo_ratings": {"home": 2179.1, "away": 1712.7}, "models": {"elo": {"xg_home": 2.64, "xg_away": 0.09, "p": [0.9127, 0.0808, 0.0065]}, "dixon_coles": {"xg_home": 2.19, "xg_away": 0.49, "p": [0.7644, 0.1702, 0.0654]}, "market": null}, "prediction": {"p_home": 0.8163, "p_draw": 0.1389, "p_away": 0.0448, "xg_home": 2.35, "xg_away": 0.36, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1857}, {"score": "1-0", "prob": 0.1557}, {"score": "3-0", "prob": 0.1468}, {"score": "4-0", "prob": 0.0879}, {"score": "0-0", "prob": 0.068}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0179}}, {"date": "2026-06-21", "round": "Matchday 11", "group": "Group H", "home": "Uruguay", "away": "Cape Verde", "played": true, "actual": [2, 2], "elo_ratings": {"home": 1939.8, "away": 1678.3}, "models": {"elo": {"xg_home": 2.08, "xg_away": 0.65, "p": [0.7086, 0.1877, 0.1037]}, "dixon_coles": {"xg_home": 1.57, "xg_away": 0.45, "p": [0.6474, 0.2529, 0.0997]}, "market": null}, "prediction": {"p_home": 0.6688, "p_draw": 0.2301, "p_away": 0.1011, "xg_home": 1.73, "xg_away": 0.51, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1828}, {"score": "2-0", "prob": 0.1566}, {"score": "0-0", "prob": 0.113}, {"score": "1-1", "prob": 0.094}, {"score": "3-0", "prob": 0.0896}]}, "eval": {"outcome": "draw", "predicted": "home", "correct_1x2": false, "exact_score_hit": false, "rps": 0.2288}}, {"date": "2026-06-22", "round": "Matchday 12", "group": "Group I", "home": "France", "away": "Iraq", "played": true, "actual": [3, 0], "elo_ratings": {"home": 2133.9, "away": 1711.6}, "models": {"elo": {"xg_home": 2.52, "xg_away": 0.21, "p": [0.877, 0.1039, 0.0191]}, "dixon_coles": {"xg_home": 1.86, "xg_away": 0.56, "p": [0.6823, 0.2168, 0.101]}, "market": {"p": [0.8836, 0.0822, 0.0342], "n_books": 31}}, "prediction": {"p_home": 0.7956, "p_draw": 0.1448, "p_away": 0.0596, "xg_home": 2.17, "xg_away": 0.41, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1822}, {"score": "1-0", "prob": 0.1729}, {"score": "3-0", "prob": 0.1287}, {"score": "2-1", "prob": 0.0775}, {"score": "4-0", "prob": 0.0698}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0227}}, {"date": "2026-06-22", "round": "Matchday 12", "group": "Group I", "home": "Norway", "away": "Senegal", "played": true, "actual": [3, 2], "elo_ratings": {"home": 1991.7, "away": 1880.3}, "models": {"elo": {"xg_home": 1.67, "xg_away": 1.06, "p": [0.5165, 0.243, 0.2405]}, "dixon_coles": {"xg_home": 1.25, "xg_away": 1.16, "p": [0.3767, 0.2867, 0.3366]}, "market": {"p": [0.4231, 0.2804, 0.2965], "n_books": 31}}, "prediction": {"p_home": 0.4237, "p_draw": 0.2749, "p_away": 0.3014, "xg_home": 1.39, "xg_away": 1.12, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1303}, {"score": "1-0", "prob": 0.1077}, {"score": "0-1", "prob": 0.0881}, {"score": "2-1", "prob": 0.0865}, {"score": "0-0", "prob": 0.0863}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.2115}}, {"date": "2026-06-22", "round": "Matchday 12", "group": "Group J", "home": "Argentina", "away": "Austria", "played": true, "actual": [2, 0], "elo_ratings": {"home": 2190.1, "away": 1915.8}, "models": {"elo": {"xg_home": 2.12, "xg_away": 0.61, "p": [0.724, 0.1815, 0.0945]}, "dixon_coles": {"xg_home": 1.72, "xg_away": 0.62, "p": [0.6344, 0.2394, 0.1262]}, "market": null}, "prediction": {"p_home": 0.6658, "p_draw": 0.2191, "p_away": 0.1151, "xg_home": 1.85, "xg_away": 0.62, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1544}, {"score": "2-0", "prob": 0.144}, {"score": "1-1", "prob": 0.0994}, {"score": "2-1", "prob": 0.0891}, {"score": "0-0", "prob": 0.0888}]}, "eval": {"outcome": "home", "predicted": "home", "correct_1x2": true, "exact_score_hit": false, "rps": 0.0625}}, {"date": "2026-06-22", "round": "Matchday 12", "group": "Group J", "home": "Jordan", "away": "Algeria", "played": true, "actual": [1, 2], "elo_ratings": {"home": 1737.0, "away": 1858.4}, "models": {"elo": {"xg_home": 1.03, "xg_away": 1.7, "p": [0.2298, 0.2405, 0.5298]}, "dixon_coles": {"xg_home": 1.04, "xg_away": 1.56, "p": [0.2482, 0.2641, 0.4878]}, "market": {"p": [0.1502, 0.2242, 0.6256], "n_books": 31}}, "prediction": {"p_home": 0.2098, "p_draw": 0.2449, "p_away": 0.5453, "xg_home": 0.98, "xg_away": 1.68, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1206}, {"score": "1-1", "prob": 0.1166}, {"score": "1-2", "prob": 0.1032}, {"score": "0-2", "prob": 0.0996}, {"score": "0-0", "prob": 0.0717}]}, "eval": {"outcome": "away", "predicted": "away", "correct_1x2": true, "exact_score_hit": false, "rps": 0.1254}}, {"date": "2026-06-23", "round": "Matchday 13", "group": "Group K", "home": "Portugal", "away": "Uzbekistan", "played": false, "actual": null, "elo_ratings": {"home": 2016.1, "away": 1800.0}, "models": {"elo": {"xg_home": 1.96, "xg_away": 0.77, "p": [0.6527, 0.208, 0.1393]}, "dixon_coles": {"xg_home": 1.55, "xg_away": 0.67, "p": [0.5805, 0.264, 0.1556]}, "market": {"p": [0.8129, 0.13, 0.0571], "n_books": 31}}, "prediction": {"p_home": 0.6777, "p_draw": 0.2047, "p_away": 0.1175, "xg_home": 1.81, "xg_away": 0.64, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1705}, {"score": "2-0", "prob": 0.1444}, {"score": "2-1", "prob": 0.1015}, {"score": "1-1", "prob": 0.0929}, {"score": "0-0", "prob": 0.0815}]}}, {"date": "2026-06-23", "round": "Matchday 13", "group": "Group K", "home": "Colombia", "away": "DR Congo", "played": false, "actual": null, "elo_ratings": {"home": 2067.4, "away": 1774.4}, "models": {"elo": {"xg_home": 2.17, "xg_away": 0.56, "p": [0.7458, 0.1723, 0.082]}, "dixon_coles": {"xg_home": 1.48, "xg_away": 0.57, "p": [0.5903, 0.2722, 0.1375]}, "market": {"p": [0.6205, 0.2355, 0.144], "n_books": 29}}, "prediction": {"p_home": 0.6351, "p_draw": 0.2373, "p_away": 0.1275, "xg_home": 1.69, "xg_away": 0.58, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1706}, {"score": "2-0", "prob": 0.1438}, {"score": "0-0", "prob": 0.1106}, {"score": "1-1", "prob": 0.1012}, {"score": "3-0", "prob": 0.0821}]}}, {"date": "2026-06-23", "round": "Matchday 13", "group": "Group L", "home": "England", "away": "Ghana", "played": false, "actual": null, "elo_ratings": {"home": 2112.9, "away": 1670.8}, "models": {"elo": {"xg_home": 2.58, "xg_away": 0.15, "p": [0.8937, 0.0934, 0.0129]}, "dixon_coles": {"xg_home": 2.12, "xg_away": 0.51, "p": [0.7474, 0.1799, 0.0727]}, "market": {"p": [0.7916, 0.1422, 0.0662], "n_books": 31}}, "prediction": {"p_home": 0.7951, "p_draw": 0.1477, "p_away": 0.0572, "xg_home": 2.27, "xg_away": 0.4, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1796}, {"score": "1-0", "prob": 0.1553}, {"score": "3-0", "prob": 0.1377}, {"score": "4-0", "prob": 0.0799}, {"score": "0-0", "prob": 0.0697}]}}, {"date": "2026-06-23", "round": "Matchday 13", "group": "Group L", "home": "Panama", "away": "Croatia", "played": false, "actual": null, "elo_ratings": {"home": 1784.4, "away": 1933.5}, "models": {"elo": {"xg_home": 0.96, "xg_away": 1.77, "p": [0.2013, 0.2326, 0.5662]}, "dixon_coles": {"xg_home": 0.83, "xg_away": 1.89, "p": [0.1541, 0.226, 0.6199]}, "market": {"p": [0.1415, 0.2311, 0.6274], "n_books": 31}}, "prediction": {"p_home": 0.1601, "p_draw": 0.2292, "p_away": 0.6107, "xg_home": 0.86, "xg_away": 1.87, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.12}, {"score": "0-2", "prob": 0.1143}, {"score": "1-1", "prob": 0.1091}, {"score": "1-2", "prob": 0.0991}, {"score": "0-3", "prob": 0.0708}]}}, {"date": "2026-06-24", "round": "Matchday 14", "group": "Group A", "home": "Czech Republic", "away": "Mexico", "played": false, "actual": null, "elo_ratings": {"home": 1767.6, "away": 2000.4}, "models": {"elo": {"xg_home": 0.73, "xg_away": 2.0, "p": [0.1256, 0.2008, 0.6736]}, "dixon_coles": {"xg_home": 0.86, "xg_away": 1.29, "p": [0.2411, 0.2969, 0.4621]}, "market": {"p": [0.2533, 0.2456, 0.5011], "n_books": 31}}, "prediction": {"p_home": 0.2199, "p_draw": 0.2578, "p_away": 0.5223, "xg_home": 0.83, "xg_away": 1.51, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1386}, {"score": "1-1", "prob": 0.118}, {"score": "0-2", "prob": 0.1067}, {"score": "0-0", "prob": 0.1005}, {"score": "1-2", "prob": 0.086}]}}, {"date": "2026-06-24", "round": "Matchday 14", "group": "Group A", "home": "South Africa", "away": "South Korea", "played": false, "actual": null, "elo_ratings": {"home": 1660.3, "away": 1876.4}, "models": {"elo": {"xg_home": 0.77, "xg_away": 1.96, "p": [0.1393, 0.208, 0.6527]}, "dixon_coles": {"xg_home": 0.84, "xg_away": 1.41, "p": [0.2187, 0.2833, 0.498]}, "market": {"p": [0.1714, 0.2447, 0.5838], "n_books": 31}}, "prediction": {"p_home": 0.1847, "p_draw": 0.2532, "p_away": 0.5621, "xg_home": 0.8, "xg_away": 1.61, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.142}, {"score": "1-1", "prob": 0.1173}, {"score": "0-2", "prob": 0.1142}, {"score": "0-0", "prob": 0.0941}, {"score": "1-2", "prob": 0.0931}]}}, {"date": "2026-06-24", "round": "Matchday 14", "group": "Group B", "home": "Switzerland", "away": "Canada", "played": false, "actual": null, "elo_ratings": {"home": 1949.0, "away": 1894.7}, "models": {"elo": {"xg_home": 1.51, "xg_away": 1.22, "p": [0.4414, 0.2533, 0.3053]}, "dixon_coles": {"xg_home": 1.42, "xg_away": 1.09, "p": [0.4404, 0.2755, 0.2841]}, "market": {"p": [0.3894, 0.3134, 0.2972], "n_books": 31}}, "prediction": {"p_home": 0.4228, "p_draw": 0.2839, "p_away": 0.2934, "xg_home": 1.43, "xg_away": 1.14, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1349}, {"score": "1-0", "prob": 0.1019}, {"score": "2-1", "prob": 0.0862}, {"score": "0-0", "prob": 0.0842}, {"score": "0-1", "prob": 0.0825}]}}, {"date": "2026-06-24", "round": "Matchday 14", "group": "Group B", "home": "Bosnia and Herzegovina", "away": "Qatar", "played": false, "actual": null, "elo_ratings": {"home": 1657.6, "away": 1578.3}, "models": {"elo": {"xg_home": 1.58, "xg_away": 1.15, "p": [0.4743, 0.2496, 0.2761]}, "dixon_coles": {"xg_home": 1.25, "xg_away": 1.3, "p": [0.3495, 0.2777, 0.3727]}, "market": {"p": [0.6618, 0.1959, 0.1423], "n_books": 31}}, "prediction": {"p_home": 0.4863, "p_draw": 0.2429, "p_away": 0.2708, "xg_home": 1.51, "xg_away": 1.12, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1196}, {"score": "1-1", "prob": 0.1156}, {"score": "2-1", "prob": 0.1048}, {"score": "2-0", "prob": 0.0845}, {"score": "0-1", "prob": 0.0708}]}}, {"date": "2026-06-24", "round": "Matchday 14", "group": "Group C", "home": "Scotland", "away": "Brazil", "played": false, "actual": null, "elo_ratings": {"home": 1842.6, "away": 2057.5}, "models": {"elo": {"xg_home": 0.78, "xg_away": 1.95, "p": [0.1404, 0.2085, 0.6512]}, "dixon_coles": {"xg_home": 0.64, "xg_away": 1.88, "p": [0.1148, 0.2187, 0.6665]}, "market": {"p": [0.1235, 0.1837, 0.6928], "n_books": 31}}, "prediction": {"p_home": 0.1235, "p_draw": 0.2042, "p_away": 0.6723, "xg_home": 0.68, "xg_away": 1.92, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.143}, {"score": "0-2", "prob": 0.1387}, {"score": "1-1", "prob": 0.095}, {"score": "1-2", "prob": 0.0943}, {"score": "0-3", "prob": 0.088}]}}, {"date": "2026-06-24", "round": "Matchday 14", "group": "Group C", "home": "Morocco", "away": "Haiti", "played": false, "actual": null, "elo_ratings": {"home": 2013.0, "away": 1654.4}, "models": {"elo": {"xg_home": 2.35, "xg_away": 0.38, "p": [0.817, 0.1381, 0.0449]}, "dixon_coles": {"xg_home": 2.06, "xg_away": 0.5, "p": [0.7401, 0.1861, 0.0737]}, "market": {"p": [0.8114, 0.1309, 0.0577], "n_books": 31}}, "prediction": {"p_home": 0.782, "p_draw": 0.1562, "p_away": 0.0618, "xg_home": 2.19, "xg_away": 0.45, "most_likely": "2-0", "top_scores": [{"score": "2-0", "prob": 0.1734}, {"score": "1-0", "prob": 0.1589}, {"score": "3-0", "prob": 0.1248}, {"score": "2-1", "prob": 0.0792}, {"score": "0-0", "prob": 0.0694}]}}, {"date": "2026-06-25", "round": "Matchday 15", "group": "Group D", "home": "Turkey", "away": "United States", "played": false, "actual": null, "elo_ratings": {"home": 1872.6, "away": 1955.2}, "models": {"elo": {"xg_home": 1.14, "xg_away": 1.59, "p": [0.2724, 0.249, 0.4786]}, "dixon_coles": {"xg_home": 1.29, "xg_away": 1.31, "p": [0.3593, 0.2746, 0.3661]}, "market": {"p": [0.2705, 0.2344, 0.4951], "n_books": 31}}, "prediction": {"p_home": 0.3091, "p_draw": 0.2549, "p_away": 0.436, "xg_home": 1.2, "xg_away": 1.45, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1213}, {"score": "0-1", "prob": 0.1037}, {"score": "1-2", "prob": 0.0931}, {"score": "1-0", "prob": 0.0796}, {"score": "0-2", "prob": 0.0755}]}}, {"date": "2026-06-25", "round": "Matchday 15", "group": "Group D", "home": "Paraguay", "away": "Australia", "played": false, "actual": null, "elo_ratings": {"home": 1877.4, "away": 1897.7}, "models": {"elo": {"xg_home": 1.31, "xg_away": 1.42, "p": [0.3464, 0.2561, 0.3975]}, "dixon_coles": {"xg_home": 0.8, "xg_away": 1.02, "p": [0.2716, 0.3348, 0.3935]}, "market": {"p": [0.3315, 0.4254, 0.2431], "n_books": 31}}, "prediction": {"p_home": 0.309, "p_draw": 0.3492, "p_away": 0.3418, "xg_home": 0.99, "xg_away": 1.08, "most_likely": "0-0", "top_scores": [{"score": "0-0", "prob": 0.152}, {"score": "1-1", "prob": 0.1495}, {"score": "0-1", "prob": 0.1198}, {"score": "1-0", "prob": 0.1164}, {"score": "0-2", "prob": 0.0681}]}}, {"date": "2026-06-25", "round": "Matchday 15", "group": "Group E", "home": "Curaçao", "away": "Ivory Coast", "played": false, "actual": null, "elo_ratings": {"home": 1608.8, "away": 1842.6}, "models": {"elo": {"xg_home": 0.72, "xg_away": 2.01, "p": [0.1248, 0.2003, 0.6749]}, "dixon_coles": {"xg_home": 0.63, "xg_away": 1.48, "p": [0.154, 0.2732, 0.5728]}, "market": {"p": [0.0515, 0.1159, 0.8326], "n_books": 31}}, "prediction": {"p_home": 0.1117, "p_draw": 0.2021, "p_away": 0.6862, "xg_home": 0.6, "xg_away": 1.79, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1815}, {"score": "0-2", "prob": 0.1496}, {"score": "1-2", "prob": 0.0991}, {"score": "1-1", "prob": 0.0895}, {"score": "0-0", "prob": 0.086}]}}, {"date": "2026-06-25", "round": "Matchday 15", "group": "Group E", "home": "Ecuador", "away": "Germany", "played": false, "actual": null, "elo_ratings": {"home": 1941.8, "away": 2036.0}, "models": {"elo": {"xg_home": 1.11, "xg_away": 1.62, "p": [0.2594, 0.2468, 0.4938]}, "dixon_coles": {"xg_home": 0.96, "xg_away": 1.12, "p": [0.303, 0.3117, 0.3854]}, "market": {"p": [0.262, 0.2439, 0.4941], "n_books": 31}}, "prediction": {"p_home": 0.279, "p_draw": 0.2737, "p_away": 0.4473, "xg_home": 0.98, "xg_away": 1.32, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1334}, {"score": "1-1", "prob": 0.1249}, {"score": "0-0", "prob": 0.1034}, {"score": "1-0", "prob": 0.0974}, {"score": "1-2", "prob": 0.0868}]}}, {"date": "2026-06-25", "round": "Matchday 15", "group": "Group F", "home": "Japan", "away": "Sweden", "played": false, "actual": null, "elo_ratings": {"home": 2008.9, "away": 1793.0}, "models": {"elo": {"xg_home": 1.96, "xg_away": 0.77, "p": [0.6524, 0.2081, 0.1395]}, "dixon_coles": {"xg_home": 1.72, "xg_away": 0.97, "p": [0.5452, 0.2481, 0.2068]}, "market": {"p": [0.4941, 0.2768, 0.2291], "n_books": 31}}, "prediction": {"p_home": 0.5509, "p_draw": 0.2493, "p_away": 0.1998, "xg_home": 1.74, "xg_away": 0.93, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1186}, {"score": "1-0", "prob": 0.1115}, {"score": "2-0", "prob": 0.1031}, {"score": "2-1", "prob": 0.0923}, {"score": "0-0", "prob": 0.0748}]}}, {"date": "2026-06-25", "round": "Matchday 15", "group": "Group F", "home": "Tunisia", "away": "Netherlands", "played": false, "actual": null, "elo_ratings": {"home": 1665.7, "away": 2036.4}, "models": {"elo": {"xg_home": 0.35, "xg_away": 2.38, "p": [0.0393, 0.1316, 0.8291]}, "dixon_coles": {"xg_home": 0.77, "xg_away": 1.54, "p": [0.1827, 0.2673, 0.55]}, "market": {"p": [0.0429, 0.1054, 0.8518], "n_books": 30}}, "prediction": {"p_home": 0.1022, "p_draw": 0.1808, "p_away": 0.717, "xg_home": 0.57, "xg_away": 1.95, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1684}, {"score": "0-2", "prob": 0.1559}, {"score": "0-3", "prob": 0.0986}, {"score": "1-2", "prob": 0.0922}, {"score": "1-1", "prob": 0.0815}]}}, {"date": "2026-06-26", "round": "Matchday 16", "group": "Group G", "home": "Egypt", "away": "Iran", "played": false, "actual": null, "elo_ratings": {"home": 1849.0, "away": 1881.6}, "models": {"elo": {"xg_home": 1.28, "xg_away": 1.45, "p": [0.3313, 0.2553, 0.4134]}, "dixon_coles": {"xg_home": 0.86, "xg_away": 1.09, "p": [0.2781, 0.322, 0.3999]}, "market": {"p": [0.3925, 0.3496, 0.2579], "n_books": 28}}, "prediction": {"p_home": 0.3299, "p_draw": 0.317, "p_away": 0.3531, "xg_home": 1.05, "xg_away": 1.13, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1405}, {"score": "0-0", "prob": 0.1284}, {"score": "1-0", "prob": 0.1185}, {"score": "0-1", "prob": 0.1155}, {"score": "2-1", "prob": 0.0711}]}}, {"date": "2026-06-26", "round": "Matchday 16", "group": "Group G", "home": "New Zealand", "away": "Belgium", "played": false, "actual": null, "elo_ratings": {"home": 1696.1, "away": 1928.9}, "models": {"elo": {"xg_home": 0.73, "xg_away": 2.0, "p": [0.1256, 0.2008, 0.6736]}, "dixon_coles": {"xg_home": 0.77, "xg_away": 1.82, "p": [0.1494, 0.2324, 0.6181]}, "market": {"p": [0.0691, 0.1405, 0.7904], "n_books": 28}}, "prediction": {"p_home": 0.1161, "p_draw": 0.1933, "p_away": 0.6906, "xg_home": 0.71, "xg_away": 1.98, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1427}, {"score": "0-2", "prob": 0.137}, {"score": "1-2", "prob": 0.1038}, {"score": "1-1", "prob": 0.0913}, {"score": "0-3", "prob": 0.0859}]}}, {"date": "2026-06-26", "round": "Matchday 16", "group": "Group H", "home": "Cape Verde", "away": "Saudi Arabia", "played": false, "actual": null, "elo_ratings": {"home": 1697.4, "away": 1705.5}, "models": {"elo": {"xg_home": 1.34, "xg_away": 1.39, "p": [0.3616, 0.2565, 0.3819]}, "dixon_coles": {"xg_home": 0.78, "xg_away": 0.99, "p": [0.2714, 0.3403, 0.3883]}, "market": {"p": [0.404, 0.2718, 0.3242], "n_books": 28}}, "prediction": {"p_home": 0.3376, "p_draw": 0.2979, "p_away": 0.3645, "xg_home": 1.01, "xg_away": 1.08, "most_likely": "0-0", "top_scores": [{"score": "0-0", "prob": 0.1331}, {"score": "0-1", "prob": 0.1319}, {"score": "1-0", "prob": 0.1285}, {"score": "1-1", "prob": 0.1256}, {"score": "0-2", "prob": 0.0727}]}}, {"date": "2026-06-26", "round": "Matchday 16", "group": "Group H", "home": "Uruguay", "away": "Spain", "played": false, "actual": null, "elo_ratings": {"home": 1920.7, "away": 2186.3}, "models": {"elo": {"xg_home": 0.64, "xg_away": 2.09, "p": [0.1007, 0.1857, 0.7136]}, "dixon_coles": {"xg_home": 0.77, "xg_away": 1.27, "p": [0.2214, 0.3025, 0.4761]}, "market": {"p": [0.138, 0.2239, 0.6381], "n_books": 28}}, "prediction": {"p_home": 0.1657, "p_draw": 0.2493, "p_away": 0.585, "xg_home": 0.7, "xg_away": 1.59, "most_likely": "0-1", "top_scores": [{"score": "0-1", "prob": 0.1609}, {"score": "0-2", "prob": 0.1238}, {"score": "1-1", "prob": 0.111}, {"score": "0-0", "prob": 0.1059}, {"score": "1-2", "prob": 0.0891}]}}, {"date": "2026-06-26", "round": "Matchday 16", "group": "Group I", "home": "Norway", "away": "France", "played": false, "actual": null, "elo_ratings": {"home": 2012.4, "away": 2142.4}, "models": {"elo": {"xg_home": 1.01, "xg_away": 1.72, "p": [0.2207, 0.2382, 0.5411]}, "dixon_coles": {"xg_home": 1.06, "xg_away": 1.64, "p": [0.2399, 0.2553, 0.5048]}, "market": {"p": [0.2166, 0.2475, 0.5359], "n_books": 28}}, "prediction": {"p_home": 0.2275, "p_draw": 0.2488, "p_away": 0.5237, "xg_home": 1.03, "xg_away": 1.68, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1184}, {"score": "0-1", "prob": 0.1088}, {"score": "1-2", "prob": 0.0977}, {"score": "0-2", "prob": 0.0937}, {"score": "0-0", "prob": 0.0694}]}}, {"date": "2026-06-26", "round": "Matchday 16", "group": "Group I", "home": "Senegal", "away": "Iraq", "played": false, "actual": null, "elo_ratings": {"home": 1859.6, "away": 1703.1}, "models": {"elo": {"xg_home": 1.79, "xg_away": 0.94, "p": [0.5759, 0.2302, 0.1939]}, "dixon_coles": {"xg_home": 1.32, "xg_away": 0.66, "p": [0.5192, 0.2979, 0.1828]}, "market": {"p": [0.7304, 0.1777, 0.092], "n_books": 27}}, "prediction": {"p_home": 0.6056, "p_draw": 0.2409, "p_away": 0.1535, "xg_home": 1.58, "xg_away": 0.69, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1775}, {"score": "2-0", "prob": 0.1296}, {"score": "1-1", "prob": 0.1051}, {"score": "0-0", "prob": 0.1031}, {"score": "2-1", "prob": 0.0963}]}}, {"date": "2026-06-27", "round": "Matchday 17", "group": "Group J", "home": "Algeria", "away": "Austria", "played": false, "actual": null, "elo_ratings": {"home": 1878.3, "away": 1900.4}, "models": {"elo": {"xg_home": 1.3, "xg_away": 1.43, "p": [0.3443, 0.256, 0.3997]}, "dixon_coles": {"xg_home": 1.19, "xg_away": 1.21, "p": [0.3521, 0.2874, 0.3605]}, "market": {"p": [0.2976, 0.3385, 0.3639], "n_books": 23}}, "prediction": {"p_home": 0.3313, "p_draw": 0.2984, "p_away": 0.3703, "xg_home": 1.21, "xg_away": 1.28, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1413}, {"score": "0-1", "prob": 0.0996}, {"score": "0-0", "prob": 0.0926}, {"score": "1-0", "prob": 0.0917}, {"score": "1-2", "prob": 0.0808}]}}, {"date": "2026-06-27", "round": "Matchday 17", "group": "Group J", "home": "Jordan", "away": "Argentina", "played": false, "actual": null, "elo_ratings": {"home": 1717.1, "away": 2205.5}, "models": {"elo": {"xg_home": 0.08, "xg_away": 2.7, "p": [0.0057, 0.0758, 0.9185]}, "dixon_coles": {"xg_home": 0.53, "xg_away": 2.24, "p": [0.0701, 0.1694, 0.7605]}, "market": {"p": [0.0741, 0.1388, 0.787], "n_books": 23}}, "prediction": {"p_home": 0.0574, "p_draw": 0.1381, "p_away": 0.8045, "xg_home": 0.4, "xg_away": 2.37, "most_likely": "0-2", "top_scores": [{"score": "0-2", "prob": 0.1773}, {"score": "0-1", "prob": 0.1453}, {"score": "0-3", "prob": 0.1434}, {"score": "0-4", "prob": 0.0877}, {"score": "0-0", "prob": 0.0639}]}}, {"date": "2026-06-27", "round": "Matchday 17", "group": "Group K", "home": "Colombia", "away": "Portugal", "played": false, "actual": null, "elo_ratings": {"home": 2067.4, "away": 2016.1}, "models": {"elo": {"xg_home": 1.51, "xg_away": 1.22, "p": [0.4376, 0.2536, 0.3088]}, "dixon_coles": {"xg_home": 1.21, "xg_away": 1.25, "p": [0.3495, 0.2839, 0.3666]}, "market": {"p": [0.2627, 0.2738, 0.4634], "n_books": 25}}, "prediction": {"p_home": 0.3385, "p_draw": 0.2737, "p_away": 0.3878, "xg_home": 1.24, "xg_away": 1.3, "most_likely": "1-1", "top_scores": [{"score": "1-1", "prob": 0.1299}, {"score": "0-1", "prob": 0.1052}, {"score": "1-0", "prob": 0.0881}, {"score": "1-2", "prob": 0.0872}, {"score": "0-0", "prob": 0.0828}]}}, {"date": "2026-06-27", "round": "Matchday 17", "group": "Group K", "home": "DR Congo", "away": "Uzbekistan", "played": false, "actual": null, "elo_ratings": {"home": 1774.4, "away": 1800.0}, "models": {"elo": {"xg_home": 1.29, "xg_away": 1.44, "p": [0.3399, 0.2558, 0.4043]}, "dixon_coles": {"xg_home": 0.71, "xg_away": 0.82, "p": [0.2808, 0.3732, 0.3459]}, "market": {"p": [0.4549, 0.2643, 0.2808], "n_books": 25}}, "prediction": {"p_home": 0.3548, "p_draw": 0.3093, "p_away": 0.336, "xg_home": 0.97, "xg_away": 0.97, "most_likely": "0-0", "top_scores": [{"score": "0-0", "prob": 0.1586}, {"score": "1-0", "prob": 0.1513}, {"score": "0-1", "prob": 0.1357}, {"score": "1-1", "prob": 0.118}, {"score": "2-1", "prob": 0.0656}]}}, {"date": "2026-06-27", "round": "Matchday 17", "group": "Group L", "home": "Panama", "away": "England", "played": false, "actual": null, "elo_ratings": {"home": 1784.4, "away": 2112.9}, "models": {"elo": {"xg_home": 0.46, "xg_away": 2.27, "p": [0.0606, 0.154, 0.7854]}, "dixon_coles": {"xg_home": 0.57, "xg_away": 2.27, "p": [0.0742, 0.1689, 0.7569]}, "market": {"p": [0.0866, 0.1426, 0.7708], "n_books": 26}}, "prediction": {"p_home": 0.0756, "p_draw": 0.1564, "p_away": 0.768, "xg_home": 0.54, "xg_away": 2.27, "most_likely": "0-2", "top_scores": [{"score": "0-2", "prob": 0.1562}, {"score": "0-1", "prob": 0.1355}, {"score": "0-3", "prob": 0.1181}, {"score": "1-2", "prob": 0.0835}, {"score": "1-1", "prob": 0.0721}]}}, {"date": "2026-06-27", "round": "Matchday 17", "group": "Group L", "home": "Croatia", "away": "Ghana", "played": false, "actual": null, "elo_ratings": {"home": 1933.5, "away": 1670.8}, "models": {"elo": {"xg_home": 2.09, "xg_away": 0.64, "p": [0.7102, 0.1871, 0.1027]}, "dixon_coles": {"xg_home": 1.77, "xg_away": 0.74, "p": [0.6155, 0.2369, 0.1476]}, "market": {"p": [0.5866, 0.2511, 0.1624], "n_books": 25}}, "prediction": {"p_home": 0.6262, "p_draw": 0.2309, "p_away": 0.1429, "xg_home": 1.84, "xg_away": 0.73, "most_likely": "1-0", "top_scores": [{"score": "1-0", "prob": 0.1337}, {"score": "2-0", "prob": 0.1278}, {"score": "1-1", "prob": 0.1081}, {"score": "2-1", "prob": 0.0905}, {"score": "0-0", "prob": 0.0825}]}}]}</script>
+<script id="back-data" type="application/json">{"n_played": 44, "mean_rps": 0.1676, "mean_logloss": 0.9118, "hit_rate_1x2": 0.5909, "exact_score_hit_rate": 0.0455, "baselines": {"rps_naive_uniform": 0.2285, "rps_elo_only": 0.178, "rps_dixon_coles_only": 0.1663}, "interpretation": {"rps_ref_bom_modelo": "0.18-0.21", "rps_ingenuo": "~0.22", "rps_bate_mercado": "<0.19"}, "calibration_bins": [{"bin": "0.0-0.1", "n": 7, "pred_mean": 0.054, "obs_freq": 0.0}, {"bin": "0.1-0.2", "n": 25, "pred_mean": 0.148, "obs_freq": 0.16}, {"bin": "0.2-0.3", "n": 47, "pred_mean": 0.254, "obs_freq": 0.234}, {"bin": "0.3-0.4", "n": 14, "pred_mean": 0.344, "obs_freq": 0.357}, {"bin": "0.4-0.5", "n": 10, "pred_mean": 0.444, "obs_freq": 0.5}, {"bin": "0.5-0.6", "n": 11, "pred_mean": 0.548, "obs_freq": 0.727}, {"bin": "0.6-0.7", "n": 11, "pred_mean": 0.641, "obs_freq": 0.636}, {"bin": "0.7-0.8", "n": 3, "pred_mean": 0.757, "obs_freq": 0.333}, {"bin": "0.8-0.9", "n": 4, "pred_mean": 0.842, "obs_freq": 0.75}], "rps_timeline": [{"date": "2026-06-11", "home": "Mexico", "away": "South Africa", "rps": 0.0895, "cum_rps": 0.0895}, {"date": "2026-06-11", "home": "South Korea", "away": "Czech Republic", "rps": 0.1963, "cum_rps": 0.1429}, {"date": "2026-06-12", "home": "Canada", "away": "Bosnia and Herzegovina", "rps": 0.1993, "cum_rps": 0.1617}, {"date": "2026-06-12", "home": "United States", "away": "Paraguay", "rps": 0.2972, "cum_rps": 0.1956}, {"date": "2026-06-13", "home": "Qatar", "away": "Switzerland", "rps": 0.2817, "cum_rps": 0.2128}, {"date": "2026-06-13", "home": "Brazil", "away": "Morocco", "rps": 0.1218, "cum_rps": 0.1976}, {"date": "2026-06-13", "home": "Haiti", "away": "Scotland", "rps": 0.1098, "cum_rps": 0.1851}, {"date": "2026-06-13", "home": "Australia", "away": "Turkey", "rps": 0.2512, "cum_rps": 0.1934}, {"date": "2026-06-14", "home": "Germany", "away": "Curaçao", "rps": 0.0149, "cum_rps": 0.1735}, {"date": "2026-06-14", "home": "Ivory Coast", "away": "Ecuador", "rps": 0.4503, "cum_rps": 0.2012}, {"date": "2026-06-14", "home": "Netherlands", "away": "Japan", "rps": 0.1339, "cum_rps": 0.1951}, {"date": "2026-06-14", "home": "Sweden", "away": "Tunisia", "rps": 0.2413, "cum_rps": 0.1989}, {"date": "2026-06-15", "home": "Belgium", "away": "Egypt", "rps": 0.159, "cum_rps": 0.1959}, {"date": "2026-06-15", "home": "Iran", "away": "New Zealand", "rps": 0.1638, "cum_rps": 0.1936}, {"date": "2026-06-15", "home": "Spain", "away": "Cape Verde", "rps": 0.3773, "cum_rps": 0.2058}, {"date": "2026-06-15", "home": "Saudi Arabia", "away": "Uruguay", "rps": 0.1989, "cum_rps": 0.2054}, {"date": "2026-06-16", "home": "France", "away": "Senegal", "rps": 0.1209, "cum_rps": 0.2004}, {"date": "2026-06-16", "home": "Iraq", "away": "Norway", "rps": 0.086, "cum_rps": 0.1941}, {"date": "2026-06-16", "home": "Argentina", "away": "Algeria", "rps": 0.0548, "cum_rps": 0.1867}, {"date": "2026-06-16", "home": "Austria", "away": "Jordan", "rps": 0.1544, "cum_rps": 0.1851}, {"date": "2026-06-17", "home": "Portugal", "away": "DR Congo", "rps": 0.2234, "cum_rps": 0.1869}, {"date": "2026-06-17", "home": "Uzbekistan", "away": "Colombia", "rps": 0.0934, "cum_rps": 0.1827}, {"date": "2026-06-17", "home": "England", "away": "Croatia", "rps": 0.1428, "cum_rps": 0.181}, {"date": "2026-06-17", "home": "Ghana", "away": "Panama", "rps": 0.3706, "cum_rps": 0.1889}, {"date": "2026-06-18", "home": "Czech Republic", "away": "South Africa", "rps": 0.1421, "cum_rps": 0.187}, {"date": "2026-06-18", "home": "Mexico", "away": "South Korea", "rps": 0.2107, "cum_rps": 0.1879}, {"date": "2026-06-18", "home": "Switzerland", "away": "Bosnia and Herzegovina", "rps": 0.0575, "cum_rps": 0.1831}, {"date": "2026-06-18", "home": "Canada", "away": "Qatar", "rps": 0.0741, "cum_rps": 0.1792}, {"date": "2026-06-19", "home": "Scotland", "away": "Morocco", "rps": 0.122, "cum_rps": 0.1772}, {"date": "2026-06-19", "home": "Brazil", "away": "Haiti", "rps": 0.012, "cum_rps": 0.1717}, {"date": "2026-06-19", "home": "United States", "away": "Australia", "rps": 0.3343, "cum_rps": 0.1769}, {"date": "2026-06-19", "home": "Turkey", "away": "Paraguay", "rps": 0.3011, "cum_rps": 0.1808}, {"date": "2026-06-20", "home": "Germany", "away": "Ivory Coast", "rps": 0.1142, "cum_rps": 0.1788}, {"date": "2026-06-20", "home": "Ecuador", "away": "Curaçao", "rps": 0.2696, "cum_rps": 0.1815}, {"date": "2026-06-20", "home": "Netherlands", "away": "Sweden", "rps": 0.1004, "cum_rps": 0.1792}, {"date": "2026-06-20", "home": "Tunisia", "away": "Japan", "rps": 0.0898, "cum_rps": 0.1767}, {"date": "2026-06-21", "home": "Belgium", "away": "Iran", "rps": 0.1438, "cum_rps": 0.1758}, {"date": "2026-06-21", "home": "New Zealand", "away": "Egypt", "rps": 0.2015, "cum_rps": 0.1765}, {"date": "2026-06-21", "home": "Spain", "away": "Saudi Arabia", "rps": 0.0179, "cum_rps": 0.1724}, {"date": "2026-06-21", "home": "Uruguay", "away": "Cape Verde", "rps": 0.2288, "cum_rps": 0.1738}, {"date": "2026-06-22", "home": "France", "away": "Iraq", "rps": 0.0227, "cum_rps": 0.1701}, {"date": "2026-06-22", "home": "Norway", "away": "Senegal", "rps": 0.2115, "cum_rps": 0.1711}, {"date": "2026-06-22", "home": "Argentina", "away": "Austria", "rps": 0.0625, "cum_rps": 0.1686}, {"date": "2026-06-22", "home": "Jordan", "away": "Algeria", "rps": 0.1254, "cum_rps": 0.1676}]}</script>
+<script id="rating-data" type="application/json">[{"team": "Argentina", "elo": 2205.5, "att": 1.11, "def": 1.34, "net": 2.45}, {"team": "Spain", "elo": 2186.3, "att": 1.25, "def": 1.14, "net": 2.39}, {"team": "France", "elo": 2142.4, "att": 1.05, "def": 1.04, "net": 2.1}, {"team": "England", "elo": 2112.9, "att": 1.02, "def": 1.22, "net": 2.24}, {"team": "Colombia", "elo": 2067.4, "att": 1.0, "def": 1.04, "net": 2.05}, {"team": "Brazil", "elo": 2057.5, "att": 1.09, "def": 1.2, "net": 2.29}, {"team": "Netherlands", "elo": 2036.4, "att": 1.05, "def": 0.84, "net": 1.89}, {"team": "Germany", "elo": 2036.0, "att": 1.11, "def": 0.81, "net": 1.91}, {"team": "Portugal", "elo": 2016.1, "att": 1.1, "def": 0.97, "net": 2.08}, {"team": "Morocco", "elo": 2013.0, "att": 0.72, "def": 1.29, "net": 2.01}, {"team": "Norway", "elo": 2012.4, "att": 0.94, "def": 0.72, "net": 1.66}, {"team": "Japan", "elo": 2008.9, "att": 0.91, "def": 0.93, "net": 1.85}, {"team": "Mexico", "elo": 2000.4, "att": 0.64, "def": 0.91, "net": 1.55}, {"team": "United States", "elo": 1955.2, "att": 0.65, "def": 0.7, "net": 1.35}, {"team": "Switzerland", "elo": 1949.0, "att": 0.88, "def": 0.76, "net": 1.64}, {"team": "Ecuador", "elo": 1941.8, "att": 0.6, "def": 1.16, "net": 1.76}, {"team": "Croatia", "elo": 1933.5, "att": 0.84, "def": 0.85, "net": 1.69}, {"team": "Belgium", "elo": 1928.9, "att": 0.96, "def": 0.89, "net": 1.85}, {"team": "Uruguay", "elo": 1920.7, "att": 0.73, "def": 1.17, "net": 1.9}, {"team": "Austria", "elo": 1900.4, "att": 0.7, "def": 0.73, "net": 1.43}, {"team": "Australia", "elo": 1897.7, "att": 0.71, "def": 0.87, "net": 1.58}, {"team": "Canada", "elo": 1894.7, "att": 0.69, "def": 0.69, "net": 1.38}, {"team": "Iran", "elo": 1881.6, "att": 0.75, "def": 0.74, "net": 1.48}, {"team": "Algeria", "elo": 1878.3, "att": 0.75, "def": 0.67, "net": 1.42}, {"team": "Paraguay", "elo": 1877.4, "att": 0.48, "def": 0.85, "net": 1.33}, {"team": "South Korea", "elo": 1876.4, "att": 0.7, "def": 0.67, "net": 1.37}, {"team": "Turkey", "elo": 1872.6, "att": 0.79, "def": 0.54, "net": 1.34}, {"team": "Senegal", "elo": 1859.6, "att": 0.71, "def": 0.88, "net": 1.59}, {"team": "Egypt", "elo": 1849.0, "att": 0.42, "def": 0.82, "net": 1.24}, {"team": "Scotland", "elo": 1842.6, "att": 0.59, "def": 0.61, "net": 1.21}, {"team": "Ivory Coast", "elo": 1842.6, "att": 0.49, "def": 0.78, "net": 1.27}, {"team": "Uzbekistan", "elo": 1800.0, "att": 0.41, "def": 0.82, "net": 1.24}, {"team": "Sweden", "elo": 1793.0, "att": 0.74, "def": 0.53, "net": 1.27}, {"team": "Panama", "elo": 1784.4, "att": 0.5, "def": 0.36, "net": 0.87}, {"team": "DR Congo", "elo": 1774.4, "att": 0.32, "def": 0.77, "net": 1.09}, {"team": "Czech Republic", "elo": 1767.6, "att": 0.6, "def": 0.54, "net": 1.14}, {"team": "Jordan", "elo": 1717.1, "att": 0.55, "def": 0.47, "net": 1.02}, {"team": "Saudi Arabia", "elo": 1705.5, "att": 0.27, "def": 0.62, "net": 0.9}, {"team": "Iraq", "elo": 1703.1, "att": 0.31, "def": 0.59, "net": 0.91}, {"team": "Cape Verde", "elo": 1697.4, "att": 0.22, "def": 0.44, "net": 0.65}, {"team": "New Zealand", "elo": 1696.1, "att": 0.47, "def": 0.53, "net": 1.0}, {"team": "Ghana", "elo": 1670.8, "att": 0.39, "def": 0.43, "net": 0.82}, {"team": "Tunisia", "elo": 1665.7, "att": 0.43, "def": 0.78, "net": 1.2}, {"team": "South Africa", "elo": 1660.3, "att": 0.33, "def": 0.52, "net": 0.86}, {"team": "Bosnia and Herzegovina", "elo": 1657.6, "att": 0.26, "def": 0.34, "net": 0.61}, {"team": "Haiti", "elo": 1654.4, "att": 0.43, "def": 0.16, "net": 0.59}, {"team": "Curaçao", "elo": 1608.8, "att": 0.16, "def": 0.26, "net": 0.42}, {"team": "Qatar", "elo": 1578.3, "att": 0.44, "def": 0.2, "net": 0.65}]</script>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   DATA
+═══════════════════════════════════════════════════ */
+const PRED = JSON.parse(document.getElementById('pred-data').textContent);
+const BACK = JSON.parse(document.getElementById('back-data').textContent);
+const RAT  = JSON.parse(document.getElementById('rating-data').textContent);
+
+const pct  = x => (x*100).toFixed(0)+'%';
+const pct1 = x => (x*100).toFixed(1)+'%';
+
+const FLAGS = {
+  'Argentina':'🇦🇷','Brazil':'🇧🇷','France':'🇫🇷','England':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','Spain':'🇪🇸',
+  'Germany':'🇩🇪','Portugal':'🇵🇹','Netherlands':'🇳🇱','Belgium':'🇧🇪','Uruguay':'🇺🇾',
+  'Colombia':'🇨🇴','Mexico':'🇲🇽','United States':'🇺🇸','Japan':'🇯🇵','South Korea':'🇰🇷',
+  'Morocco':'🇲🇦','Senegal':'🇸🇳','Canada':'🇨🇦','Australia':'🇦🇺','Switzerland':'🇨🇭',
+  'Croatia':'🇭🇷','Norway':'🇳🇴','Sweden':'🇸🇪','Ecuador':'🇪🇨','Saudi Arabia':'🇸🇦',
+  'Iran':'🇮🇷','Turkey':'🇹🇷','Czech Republic':'🇨🇿','Austria':'🇦🇹','Scotland':'🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+  'Ghana':'🇬🇭','Egypt':'🇪🇬','Tunisia':'🇹🇳','Ivory Coast':'🇨🇮','South Africa':'🇿🇦',
+  'DR Congo':'🇨🇩','Algeria':'🇩🇿','Bosnia and Herzegovina':'🇧🇦','Haiti':'🇭🇹',
+  'Paraguay':'🇵🇾','Qatar':'🇶🇦','Iraq':'🇮🇶','Jordan':'🇯🇴','New Zealand':'🇳🇿',
+  'Panama':'🇵🇦','Cape Verde':'🇨🇻','Curaçao':'🇨🇼','Uzbekistan':'🇺🇿',
+};
+const F = t => FLAGS[t] || '🏳️';
+const short = t => t.replace(' and Herzegovina','').replace('Ivory ','').replace('DR ','');
+
+/* ═══════════════════════════════════════════════════
+   HEADER & PILLS
+═══════════════════════════════════════════════════ */
+document.getElementById('tagline').textContent =
+  `${PRED.n_matches} jogos modelados · ${BACK.n_played} já disputados · atualizado em ${PRED.generated_at.split('T')[0]}`;
+document.getElementById('pill-rps').innerHTML  = `📉 Precisão ${BACK.mean_rps}`;
+document.getElementById('pill-acc').innerHTML  = `✅ ${pct(BACK.hit_rate_1x2)} de acerto`;
+document.getElementById('pill-games').innerHTML = `⚽ ${BACK.n_played}/${PRED.n_matches} jogos`;
+
+/* ═══════════════════════════════════════════════════
+   TABS
+═══════════════════════════════════════════════════ */
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-pane').forEach(p => { p.classList.remove('active'); });
+    btn.classList.add('active');
+    const pane = document.getElementById('tab-' + btn.dataset.tab);
+    pane.classList.add('active');
+    // re-trigger fade
+    pane.classList.remove('fade-in');
+    void pane.offsetWidth;
+    pane.classList.add('fade-in');
+  });
+});
+
+/* ═══════════════════════════════════════════════════
+   COUNT-UP ANIMATION
+═══════════════════════════════════════════════════ */
+function countUp(el, target, duration=900, decimals=0, suffix='') {
+  const start = performance.now();
+  const isStr = typeof target === 'string';
+  if (isStr) { el.textContent = target; return; }
+  (function step(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1-p, 3);
+    el.textContent = (target * ease).toFixed(decimals) + suffix;
+    if (p < 1) requestAnimationFrame(step);
+  })(start);
+}
+
+/* ═══════════════════════════════════════════════════
+   KPI CARDS
+═══════════════════════════════════════════════════ */
+const rpsScore = BACK.mean_rps < 0.17 ? 95 : BACK.mean_rps < 0.19 ? 80 : BACK.mean_rps < 0.21 ? 60 : 40;
+const rpsLabel = BACK.mean_rps < 0.19 ? 'Excelente — bate o mercado' : BACK.mean_rps < 0.21 ? 'Bom — acima da média' : 'Regular';
+
+const kpis = [
+  {
+    icon:'📉', id:'kpi-rps',
+    val: BACK.mean_rps, dec:4, suffix:'',
+    cls:'c-gold', glowColor:'rgba(240,192,48,.15)',
+    label:'Precisão do Modelo',
+    explain:`Mede o quanto erramos nas probabilidades. Menor = mais preciso. Nosso modelo: ${rpsLabel}.`,
+    quality: rpsScore, qualityColor:'#f0c030',
+    tip:'RPS (Ranked Probability Score): padrão científico para avaliar previsões de futebol. Bom modelo fica entre 0.18 e 0.21.'
+  },
+  {
+    icon:'🎯', id:'kpi-acc',
+    val: BACK.hit_rate_1x2*100, dec:1, suffix:'%',
+    cls:'c-green', glowColor:'rgba(0,229,122,.12)',
+    label:'Resultado Correto',
+    explain:'Em quantos jogos previmos corretamente quem ganhou (ou que empataria).',
+    quality: BACK.hit_rate_1x2*100, qualityColor:'#00e57a',
+    tip:'Acerto 1X2: o resultado mais provável (vitória casa, empate, vitória fora) coincidiu com o resultado real.'
+  },
+  {
+    icon:'🔬', id:'kpi-exact',
+    val: BACK.exact_score_hit_rate*100, dec:1, suffix:'%',
+    cls:'c-cyan', glowColor:'rgba(0,212,255,.1)',
+    label:'Placar Exato Cravado',
+    explain:`Previmos o placar certinho em ${Math.round(BACK.exact_score_hit_rate * BACK.n_played)} de ${BACK.n_played} jogos — resultado difícil de prever.`,
+    quality: BACK.exact_score_hit_rate*200, qualityColor:'#00d4ff',
+    tip:'Acerto de placar exato: o modelo previu o placar correto (ex: 2-0) com alta probabilidade e acertou.'
+  },
+  {
+    icon:'⚽', id:'kpi-played',
+    val: BACK.n_played, dec:0, suffix:'',
+    cls:'c-purple', glowColor:'rgba(176,112,255,.1)',
+    label:'Jogos Avaliados',
+    explain:`${PRED.n_matches - BACK.n_played} jogos ainda a disputar na fase de grupos.`,
+    quality: (BACK.n_played / PRED.n_matches)*100, qualityColor:'#b070ff',
+    tip:'Total de jogos da fase de grupos já disputados e incluídos no cálculo de acurácia do modelo.'
+  },
+  {
+    icon:'📊', id:'kpi-vsnaive',
+    val: ((BACK.baselines.rps_naive_uniform - BACK.mean_rps) / BACK.baselines.rps_naive_uniform * 100),
+    dec:1, suffix:'%',
+    cls:'c-orange', glowColor:'rgba(255,144,48,.1)',
+    label:'Melhor que o Aleatório',
+    explain:'O modelo é este % mais preciso do que simplesmente dividir 33%/33%/33% entre os resultados.',
+    quality: 70, qualityColor:'#ff9030',
+    tip:'Comparação com um modelo ingênuo que atribui probabilidade igual (33%) para vitória, empate e derrota.'
+  },
+];
+
+document.getElementById('kpi-cards').innerHTML = kpis.map(k =>
+  `<div class="kpi" style="--glow:${k.glowColor}">
+    <div class="glow" style="background:${k.glowColor};filter:blur(30px)"></div>
+    <span class="icon">${k.icon}</span>
+    <div class="num ${k.cls}" id="${k.id}">0</div>
+    <div class="label">${k.label}<span class="tip" data-tip="${k.tip}">?</span></div>
+    <div class="explain">${k.explain}</div>
+    <div class="quality-bar"><div class="quality-fill" style="width:${Math.min(k.quality,100)}%;background:${k.qualityColor}"></div></div>
+  </div>`
+).join('');
+
+// trigger count-up
+setTimeout(() => {
+  kpis.forEach(k => {
+    countUp(document.getElementById(k.id), k.val, 800, k.dec, k.suffix);
+  });
+}, 100);
+
+/* ═══════════════════════════════════════════════════
+   CHART.JS GLOBAL DEFAULTS
+═══════════════════════════════════════════════════ */
+Chart.defaults.color = '#4a6080';
+Chart.defaults.borderColor = 'rgba(255,255,255,.06)';
+Chart.defaults.font.family = "-apple-system,'Segoe UI',sans-serif";
+Chart.defaults.font.size = 11;
+
+const gridColor = 'rgba(255,255,255,.05)';
+
+/* ═══════════════════════════════════════════════════
+   CHART: RPS TIMELINE
+═══════════════════════════════════════════════════ */
+(function() {
+  const tl = BACK.rps_timeline;
+  new Chart(document.getElementById('chart-rps'), {
+    type:'line',
+    data:{
+      labels: tl.map((_,i)=>`J${i+1}`),
+      datasets:[
+        { label:'RPS por jogo', data:tl.map(d=>d.rps),
+          borderColor:'rgba(90,112,144,.5)', backgroundColor:'transparent',
+          pointRadius:2, pointHoverRadius:5, borderWidth:1.5, tension:.3 },
+        { label:'RPS acumulado', data:tl.map(d=>d.cum_rps),
+          borderColor:'#f0c030',
+          backgroundColor:(ctx)=>{
+            const g=ctx.chart.ctx.createLinearGradient(0,0,0,200);
+            g.addColorStop(0,'rgba(240,192,48,.15)');
+            g.addColorStop(1,'rgba(240,192,48,.01)');
+            return g;
+          },
+          fill:true, pointRadius:0, borderWidth:2.5, tension:.4 },
+        { label:'Meta (< 0.19)', data:tl.map(()=>0.19),
+          borderColor:'#00e57a', borderDash:[5,4], pointRadius:0,
+          borderWidth:1.5, backgroundColor:'transparent' },
+        { label:'Ingênuo (0.22)', data:tl.map(()=>0.225),
+          borderColor:'#f04060', borderDash:[5,4], pointRadius:0,
+          borderWidth:1.5, backgroundColor:'transparent' },
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{
+        legend:{ position:'bottom', labels:{boxWidth:10,padding:14,font:{size:10}} },
+        tooltip:{ backgroundColor:'rgba(2,8,24,.95)', borderColor:'rgba(255,255,255,.1)',
+          borderWidth:1, padding:10, titleFont:{size:11},bodyFont:{size:11} }
+      },
+      scales:{
+        y:{ min:0, max:.42, grid:{color:gridColor}, ticks:{callback:v=>v.toFixed(2)} },
+        x:{ grid:{display:false}, ticks:{maxTicksLimit:12} }
+      }
+    }
+  });
+})();
+
+/* ═══════════════════════════════════════════════════
+   CHART: MODEL COMPARISON
+═══════════════════════════════════════════════════ */
+(function() {
+  const b = BACK.baselines;
+  const data = [
+    {l:'Ensemble (nosso)',v:BACK.mean_rps,c:'#f0c030'},
+    {l:'Dixon-Coles',v:b.rps_dixon_coles_only,c:'#3b82f6'},
+    {l:'Elo',v:b.rps_elo_only,c:'#9060e0'},
+    {l:'Aleatório (33/33/33)',v:b.rps_naive_uniform,c:'#f04060'},
+  ];
+  new Chart(document.getElementById('chart-models'),{
+    type:'bar',
+    data:{
+      labels:data.map(d=>d.l),
+      datasets:[{
+        data:data.map(d=>d.v),
+        backgroundColor:data.map(d=>d.c+'22'),
+        borderColor:data.map(d=>d.c),
+        borderWidth:1.5, borderRadius:8, borderSkipped:false,
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'rgba(2,8,24,.95)', borderColor:'rgba(255,255,255,.1)',
+          borderWidth:1, padding:10,
+          callbacks:{ label:ctx=>` RPS: ${ctx.parsed.y.toFixed(4)}` }
+        }
+      },
+      scales:{
+        y:{ min:.14, max:.24, grid:{color:gridColor},
+          ticks:{callback:v=>v.toFixed(2)} },
+        x:{ grid:{display:false} }
+      }
+    }
+  });
+})();
+
+/* ═══════════════════════════════════════════════════
+   CHART: CALIBRATION
+═══════════════════════════════════════════════════ */
+(function() {
+  const bins = BACK.calibration_bins;
+  new Chart(document.getElementById('chart-calib'),{
+    type:'scatter',
+    data:{
+      datasets:[
+        { label:'Modelo', data:bins.map(b=>({x:b.pred_mean,y:b.obs_freq})),
+          backgroundColor:'rgba(0,180,255,.5)', borderColor:'#00b4ff',
+          pointRadius:bins.map(b=>Math.min(14,4+b.n/5)),
+          pointHoverRadius:14,
+        },
+        { label:'Ideal', data:[{x:0,y:0},{x:1,y:1}],
+          type:'line', borderColor:'rgba(255,255,255,.15)',
+          borderDash:[5,4], pointRadius:0, borderWidth:1.5, backgroundColor:'transparent'
+        }
+      ]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{
+        legend:{ position:'bottom', labels:{boxWidth:10,padding:14,font:{size:10}} },
+        tooltip:{
+          backgroundColor:'rgba(2,8,24,.95)', borderColor:'rgba(255,255,255,.1)',
+          borderWidth:1, padding:10,
+          callbacks:{
+            label:ctx=>ctx.dataset.label==='Modelo'
+              ? `Previsto: ${(ctx.parsed.x*100).toFixed(0)}% → Real: ${(ctx.parsed.y*100).toFixed(0)}%`
+              : ''
+          }
+        }
+      },
+      scales:{
+        x:{ min:0,max:1, grid:{color:gridColor},
+          title:{display:true,text:'Probabilidade prevista',color:'#4a6080'},
+          ticks:{callback:v=>v*100+'%'} },
+        y:{ min:0,max:1, grid:{color:gridColor},
+          title:{display:true,text:'Frequência real',color:'#4a6080'},
+          ticks:{callback:v=>v*100+'%'} }
+      }
+    }
+  });
+})();
+
+/* ═══════════════════════════════════════════════════
+   CHART: TOP ELO
+═══════════════════════════════════════════════════ */
+(function() {
+  const top = RAT.slice(0,12);
+  new Chart(document.getElementById('chart-elo'),{
+    type:'bar',
+    data:{
+      labels:top.map(t=>short(t.team)),
+      datasets:[{
+        data:top.map(t=>t.elo),
+        backgroundColor:top.map((_,i)=>i<3?'rgba(240,192,48,.25)':'rgba(59,130,246,.15)'),
+        borderColor:top.map((_,i)=>i<3?'#f0c030':'#3b82f6'),
+        borderWidth:1.5, borderRadius:6, borderSkipped:false,
+      }]
+    },
+    options:{
+      indexAxis:'y',
+      responsive:true, maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{
+          backgroundColor:'rgba(2,8,24,.95)', borderColor:'rgba(255,255,255,.1)',
+          borderWidth:1, padding:10,
+          callbacks:{ label:ctx=>` Elo: ${ctx.parsed.x}` }
+        }
+      },
+      scales:{
+        x:{ min:1700, grid:{color:gridColor}, ticks:{callback:v=>v} },
+        y:{ grid:{display:false} }
+      }
+    }
+  });
+})();
+
+/* ═══════════════════════════════════════════════════
+   RECENT RESULTS
+═══════════════════════════════════════════════════ */
+(function() {
+  const played = PRED.matches.filter(m=>m.played).slice(-8).reverse();
+  document.getElementById('recent-results').innerHTML = played.map(m=>{
+    const p = m.prediction;
+    const e = m.eval||{};
+    return `<div class="rr-row">
+      <span class="small muted" style="width:74px;flex-shrink:0">${m.date}</span>
+      <span class="small muted" style="width:28px;flex-shrink:0">${(m.group||'').replace('Group ','')}</span>
+      <span style="flex:1;font-weight:700;min-width:0;font-size:13px">${F(m.home)} ${m.home} <span class="muted">×</span> ${m.away} ${F(m.away)}</span>
+      <span class="score-big" style="width:54px;text-align:center;flex-shrink:0;color:${e.correct_1x2?'#d0dff0':'#f04060'}">${m.actual[0]}-${m.actual[1]}</span>
+      <span class="muted small" style="width:56px;flex-shrink:0;text-align:center">prev <b style="color:#f0c030">${p.most_likely}</b></span>
+      <span style="width:70px;flex-shrink:0;text-align:center">${
+        e.correct_1x2
+          ? '<span class="pill pill-win">✓ acertou</span>'
+          : '<span class="pill pill-lose">✕ errou</span>'
+      }</span>
+      ${e.exact_score_hit ? '<span class="pill pill-score">🎯 exato</span>' : '<span style="width:70px"></span>'}
+      <span class="muted small mono" style="width:44px;text-align:right;flex-shrink:0">${e.rps!=null?e.rps.toFixed(3):'—'}</span>
+    </div>`;
+  }).join('');
+})();
+
+/* ═══════════════════════════════════════════════════
+   TAB: JOGOS DISPUTADOS
+═══════════════════════════════════════════════════ */
+(function() {
+  const matches = PRED.matches.filter(m=>m.played);
+  const groups = [...new Set(matches.map(m=>m.group||''))].sort();
+  const fbar = document.getElementById('played-filters');
+  groups.forEach(g=>{
+    const btn=document.createElement('button');
+    btn.className='fbtn'; btn.dataset.gf=g; btn.textContent=g;
+    fbar.appendChild(btn);
+  });
+  let ag='all', sk='date', sd=1;
+  function render(){
+    let rows = ag==='all' ? matches : matches.filter(m=>m.group===ag);
+    rows=[...rows].sort((a,b)=>{
+      let va=sk==='rps'?(a.eval?.rps??-1):a[sk]??'';
+      let vb=sk==='rps'?(b.eval?.rps??-1):b[sk]??'';
+      return (va>vb?1:va<vb?-1:0)*sd;
+    });
+    const correct=rows.filter(m=>m.eval?.correct_1x2).length;
+    const exact=rows.filter(m=>m.eval?.exact_score_hit).length;
+    document.getElementById('played-count').textContent=
+      `${rows.length} jogos · ${correct} resultados acertados (${pct(correct/Math.max(1,rows.length))}) · ${exact} placares exatos`;
+    document.getElementById('played-body').innerHTML=rows.map(m=>{
+      const p=m.prediction; const e=m.eval||{};
+      const mkt=m.models.market?' <span style="font-size:9px;color:#f0a020;opacity:.7" title="odds disponíveis">💰</span>':'';
+      return `<tr>
+        <td class="small muted">${m.date}</td>
+        <td class="small muted">${(m.group||'').replace('Group ','')}</td>
+        <td style="font-weight:700">${F(m.home)} ${m.home} <span class="muted small">×</span> ${m.away} ${F(m.away)}${mkt}</td>
+        <td><span class="score-big" style="color:${e.correct_1x2?'#d0dff0':'#5a7090'}">${m.actual[0]}-${m.actual[1]}</span></td>
+        <td class="mono small" style="color:#f0c030">${p.most_likely}</td>
+        <td>
+          <div class="pbar"><div class="ph" style="flex:${p.p_home}"></div><div class="pd" style="flex:${p.p_draw}"></div><div class="pa" style="flex:${p.p_away}"></div></div>
+          <div class="pnums">${pct(p.p_home)} · ${pct(p.p_draw)} · ${pct(p.p_away)}</div>
+        </td>
+        <td class="mono small">${e.rps!=null?e.rps.toFixed(3):'—'}</td>
+        <td>${e.correct_1x2!=null?(e.correct_1x2?'<span class="pill pill-win">✓</span>':'<span class="pill pill-lose">✕</span>'):'—'}</td>
+        <td>${e.exact_score_hit?'<span class="pill pill-score">🎯</span>':'<span class="muted small">—</span>'}</td>
+      </tr>`;
+    }).join('');
+  }
+  fbar.addEventListener('click',e=>{
+    const btn=e.target.closest('.fbtn');if(!btn)return;
+    fbar.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active'); ag=btn.dataset.gf; render();
+  });
+  document.querySelectorAll('#tab-played th[data-sk]').forEach(th=>{
+    th.addEventListener('click',()=>{
+      const k=th.dataset.sk; sd=sk===k?-sd:1; sk=k; render();
+    });
+  });
+  render();
+})();
+
+/* ═══════════════════════════════════════════════════
+   TAB: PRÓXIMOS JOGOS
+═══════════════════════════════════════════════════ */
+(function() {
+  const upcoming=PRED.matches.filter(m=>!m.played);
+  const groups=[...new Set(upcoming.map(m=>m.group||''))].sort();
+  const fbar=document.getElementById('upcoming-filters');
+  groups.forEach(g=>{
+    const btn=document.createElement('button');
+    btn.className='fbtn'; btn.dataset.uf=g; btn.textContent=g;
+    fbar.appendChild(btn);
+  });
+  let ag='all';
+  function render(){
+    const rows=ag==='all'?upcoming:upcoming.filter(m=>m.group===ag);
+    const grid=document.getElementById('upcoming-grid');
+    const empty=document.getElementById('upcoming-empty');
+    if(!rows.length){grid.innerHTML='';empty.style.display='block';return;}
+    empty.style.display='none';
+    grid.innerHTML=rows.map(m=>{
+      const p=m.prediction;
+      const hasMkt=!!m.models.market;
+      const favH=p.p_home>p.p_away&&p.p_home>p.p_draw;
+      const favA=p.p_away>p.p_home&&p.p_away>p.p_draw;
+      return `<div class="gcard">
+        <div class="gc-meta">
+          <span class="gc-group">${m.group} · ${m.round}</span>
+          <span class="gc-date">📅 ${m.date}</span>
+        </div>
+        <div class="gc-matchup">
+          <div class="gc-team" style="${favH?'background:rgba(59,130,246,.06);border-radius:8px;padding:4px':''}">
+            <div class="tc-name">${F(m.home)} ${m.home}</div>
+            <div class="tc-xg">xG esperado: ${p.xg_home}</div>
+          </div>
+          <div class="gc-vs">VS</div>
+          <div class="gc-team" style="${favA?'background:rgba(240,64,96,.06);border-radius:8px;padding:4px':''}">
+            <div class="tc-name">${m.away} ${F(m.away)}</div>
+            <div class="tc-xg">xG esperado: ${p.xg_away}</div>
+          </div>
+        </div>
+        <div class="gc-score">${p.most_likely}</div>
+        <div class="gc-pbar">
+          <div style="flex:${p.p_home};background:#3b82f6;border-radius:3px 0 0 3px"></div>
+          <div style="flex:${p.p_draw};background:#9060e0"></div>
+          <div style="flex:${p.p_away};background:#f04060;border-radius:0 3px 3px 0"></div>
+        </div>
+        <div class="gc-pnums">
+          <span class="pn-h">${pct(p.p_home)} Casa</span>
+          <span>${pct(p.p_draw)} Empate</span>
+          <span class="pn-a">Fora ${pct(p.p_away)}</span>
+        </div>
+        ${hasMkt?`<div class="gc-mkt">💰 Baseado em odds de ${m.models.market.n_books} casas de apostas</div>`:''}
+      </div>`;
+    }).join('');
+  }
+  fbar.addEventListener('click',e=>{
+    const btn=e.target.closest('.fbtn');if(!btn)return;
+    fbar.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active'); ag=btn.dataset.uf; render();
+  });
+  render();
+})();
+
+/* ═══════════════════════════════════════════════════
+   TAB: CHAVEAMENTO
+═══════════════════════════════════════════════════ */
+(function() {
+  // Build standings
+  const teamStats={};
+  PRED.matches.forEach(m=>{
+    const g=m.group||'';
+    [m.home,m.away].forEach(t=>{
+      if(!teamStats[t]) teamStats[t]={team:t,group:g,pts:0,gf:0,ga:0,gd:0,w:0,d:0,l:0,pld:0,form:[]};
+    });
+    if(m.played&&m.actual){
+      const [gh,ga]=m.actual;
+      teamStats[m.home].pld++; teamStats[m.away].pld++;
+      teamStats[m.home].gf+=gh; teamStats[m.home].ga+=ga;
+      teamStats[m.away].gf+=ga; teamStats[m.away].ga+=gh;
+      teamStats[m.home].gd=teamStats[m.home].gf-teamStats[m.home].ga;
+      teamStats[m.away].gd=teamStats[m.away].gf-teamStats[m.away].ga;
+      if(gh>ga){teamStats[m.home].pts+=3;teamStats[m.home].w++;teamStats[m.home].form.push('W');teamStats[m.away].l++;teamStats[m.away].form.push('L');}
+      else if(gh===ga){teamStats[m.home].pts+=1;teamStats[m.home].d++;teamStats[m.home].form.push('D');teamStats[m.away].pts+=1;teamStats[m.away].d++;teamStats[m.away].form.push('D');}
+      else{teamStats[m.away].pts+=3;teamStats[m.away].w++;teamStats[m.away].form.push('W');teamStats[m.home].l++;teamStats[m.home].form.push('L');}
+    }
+  });
+
+  const groupMap={};
+  PRED.matches.forEach(m=>{
+    const g=m.group||'';
+    if(!groupMap[g])groupMap[g]=new Set();
+    groupMap[g].add(m.home); groupMap[g].add(m.away);
+  });
+  const groupStandings={};
+  Object.keys(groupMap).sort().forEach(g=>{
+    groupStandings[g]=[...groupMap[g]]
+      .map(t=>teamStats[t]||{team:t,group:g,pts:0,gf:0,ga:0,gd:0,w:0,d:0,l:0,pld:0,form:[]})
+      .sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf);
+  });
+
+  // Render standings
+  document.getElementById('standings-grid').innerHTML=Object.keys(groupStandings).map(g=>{
+    const teams=groupStandings[g];
+    const rows=teams.map((t,i)=>{
+      const zone=i<2?'qual':i===2?'bubble':'';
+      const formH=t.form.slice(-3).map(f=>
+        f==='W'?'<div class="fp fp-w">V</div>':f==='D'?'<div class="fp fp-d">E</div>':'<div class="fp fp-l">D</div>'
+      ).join('');
+      return `<tr>
+        <td class="rank">${i+1}</td>
+        <td class="${zone}" style="font-weight:${i<2?700:400}">${F(t.team)} ${short(t.team.length>15?t.team.split(' ')[0]+' '+t.team.split(' ')[1]:t.team)}</td>
+        <td class="pts">${t.pts}</td>
+        <td class="gd">${t.gd>=0?'+'+t.gd:t.gd}</td>
+        <td><div class="form-pills">${formH}</div></td>
+      </tr>`;
+    }).join('');
+    return `<div class="sgroup">
+      <div class="sg-head">${g}</div>
+      <table class="sg-tbl">
+        <thead><tr><th></th><th style="text-align:left">Seleção</th><th>Pts</th><th>SG</th><th>Forma</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+  }).join('');
+
+  // Bracket
+  const qualified={};
+  Object.keys(groupStandings).forEach(g=>{
+    const letter=g.replace('Group ','');
+    qualified[letter]=groupStandings[g].slice(0,2).map(t=>t.team);
+  });
+  const eloMap={};
+  RAT.forEach(r=>{eloMap[r.team]=r.elo});
+  const wp=(a,b)=>{
+    const ea=eloMap[a]||1700, eb=eloMap[b]||1700;
+    return 1/(1+Math.pow(10,(eb-ea)/400));
+  };
+
+  const r32=[
+    ['A',1,'B',2],['C',1,'D',2],['E',1,'F',2],['G',1,'H',2],
+    ['I',1,'J',2],['K',1,'L',2],
+    ['B',1,'A',2],['D',1,'C',2],['F',1,'E',2],['H',1,'G',2],
+    ['J',1,'I',2],['L',1,'K',2],
+  ];
+
+  function getTeam(grp, pos){
+    return qualified[grp]?.[pos-1] || `${pos===1?'1°':'2°'}${grp}`;
+  }
+  function matchHTML(tA, tB, tagA='', tagB=''){
+    const isStr=(t)=>typeof t==='string'&&t.length<=3;
+    const pA = isStr(tA)||isStr(tB) ? 0.5 : wp(tA, tB);
+    const pB = 1-pA;
+    const favA=pA>pB;
+    return `<div class="b-match">
+      <div class="b-team ${favA?'b-fav':''}">
+        ${tagA?`<span class="b-tag">${tagA}</span>`:''}
+        <span class="b-name">${F(tA)} ${short(tA.split(' ').slice(0,2).join(' '))}</span>
+        <span class="b-prob">${favA?'<b>':''}${(pA*100).toFixed(0)}%${favA?'</b>':''}</span>
+      </div>
+      <div class="b-team ${!favA?'b-fav':''}">
+        ${tagB?`<span class="b-tag">${tagB}</span>`:''}
+        <span class="b-name">${F(tB)} ${short(tB.split(' ').slice(0,2).join(' '))}</span>
+        <span class="b-prob">${!favA?'<b>':''}${(pB*100).toFixed(0)}%${!favA?'</b>':''}</span>
+      </div>
+    </div>`;
+  }
+  function projWinner(tA, tB){
+    const isStr=(t)=>typeof t==='string'&&t.length<=3;
+    if(isStr(tA)||isStr(tB)) return tA;
+    return wp(tA,tB)>=0.5?tA:tB;
+  }
+
+  const r32Matches=r32.map(([gA,pA,gB,pB])=>({
+    tA:getTeam(gA,pA), tB:getTeam(gB,pB), tagA:`${pA===1?'1°':'2°'}${gA}`, tagB:`${pB===1?'1°':'2°'}${gB}`
+  }));
+  const r32W=r32Matches.map(m=>projWinner(m.tA,m.tB));
+
+  const r16Pairs=[];
+  for(let i=0;i<r32W.length;i+=2) r16Pairs.push([r32W[i],r32W[i+1]]);
+  const r16W=r16Pairs.map(([a,b])=>projWinner(a,b));
+
+  const qfPairs=[];
+  for(let i=0;i<r16W.length;i+=2) qfPairs.push([r16W[i],r16W[i+1]]);
+  const qfW=qfPairs.map(([a,b])=>projWinner(a,b));
+
+  const sfPairs=[[qfW[0],qfW[1]],[qfW[2],qfW[3]]];
+  const sfW=sfPairs.map(([a,b])=>projWinner(a,b));
+
+  const half1=r32Matches.slice(0,6);
+  const half2=r32Matches.slice(6,12);
+  const qfMatches=qfPairs.map(([a,b])=>({tA:a,tB:b,tagA:'',tagB:''}));
+  const sfMatches=sfPairs.map(([a,b])=>({tA:a,tB:b,tagA:'',tagB:''}));
+
+  document.getElementById('bracket-view').innerHTML = `
+    <div class="b-col">
+      <div class="b-rnd-title">⚔️ Oitavas — 1ª metade</div>
+      ${half1.map(m=>matchHTML(m.tA,m.tB,m.tagA,m.tagB)).join('')}
+    </div>
+    <div class="b-col">
+      <div class="b-rnd-title">⚔️ Oitavas — 2ª metade</div>
+      ${half2.map(m=>matchHTML(m.tA,m.tB,m.tagA,m.tagB)).join('')}
+    </div>
+    <div class="b-col b-col-narrow" style="justify-content:space-around;display:flex;flex-direction:column">
+      <div class="b-rnd-title">🏅 Quartas</div>
+      ${qfMatches.map(m=>matchHTML(m.tA,m.tB)).join('')}
+    </div>
+    <div class="b-col b-col-narrow" style="justify-content:space-around;display:flex;flex-direction:column">
+      <div class="b-rnd-title">🔥 Semifinais</div>
+      ${sfMatches.map(m=>matchHTML(m.tA,m.tB)).join('')}
+    </div>
+    <div class="b-col" style="max-width:200px;flex:.38;justify-content:center;display:flex;flex-direction:column">
+      <div class="b-rnd-title">🏆 Final</div>
+      ${matchHTML(sfW[0],sfW[1])}
+    </div>
+  `;
+})();
+
+/* ═══════════════════════════════════════════════════
+   TAB: FRAMEWORK
+═══════════════════════════════════════════════════ */
+(function() {
+  const cards=[
+    {n:1,title:'Elo de Seleções',text:'Rating de força construído sobre <strong>~49 mil jogos internacionais</strong> (1872–2026). Cada vitória aumenta o rating e cada derrota diminui — mais do que em partidas importantes. Calibrado para converter a diferença de força em gols esperados.'},
+    {n:2,title:'Dixon-Coles',text:'Estima separadamente o potencial de <strong>ataque e defesa</strong> de cada seleção usando máxima verossimilhança. Jogos recentes têm mais peso. Inclui correção para resultados de baixo placar, que são mais frequentes no futebol.'},
+    {n:3,title:'Mercado de Apostas',text:'Odds de <strong>31+ casas de apostas</strong>, com a margem da casa removida. Funciona como a "sabedoria das multidões" — incorpora informações difíceis de modelar, como lesões de última hora e escalações.'},
+    {n:4,title:'Ensemble (combinação)',text:'Junta os três métodos com pesos calibrados: Elo <code>22%</code> · Dixon-Coles <code>43%</code> · Mercado <code>35%</code>. Retorna a probabilidade de vitória/empate/derrota e o placar mais provável por Poisson bivariado.'},
+    {n:5,title:'Avaliação (RPS)',text:'Usamos o <strong>Ranked Probability Score</strong> — padrão científico. Ele penaliza erros proporcionalmente: prever 90% para o time que perdeu é muito pior do que prever 55%. Bom modelo fica entre <code>0.18</code> e <code>0.21</code>.'},
+    {n:6,title:'Sem "Cola" (No Leakage)',text:'Jogos já disputados são previstos usando apenas dados <strong>anteriores à partida</strong>. Isso garante que as métricas de acurácia refletem previsões reais — não há vantagem retroativa.'},
+  ];
+  document.getElementById('fw-cards-container').innerHTML=cards.map(c=>
+    `<div class="fw-card"><div class="fw-num">${c.n}</div><h4>${c.title}</h4><p>${c.text}</p></div>`
+  ).join('');
+
+  document.getElementById('ds-list').innerHTML=[
+    {icon:'📦',name:'Kaggle / martj42',desc:'~49 mil resultados internacionais desde 1872. Base principal de treino para Elo e Dixon-Coles.'},
+    {icon:'⚽',name:'OpenFootball',desc:'Resultados da Copa 2026 atualizados automaticamente. Grátis, sem chave de API.'},
+    {icon:'💰',name:'The Odds API',desc:'Odds de 31+ casas para jogos futuros. A margem da banca é removida matematicamente antes de usar.'},
+    {icon:'📡',name:'StatsBomb Open Data',desc:'Eventos e xG de partidas históricas para validação e calibração dos gols esperados.'},
+    {icon:'📰',name:'NewsData.io',desc:'Notícias sobre lesões, suspensões e contexto em português e inglês.'},
+  ].map(d=>`<li class="ds-item"><span class="ds-icon">${d.icon}</span><div class="ds-info"><strong>${d.name}</strong><p>${d.desc}</p></div></li>`).join('');
+
+  const w=PRED.weights;
+  document.getElementById('model-params').innerHTML=[
+    {n:'Peso Elo (com odds)',v:w.elo,c:'#3b82f6'},
+    {n:'Peso Dixon-Coles',v:w.dixon_coles,c:'#f0c030'},
+    {n:'Peso Mercado',v:w.market,c:'#00e57a'},
+    {n:'Peso Elo (sem odds)',v:w.sem_mercado.elo,c:'#3b82f6'},
+    {n:'Peso DC (sem odds)',v:w.sem_mercado.dixon_coles,c:'#f0c030'},
+  ].map(r=>`<div class="mbar-row">
+    <span class="mbar-name">${r.n}</span>
+    <div class="mbar-bg"><div class="mbar-fill" style="width:${r.v*100}%;background:${r.c}"></div></div>
+    <span class="mbar-val">${(r.v*100).toFixed(0)}%</span>
+  </div>`).join('')+`<div class="divider"></div>
+  <p class="small muted">
+    <b style="color:#5a7090">Calibração Elo:</b> β = ${PRED.elo_calibration.beta_sup_per_elo.toFixed(6)}<br>
+    <b style="color:#5a7090">Dixon-Coles ρ (correção):</b> ${PRED.dc_params.rho.toFixed(4)} · γ (mando) = ${PRED.dc_params.gamma.toFixed(4)}
+  </p>`;
+
+  const b=BACK.baselines;
+  document.getElementById('accuracy-detail').innerHTML=[
+    {n:'Ensemble (nosso)',v:BACK.mean_rps,c:'#f0c030',max:.25},
+    {n:'Só Dixon-Coles',v:b.rps_dixon_coles_only,c:'#3b82f6',max:.25},
+    {n:'Só Elo',v:b.rps_elo_only,c:'#9060e0',max:.25},
+    {n:'Aleatório (33/33/33)',v:b.rps_naive_uniform,c:'#f04060',max:.25},
+    {n:'Resultado certo',v:BACK.hit_rate_1x2,c:'#00e57a',max:1},
+    {n:'Placar exato',v:BACK.exact_score_hit_rate,c:'#00d4ff',max:1},
+  ].map(r=>`<div class="mbar-row">
+    <span class="mbar-name">${r.n}</span>
+    <div class="mbar-bg"><div class="mbar-fill" style="width:${(r.v/r.max)*100}%;background:${r.c}"></div></div>
+    <span class="mbar-val mono">${r.v<1&&r.n.includes('Placar')||r.n.includes('certo')?pct(r.v):r.v.toFixed?r.v.toFixed(4):r.v}</span>
+  </div>`).join('');
+
+  const bins=BACK.calibration_bins;
+  document.getElementById('calib-bins').innerHTML=bins.map(b=>{
+    const hp=Math.round(b.pred_mean*52);
+    const ho=Math.round(b.obs_freq*52);
+    const good=Math.abs(b.pred_mean-b.obs_freq)<0.12;
+    const col=good?'#00e57a':'#f0c030';
+    return `<div class="calbin">
+      <div class="cbl">${b.bin}</div>
+      <div class="cbars">
+        <div class="cbar" style="height:${hp}px;background:#3b82f6" title="Previsto: ${(b.pred_mean*100).toFixed(0)}%"></div>
+        <div class="cbar" style="height:${ho}px;background:${col}" title="Real: ${(b.obs_freq*100).toFixed(0)}%"></div>
+      </div>
+      <div class="cval" style="color:${col}">${(b.obs_freq*100).toFixed(0)}%</div>
+      <div class="cn">n=${b.n}</div>
+    </div>`;
+  }).join('');
+})();
+
+/* ═══════════════════════════════════════════════════
+   TAB: RANKING
+═══════════════════════════════════════════════════ */
+(function() {
+  let rk='elo', rd=-1;
+  function render(){
+    const rows=[...RAT].sort((a,b)=>(a[rk]>b[rk]?1:a[rk]<b[rk]?-1:0)*rd);
+    const maxE=Math.max(...rows.map(r=>r.elo));
+    document.getElementById('ranking-body').innerHTML=rows.map((r,i)=>{
+      const bw=(r.elo/maxE*100).toFixed(1);
+      const nc=r.net>=2.2?'#f0c030':r.net>=1.8?'#00e57a':r.net>=1.2?'#3b82f6':'#4a6080';
+      return `<tr>
+        <td class="muted small">${i+1}</td>
+        <td style="font-weight:700">${F(r.team)} ${r.team}</td>
+        <td class="mono" style="font-weight:800;color:#d0dff0">${r.elo}</td>
+        <td class="mono" style="color:${r.att>=0?'#00e57a':'#f04060'}">${r.att>=0?'+':''}${r.att}</td>
+        <td class="mono" style="color:${r.def>=0?'#00e57a':'#f04060'}">${r.def>=0?'+':''}${r.def}</td>
+        <td class="mono" style="font-weight:800;color:${nc}">${r.net>=0?'+':''}${r.net}</td>
+        <td>
+          <div class="rank-bar-bg">
+            <div class="rank-bar-fill" style="width:${bw}%"></div>
+          </div>
+        </td>
+      </tr>`;
+    }).join('');
+  }
+  document.querySelectorAll('#tab-ranking th[data-rk]').forEach(th=>{
+    th.addEventListener('click',()=>{
+      const k=th.dataset.rk; rd=rk===k?-rd:-1; rk=k; render();
+    });
+  });
+  render();
+})();
+</script>
+</body>
+</html>

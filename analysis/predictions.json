@@ -1,0 +1,154 @@
+{
+  "ensemble": {
+    "model": "Ensemble Ponderado por Evidência",
+    "weights": {
+      "mercado": 0.28,
+      "bayesiano": 0.25,
+      "xg": 0.22,
+      "dixon_coles": 0.15,
+      "elo": 0.1
+    },
+    "home_team": "Brasil",
+    "away_team": "Haiti",
+    "date": "2026-06-19",
+    "stage": "Grupo C — 2ª Rodada — Copa do Mundo 2026"
+  },
+  "individual_model_predictions": {
+    "dixon_coles": {
+      "brasil": 2.88,
+      "haiti": 0.61,
+      "brasil_win_prob": 0.8294
+    },
+    "elo": {
+      "brasil": 2.2,
+      "haiti": 0.41,
+      "brasil_win_prob": 0.9113
+    },
+    "bayesiano": {
+      "brasil": 2.84,
+      "haiti": 0.33,
+      "brasil_win_prob": 0.8663
+    },
+    "xg": {
+      "brasil": 1.96,
+      "haiti": 0.41,
+      "brasil_win_prob": 0.747
+    },
+    "mercado": {
+      "brasil": 2.76,
+      "haiti": 0.79,
+      "brasil_win_prob": 0.8471
+    }
+  },
+  "pre_context_adjustment": {
+    "expected_goals": {
+      "brasil": 2.55,
+      "haiti": 0.53
+    },
+    "probabilities": {
+      "brasil_win": 0.8086,
+      "draw": 0.1342,
+      "haiti_win": 0.0571
+    }
+  },
+  "contextual_adjustments_applied": {
+    "pressao_brasil": "+6% ataque (necessidade de vencer)",
+    "ausencia_neymar": "-5% ataque",
+    "bloco_baixo_haiti": "-8% Brasil ataque, +10% Haiti ataque",
+    "calor_fadiga": "-3% ambos",
+    "historico_h2h": "+3% Brasil ataque",
+    "fase_grupo": "+2% Brasil ataque"
+  },
+  "FINAL_PREDICTION": {
+    "expected_goals": {
+      "brasil": 2.41,
+      "haiti": 0.57
+    },
+    "probabilities": {
+      "brasil_win": 0.7827,
+      "draw": 0.1485,
+      "haiti_win": 0.0687
+    },
+    "most_likely_score": "2-0",
+    "most_likely_score_prob": 0.1484,
+    "top_5_scores": [
+      {
+        "score": "2-0",
+        "prob": 0.1484
+      },
+      {
+        "score": "1-0",
+        "prob": 0.1232
+      },
+      {
+        "score": "3-0",
+        "prob": 0.1191
+      },
+      {
+        "score": "2-1",
+        "prob": 0.0839
+      },
+      {
+        "score": "4-0",
+        "prob": 0.0717
+      }
+    ],
+    "80pct_confidence_set": [
+      "2-0",
+      "1-0",
+      "3-0",
+      "2-1",
+      "4-0",
+      "1-1",
+      "3-1",
+      "0-0"
+    ]
+  },
+  "sensitivity_analysis": [
+    {
+      "scenario": "Neymar joga (se recuperar)",
+      "expected_goals": {
+        "brasil": 2.6,
+        "haiti": 0.57
+      },
+      "brasil_win_prob": 0.8095,
+      "most_likely_score": "2-0"
+    },
+    {
+      "scenario": "Vinicius Jr. lesionado",
+      "expected_goals": {
+        "brasil": 2.05,
+        "haiti": 0.57
+      },
+      "brasil_win_prob": 0.7226,
+      "most_likely_score": "2-0"
+    },
+    {
+      "scenario": "Haiti muito defensivo",
+      "expected_goals": {
+        "brasil": 2.12,
+        "haiti": 0.45
+      },
+      "brasil_win_prob": 0.7643,
+      "most_likely_score": "2-0"
+    },
+    {
+      "scenario": "Brasil ataca desde o 1o minuto",
+      "expected_goals": {
+        "brasil": 2.77,
+        "haiti": 0.59
+      },
+      "brasil_win_prob": 0.8247,
+      "most_likely_score": "2-0"
+    },
+    {
+      "scenario": "Pênalti para o Haiti",
+      "expected_goals": {
+        "brasil": 2.41,
+        "haiti": 0.74
+      },
+      "brasil_win_prob": 0.744,
+      "most_likely_score": "2-0"
+    }
+  ]
+}

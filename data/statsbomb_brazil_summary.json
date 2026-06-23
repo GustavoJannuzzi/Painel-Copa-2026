@@ -1,0 +1,1144 @@
+{
+  "generated_at": "2026-06-22T19:47:19.019996+00:00",
+  "source": "StatsBomb Open Data (github.com/statsbomb/open-data)",
+  "team": "Brazil",
+  "seasons": [
+    "2018",
+    "2022"
+  ],
+  "n_matches": 10,
+  "matches": [
+    {
+      "match_id": 7533,
+      "date": "2018-06-17",
+      "stage": "Group Stage",
+      "home": "Brazil",
+      "away": "Switzerland",
+      "score": [
+        1,
+        1
+      ],
+      "xg": {
+        "Switzerland": 0.47,
+        "Brazil": 1.87
+      },
+      "shots": {
+        "Switzerland": 7,
+        "Brazil": 21
+      },
+      "fouls_by_team": {
+        "Brazil": 12,
+        "Switzerland": 21
+      },
+      "fouls_by_player": [
+        {
+          "player": "Blerim Džemaili",
+          "fouls": 5
+        },
+        {
+          "player": "Valon Behrami",
+          "fouls": 4
+        },
+        {
+          "player": "Granit Xhaka",
+          "fouls": 3
+        },
+        {
+          "player": "Willian Borges da Silva",
+          "fouls": 2
+        },
+        {
+          "player": "Gabriel Fernando de Jesus",
+          "fouls": 2
+        },
+        {
+          "player": "Philippe Coutinho Correia",
+          "fouls": 2
+        },
+        {
+          "player": "Haris Seferović",
+          "fouls": 2
+        },
+        {
+          "player": "Fernando Luiz Roza",
+          "fouls": 2
+        },
+        {
+          "player": "Michael Lang",
+          "fouls": 2
+        },
+        {
+          "player": "Stephan Lichtsteiner",
+          "fouls": 1
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "fouls": 1
+        },
+        {
+          "player": "João Miranda de Souza Filho",
+          "fouls": 1
+        },
+        {
+          "player": "Fabian Lukas Schär",
+          "fouls": 1
+        },
+        {
+          "player": "Steven Zuber",
+          "fouls": 1
+        },
+        {
+          "player": "Breel-Donald Embolo",
+          "fouls": 1
+        },
+        {
+          "player": "Thiago Emiliano da Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Denis Lemi Zakaria Lako Lado",
+          "fouls": 1
+        },
+        {
+          "player": "Roberto Firmino Barbosa de Oliveira",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Carlos Henrique Casimiro",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 46
+        },
+        {
+          "player": "Fabian Lukas Schär",
+          "team": "Switzerland",
+          "card": "Yellow Card",
+          "minute": 64
+        },
+        {
+          "player": "Valon Behrami",
+          "team": "Switzerland",
+          "card": "Yellow Card",
+          "minute": 67
+        }
+      ],
+      "n_events": 4010,
+      "season": "2018"
+    },
+    {
+      "match_id": 7548,
+      "date": "2018-06-22",
+      "stage": "Group Stage",
+      "home": "Brazil",
+      "away": "Costa Rica",
+      "score": [
+        2,
+        0
+      ],
+      "xg": {
+        "Brazil": 3.1,
+        "Costa Rica": 0.16
+      },
+      "shots": {
+        "Brazil": 23,
+        "Costa Rica": 4
+      },
+      "fouls_by_team": {
+        "Costa Rica": 17,
+        "Brazil": 11
+      },
+      "fouls_by_player": [
+        {
+          "player": "David Alberto Guzmán Pérez",
+          "fouls": 5
+        },
+        {
+          "player": "Bryan Oviedo",
+          "fouls": 4
+        },
+        {
+          "player": "Neymar da Silva Santos Junior",
+          "fouls": 4
+        },
+        {
+          "player": "João Miranda de Souza Filho",
+          "fouls": 3
+        },
+        {
+          "player": "Johan Alberto Venegas Ulloa",
+          "fouls": 2
+        },
+        {
+          "player": "Óscar Esau Duarte Gaitán",
+          "fouls": 2
+        },
+        {
+          "player": "Gabriel Fernando de Jesus",
+          "fouls": 2
+        },
+        {
+          "player": "Bryan Ruiz González",
+          "fouls": 2
+        },
+        {
+          "player": "Cristian Gamboa Luna",
+          "fouls": 1
+        },
+        {
+          "player": "Marcos Danilo Ureña Porras",
+          "fouls": 1
+        },
+        {
+          "player": "Willian Borges da Silva",
+          "fouls": 1
+        },
+        {
+          "player": "José Paulo Bezzera Maciel Júnior",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Neymar da Silva Santos Junior",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 80
+        },
+        {
+          "player": "Philippe Coutinho Correia",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 81
+        },
+        {
+          "player": "Johnny Acosta Zamora",
+          "team": "Costa Rica",
+          "card": "Yellow Card",
+          "minute": 83
+        }
+      ],
+      "n_events": 3721,
+      "season": "2018"
+    },
+    {
+      "match_id": 7565,
+      "date": "2018-06-27",
+      "stage": "Group Stage",
+      "home": "Serbia",
+      "away": "Brazil",
+      "score": [
+        0,
+        2
+      ],
+      "xg": {
+        "Brazil": 1.42,
+        "Serbia": 0.95
+      },
+      "shots": {
+        "Brazil": 15,
+        "Serbia": 11
+      },
+      "fouls_by_team": {
+        "Serbia": 14,
+        "Brazil": 7
+      },
+      "fouls_by_player": [
+        {
+          "player": "Aleksandar Kolarov",
+          "fouls": 3
+        },
+        {
+          "player": "Antonio Rukavina",
+          "fouls": 3
+        },
+        {
+          "player": "Fágner Conserva Lemos",
+          "fouls": 2
+        },
+        {
+          "player": "Filip Kostić",
+          "fouls": 2
+        },
+        {
+          "player": "Adem Ljajić",
+          "fouls": 2
+        },
+        {
+          "player": "Willian Borges da Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Aleksandar Mitrović",
+          "fouls": 1
+        },
+        {
+          "player": "Sergej Milinković-Savić",
+          "fouls": 1
+        },
+        {
+          "player": "Thiago Emiliano da Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Dušan Tadić",
+          "fouls": 1
+        },
+        {
+          "player": "Gabriel Fernando de Jesus",
+          "fouls": 1
+        },
+        {
+          "player": "João Miranda de Souza Filho",
+          "fouls": 1
+        },
+        {
+          "player": "Nemanja Matić",
+          "fouls": 1
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Adem Ljajić",
+          "team": "Serbia",
+          "card": "Yellow Card",
+          "minute": 31
+        },
+        {
+          "player": "Nemanja Matić",
+          "team": "Serbia",
+          "card": "Yellow Card",
+          "minute": 47
+        },
+        {
+          "player": "Aleksandar Mitrović",
+          "team": "Serbia",
+          "card": "Yellow Card",
+          "minute": 70
+        }
+      ],
+      "n_events": 4083,
+      "season": "2018"
+    },
+    {
+      "match_id": 7583,
+      "date": "2018-07-02",
+      "stage": "Round of 16",
+      "home": "Brazil",
+      "away": "Mexico",
+      "score": [
+        2,
+        0
+      ],
+      "xg": {
+        "Mexico": 0.58,
+        "Brazil": 3.32
+      },
+      "shots": {
+        "Mexico": 14,
+        "Brazil": 19
+      },
+      "fouls_by_team": {
+        "Mexico": 19,
+        "Brazil": 8
+      },
+      "fouls_by_player": [
+        {
+          "player": "Héctor Miguel Herrera López",
+          "fouls": 6
+        },
+        {
+          "player": "Edson Omar Álvarez Velázquez",
+          "fouls": 2
+        },
+        {
+          "player": "Philippe Coutinho Correia",
+          "fouls": 2
+        },
+        {
+          "player": "José Andrés Guardado Hernández",
+          "fouls": 2
+        },
+        {
+          "player": "Carlos Joel Salcedo Hernández",
+          "fouls": 2
+        },
+        {
+          "player": "Rafael Márquez Álvarez",
+          "fouls": 2
+        },
+        {
+          "player": "Fágner Conserva Lemos",
+          "fouls": 2
+        },
+        {
+          "player": "Gabriel Fernando de Jesus",
+          "fouls": 2
+        },
+        {
+          "player": "Hirving Rodrigo Lozano Bahena",
+          "fouls": 2
+        },
+        {
+          "player": "Javier Hernández Balcázar",
+          "fouls": 1
+        },
+        {
+          "player": "Jesús Daniel Gallardo Vasconcelos",
+          "fouls": 1
+        },
+        {
+          "player": "Filipe Luís Kasmirski",
+          "fouls": 1
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "fouls": 1
+        },
+        {
+          "player": "Raúl Alonso Jiménez Rodríguez",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Edson Omar Álvarez Velázquez",
+          "team": "Mexico",
+          "card": "Yellow Card",
+          "minute": 37
+        },
+        {
+          "player": "Filipe Luís Kasmirski",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 41
+        },
+        {
+          "player": "Héctor Miguel Herrera López",
+          "team": "Mexico",
+          "card": "Yellow Card",
+          "minute": 54
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 58
+        },
+        {
+          "player": "Raúl Alonso Jiménez Rodríguez",
+          "team": "Mexico",
+          "card": "Yellow Card",
+          "minute": 76
+        },
+        {
+          "player": "José Andrés Guardado Hernández",
+          "team": "Mexico",
+          "card": "Yellow Card",
+          "minute": 91
+        }
+      ],
+      "n_events": 3393,
+      "season": "2018"
+    },
+    {
+      "match_id": 8650,
+      "date": "2018-07-06",
+      "stage": "Quarter-finals",
+      "home": "Brazil",
+      "away": "Belgium",
+      "score": [
+        1,
+        2
+      ],
+      "xg": {
+        "Belgium": 0.41,
+        "Brazil": 2.61
+      },
+      "shots": {
+        "Belgium": 8,
+        "Brazil": 25
+      },
+      "fouls_by_team": {
+        "Brazil": 20,
+        "Belgium": 18
+      },
+      "fouls_by_player": [
+        {
+          "player": "Marouane Fellaini-Bakkioui",
+          "fouls": 6
+        },
+        {
+          "player": "Eden Hazard",
+          "fouls": 4
+        },
+        {
+          "player": "Fágner Conserva Lemos",
+          "fouls": 4
+        },
+        {
+          "player": "João Miranda de Souza Filho",
+          "fouls": 4
+        },
+        {
+          "player": "Romelu Lukaku Menama",
+          "fouls": 3
+        },
+        {
+          "player": "José Paulo Bezzera Maciel Júnior",
+          "fouls": 3
+        },
+        {
+          "player": "Marcelo Vieira da Silva Júnior",
+          "fouls": 2
+        },
+        {
+          "player": "Toby Alderweireld",
+          "fouls": 2
+        },
+        {
+          "player": "Thomas Meunier",
+          "fouls": 2
+        },
+        {
+          "player": "Fernando Luiz Roza",
+          "fouls": 2
+        },
+        {
+          "player": "Willian Borges da Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Gabriel Fernando de Jesus",
+          "fouls": 1
+        },
+        {
+          "player": "Jan Vertonghen",
+          "fouls": 1
+        },
+        {
+          "player": "Philippe Coutinho Correia",
+          "fouls": 1
+        },
+        {
+          "player": "Roberto Firmino Barbosa de Oliveira",
+          "fouls": 1
+        },
+        {
+          "player": "Renato Soares de Oliveira Augusto",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Toby Alderweireld",
+          "team": "Belgium",
+          "card": "Yellow Card",
+          "minute": 46
+        },
+        {
+          "player": "Thomas Meunier",
+          "team": "Belgium",
+          "card": "Yellow Card",
+          "minute": 70
+        },
+        {
+          "player": "Fernando Luiz Roza",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 84
+        },
+        {
+          "player": "Fágner Conserva Lemos",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 89
+        }
+      ],
+      "n_events": 3589,
+      "season": "2018"
+    },
+    {
+      "match_id": 3857258,
+      "date": "2022-11-24",
+      "stage": "Group Stage",
+      "home": "Brazil",
+      "away": "Serbia",
+      "score": [
+        2,
+        0
+      ],
+      "xg": {
+        "Brazil": 2.12,
+        "Serbia": 0.16
+      },
+      "shots": {
+        "Brazil": 23,
+        "Serbia": 5
+      },
+      "fouls_by_team": {
+        "Serbia": 11,
+        "Brazil": 8
+      },
+      "fouls_by_player": [
+        {
+          "player": "Nikola Milenković",
+          "fouls": 3
+        },
+        {
+          "player": "Saša Lukić",
+          "fouls": 3
+        },
+        {
+          "player": "Aleksandar Mitrović",
+          "fouls": 1
+        },
+        {
+          "player": "Neymar da Silva Santos Junior",
+          "fouls": 1
+        },
+        {
+          "player": "Raphael Dias Belloli",
+          "fouls": 1
+        },
+        {
+          "player": "Strahinja Pavlović",
+          "fouls": 1
+        },
+        {
+          "player": "Richarlison de Andrade",
+          "fouls": 1
+        },
+        {
+          "player": "Lucas Tolentino Coelho de Lima",
+          "fouls": 1
+        },
+        {
+          "player": "Alex Sandro Lobo Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Andrija Živković",
+          "fouls": 1
+        },
+        {
+          "player": "Nemanja Gudelj",
+          "fouls": 1
+        },
+        {
+          "player": "Dušan Tadić",
+          "fouls": 1
+        },
+        {
+          "player": "Gabriel Teodoro Martinelli Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Frederico Rodrigues Santos",
+          "fouls": 1
+        },
+        {
+          "player": "Gabriel Fernando de Jesus",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Strahinja Pavlović",
+          "team": "Serbia",
+          "card": "Yellow Card",
+          "minute": 5
+        },
+        {
+          "player": "Nemanja Gudelj",
+          "team": "Serbia",
+          "card": "Yellow Card",
+          "minute": 48
+        },
+        {
+          "player": "Saša Lukić",
+          "team": "Serbia",
+          "card": "Yellow Card",
+          "minute": 63
+        }
+      ],
+      "n_events": 3656,
+      "season": "2022"
+    },
+    {
+      "match_id": 3857269,
+      "date": "2022-11-28",
+      "stage": "Group Stage",
+      "home": "Brazil",
+      "away": "Switzerland",
+      "score": [
+        1,
+        0
+      ],
+      "xg": {
+        "Switzerland": 0.29,
+        "Brazil": 0.92
+      },
+      "shots": {
+        "Switzerland": 6,
+        "Brazil": 13
+      },
+      "fouls_by_team": {
+        "Switzerland": 18,
+        "Brazil": 10
+      },
+      "fouls_by_player": [
+        {
+          "player": "Fabian Rieder",
+          "fouls": 4
+        },
+        {
+          "player": "Silvan Widmer",
+          "fouls": 3
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "fouls": 3
+        },
+        {
+          "player": "Éder Gabriel Militão",
+          "fouls": 3
+        },
+        {
+          "player": "Nico Elvedi",
+          "fouls": 2
+        },
+        {
+          "player": "Thiago Emiliano da Silva",
+          "fouls": 2
+        },
+        {
+          "player": "Ruben Vargas",
+          "fouls": 2
+        },
+        {
+          "player": "Manuel Obafemi Akanji",
+          "fouls": 2
+        },
+        {
+          "player": "Granit Xhaka",
+          "fouls": 2
+        },
+        {
+          "player": "Alex Sandro Lobo Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Remo Freuler",
+          "fouls": 1
+        },
+        {
+          "player": "Frederico Rodrigues Santos",
+          "fouls": 1
+        },
+        {
+          "player": "Ricardo Iván Rodríguez Araya",
+          "fouls": 1
+        },
+        {
+          "player": "Michel Aebischer",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Fabian Rieder",
+          "team": "Switzerland",
+          "card": "Yellow Card",
+          "minute": 49
+        },
+        {
+          "player": "Frederico Rodrigues Santos",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 51
+        }
+      ],
+      "n_events": 3786,
+      "season": "2022"
+    },
+    {
+      "match_id": 3857280,
+      "date": "2022-12-02",
+      "stage": "Group Stage",
+      "home": "Cameroon",
+      "away": "Brazil",
+      "score": [
+        1,
+        0
+      ],
+      "xg": {
+        "Brazil": 2.38,
+        "Cameroon": 0.38
+      },
+      "shots": {
+        "Brazil": 21,
+        "Cameroon": 7
+      },
+      "fouls_by_team": {
+        "Cameroon": 17,
+        "Brazil": 15
+      },
+      "fouls_by_player": [
+        {
+          "player": "Daniel Alves da Silva",
+          "fouls": 5
+        },
+        {
+          "player": "André-Frank Zambo Anguissa",
+          "fouls": 3
+        },
+        {
+          "player": "Pierre Kunde Malong",
+          "fouls": 3
+        },
+        {
+          "player": "Nicolas Moumi Ngamaleu",
+          "fouls": 2
+        },
+        {
+          "player": "Éder Gabriel Militão",
+          "fouls": 2
+        },
+        {
+          "player": "Fábio Henrique Tavares",
+          "fouls": 2
+        },
+        {
+          "player": "Ngoran Suiru Fai Collins",
+          "fouls": 2
+        },
+        {
+          "player": "Christopher Wooh",
+          "fouls": 2
+        },
+        {
+          "player": "Bruno Guimarães Rodriguez Moura",
+          "fouls": 2
+        },
+        {
+          "player": "Vincent Paté Aboubakar",
+          "fouls": 2
+        },
+        {
+          "player": "Bryan Mbeumo",
+          "fouls": 1
+        },
+        {
+          "player": "Nouhou Tolo",
+          "fouls": 1
+        },
+        {
+          "player": "Alex Nicolao Telles",
+          "fouls": 1
+        },
+        {
+          "player": "Enzo Ebosse",
+          "fouls": 1
+        },
+        {
+          "player": "Frederico Rodrigues Santos",
+          "fouls": 1
+        },
+        {
+          "player": "Gleison Bremer Silva Nascimento",
+          "fouls": 1
+        },
+        {
+          "player": "Gabriel Teodoro Martinelli Silva",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Nouhou Tolo",
+          "team": "Cameroon",
+          "card": "Yellow Card",
+          "minute": 5
+        },
+        {
+          "player": "Éder Gabriel Militão",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 6
+        },
+        {
+          "player": "Pierre Kunde Malong",
+          "team": "Cameroon",
+          "card": "Yellow Card",
+          "minute": 27
+        },
+        {
+          "player": "Ngoran Suiru Fai Collins",
+          "team": "Cameroon",
+          "card": "Yellow Card",
+          "minute": 31
+        },
+        {
+          "player": "Vincent Paté Aboubakar",
+          "team": "Cameroon",
+          "card": "Yellow Card",
+          "minute": 80
+        },
+        {
+          "player": "Bruno Guimarães Rodriguez Moura",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 84
+        },
+        {
+          "player": "Vincent Paté Aboubakar",
+          "team": "Cameroon",
+          "card": "Second Yellow",
+          "minute": 92
+        }
+      ],
+      "n_events": 3299,
+      "season": "2022"
+    },
+    {
+      "match_id": 3869253,
+      "date": "2022-12-05",
+      "stage": "Round of 16",
+      "home": "Brazil",
+      "away": "South Korea",
+      "score": [
+        4,
+        1
+      ],
+      "xg": {
+        "Brazil": 3.26,
+        "South Korea": 0.34
+      },
+      "shots": {
+        "Brazil": 18,
+        "South Korea": 8
+      },
+      "fouls_by_team": {
+        "South Korea": 12,
+        "Brazil": 8
+      },
+      "fouls_by_player": [
+        {
+          "player": "Richarlison de Andrade",
+          "fouls": 3
+        },
+        {
+          "player": "Hee-Chan Hwang",
+          "fouls": 3
+        },
+        {
+          "player": "Gue-Sung Cho",
+          "fouls": 2
+        },
+        {
+          "player": "Woo-Young Jung",
+          "fouls": 2
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "fouls": 2
+        },
+        {
+          "player": "Jun-Ho Son",
+          "fouls": 2
+        },
+        {
+          "player": "Raphael Dias Belloli",
+          "fouls": 1
+        },
+        {
+          "player": "Heung-Min Son",
+          "fouls": 1
+        },
+        {
+          "player": "In-Beom Hwang",
+          "fouls": 1
+        },
+        {
+          "player": "Danilo Luiz da Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Gleison Bremer Silva Nascimento",
+          "fouls": 1
+        },
+        {
+          "player": "Seung-Ho Paik",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Woo-Young Jung",
+          "team": "South Korea",
+          "card": "Yellow Card",
+          "minute": 43
+        }
+      ],
+      "n_events": 4046,
+      "season": "2022"
+    },
+    {
+      "match_id": 3869420,
+      "date": "2022-12-09",
+      "stage": "Quarter-finals",
+      "home": "Croatia",
+      "away": "Brazil",
+      "score": [
+        1,
+        1
+      ],
+      "xg": {
+        "Brazil": 4.95,
+        "Croatia": 3.77
+      },
+      "shots": {
+        "Brazil": 24,
+        "Croatia": 13
+      },
+      "fouls_by_team": {
+        "Brazil": 25,
+        "Croatia": 23
+      },
+      "fouls_by_player": [
+        {
+          "player": "Marcelo Brozović",
+          "fouls": 4
+        },
+        {
+          "player": "Nikola Vlašić",
+          "fouls": 4
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "fouls": 3
+        },
+        {
+          "player": "Luka Modrić",
+          "fouls": 3
+        },
+        {
+          "player": "Ivan Perišić",
+          "fouls": 3
+        },
+        {
+          "player": "Lucas Tolentino Coelho de Lima",
+          "fouls": 3
+        },
+        {
+          "player": "Neymar da Silva Santos Junior",
+          "fouls": 3
+        },
+        {
+          "player": "Rodrygo Silva de Goes",
+          "fouls": 3
+        },
+        {
+          "player": "Borna Sosa",
+          "fouls": 2
+        },
+        {
+          "player": "Mateo Kovačić",
+          "fouls": 2
+        },
+        {
+          "player": "Danilo Luiz da Silva",
+          "fouls": 2
+        },
+        {
+          "player": "Éder Gabriel Militão",
+          "fouls": 2
+        },
+        {
+          "player": "Richarlison de Andrade",
+          "fouls": 2
+        },
+        {
+          "player": "Antony Matheus dos Santos",
+          "fouls": 2
+        },
+        {
+          "player": "Pedro Guilherme Abreu dos Santos",
+          "fouls": 2
+        },
+        {
+          "player": "Joško Gvardiol",
+          "fouls": 1
+        },
+        {
+          "player": "Mario Pašalić",
+          "fouls": 1
+        },
+        {
+          "player": "Andrej Kramarić",
+          "fouls": 1
+        },
+        {
+          "player": "Marcos Aoás Corrêa",
+          "fouls": 1
+        },
+        {
+          "player": "Ante Budimir",
+          "fouls": 1
+        },
+        {
+          "player": "Bruno Petković",
+          "fouls": 1
+        },
+        {
+          "player": "Alex Sandro Lobo Silva",
+          "fouls": 1
+        },
+        {
+          "player": "Frederico Rodrigues Santos",
+          "fouls": 1
+        }
+      ],
+      "cards": [
+        {
+          "player": "Danilo Luiz da Silva",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 24
+        },
+        {
+          "player": "Marcelo Brozović",
+          "team": "Croatia",
+          "card": "Yellow Card",
+          "minute": 30
+        },
+        {
+          "player": "Carlos Henrique Casimiro",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 67
+        },
+        {
+          "player": "Marcos Aoás Corrêa",
+          "team": "Brazil",
+          "card": "Yellow Card",
+          "minute": 76
+        },
+        {
+          "player": "Bruno Petković",
+          "team": "Croatia",
+          "card": "Yellow Card",
+          "minute": 116
+        }
+      ],
+      "n_events": 5145,
+      "season": "2022"
+    }
+  ]
+}

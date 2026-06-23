@@ -1,0 +1,24 @@
+# Segredos
+.env
+*.key
+~/.kaggle/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Dados brutos grandes
+data/raw/**/*.zip
+
+# Build intermediário
+output/dashboard_data.json
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

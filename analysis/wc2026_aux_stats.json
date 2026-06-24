@@ -1777,7 +1777,7 @@
         {
           "name": "Yoane Wissa",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]
@@ -1837,20 +1837,20 @@
       "away": [
         {
           "name": "Daniel Muñoz",
-          "goals": 1,
+          "goals": 2,
           "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Luis Díaz",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Jáminton Campaz",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]
@@ -1917,19 +1917,19 @@
         {
           "name": "Harry Kane",
           "goals": 2,
-          "goals_per_game": 2.0,
+          "goals_per_game": 1.0,
           "pen": 1
         },
         {
           "name": "Jude Bellingham",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Marcus Rashford",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ],
@@ -1937,13 +1937,19 @@
         {
           "name": "Martin Baturina",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Petar Musa",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ante Budimir",
+          "goals": 1,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]
@@ -2024,7 +2030,7 @@
         {
           "name": "Caleb Yirenkyi",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ],
@@ -3894,20 +3900,20 @@
       "home": [
         {
           "name": "Daniel Muñoz",
-          "goals": 1,
+          "goals": 2,
           "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Luis Díaz",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Jáminton Campaz",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ],
@@ -3915,12 +3921,20 @@
         {
           "name": "Yoane Wissa",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Colombia",
+        "name": "Daniel Muñoz",
+        "minute": "76",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-23_England_Ghana": {
     "home": "England",
@@ -3953,19 +3967,19 @@
         {
           "name": "Harry Kane",
           "goals": 2,
-          "goals_per_game": 2.0,
+          "goals_per_game": 1.0,
           "pen": 1
         },
         {
           "name": "Jude Bellingham",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Marcus Rashford",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ],
@@ -3973,7 +3987,7 @@
         {
           "name": "Caleb Yirenkyi",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]
@@ -4037,18 +4051,32 @@
         {
           "name": "Martin Baturina",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Petar Musa",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ante Budimir",
+          "goals": 1,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Croatia",
+        "name": "Ante Budimir",
+        "minute": "55",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-24_Czech Republic_Mexico": {
     "home": "Czech Republic",
@@ -5348,20 +5376,20 @@
       "home": [
         {
           "name": "Daniel Muñoz",
-          "goals": 1,
+          "goals": 2,
           "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Luis Díaz",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Jáminton Campaz",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ],
@@ -5425,7 +5453,7 @@
         {
           "name": "Yoane Wissa",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ],
@@ -5497,19 +5525,19 @@
         {
           "name": "Harry Kane",
           "goals": 2,
-          "goals_per_game": 2.0,
+          "goals_per_game": 1.0,
           "pen": 1
         },
         {
           "name": "Jude Bellingham",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Marcus Rashford",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]
@@ -5547,13 +5575,19 @@
         {
           "name": "Martin Baturina",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         },
         {
           "name": "Petar Musa",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
+          "pen": 0
+        },
+        {
+          "name": "Ante Budimir",
+          "goals": 1,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ],
@@ -5561,7 +5595,7 @@
         {
           "name": "Caleb Yirenkyi",
           "goals": 1,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.5,
           "pen": 0
         }
       ]

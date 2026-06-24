@@ -1,4 +1,4 @@
-"""
+﻿"""
 Gera output/index.html — painel visual self-contained da Copa 2026.
 v3: modal de detalhes por jogo, ícones SVG, fonte Inter, stats auxiliares.
 """
@@ -1135,7 +1135,7 @@ const gridColor = 'rgba(255,255,255,.04)';
   const played = PRED.matches.filter(m=>m.played).slice(-12).reverse();
   document.getElementById('recent-results').innerHTML = played.map(m => {
     const p = m.prediction; const e = m.eval||{};
-    return `<div class="rr-row" onclick="openModal(${JSON.stringify(m).replace(/</g,'\\u003c')})">
+    return `<div class="rr-row" onclick="openModal(${JSON.stringify(m).replace(/</g,'\\u003c').replace(/"/g,'&quot;')})">
       <span class="small muted" style="width:74px;flex-shrink:0">${m.date}</span>
       <span class="small muted" style="width:26px;flex-shrink:0">${(m.group||'').replace('Group ','')}</span>
       <span style="flex:1;font-weight:700;min-width:0;font-size:13px">${F(m.home)} ${m.home} <span class="muted">×</span> ${m.away} ${F(m.away)}</span>
@@ -1173,7 +1173,7 @@ const gridColor = 'rgba(255,255,255,.04)';
     document.getElementById('played-body').innerHTML=rows.map(m=>{
       const p=m.prediction; const e=m.eval||{};
       const mkt=m.models.market?' <span style="font-size:9px;color:#e89820;opacity:.7" title="odds disponíveis">●</span>':'';
-      const mj = JSON.stringify(m).replace(/</g,'\\u003c');
+      const mj = JSON.stringify(m).replace(/</g,'\\u003c').replace(/"/g,'&quot;');
       return `<tr onclick="openModal(${mj})">
         <td class="small muted">${m.date}</td>
         <td class="small muted">${(m.group||'').replace('Group ','')}</td>
@@ -1223,7 +1223,7 @@ const gridColor = 'rgba(255,255,255,.04)';
       const hasMkt=!!m.models.market;
       const favH=p.p_home>p.p_away&&p.p_home>p.p_draw;
       const favA=p.p_away>p.p_home&&p.p_away>p.p_draw;
-      const mj=JSON.stringify(m).replace(/</g,'\\u003c');
+      const mj=JSON.stringify(m).replace(/</g,'\\u003c').replace(/"/g,'&quot;');
       return `<div class="gcard" onclick="openModal(${mj})">
         <div class="gc-meta">
           <span class="gc-group">${m.group} · ${m.round}</span>
@@ -1325,6 +1325,11 @@ const gridColor = 'rgba(255,255,255,.04)';
     const letter=g.replace('Group ','');
     qualified[letter]=groupStandings[g].slice(0,2).map(t=>t.team);
   });
+  // 8 melhores terceiros colocados (avançam no formato Copa 2026)
+  const thirds=Object.keys(groupStandings)
+    .map(g=>groupStandings[g][2]).filter(t=>t&&t.team)
+    .sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf)
+    .slice(0,8).map(t=>t.team);
   const eloMap={};
   RAT.forEach(r=>{eloMap[r.team]=r.elo});
   const wp=(a,b)=>{const ea=eloMap[a]||1700,eb=eloMap[b]||1700;return 1/(1+Math.pow(10,(eb-ea)/400));};
@@ -1336,31 +1341,42 @@ const gridColor = 'rgba(255,255,255,.04)';
   ];
   function getTeam(grp,pos){return qualified[grp]?.[pos-1]||`${pos===1?'1°':'2°'}${grp}`;}
   function matchHTML(tA,tB,tagA='',tagB=''){
-    const isStr=t=>typeof t==='string'&&t.length<=3;
+    if(!tA||!tB) return '';
+    const isStr=t=>!t||typeof t!=='string'||t.length<=4;
     const pA=isStr(tA)||isStr(tB)?0.5:wp(tA,tB); const pB=1-pA; const favA=pA>pB;
+    const sA=String(tA); const sB=String(tB);
     return `<div class="b-match">
       <div class="b-team ${favA?'b-fav':''}">
         ${tagA?`<span class="b-tag">${tagA}</span>`:''}
-        <span class="b-name">${F(tA)} ${short(tA.split(' ').slice(0,2).join(' '))}</span>
+        <span class="b-name">${F(sA)} ${short(sA.split(' ').slice(0,2).join(' '))}</span>
         <span class="b-prob">${favA?'<b>':''}${(pA*100).toFixed(0)}%${favA?'</b>':''}</span>
       </div>
       <div class="b-team ${!favA?'b-fav':''}">
         ${tagB?`<span class="b-tag">${tagB}</span>`:''}
-        <span class="b-name">${F(tB)} ${short(tB.split(' ').slice(0,2).join(' '))}</span>
+        <span class="b-name">${F(sB)} ${short(sB.split(' ').slice(0,2).join(' '))}</span>
         <span class="b-prob">${!favA?'<b>':''}${(pB*100).toFixed(0)}%${!favA?'</b>':''}</span>
       </div>
     </div>`;
   }
-  function projWinner(tA,tB){const isStr=t=>typeof t==='string'&&t.length<=3;if(isStr(tA)||isStr(tB))return tA;return wp(tA,tB)>=0.5?tA:tB;}
+  function projWinner(tA,tB){
+    if(!tA) return tB||'TBD'; if(!tB) return tA||'TBD';
+    const isStr=t=>typeof t!=='string'||t.length<=4;
+    if(isStr(tA)||isStr(tB))return tA;
+    return wp(tA,tB)>=0.5?tA:tB;
+  }
   const r32M=r32.map(([gA,pA,gB,pB])=>({tA:getTeam(gA,pA),tB:getTeam(gB,pB),tagA:`${pA===1?'1°':'2°'}${gA}`,tagB:`${pB===1?'1°':'2°'}${gB}`}));
-  const r32W=r32M.map(m=>projWinner(m.tA,m.tB));
+  // 4 duelos extras dos terceiros colocados → 16 jogos totais nas oitavas (formato Copa 2026)
+  const extra4M=[];
+  for(let i=0;i<8;i+=2) extra4M.push({tA:thirds[i]||`3°${i+1}`,tB:thirds[i+1]||`3°${i+2}`,tagA:'3°',tagB:'3°'});
+  const allR32M=[...r32M,...extra4M];
+  const r32W=allR32M.map(m=>projWinner(m.tA,m.tB));
   const r16P=[]; for(let i=0;i<r32W.length;i+=2) r16P.push([r32W[i],r32W[i+1]]);
   const r16W=r16P.map(([a,b])=>projWinner(a,b));
   const qfP=[]; for(let i=0;i<r16W.length;i+=2) qfP.push([r16W[i],r16W[i+1]]);
   const qfW=qfP.map(([a,b])=>projWinner(a,b));
   const sfP=[[qfW[0],qfW[1]],[qfW[2],qfW[3]]];
   const sfW=sfP.map(([a,b])=>projWinner(a,b));
-  const half1=r32M.slice(0,6); const half2=r32M.slice(6,12);
+  const half1=allR32M.slice(0,8); const half2=allR32M.slice(8,16);
   const qfM=qfP.map(([a,b])=>({tA:a,tB:b,tagA:'',tagB:''}));
   const sfM=sfP.map(([a,b])=>({tA:a,tB:b,tagA:'',tagB:''}));
   document.getElementById('bracket-view').innerHTML=`
@@ -1497,3 +1513,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+

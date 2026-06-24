@@ -345,6 +345,39 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
 .bkt-champ-lbl{font-size:8px;color:#2e4060;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px;}
 .bkt-champ-flag{font-size:26px;display:block;margin-bottom:2px;}
 .bkt-champ-name{font-size:11px;font-weight:800;color:#e8b820;text-transform:uppercase;letter-spacing:.06em;}
+/* ── BRACKET V2 (vertical funnel) ── */
+.bkt2-wrap{padding:0 0 24px;}
+.bkt2-round-wrap{margin-bottom:4px;}
+.bkt2-rnd-hdr{position:sticky;z-index:20;display:flex;align-items:center;gap:10px;background:rgba(2,8,16,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:9px 14px;border-top:2px solid rgba(232,184,32,.28);border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:10px;}
+.bkt2-rnd-name{font-size:10px;font-weight:800;color:#e8b820;text-transform:uppercase;letter-spacing:.12em;}
+.bkt2-rnd-pill{font-size:8px;font-weight:700;padding:2px 7px;border-radius:4px;background:rgba(232,184,32,.12);color:#e8b820;border:1px solid rgba(232,184,32,.25);text-transform:uppercase;letter-spacing:.08em;}
+.bkt2-rnd-count{font-size:9px;color:#2e4060;margin-left:auto;}
+.bkt2-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;padding:0 12px 10px;}
+.bkt2-card{background:rgba(5,14,32,.9);border:1px solid rgba(255,255,255,.09);border-radius:10px;width:162px;overflow:hidden;transition:border-color .15s,transform .12s;flex-shrink:0;}
+.bkt2-card:hover{border-color:rgba(232,184,32,.45);transform:translateY(-2px);}
+.bkt2-card-hdr{display:flex;align-items:center;justify-content:space-between;padding:4px 8px;background:rgba(0,0,0,.3);border-bottom:1px solid rgba(255,255,255,.05);gap:4px;}
+.bkt2-match-tag{font-size:7.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;padding:2px 5px;border-radius:3px;white-space:nowrap;}
+.bkt2-match-tag.est{background:rgba(59,130,246,.15);color:#93c5fd;border:1px solid rgba(59,130,246,.22);}
+.bkt2-fav-txt{font-size:7.5px;color:#3a5570;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:70px;}
+.bkt2-row{display:flex;align-items:center;gap:4px;padding:5px 8px;font-size:10.5px;}
+.bkt2-row:first-child{border-bottom:1px solid rgba(255,255,255,.05);}
+.bkt2-row.bkt2-win{background:rgba(232,184,32,.12);color:#e8b820;font-weight:700;}
+.bkt2-flag{font-size:14px;flex-shrink:0;width:18px;text-align:center;}
+.bkt2-nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;}
+.bkt2-sc{font-weight:700;font-size:12px;min-width:14px;text-align:right;flex-shrink:0;color:#c8d8ec;}
+.bkt2-row.bkt2-win .bkt2-sc{color:#e8b820;}
+.bkt2-ttag{font-size:7px;font-weight:700;padding:1px 4px;border-radius:3px;flex-shrink:0;line-height:1.5;text-transform:uppercase;letter-spacing:.05em;}
+.bkt2-ttag.conf{background:rgba(0,212,112,.12);color:#00d470;border:1px solid rgba(0,212,112,.25);}
+.bkt2-ttag.proj{background:rgba(40,60,100,.4);color:#4a6080;border:1px solid rgba(40,60,100,.5);}
+.bkt2-final-card{border:1px solid rgba(232,184,32,.5);background:linear-gradient(160deg,rgba(232,184,32,.14),rgba(5,14,32,.95));width:178px;}
+.bkt2-final-card .bkt2-card-hdr{background:rgba(232,184,32,.1);}
+.bkt2-final-card .bkt2-row{font-size:12px;padding:7px 9px;}
+.bkt2-champ{text-align:center;padding:10px 8px 9px;border-top:1px solid rgba(232,184,32,.3);background:rgba(232,184,32,.07);}
+.bkt2-champ-lbl{font-size:7px;color:#2e4060;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px;}
+.bkt2-champ-flag{font-size:28px;display:block;margin-bottom:2px;}
+.bkt2-champ-name{font-size:12px;font-weight:800;color:#e8b820;letter-spacing:.04em;}
+.bkt2-arrow{display:flex;justify-content:center;align-items:center;height:14px;margin:0 0 2px;}
+.bkt2-arrow svg{opacity:.3;}
 
 /* ── FRAMEWORK CARDS ── */
 .fw-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:26px;}
@@ -659,9 +692,7 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
       <p class="small muted" style="margin-bottom:16px">
         Previsão completa do mata-mata: placares projetados pelo modelo Dixon-Coles, do R32 até a Final. Time em dourado = favorito projetado. WC 2026: 32 equipes.
       </p>
-      <div class="bracket-scroll">
-        <div class="bracket" id="bracket-view"></div>
-      </div>
+      <div id="bracket-view" class="bkt2-wrap"></div>
     </div>
     <div class="section">
       <div class="section-title">
@@ -1343,43 +1374,46 @@ const gridColor = 'rgba(255,255,255,.04)';
     </div>`;
   }).join('');
 
-  // Bracket visual — árvore com placar projetado e linhas conectoras
+  // Bracket v2 — funil vertical com placar projetado, tags e status por time
   const qualified={};
   Object.keys(groupStandings).forEach(g=>{
     const letter=g.replace('Group ','');
     qualified[letter]=groupStandings[g].slice(0,2).map(t=>t.team);
   });
-  // 8 melhores terceiros (formato Copa 2026: 48 times, 16 grupos → R32)
+  // Grupos encerrados (todos jogaram 3 partidas)
+  const grpDone={};
+  Object.keys(groupStandings).forEach(g=>{grpDone[g]=groupStandings[g].every(t=>t.pld>=3);});
+  // 8 melhores terceiros colocados
   const thirds=Object.keys(groupStandings)
     .map(g=>groupStandings[g][2]).filter(t=>t&&t.team)
     .sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf)
     .slice(0,8).map(t=>t.team);
+  const thirdsGrp=Object.keys(groupStandings)
+    .map(g=>({g,t:groupStandings[g][2]}))
+    .filter(x=>x.t&&thirds.includes(x.t.team))
+    .slice(0,8);
   const eloMap={},attMap={},defMap={};
   RAT.forEach(r=>{eloMap[r.team]=r.elo;attMap[r.team]=r.att;defMap[r.team]=r.def;});
-  // Elo win prob (neutral)
   const wp=(a,b)=>{const ea=eloMap[a]||1700,eb=eloMap[b]||1700;return 1/(1+Math.pow(10,(eb-ea)/400));};
-  // Placar projetado via Dixon-Coles (partida neutra): lam = exp(mu + att_A - def_B)
+  function isPlh(t){return!t||typeof t!=='string'||t.length<=4||/^[123°]/.test(t)||t==='TBD';}
   function projScore(tA,tB){
-    if(!tA||!tB||attMap[tA]===undefined||attMap[tB]===undefined) return ['?','?'];
+    if(isPlh(tA)||isPlh(tB)) return ['?','?'];
     const mu=PRED.dc_params.intercept;
     const xA=Math.exp(mu+(attMap[tA]||0)-(defMap[tB]||0));
     const xB=Math.exp(mu+(attMap[tB]||0)-(defMap[tA]||0));
     return [Math.round(xA),Math.round(xB)];
   }
-  function isPlh(t){return!t||typeof t!=='string'||t.length<=4||/^[123]°/.test(t)||t==='TBD';}
   function projWinner(tA,tB){
     if(!tA) return tB||'TBD'; if(!tB) return tA||'TBD';
     if(isPlh(tA)||isPlh(tB)) return tA||'TBD';
     return wp(tA,tB)>=0.5?tA:tB;
   }
-  // Avança uma rodada: pares de jogos → vencedores se enfrentam
   function advRound(ms){
     const next=[];
     for(let i=0;i<ms.length;i+=2)
-      next.push({tA:projWinner(ms[i].tA,ms[i].tB),tB:projWinner(ms[i+1].tA,ms[i+1].tB)});
+      next.push({tA:projWinner(ms[i].tA,ms[i].tB),tB:projWinner(ms[i+1].tA,ms[i+1].tB),cA:false,cB:false});
     return next;
   }
-  // Monta os 16 jogos das oitavas (12 de grupos + 4 de terceiros colocados)
   const r32list=[
     ['A',1,'B',2],['C',1,'D',2],['E',1,'F',2],['G',1,'H',2],
     ['I',1,'J',2],['K',1,'L',2],
@@ -1387,45 +1421,85 @@ const gridColor = 'rgba(255,255,255,.04)';
     ['J',1,'I',2],['L',1,'K',2],
   ];
   const getT=(g,p)=>qualified[g]?.[p-1]||`${p===1?'1°':'2°'}${g}`;
-  const r32M=r32list.map(([gA,pA,gB,pB])=>({tA:getT(gA,pA),tB:getT(gB,pB)}));
+  const r32M=r32list.map(([gA,pA,gB,pB])=>({
+    tA:getT(gA,pA),tB:getT(gB,pB),
+    cA:!!grpDone['Group '+gA],cB:!!grpDone['Group '+gB]
+  }));
   const ex4=[];
-  for(let i=0;i<8;i+=2) ex4.push({tA:thirds[i]||`3°${i+1}`,tB:thirds[i+1]||`3°${i+2}`});
-  const allR32=[...r32M,...ex4]; // 16 jogos
-  const r16M=advRound(allR32);   // 8 jogos
-  const qfM=advRound(r16M);      // 4 jogos
-  const sfM=advRound(qfM);       // 2 jogos
-  const finM=advRound(sfM)[0];   // 1 jogo (final)
+  for(let i=0;i<8;i+=2){
+    const gA=thirdsGrp[i]?.g,gB=thirdsGrp[i+1]?.g;
+    ex4.push({tA:thirds[i]||`3°${i+1}`,tB:thirds[i+1]||`3°${i+2}`,cA:!!(gA&&grpDone[gA]),cB:!!(gB&&grpDone[gB])});
+  }
+  const allR32=[...r32M,...ex4];
+  const r16M=advRound(allR32);
+  const qfM=advRound(r16M);
+  const sfM=advRound(qfM);
+  const finM=advRound(sfM)[0];
   const champ=projWinner(finM.tA,finM.tB);
-  // Renderiza um card de jogo
-  function mCard(tA,tB,isFinal=false){
+  function mCard2(m,isFinal=false){
+    const {tA,tB,cA=false,cB=false}=m;
     const sA=tA?String(tA):'TBD',sB=tB?String(tB):'TBD';
     const ph=isPlh(tA)||isPlh(tB);
-    const favA=ph?true:wp(tA,tB)>=0.5;
+    const pA=ph?0.5:wp(tA,tB); const favA=pA>=0.5;
     const [scA,scB]=projScore(tA,tB);
     const shn=n=>{if(!n||n==='TBD')return n;const p=n.split(' ');return p.length>2?p.slice(0,2).join(' '):n;};
-    const cls=isFinal?'bkt-final-card':'bkt-card';
+    const ttag=(conf,phTeam)=>phTeam?'':`<span class="bkt2-ttag ${conf?'conf':'proj'}">${conf?'✓ Conf':'Proj'}</span>`;
+    const pct=ph?'':`${(Math.max(pA,1-pA)*100).toFixed(0)}% ${shn(favA?sA:sB)}`;
+    const cls=isFinal?'bkt2-card bkt2-final-card':'bkt2-card';
     return `<div class="${cls}">
-      <div class="bkt-row${favA?' bkt-win':''}"><span class="bkt-flag">${F(sA)}</span><span class="bkt-nm" title="${sA}">${shn(sA)}</span><span class="bkt-sc">${scA}</span></div>
-      <div class="bkt-row${!favA?' bkt-win':''}"><span class="bkt-flag">${F(sB)}</span><span class="bkt-nm" title="${sB}">${shn(sB)}</span><span class="bkt-sc">${scB}</span></div>
-      ${isFinal?`<div class="bkt-champ-wrap"><div class="bkt-champ-lbl">Campeão projetado</div><span class="bkt-champ-flag">${F(champ)}</span><div class="bkt-champ-name">${shn(champ)}</div></div>`:''}
+      <div class="bkt2-card-hdr">
+        <span class="bkt2-match-tag est">Placar Estimado</span>
+        <span class="bkt2-fav-txt">${pct}</span>
+      </div>
+      <div class="bkt2-row${favA?' bkt2-win':''}">
+        <span class="bkt2-flag">${F(sA)}</span>
+        <span class="bkt2-nm" title="${sA}">${shn(sA)}</span>
+        ${ttag(cA,isPlh(tA))}
+        <span class="bkt2-sc">${scA}</span>
+      </div>
+      <div class="bkt2-row${!favA?' bkt2-win':''}">
+        <span class="bkt2-flag">${F(sB)}</span>
+        <span class="bkt2-nm" title="${sB}">${shn(sB)}</span>
+        ${ttag(cB,isPlh(tB))}
+        <span class="bkt2-sc">${scB}</span>
+      </div>
+      ${isFinal?`<div class="bkt2-champ"><div class="bkt2-champ-lbl">Campeão projetado</div><span class="bkt2-champ-flag">${F(champ)}</span><div class="bkt2-champ-name">${shn(champ)}</div></div>`:''}
     </div>`;
   }
-  // Renderiza uma rodada inteira como coluna do bracket
-  function rndCol(matches, label, slotH, addConn=true){
-    const slots=matches.map((m,i)=>{
-      const cc=addConn?(i%2===0?'bkt-conn-top':'bkt-conn-bot'):'';
-      return `<div class="bkt-slot ${cc}" style="height:${slotH}px">${mCard(m.tA,m.tB)}</div>`;
-    }).join('');
-    return `<div class="bkt-round"><div class="bkt-round-hdr">${label}</div><div class="bkt-round-body">${slots}</div></div>`;
+  const arrowSVG=`<svg width="24" height="14" viewBox="0 0 24 14"><polygon points="12,14 0,0 24,0" fill="rgba(232,184,32,.3)"/></svg>`;
+  function rndHdr(name,n,pill=''){
+    return `<div class="bkt2-rnd-hdr">${pill?`<span class="bkt2-rnd-pill">${pill}</span>`:''}<span class="bkt2-rnd-name">${name}</span><span class="bkt2-rnd-count">${n} jogo${n!==1?'s':''}</span></div>`;
   }
-  const BASE=56; // altura base (px) de cada slot nas oitavas
-  document.getElementById('bracket-view').innerHTML=`<div class="bkt-wrap">
-    ${rndCol(allR32,'R32 — Oitavas (16 avos)',BASE)}
-    ${rndCol(r16M,'R16 — Oitavas-de-final',BASE*2)}
-    ${rndCol(qfM,'Quartas de Final',BASE*4)}
-    ${rndCol(sfM,'Semifinais',BASE*8)}
-    <div class="bkt-round"><div class="bkt-round-hdr">&#9917; Final</div><div class="bkt-round-body"><div class="bkt-slot" style="height:${BASE*16}px">${mCard(finM.tA,finM.tB,true)}</div></div></div>
-  </div>`;
+  const h1=allR32.slice(0,8),h2=allR32.slice(8,16);
+  document.getElementById('bracket-view').innerHTML=`
+    <div class="bkt2-round-wrap">
+      ${rndHdr('R32 — 16 Avos de Final',16,'Copa 2026')}
+      <div class="bkt2-grid">${h1.map(m=>mCard2(m)).join('')}</div>
+      <div class="bkt2-grid" style="margin-top:2px">${h2.map(m=>mCard2(m)).join('')}</div>
+    </div>
+    <div class="bkt2-arrow">${arrowSVG}</div>
+    <div class="bkt2-round-wrap">
+      ${rndHdr('R16 — Oitavas-de-Final',8)}
+      <div class="bkt2-grid">${r16M.map(m=>mCard2(m)).join('')}</div>
+    </div>
+    <div class="bkt2-arrow">${arrowSVG}</div>
+    <div class="bkt2-round-wrap">
+      ${rndHdr('Quartas de Final',4)}
+      <div class="bkt2-grid">${qfM.map(m=>mCard2(m)).join('')}</div>
+    </div>
+    <div class="bkt2-arrow">${arrowSVG}</div>
+    <div class="bkt2-round-wrap">
+      ${rndHdr('Semifinais',2)}
+      <div class="bkt2-grid">${sfM.map(m=>mCard2(m)).join('')}</div>
+    </div>
+    <div class="bkt2-arrow">${arrowSVG}</div>
+    <div class="bkt2-round-wrap">
+      ${rndHdr('⚽ Grande Final — WC 2026',1,'Final')}
+      <div class="bkt2-grid">${mCard2(finM,true)}</div>
+    </div>`;
+  // Ajusta headers sticky abaixo do site-header fixo
+  const siteH=document.querySelector('.site-header')?.offsetHeight||112;
+  document.querySelectorAll('.bkt2-rnd-hdr').forEach(el=>el.style.top=siteH+'px');
 })();
 
 /* ═══ TAB: FRAMEWORK ═══ */

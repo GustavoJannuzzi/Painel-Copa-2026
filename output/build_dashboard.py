@@ -321,6 +321,30 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
 .b-prob{font-size:10px;color:#3a5570;font-variant-numeric:tabular-nums;flex-shrink:0}
 .b-fav .b-name{color:#e8b820}
 .b-fav .b-prob{color:#e8b820;font-weight:700}
+/* ── VISUAL BRACKET (new) ── */
+.bkt-wrap{display:flex;gap:20px;min-width:1560px;align-items:flex-start;padding:6px 0 20px;}
+.bkt-round{display:flex;flex-direction:column;flex:1;min-width:160px;}
+.bkt-round-hdr{text-align:center;font-size:9px;font-weight:800;color:#e8b820;text-transform:uppercase;letter-spacing:.1em;padding:7px 0 10px;border-bottom:1px solid rgba(255,255,255,.05);margin-bottom:0;flex-shrink:0;}
+.bkt-round-body{display:flex;flex-direction:column;}
+.bkt-slot{display:flex;align-items:center;justify-content:center;position:relative;}
+.bkt-card{background:rgba(5,14,32,.88);border:1px solid rgba(255,255,255,.09);border-radius:8px;width:154px;overflow:hidden;transition:border-color .15s;}
+.bkt-card:hover{border-color:rgba(232,184,32,.4);}
+.bkt-row{display:flex;align-items:center;gap:4px;padding:5px 7px;font-size:10.5px;}
+.bkt-row:first-child{border-bottom:1px solid rgba(255,255,255,.05);}
+.bkt-row.bkt-win{background:rgba(232,184,32,.14);color:#e8b820;font-weight:700;}
+.bkt-flag{font-size:13px;flex-shrink:0;width:18px;text-align:center;}
+.bkt-nm{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bkt-sc{font-weight:700;font-size:11px;min-width:12px;text-align:right;flex-shrink:0;color:#c8d8ec;}
+.bkt-row.bkt-win .bkt-sc{color:#e8b820;}
+.bkt-conn-top::after,.bkt-conn-bot::after{content:'';position:absolute;right:-20px;width:20px;border-color:rgba(232,184,32,.22);border-style:solid;pointer-events:none;}
+.bkt-conn-top::after{top:50%;bottom:0;border-width:1px 1px 0 0;border-radius:0 4px 0 0;}
+.bkt-conn-bot::after{top:0;bottom:50%;border-width:0 1px 1px 0;border-radius:0 0 4px 0;}
+.bkt-final-card{background:linear-gradient(135deg,rgba(232,184,32,.18) 0%,rgba(5,14,32,.92) 60%);border:1px solid rgba(232,184,32,.4);border-radius:10px;width:162px;overflow:hidden;}
+.bkt-final-card .bkt-row{padding:6px 9px;font-size:11.5px;}
+.bkt-champ-wrap{text-align:center;padding:10px 8px 9px;background:rgba(232,184,32,.08);border-top:1px solid rgba(232,184,32,.3);}
+.bkt-champ-lbl{font-size:8px;color:#2e4060;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px;}
+.bkt-champ-flag{font-size:26px;display:block;margin-bottom:2px;}
+.bkt-champ-name{font-size:11px;font-weight:800;color:#e8b820;text-transform:uppercase;letter-spacing:.06em;}
 
 /* ── FRAMEWORK CARDS ── */
 .fw-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:26px;}
@@ -641,10 +665,10 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
     <div class="section">
       <div class="section-title">
         <span class="section-title-dot"></span>
-        Projeção do Chaveamento — Oitavas de Final
+        Projeção do Chaveamento — R32 até a Final
       </div>
       <p class="small muted" style="margin-bottom:16px">
-        Baseado nos prováveis classificados. WC 2026: 32 equipes nas oitavas.
+        Previsão completa do mata-mata: placares projetados pelo modelo Dixon-Coles, do R32 até a Final. Time em dourado = favorito projetado. WC 2026: 32 equipes.
       </p>
       <div class="bracket-scroll">
         <div class="bracket" id="bracket-view"></div>
@@ -1319,78 +1343,89 @@ const gridColor = 'rgba(255,255,255,.04)';
     </div>`;
   }).join('');
 
-  // Bracket
+  // Bracket visual — árvore com placar projetado e linhas conectoras
   const qualified={};
   Object.keys(groupStandings).forEach(g=>{
     const letter=g.replace('Group ','');
     qualified[letter]=groupStandings[g].slice(0,2).map(t=>t.team);
   });
-  // 8 melhores terceiros colocados (avançam no formato Copa 2026)
+  // 8 melhores terceiros (formato Copa 2026: 48 times, 16 grupos → R32)
   const thirds=Object.keys(groupStandings)
     .map(g=>groupStandings[g][2]).filter(t=>t&&t.team)
     .sort((a,b)=>b.pts-a.pts||b.gd-a.gd||b.gf-a.gf)
     .slice(0,8).map(t=>t.team);
-  const eloMap={};
-  RAT.forEach(r=>{eloMap[r.team]=r.elo});
+  const eloMap={},attMap={},defMap={};
+  RAT.forEach(r=>{eloMap[r.team]=r.elo;attMap[r.team]=r.att;defMap[r.team]=r.def;});
+  // Elo win prob (neutral)
   const wp=(a,b)=>{const ea=eloMap[a]||1700,eb=eloMap[b]||1700;return 1/(1+Math.pow(10,(eb-ea)/400));};
-  const r32=[
+  // Placar projetado via Dixon-Coles (partida neutra): lam = exp(mu + att_A - def_B)
+  function projScore(tA,tB){
+    if(!tA||!tB||attMap[tA]===undefined||attMap[tB]===undefined) return ['?','?'];
+    const mu=PRED.dc_params.intercept;
+    const xA=Math.exp(mu+(attMap[tA]||0)-(defMap[tB]||0));
+    const xB=Math.exp(mu+(attMap[tB]||0)-(defMap[tA]||0));
+    return [Math.round(xA),Math.round(xB)];
+  }
+  function isPlh(t){return!t||typeof t!=='string'||t.length<=4||/^[123]°/.test(t)||t==='TBD';}
+  function projWinner(tA,tB){
+    if(!tA) return tB||'TBD'; if(!tB) return tA||'TBD';
+    if(isPlh(tA)||isPlh(tB)) return tA||'TBD';
+    return wp(tA,tB)>=0.5?tA:tB;
+  }
+  // Avança uma rodada: pares de jogos → vencedores se enfrentam
+  function advRound(ms){
+    const next=[];
+    for(let i=0;i<ms.length;i+=2)
+      next.push({tA:projWinner(ms[i].tA,ms[i].tB),tB:projWinner(ms[i+1].tA,ms[i+1].tB)});
+    return next;
+  }
+  // Monta os 16 jogos das oitavas (12 de grupos + 4 de terceiros colocados)
+  const r32list=[
     ['A',1,'B',2],['C',1,'D',2],['E',1,'F',2],['G',1,'H',2],
     ['I',1,'J',2],['K',1,'L',2],
     ['B',1,'A',2],['D',1,'C',2],['F',1,'E',2],['H',1,'G',2],
     ['J',1,'I',2],['L',1,'K',2],
   ];
-  function getTeam(grp,pos){return qualified[grp]?.[pos-1]||`${pos===1?'1°':'2°'}${grp}`;}
-  function matchHTML(tA,tB,tagA='',tagB=''){
-    if(!tA||!tB) return '';
-    const isStr=t=>!t||typeof t!=='string'||t.length<=4;
-    const pA=isStr(tA)||isStr(tB)?0.5:wp(tA,tB); const pB=1-pA; const favA=pA>pB;
-    const sA=String(tA); const sB=String(tB);
-    return `<div class="b-match">
-      <div class="b-team ${favA?'b-fav':''}">
-        ${tagA?`<span class="b-tag">${tagA}</span>`:''}
-        <span class="b-name">${F(sA)} ${short(sA.split(' ').slice(0,2).join(' '))}</span>
-        <span class="b-prob">${favA?'<b>':''}${(pA*100).toFixed(0)}%${favA?'</b>':''}</span>
-      </div>
-      <div class="b-team ${!favA?'b-fav':''}">
-        ${tagB?`<span class="b-tag">${tagB}</span>`:''}
-        <span class="b-name">${F(sB)} ${short(sB.split(' ').slice(0,2).join(' '))}</span>
-        <span class="b-prob">${!favA?'<b>':''}${(pB*100).toFixed(0)}%${!favA?'</b>':''}</span>
-      </div>
+  const getT=(g,p)=>qualified[g]?.[p-1]||`${p===1?'1°':'2°'}${g}`;
+  const r32M=r32list.map(([gA,pA,gB,pB])=>({tA:getT(gA,pA),tB:getT(gB,pB)}));
+  const ex4=[];
+  for(let i=0;i<8;i+=2) ex4.push({tA:thirds[i]||`3°${i+1}`,tB:thirds[i+1]||`3°${i+2}`});
+  const allR32=[...r32M,...ex4]; // 16 jogos
+  const r16M=advRound(allR32);   // 8 jogos
+  const qfM=advRound(r16M);      // 4 jogos
+  const sfM=advRound(qfM);       // 2 jogos
+  const finM=advRound(sfM)[0];   // 1 jogo (final)
+  const champ=projWinner(finM.tA,finM.tB);
+  // Renderiza um card de jogo
+  function mCard(tA,tB,isFinal=false){
+    const sA=tA?String(tA):'TBD',sB=tB?String(tB):'TBD';
+    const ph=isPlh(tA)||isPlh(tB);
+    const favA=ph?true:wp(tA,tB)>=0.5;
+    const [scA,scB]=projScore(tA,tB);
+    const shn=n=>{if(!n||n==='TBD')return n;const p=n.split(' ');return p.length>2?p.slice(0,2).join(' '):n;};
+    const cls=isFinal?'bkt-final-card':'bkt-card';
+    return `<div class="${cls}">
+      <div class="bkt-row${favA?' bkt-win':''}"><span class="bkt-flag">${F(sA)}</span><span class="bkt-nm" title="${sA}">${shn(sA)}</span><span class="bkt-sc">${scA}</span></div>
+      <div class="bkt-row${!favA?' bkt-win':''}"><span class="bkt-flag">${F(sB)}</span><span class="bkt-nm" title="${sB}">${shn(sB)}</span><span class="bkt-sc">${scB}</span></div>
+      ${isFinal?`<div class="bkt-champ-wrap"><div class="bkt-champ-lbl">Campeão projetado</div><span class="bkt-champ-flag">${F(champ)}</span><div class="bkt-champ-name">${shn(champ)}</div></div>`:''}
     </div>`;
   }
-  function projWinner(tA,tB){
-    if(!tA) return tB||'TBD'; if(!tB) return tA||'TBD';
-    const isStr=t=>typeof t!=='string'||t.length<=4;
-    if(isStr(tA)||isStr(tB))return tA;
-    return wp(tA,tB)>=0.5?tA:tB;
+  // Renderiza uma rodada inteira como coluna do bracket
+  function rndCol(matches, label, slotH, addConn=true){
+    const slots=matches.map((m,i)=>{
+      const cc=addConn?(i%2===0?'bkt-conn-top':'bkt-conn-bot'):'';
+      return `<div class="bkt-slot ${cc}" style="height:${slotH}px">${mCard(m.tA,m.tB)}</div>`;
+    }).join('');
+    return `<div class="bkt-round"><div class="bkt-round-hdr">${label}</div><div class="bkt-round-body">${slots}</div></div>`;
   }
-  const r32M=r32.map(([gA,pA,gB,pB])=>({tA:getTeam(gA,pA),tB:getTeam(gB,pB),tagA:`${pA===1?'1°':'2°'}${gA}`,tagB:`${pB===1?'1°':'2°'}${gB}`}));
-  // 4 duelos extras dos terceiros colocados → 16 jogos totais nas oitavas (formato Copa 2026)
-  const extra4M=[];
-  for(let i=0;i<8;i+=2) extra4M.push({tA:thirds[i]||`3°${i+1}`,tB:thirds[i+1]||`3°${i+2}`,tagA:'3°',tagB:'3°'});
-  const allR32M=[...r32M,...extra4M];
-  const r32W=allR32M.map(m=>projWinner(m.tA,m.tB));
-  const r16P=[]; for(let i=0;i<r32W.length;i+=2) r16P.push([r32W[i],r32W[i+1]]);
-  const r16W=r16P.map(([a,b])=>projWinner(a,b));
-  const qfP=[]; for(let i=0;i<r16W.length;i+=2) qfP.push([r16W[i],r16W[i+1]]);
-  const qfW=qfP.map(([a,b])=>projWinner(a,b));
-  const sfP=[[qfW[0],qfW[1]],[qfW[2],qfW[3]]];
-  const sfW=sfP.map(([a,b])=>projWinner(a,b));
-  const half1=allR32M.slice(0,8); const half2=allR32M.slice(8,16);
-  const qfM=qfP.map(([a,b])=>({tA:a,tB:b,tagA:'',tagB:''}));
-  const sfM=sfP.map(([a,b])=>({tA:a,tB:b,tagA:'',tagB:''}));
-  document.getElementById('bracket-view').innerHTML=`
-    <div class="b-col"><div class="b-rnd-title">Oitavas — 1ª metade</div>${half1.map(m=>matchHTML(m.tA,m.tB,m.tagA,m.tagB)).join('')}</div>
-    <div class="b-col"><div class="b-rnd-title">Oitavas — 2ª metade</div>${half2.map(m=>matchHTML(m.tA,m.tB,m.tagA,m.tagB)).join('')}</div>
-    <div class="b-col b-col-narrow" style="justify-content:space-around;display:flex;flex-direction:column">
-      <div class="b-rnd-title">Quartas</div>${qfM.map(m=>matchHTML(m.tA,m.tB)).join('')}
-    </div>
-    <div class="b-col b-col-narrow" style="justify-content:space-around;display:flex;flex-direction:column">
-      <div class="b-rnd-title">Semifinais</div>${sfM.map(m=>matchHTML(m.tA,m.tB)).join('')}
-    </div>
-    <div class="b-col" style="max-width:200px;flex:.38;justify-content:center;display:flex;flex-direction:column">
-      <div class="b-rnd-title">Final</div>${matchHTML(sfW[0],sfW[1])}
-    </div>`;
+  const BASE=56; // altura base (px) de cada slot nas oitavas
+  document.getElementById('bracket-view').innerHTML=`<div class="bkt-wrap">
+    ${rndCol(allR32,'R32 — Oitavas (16 avos)',BASE)}
+    ${rndCol(r16M,'R16 — Oitavas-de-final',BASE*2)}
+    ${rndCol(qfM,'Quartas de Final',BASE*4)}
+    ${rndCol(sfM,'Semifinais',BASE*8)}
+    <div class="bkt-round"><div class="bkt-round-hdr">&#9917; Final</div><div class="bkt-round-body"><div class="bkt-slot" style="height:${BASE*16}px">${mCard(finM.tA,finM.tB,true)}</div></div></div>
+  </div>`;
 })();
 
 /* ═══ TAB: FRAMEWORK ═══ */

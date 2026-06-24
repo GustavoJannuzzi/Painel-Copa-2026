@@ -654,17 +654,6 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
     <div class="section">
       <div class="section-title">
         <span class="section-title-dot"></span>
-        Classificação por Grupo
-      </div>
-      <p class="small muted" style="margin-bottom:16px">
-        <span style="color:#00d470">■</span> Verde = classificado &nbsp;
-        <span style="color:#e8b820">■</span> Amarelo = na briga por 3° lugar
-      </p>
-      <div class="sgrids" id="standings-grid"></div>
-    </div>
-    <div class="section">
-      <div class="section-title">
-        <span class="section-title-dot"></span>
         Projeção do Chaveamento — R32 até a Final
       </div>
       <p class="small muted" style="margin-bottom:16px">
@@ -673,6 +662,17 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
       <div class="bracket-scroll">
         <div class="bracket" id="bracket-view"></div>
       </div>
+    </div>
+    <div class="section">
+      <div class="section-title">
+        <span class="section-title-dot"></span>
+        Classificação por Grupo
+      </div>
+      <p class="small muted" style="margin-bottom:16px">
+        <span style="color:#00d470">■</span> Verde = classificado &nbsp;
+        <span style="color:#e8b820">■</span> Amarelo = na briga por 3° lugar
+      </p>
+      <div class="sgrids" id="standings-grid"></div>
     </div>
   </div>
 

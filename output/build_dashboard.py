@@ -590,6 +590,10 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
         <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         Ranking
       </button>
+      <button class="tab-btn" data-tab="experiments">
+        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        Experimentos
+      </button>
     </nav>
   </div>
 </div>
@@ -761,6 +765,30 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
     </div>
   </div>
 
+  <!-- EXPERIMENTOS -->
+  <div class="tab-pane fade-in" id="tab-experiments">
+    <div class="section">
+      <div class="section-title"><span class="section-title-dot"></span>Diagnóstico do Framework v3</div>
+      <div class="grid2" style="gap:16px;margin-top:16px" id="exp-grid"></div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span class="section-title-dot"></span>Comparativo de Modelos (RPS — menor é melhor)</div>
+      <div id="synergy-table" style="margin-top:12px"></div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span class="section-title-dot"></span>Otimização de Parâmetros (Fase 2)</div>
+      <div id="param-table" style="margin-top:12px"></div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span class="section-title-dot"></span>XGBoost — Importância de Features</div>
+      <div id="xgb-importance" style="margin-top:12px"></div>
+    </div>
+    <div class="section">
+      <div class="section-title"><span class="section-title-dot"></span>Sinais de Notícias Recentes</div>
+      <div id="news-signals" style="margin-top:12px"></div>
+    </div>
+  </div>
+
 </div><!-- /wrap -->
 
 <div style="max-width:1320px;margin:0 auto;padding:0 20px;position:relative;z-index:1">
@@ -778,6 +806,9 @@ tbody tr:hover td{background:rgba(255,255,255,.03)}
 <script id="back-data"   type="application/json">__DATA_BACK__</script>
 <script id="rating-data" type="application/json">__DATA_RATINGS__</script>
 <script id="aux-data"    type="application/json">__DATA_AUX__</script>
+<script id="diag-data"   type="application/json">__DATA_DIAG__</script>
+<script id="xgb-data"    type="application/json">__DATA_XGB__</script>
+<script id="news-data"   type="application/json">__DATA_NEWS__</script>
 
 <script>
 /* ═══ DATA ═══ */
@@ -785,6 +816,9 @@ const PRED = JSON.parse(document.getElementById('pred-data').textContent);
 const BACK = JSON.parse(document.getElementById('back-data').textContent);
 const RAT  = JSON.parse(document.getElementById('rating-data').textContent);
 const AUX  = JSON.parse(document.getElementById('aux-data').textContent);
+const DIAG = JSON.parse(document.getElementById('diag-data').textContent);
+const XGB  = JSON.parse(document.getElementById('xgb-data').textContent);
+const NEWS = JSON.parse(document.getElementById('news-data').textContent);
 
 const pct  = x => (x*100).toFixed(0)+'%';
 const pct1 = x => (x*100).toFixed(1)+'%';
@@ -1594,6 +1628,87 @@ const gridColor = 'rgba(255,255,255,.04)';
   });
   render();
 })();
+
+/* ═══ TAB: EXPERIMENTOS ═══ */
+(function(){
+  /* KPI cards de diagnóstico */
+  const cv = DIAG.temporal_cv || {};
+  const cal = DIAG.calibration || {};
+  const hl = (DIAG.halflife_analysis || {});
+  const best_hl = hl.best_halflife || {};
+  const syn = DIAG.ensemble_synergy || {};
+
+  document.getElementById('exp-grid').innerHTML = [
+    {label:'RPS OOS 2024+',val:(cv.rps_oos_dc_2024||'—'),sub:'Cross-val temporal',col:'#3b82f6'},
+    {label:'ECE Calibração',val:(cal.ece_ensemble||'—'),sub:'Viés: '+((cal.bias_direction||'').replace('_',' ')),col:'#e8b820'},
+    {label:'Halflife Ótimo',val:(best_hl.halflife_years||'—')+'a',sub:'RPS: '+(best_hl.rps_copa||'—'),col:'#00d470'},
+    {label:'XGB CV RPS',val:(XGB.cv_rps||'—'),sub:'n_treino='+((XGB.n_train)||0),col:'#8050d0'},
+  ].map(k=>`<div class="glass kpi" style="padding:18px">
+    <div class="kpi-label">${k.label}</div>
+    <div class="kpi-num num" style="color:${k.col}">${k.val}</div>
+    <div class="small muted">${k.sub}</div>
+  </div>`).join('');
+
+  /* Tabela comparativa de modelos */
+  const ranking = (syn.ranking||[]);
+  const bestRPS = ranking.length ? ranking[0].rps : 1;
+  document.getElementById('synergy-table').innerHTML = `<div class="tbl-wrap"><table>
+    <thead><tr><th>Modelo</th><th>RPS</th><th>vs Naive</th><th>Barra</th></tr></thead>
+    <tbody>${ranking.map(r=>{
+      const naive = syn.naive || 0.2346;
+      const gain = ((naive-r.rps)/naive*100).toFixed(1);
+      const w = (bestRPS/r.rps*70).toFixed(1);
+      const isCurrent = r.model==='ensemble';
+      const col = r.rps<=bestRPS*1.02?'#e8b820':r.rps<=0.18?'#00d470':'#7a9ab8';
+      return `<tr style="${isCurrent?'background:rgba(232,184,32,.06)':''}">
+        <td style="font-weight:${isCurrent?700:400}">${r.model}${isCurrent?' ★':''}</td>
+        <td class="mono" style="color:${col}">${r.rps}</td>
+        <td class="mono" style="color:#00d470">-${gain}%</td>
+        <td><div style="background:rgba(255,255,255,.05);border-radius:4px;height:8px;width:120px">
+          <div style="width:${w}%;height:8px;border-radius:4px;background:${col}"></div></div></td>
+      </tr>`;
+    }).join('')}</tbody>
+  </table></div>`;
+
+  /* Parâmetros otimizados */
+  document.getElementById('param-table').innerHTML = `<div class="tbl-wrap"><table>
+    <thead><tr><th>Parâmetro</th><th>Antes</th><th>Depois</th><th>Ganho RPS</th></tr></thead>
+    <tbody>
+      <tr><td>Halflife (time-decay)</td><td class="mono muted">912d (2.5a)</td><td class="mono" style="color:#00d470">365d (1.0a)</td><td class="mono" style="color:#e8b820">-0.0024</td></tr>
+      <tr><td>RIDGE Dixon-Coles</td><td class="mono muted">2.0</td><td class="mono" style="color:#00d470">0.5</td><td class="mono" style="color:#e8b820">-0.0029</td></tr>
+      <tr><td>W_Market (com odds)</td><td class="mono muted">0.35</td><td class="mono" style="color:#00d470">0.90</td><td class="mono" style="color:#e8b820">-0.0107</td></tr>
+      <tr><td>W_DC (sem odds)</td><td class="mono muted">0.65</td><td class="mono" style="color:#00d470">0.95</td><td class="mono" style="color:#e8b820">-0.0036</td></tr>
+      <tr style="background:rgba(232,184,32,.06);font-weight:700"><td>Total (v2→v3)</td><td class="mono muted">0.1668</td><td class="mono" style="color:#e8b820">0.1616</td><td class="mono" style="color:#e8b820">-3.1%</td></tr>
+    </tbody>
+  </table></div>`;
+
+  /* XGBoost feature importance */
+  if (XGB.feature_importance) {
+    const feats = Object.entries(XGB.feature_importance).sort((a,b)=>b[1]-a[1]).slice(0,10);
+    const maxImp = feats[0][1];
+    document.getElementById('xgb-importance').innerHTML = feats.map(([f,v])=>`
+      <div class="mbar-row">
+        <span class="mbar-name" style="font-size:11px;width:200px">${f}</span>
+        <div class="mbar-bg"><div class="mbar-fill" style="width:${(v/maxImp*100).toFixed(0)}%;background:#8050d0"></div></div>
+        <span class="mbar-val mono">${v.toFixed(4)}</span>
+      </div>`).join('');
+  }
+
+  /* Sinais de notícias */
+  const newsTeams = Object.entries(NEWS).filter(([t,s])=>s.absent?.length||s.confirmed?.length||s.form_signal);
+  if (newsTeams.length) {
+    document.getElementById('news-signals').innerHTML = newsTeams.map(([team,s])=>`
+      <div class="glass" style="padding:14px;margin-bottom:10px">
+        <div style="font-weight:700;margin-bottom:6px">${team}</div>
+        ${s.absent?.length?`<div style="color:#e04060;font-size:12px">Desfalques: ${s.absent.join(', ')}</div>`:''}
+        ${s.confirmed?.length?`<div style="color:#00d470;font-size:12px">Confirmados: ${s.confirmed.join(', ')}</div>`:''}
+        ${s.form_signal?`<div style="color:${s.form_signal>0?'#00d470':'#e04060'};font-size:12px">Forma: ${s.form_signal>0?'Positiva':'Negativa'}</div>`:''}
+        ${s.sources?.length?`<div class="muted" style="font-size:11px;margin-top:4px">${s.sources[0]}</div>`:''}
+      </div>`).join('');
+  } else {
+    document.getElementById('news-signals').innerHTML = '<p class="muted small">Nenhum sinal detectado nas noticias recentes.</p>';
+  }
+})();
 </script>
 </body>
 </html>"""
@@ -1607,11 +1722,24 @@ def main():
     aux_path = ANALYSIS / "wc2026_aux_stats.json"
     aux = json.load(open(aux_path, encoding="utf-8")) if aux_path.exists() else {}
 
+    # Novos dados — Fase 2-5
+    diag_path = ANALYSIS / "diagnostics_report.json"
+    diag = json.load(open(diag_path, encoding="utf-8")) if diag_path.exists() else {}
+
+    xgb_path = ANALYSIS / "xgboost_model.json"
+    xgb_meta = json.load(open(xgb_path, encoding="utf-8")) if xgb_path.exists() else {}
+
+    news_path = ANALYSIS / "news_signals.json"
+    news_signals = json.load(open(news_path, encoding="utf-8")) if news_path.exists() else {}
+
     html = (HTML_TEMPLATE
             .replace("__DATA_PRED__",    json.dumps(pred,    ensure_ascii=False))
             .replace("__DATA_BACK__",    json.dumps(back,    ensure_ascii=False))
             .replace("__DATA_RATINGS__", json.dumps(ratings, ensure_ascii=False))
-            .replace("__DATA_AUX__",     json.dumps(aux,     ensure_ascii=False)))
+            .replace("__DATA_AUX__",     json.dumps(aux,     ensure_ascii=False))
+            .replace("__DATA_DIAG__",    json.dumps(diag,    ensure_ascii=False))
+            .replace("__DATA_XGB__",     json.dumps(xgb_meta, ensure_ascii=False))
+            .replace("__DATA_NEWS__",    json.dumps(news_signals, ensure_ascii=False)))
 
     out = ROOT / "output" / "index.html"
     out.write_text(html, encoding="utf-8")

@@ -4,26 +4,26 @@
     "away": "South Africa",
     "date": "2026-06-11",
     "corners": {
-      "home": 5.8,
-      "away": 4.5,
-      "total": 10.3
+      "home": 6.2,
+      "away": 4.8,
+      "total": 11.0
     },
     "fouls": {
-      "home": 10.9,
-      "away": 11.0,
-      "total": 21.9
+      "home": 11.0,
+      "away": 10.2,
+      "total": 21.2
     },
     "yellow_cards": {
       "home": 2.1,
-      "away": 2.1,
-      "total": 4.2
+      "away": 1.9,
+      "total": 4.0
     },
-    "penalty_prob": 0.269,
-    "btts": 0.3589,
-    "over_2_5": 0.3175,
+    "penalty_prob": 0.26,
+    "btts": 0.3678,
+    "over_2_5": 0.3406,
     "xg": {
-      "home": 1.32,
-      "away": 0.66
+      "home": 1.42,
+      "away": 0.64
     },
     "scorers": {
       "home": [
@@ -89,26 +89,26 @@
     "away": "Czech Republic",
     "date": "2026-06-11",
     "corners": {
-      "home": 6.0,
-      "away": 5.5,
-      "total": 11.5
+      "home": 6.3,
+      "away": 6.2,
+      "total": 12.5
     },
     "fouls": {
-      "home": 10.0,
-      "away": 10.0,
-      "total": 20.0
+      "home": 9.6,
+      "away": 9.3,
+      "total": 18.9
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 1.9,
-      "total": 3.8
+      "home": 1.8,
+      "away": 1.8,
+      "total": 3.6
     },
-    "penalty_prob": 0.245,
-    "btts": 0.5026,
-    "over_2_5": 0.449,
+    "penalty_prob": 0.232,
+    "btts": 0.5541,
+    "over_2_5": 0.5045,
     "xg": {
-      "home": 1.38,
-      "away": 1.09
+      "home": 1.41,
+      "away": 1.28
     },
     "scorers": {
       "home": [
@@ -169,26 +169,26 @@
     "away": "Bosnia and Herzegovina",
     "date": "2026-06-12",
     "corners": {
-      "home": 6.2,
-      "away": 4.6,
-      "total": 10.8
+      "home": 6.1,
+      "away": 4.9,
+      "total": 11.0
     },
     "fouls": {
-      "home": 10.1,
-      "away": 10.8,
+      "home": 10.4,
+      "away": 10.5,
       "total": 20.9
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 2.1,
+      "home": 2.0,
+      "away": 2.0,
       "total": 4.0
     },
     "penalty_prob": 0.256,
-    "btts": 0.4391,
-    "over_2_5": 0.4374,
+    "btts": 0.4055,
+    "over_2_5": 0.3579,
     "xg": {
-      "home": 1.66,
-      "away": 0.77
+      "home": 1.37,
+      "away": 0.76
     },
     "scorers": {
       "home": [
@@ -267,25 +267,25 @@
     "date": "2026-06-12",
     "corners": {
       "home": 5.5,
-      "away": 5.1,
-      "total": 10.6
+      "away": 6.0,
+      "total": 11.5
     },
     "fouls": {
-      "home": 10.2,
-      "away": 11.4,
-      "total": 21.6
+      "home": 9.6,
+      "away": 11.0,
+      "total": 20.6
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 2.2,
-      "total": 4.1
+      "home": 1.8,
+      "away": 2.1,
+      "total": 3.9
     },
-    "penalty_prob": 0.265,
-    "btts": 0.3843,
-    "over_2_5": 0.2991,
+    "penalty_prob": 0.253,
+    "btts": 0.4113,
+    "over_2_5": 0.3484,
     "xg": {
-      "home": 0.96,
-      "away": 0.95
+      "home": 0.82,
+      "away": 1.27
     },
     "scorers": {
       "home": [
@@ -372,26 +372,26 @@
     "away": "Switzerland",
     "date": "2026-06-13",
     "corners": {
-      "home": 5.0,
-      "away": 7.1,
-      "total": 12.1
+      "home": 4.7,
+      "away": 8.5,
+      "total": 13.2
     },
     "fouls": {
-      "home": 9.7,
-      "away": 9.6,
-      "total": 19.3
+      "home": 9.5,
+      "away": 9.2,
+      "total": 18.7
     },
     "yellow_cards": {
       "home": 1.8,
-      "away": 1.8,
-      "total": 3.6
+      "away": 1.7,
+      "total": 3.5
     },
-    "penalty_prob": 0.237,
-    "btts": 0.5213,
-    "over_2_5": 0.6131,
+    "penalty_prob": 0.229,
+    "btts": 0.4519,
+    "over_2_5": 0.7347,
     "xg": {
-      "home": 0.85,
-      "away": 2.31
+      "home": 0.63,
+      "away": 3.19
     },
     "scorers": {
       "home": [
@@ -458,25 +458,25 @@
     "date": "2026-06-13",
     "corners": {
       "home": 6.3,
-      "away": 5.3,
-      "total": 11.6
+      "away": 5.8,
+      "total": 12.1
     },
     "fouls": {
-      "home": 10.0,
-      "away": 11.8,
-      "total": 21.8
+      "home": 9.3,
+      "away": 12.2,
+      "total": 21.5
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 2.2,
+      "home": 1.8,
+      "away": 2.3,
       "total": 4.1
     },
-    "penalty_prob": 0.267,
-    "btts": 0.3231,
-    "over_2_5": 0.2378,
+    "penalty_prob": 0.264,
+    "btts": 0.3188,
+    "over_2_5": 0.2255,
     "xg": {
-      "home": 0.95,
-      "away": 0.73
+      "home": 0.76,
+      "away": 0.87
     },
     "scorers": {
       "home": [
@@ -542,26 +542,26 @@
     "away": "Scotland",
     "date": "2026-06-13",
     "corners": {
-      "home": 5.1,
-      "away": 6.2,
-      "total": 11.3
+      "home": 5.0,
+      "away": 7.3,
+      "total": 12.3
     },
     "fouls": {
-      "home": 9.6,
-      "away": 10.2,
-      "total": 19.8
+      "home": 9.4,
+      "away": 9.6,
+      "total": 19.0
     },
     "yellow_cards": {
       "home": 1.8,
-      "away": 1.9,
-      "total": 3.7
+      "away": 1.8,
+      "total": 3.6
     },
-    "penalty_prob": 0.243,
-    "btts": 0.5268,
-    "over_2_5": 0.5291,
+    "penalty_prob": 0.233,
+    "btts": 0.5097,
+    "over_2_5": 0.6233,
     "xg": {
-      "home": 0.98,
-      "away": 1.82
+      "home": 0.81,
+      "away": 2.41
     },
     "scorers": {
       "home": [
@@ -602,26 +602,26 @@
     "away": "Turkey",
     "date": "2026-06-13",
     "corners": {
-      "home": 6.0,
-      "away": 5.9,
-      "total": 11.9
+      "home": 6.1,
+      "away": 6.6,
+      "total": 12.7
     },
     "fouls": {
-      "home": 10.5,
-      "away": 9.3,
-      "total": 19.8
+      "home": 10.4,
+      "away": 9.0,
+      "total": 19.4
     },
     "yellow_cards": {
       "home": 2.0,
-      "away": 1.8,
-      "total": 3.8
+      "away": 1.7,
+      "total": 3.7
     },
-    "penalty_prob": 0.243,
-    "btts": 0.5034,
-    "over_2_5": 0.4505,
+    "penalty_prob": 0.238,
+    "btts": 0.4887,
+    "over_2_5": 0.4203,
     "xg": {
-      "home": 1.39,
-      "away": 1.09
+      "home": 1.16,
+      "away": 1.2
     },
     "scorers": {
       "home": [
@@ -687,26 +687,26 @@
     "away": "Curaçao",
     "date": "2026-06-14",
     "corners": {
-      "home": 8.0,
-      "away": 4.2,
-      "total": 12.2
+      "home": 9.1,
+      "away": 4.0,
+      "total": 13.1
     },
     "fouls": {
-      "home": 8.9,
-      "away": 10.9,
-      "total": 19.8
+      "home": 8.6,
+      "away": 10.8,
+      "total": 19.4
     },
     "yellow_cards": {
-      "home": 1.7,
+      "home": 1.6,
       "away": 2.1,
-      "total": 3.8
+      "total": 3.7
     },
-    "penalty_prob": 0.243,
-    "btts": 0.4321,
-    "over_2_5": 0.6507,
+    "penalty_prob": 0.238,
+    "btts": 0.3734,
+    "over_2_5": 0.7448,
     "xg": {
-      "home": 2.74,
-      "away": 0.62
+      "home": 3.4,
+      "away": 0.48
     },
     "scorers": {
       "home": [
@@ -808,26 +808,26 @@
     "away": "Ecuador",
     "date": "2026-06-14",
     "corners": {
-      "home": 4.7,
+      "home": 4.4,
       "away": 5.4,
-      "total": 10.1
+      "total": 9.8
     },
     "fouls": {
-      "home": 11.1,
-      "away": 11.9,
-      "total": 23.0
+      "home": 11.0,
+      "away": 13.3,
+      "total": 24.3
     },
     "yellow_cards": {
       "home": 2.1,
-      "away": 2.3,
-      "total": 4.4
+      "away": 2.5,
+      "total": 4.6
     },
-    "penalty_prob": 0.282,
-    "btts": 0.2901,
-    "over_2_5": 0.2148,
+    "penalty_prob": 0.298,
+    "btts": 0.2017,
+    "over_2_5": 0.1438,
     "xg": {
-      "home": 0.61,
-      "away": 0.99
+      "home": 0.4,
+      "away": 0.91
     },
     "scorers": {
       "home": [
@@ -886,26 +886,26 @@
     "away": "Japan",
     "date": "2026-06-14",
     "corners": {
-      "home": 6.7,
-      "away": 6.3,
-      "total": 13.0
+      "home": 7.1,
+      "away": 6.6,
+      "total": 13.7
     },
     "fouls": {
-      "home": 9.2,
-      "away": 9.9,
-      "total": 19.1
+      "home": 8.8,
+      "away": 10.1,
+      "total": 18.9
     },
     "yellow_cards": {
       "home": 1.7,
       "away": 1.9,
       "total": 3.6
     },
-    "penalty_prob": 0.234,
-    "btts": 0.5297,
-    "over_2_5": 0.4757,
+    "penalty_prob": 0.232,
+    "btts": 0.4924,
+    "over_2_5": 0.4247,
     "xg": {
-      "home": 1.32,
-      "away": 1.26
+      "home": 1.2,
+      "away": 1.18
     },
     "scorers": {
       "home": [
@@ -997,26 +997,26 @@
     "away": "Tunisia",
     "date": "2026-06-14",
     "corners": {
-      "home": 5.8,
-      "away": 5.2,
-      "total": 11.0
+      "home": 6.7,
+      "away": 5.5,
+      "total": 12.2
     },
     "fouls": {
-      "home": 9.5,
-      "away": 11.4,
-      "total": 20.9
+      "home": 8.6,
+      "away": 10.8,
+      "total": 19.4
     },
     "yellow_cards": {
-      "home": 1.8,
-      "away": 2.2,
-      "total": 4.0
+      "home": 1.6,
+      "away": 2.1,
+      "total": 3.7
     },
-    "penalty_prob": 0.256,
-    "btts": 0.446,
-    "over_2_5": 0.3721,
+    "penalty_prob": 0.238,
+    "btts": 0.5361,
+    "over_2_5": 0.4869,
     "xg": {
-      "home": 1.13,
-      "away": 1.05
+      "home": 1.45,
+      "away": 1.17
     },
     "scorers": {
       "home": [
@@ -1104,26 +1104,26 @@
     "away": "Egypt",
     "date": "2026-06-15",
     "corners": {
-      "home": 6.5,
-      "away": 4.8,
-      "total": 11.3
+      "home": 6.8,
+      "away": 4.9,
+      "total": 11.7
     },
     "fouls": {
-      "home": 9.6,
+      "home": 9.3,
       "away": 11.6,
-      "total": 21.2
+      "total": 20.9
     },
     "yellow_cards": {
       "home": 1.8,
       "away": 2.2,
       "total": 4.0
     },
-    "penalty_prob": 0.26,
-    "btts": 0.3916,
-    "over_2_5": 0.3476,
+    "penalty_prob": 0.256,
+    "btts": 0.3815,
+    "over_2_5": 0.3281,
     "xg": {
-      "home": 1.35,
-      "away": 0.74
+      "home": 1.3,
+      "away": 0.72
     },
     "scorers": {
       "home": [
@@ -1183,26 +1183,26 @@
     "away": "New Zealand",
     "date": "2026-06-15",
     "corners": {
-      "home": 6.2,
-      "away": 5.1,
-      "total": 11.3
+      "home": 6.4,
+      "away": 4.6,
+      "total": 11.0
     },
     "fouls": {
-      "home": 10.0,
-      "away": 10.5,
-      "total": 20.5
+      "home": 9.8,
+      "away": 11.1,
+      "total": 20.9
     },
     "yellow_cards": {
       "home": 1.9,
-      "away": 2.0,
-      "total": 3.9
+      "away": 2.1,
+      "total": 4.0
     },
-    "penalty_prob": 0.252,
-    "btts": 0.4617,
-    "over_2_5": 0.4208,
+    "penalty_prob": 0.256,
+    "btts": 0.4037,
+    "over_2_5": 0.3799,
     "xg": {
-      "home": 1.46,
-      "away": 0.9
+      "home": 1.5,
+      "away": 0.71
     },
     "scorers": {
       "home": [
@@ -1270,26 +1270,26 @@
     "away": "Cape Verde",
     "date": "2026-06-15",
     "corners": {
-      "home": 8.3,
-      "away": 4.0,
-      "total": 12.3
+      "home": 9.6,
+      "away": 4.3,
+      "total": 13.9
     },
     "fouls": {
-      "home": 9.3,
-      "away": 11.2,
-      "total": 20.5
+      "home": 8.8,
+      "away": 10.5,
+      "total": 19.3
     },
     "yellow_cards": {
-      "home": 1.8,
-      "away": 2.1,
-      "total": 3.9
+      "home": 1.7,
+      "away": 2.0,
+      "total": 3.7
     },
-    "penalty_prob": 0.252,
-    "btts": 0.3473,
-    "over_2_5": 0.6006,
+    "penalty_prob": 0.237,
+    "btts": 0.3545,
+    "over_2_5": 0.7287,
     "xg": {
-      "home": 2.64,
-      "away": 0.46
+      "home": 3.33,
+      "away": 0.45
     },
     "scorers": {
       "home": [
@@ -1334,26 +1334,26 @@
     "away": "Uruguay",
     "date": "2026-06-15",
     "corners": {
-      "home": 4.1,
-      "away": 6.0,
+      "home": 4.0,
+      "away": 6.1,
       "total": 10.1
     },
     "fouls": {
-      "home": 11.6,
-      "away": 11.4,
-      "total": 23.0
+      "home": 11.5,
+      "away": 11.8,
+      "total": 23.3
     },
     "yellow_cards": {
       "home": 2.2,
       "away": 2.2,
       "total": 4.4
     },
-    "penalty_prob": 0.282,
-    "btts": 0.2807,
-    "over_2_5": 0.2635,
+    "penalty_prob": 0.286,
+    "btts": 0.2402,
+    "over_2_5": 0.2327,
     "xg": {
-      "home": 0.48,
-      "away": 1.3
+      "home": 0.39,
+      "away": 1.27
     },
     "scorers": {
       "home": [
@@ -1401,26 +1401,26 @@
     "away": "Senegal",
     "date": "2026-06-16",
     "corners": {
-      "home": 6.8,
-      "away": 5.4,
-      "total": 12.2
+      "home": 7.2,
+      "away": 6.0,
+      "total": 13.2
     },
     "fouls": {
-      "home": 9.7,
-      "away": 10.6,
-      "total": 20.3
+      "home": 9.5,
+      "away": 9.8,
+      "total": 19.3
     },
     "yellow_cards": {
       "home": 1.8,
-      "away": 2.0,
-      "total": 3.8
+      "away": 1.9,
+      "total": 3.7
     },
-    "penalty_prob": 0.249,
-    "btts": 0.4318,
-    "over_2_5": 0.3853,
+    "penalty_prob": 0.237,
+    "btts": 0.4619,
+    "over_2_5": 0.4154,
     "xg": {
-      "home": 1.39,
-      "away": 0.84
+      "home": 1.44,
+      "away": 0.9
     },
     "scorers": {
       "home": [
@@ -1494,26 +1494,26 @@
     "away": "Norway",
     "date": "2026-06-16",
     "corners": {
-      "home": 4.7,
-      "away": 6.8,
-      "total": 11.5
+      "home": 4.5,
+      "away": 8.2,
+      "total": 12.7
     },
     "fouls": {
-      "home": 11.3,
-      "away": 9.2,
-      "total": 20.5
+      "home": 11.4,
+      "away": 8.6,
+      "total": 20.0
     },
     "yellow_cards": {
-      "home": 2.1,
-      "away": 1.7,
+      "home": 2.2,
+      "away": 1.6,
       "total": 3.8
     },
-    "penalty_prob": 0.252,
-    "btts": 0.4457,
-    "over_2_5": 0.4436,
+    "penalty_prob": 0.245,
+    "btts": 0.4045,
+    "over_2_5": 0.516,
     "xg": {
-      "home": 0.78,
-      "away": 1.67
+      "home": 0.6,
+      "away": 2.14
     },
     "scorers": {
       "home": [
@@ -1594,26 +1594,26 @@
     "away": "Algeria",
     "date": "2026-06-16",
     "corners": {
-      "home": 7.3,
+      "home": 7.5,
       "away": 5.2,
-      "total": 12.5
+      "total": 12.7
     },
     "fouls": {
-      "home": 10.3,
-      "away": 9.8,
-      "total": 20.1
+      "home": 10.6,
+      "away": 9.9,
+      "total": 20.5
     },
     "yellow_cards": {
       "home": 2.0,
       "away": 1.9,
       "total": 3.9
     },
-    "penalty_prob": 0.247,
-    "btts": 0.4055,
-    "over_2_5": 0.4492,
+    "penalty_prob": 0.252,
+    "btts": 0.3338,
+    "over_2_5": 0.3602,
     "xg": {
-      "home": 1.82,
-      "away": 0.65
+      "home": 1.61,
+      "away": 0.53
     },
     "scorers": {
       "home": [
@@ -1668,26 +1668,26 @@
     "away": "Jordan",
     "date": "2026-06-16",
     "corners": {
-      "home": 6.1,
-      "away": 5.3,
-      "total": 11.4
+      "home": 6.8,
+      "away": 5.6,
+      "total": 12.4
     },
     "fouls": {
       "home": 10.1,
-      "away": 10.0,
-      "total": 20.1
+      "away": 9.3,
+      "total": 19.4
     },
     "yellow_cards": {
       "home": 1.9,
-      "away": 1.9,
-      "total": 3.8
+      "away": 1.8,
+      "total": 3.7
     },
-    "penalty_prob": 0.247,
-    "btts": 0.4885,
-    "over_2_5": 0.4474,
+    "penalty_prob": 0.238,
+    "btts": 0.4857,
+    "over_2_5": 0.4775,
     "xg": {
-      "home": 1.49,
-      "away": 0.98
+      "home": 1.71,
+      "away": 0.88
     },
     "scorers": {
       "home": [
@@ -1761,25 +1761,25 @@
     "away": "DR Congo",
     "date": "2026-06-17",
     "corners": {
-      "home": 7.1,
-      "away": 4.4,
-      "total": 11.5
+      "home": 7.4,
+      "away": 4.6,
+      "total": 12.0
     },
     "fouls": {
-      "home": 9.3,
-      "away": 11.9,
+      "home": 8.9,
+      "away": 12.3,
       "total": 21.2
     },
     "yellow_cards": {
-      "home": 1.8,
+      "home": 1.7,
       "away": 2.3,
-      "total": 4.1
+      "total": 4.0
     },
     "penalty_prob": 0.26,
-    "btts": 0.3722,
-    "over_2_5": 0.3888,
+    "btts": 0.3529,
+    "over_2_5": 0.3315,
     "xg": {
-      "home": 1.63,
+      "home": 1.42,
       "away": 0.61
     },
     "scorers": {
@@ -1841,25 +1841,25 @@
     "date": "2026-06-17",
     "corners": {
       "home": 4.6,
-      "away": 6.7,
-      "total": 11.3
+      "away": 7.5,
+      "total": 12.1
     },
     "fouls": {
-      "home": 11.6,
-      "away": 9.9,
-      "total": 21.5
+      "home": 12.0,
+      "away": 8.9,
+      "total": 20.9
     },
     "yellow_cards": {
-      "home": 2.2,
-      "away": 1.9,
-      "total": 4.1
+      "home": 2.3,
+      "away": 1.7,
+      "total": 4.0
     },
-    "penalty_prob": 0.264,
-    "btts": 0.3556,
-    "over_2_5": 0.331,
+    "penalty_prob": 0.256,
+    "btts": 0.3621,
+    "over_2_5": 0.3554,
     "xg": {
-      "home": 0.63,
-      "away": 1.4
+      "home": 0.61,
+      "away": 1.51
     },
     "scorers": {
       "home": [
@@ -1927,26 +1927,26 @@
     "away": "Croatia",
     "date": "2026-06-17",
     "corners": {
-      "home": 6.7,
-      "away": 5.6,
-      "total": 12.3
+      "home": 7.0,
+      "away": 5.7,
+      "total": 12.7
     },
     "fouls": {
-      "home": 10.3,
-      "away": 10.0,
+      "home": 10.6,
+      "away": 9.7,
       "total": 20.3
     },
     "yellow_cards": {
       "home": 2.0,
-      "away": 1.9,
-      "total": 3.9
+      "away": 1.8,
+      "total": 3.8
     },
     "penalty_prob": 0.249,
-    "btts": 0.4185,
-    "over_2_5": 0.3746,
+    "btts": 0.3738,
+    "over_2_5": 0.3339,
     "xg": {
-      "home": 1.39,
-      "away": 0.8
+      "home": 1.36,
+      "away": 0.68
     },
     "scorers": {
       "home": [
@@ -2040,26 +2040,26 @@
     "away": "Panama",
     "date": "2026-06-17",
     "corners": {
-      "home": 5.3,
-      "away": 5.5,
-      "total": 10.8
+      "home": 5.7,
+      "away": 5.6,
+      "total": 11.3
     },
     "fouls": {
-      "home": 10.5,
-      "away": 9.9,
-      "total": 20.4
+      "home": 10.2,
+      "away": 9.7,
+      "total": 19.9
     },
     "yellow_cards": {
-      "home": 2.0,
-      "away": 1.9,
-      "total": 3.9
+      "home": 1.9,
+      "away": 1.8,
+      "total": 3.7
     },
-    "penalty_prob": 0.25,
-    "btts": 0.5102,
-    "over_2_5": 0.451,
+    "penalty_prob": 0.244,
+    "btts": 0.5126,
+    "over_2_5": 0.4515,
     "xg": {
-      "home": 1.21,
-      "away": 1.27
+      "home": 1.3,
+      "away": 1.18
     },
     "scorers": {
       "home": [
@@ -2112,26 +2112,26 @@
     "away": "South Africa",
     "date": "2026-06-18",
     "corners": {
-      "home": 5.7,
-      "away": 4.9,
-      "total": 10.6
+      "home": 6.4,
+      "away": 5.4,
+      "total": 11.8
     },
     "fouls": {
-      "home": 10.0,
-      "away": 11.0,
-      "total": 21.0
+      "home": 9.3,
+      "away": 10.2,
+      "total": 19.5
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 2.1,
-      "total": 4.0
+      "home": 1.8,
+      "away": 1.9,
+      "total": 3.7
     },
-    "penalty_prob": 0.258,
-    "btts": 0.4473,
-    "over_2_5": 0.3827,
+    "penalty_prob": 0.239,
+    "btts": 0.5165,
+    "over_2_5": 0.4732,
     "xg": {
-      "home": 1.26,
-      "away": 0.96
+      "home": 1.51,
+      "away": 1.06
     },
     "scorers": {
       "home": [
@@ -2185,26 +2185,26 @@
     "away": "South Korea",
     "date": "2026-06-18",
     "corners": {
-      "home": 5.6,
-      "away": 5.5,
-      "total": 11.1
+      "home": 6.0,
+      "away": 5.7,
+      "total": 11.7
     },
     "fouls": {
-      "home": 10.9,
-      "away": 10.0,
-      "total": 20.9
+      "home": 11.0,
+      "away": 9.6,
+      "total": 20.6
     },
     "yellow_cards": {
       "home": 2.1,
-      "away": 1.9,
-      "total": 4.0
+      "away": 1.8,
+      "total": 3.9
     },
-    "penalty_prob": 0.256,
-    "btts": 0.4233,
-    "over_2_5": 0.3479,
+    "penalty_prob": 0.253,
+    "btts": 0.4126,
+    "over_2_5": 0.3406,
     "xg": {
-      "home": 1.14,
-      "away": 0.95
+      "home": 1.2,
+      "away": 0.86
     },
     "scorers": {
       "home": [
@@ -2263,26 +2263,26 @@
     "away": "Bosnia and Herzegovina",
     "date": "2026-06-18",
     "corners": {
-      "home": 6.9,
-      "away": 4.5,
-      "total": 11.4
+      "home": 7.7,
+      "away": 4.8,
+      "total": 12.5
     },
     "fouls": {
-      "home": 9.6,
-      "away": 10.8,
-      "total": 20.4
+      "home": 9.2,
+      "away": 10.5,
+      "total": 19.7
     },
     "yellow_cards": {
-      "home": 1.8,
-      "away": 2.1,
-      "total": 3.9
+      "home": 1.7,
+      "away": 2.0,
+      "total": 3.7
     },
-    "penalty_prob": 0.25,
-    "btts": 0.4458,
-    "over_2_5": 0.5116,
+    "penalty_prob": 0.242,
+    "btts": 0.4305,
+    "over_2_5": 0.517,
     "xg": {
-      "home": 2.01,
-      "away": 0.71
+      "home": 2.08,
+      "away": 0.66
     },
     "scorers": {
       "home": [
@@ -2381,26 +2381,26 @@
     "away": "Qatar",
     "date": "2026-06-18",
     "corners": {
-      "home": 6.4,
-      "away": 5.0,
-      "total": 11.4
+      "home": 6.7,
+      "away": 4.8,
+      "total": 11.5
     },
     "fouls": {
-      "home": 10.1,
-      "away": 9.7,
-      "total": 19.8
+      "home": 10.4,
+      "away": 9.5,
+      "total": 19.9
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 2.0,
       "away": 1.8,
-      "total": 3.7
+      "total": 3.8
     },
-    "penalty_prob": 0.243,
-    "btts": 0.5169,
-    "over_2_5": 0.5378,
+    "penalty_prob": 0.244,
+    "btts": 0.4582,
+    "over_2_5": 0.5355,
     "xg": {
-      "home": 1.91,
-      "away": 0.92
+      "home": 2.1,
+      "away": 0.73
     },
     "scorers": {
       "home": [
@@ -2494,26 +2494,26 @@
     "away": "Morocco",
     "date": "2026-06-19",
     "corners": {
-      "home": 4.8,
-      "away": 6.0,
-      "total": 10.8
+      "home": 5.3,
+      "away": 6.2,
+      "total": 11.5
     },
     "fouls": {
-      "home": 10.2,
-      "away": 11.8,
-      "total": 22.0
+      "home": 9.6,
+      "away": 12.2,
+      "total": 21.8
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 2.2,
+      "home": 1.8,
+      "away": 2.3,
       "total": 4.1
     },
-    "penalty_prob": 0.27,
-    "btts": 0.3276,
-    "over_2_5": 0.2938,
+    "penalty_prob": 0.267,
+    "btts": 0.3062,
+    "over_2_5": 0.2609,
     "xg": {
-      "home": 0.58,
-      "away": 1.31
+      "home": 0.55,
+      "away": 1.22
     },
     "scorers": {
       "home": [
@@ -2566,26 +2566,26 @@
     "away": "Haiti",
     "date": "2026-06-19",
     "corners": {
-      "home": 8.1,
-      "away": 4.5,
-      "total": 12.6
+      "home": 8.7,
+      "away": 4.6,
+      "total": 13.3
     },
     "fouls": {
-      "home": 10.0,
-      "away": 9.6,
-      "total": 19.6
+      "home": 9.3,
+      "away": 9.4,
+      "total": 18.7
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 1.8,
       "away": 1.8,
-      "total": 3.7
+      "total": 3.6
     },
-    "penalty_prob": 0.24,
-    "btts": 0.3996,
-    "over_2_5": 0.6814,
+    "penalty_prob": 0.229,
+    "btts": 0.427,
+    "over_2_5": 0.746,
     "xg": {
-      "home": 2.97,
-      "away": 0.54
+      "home": 3.32,
+      "away": 0.58
     },
     "scorers": {
       "home": [
@@ -2646,26 +2646,26 @@
     "away": "Australia",
     "date": "2026-06-19",
     "corners": {
-      "home": 5.4,
-      "away": 5.8,
-      "total": 11.2
+      "home": 5.6,
+      "away": 6.3,
+      "total": 11.9
     },
     "fouls": {
-      "home": 10.2,
-      "away": 10.5,
-      "total": 20.7
+      "home": 9.6,
+      "away": 10.4,
+      "total": 20.0
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 1.8,
       "away": 2.0,
-      "total": 3.9
+      "total": 3.8
     },
-    "penalty_prob": 0.254,
-    "btts": 0.4318,
-    "over_2_5": 0.3609,
+    "penalty_prob": 0.245,
+    "btts": 0.4507,
+    "over_2_5": 0.3998,
     "xg": {
-      "home": 0.95,
-      "away": 1.19
+      "home": 0.89,
+      "away": 1.4
     },
     "scorers": {
       "home": [
@@ -2731,26 +2731,26 @@
     "away": "Paraguay",
     "date": "2026-06-19",
     "corners": {
-      "home": 5.9,
-      "away": 5.3,
-      "total": 11.2
+      "home": 6.5,
+      "away": 5.8,
+      "total": 12.3
     },
     "fouls": {
-      "home": 9.3,
-      "away": 11.4,
-      "total": 20.7
+      "home": 9.0,
+      "away": 11.0,
+      "total": 20.0
     },
     "yellow_cards": {
-      "home": 1.8,
-      "away": 2.2,
-      "total": 4.0
+      "home": 1.7,
+      "away": 2.1,
+      "total": 3.8
     },
-    "penalty_prob": 0.254,
-    "btts": 0.4534,
-    "over_2_5": 0.3804,
+    "penalty_prob": 0.245,
+    "btts": 0.4465,
+    "over_2_5": 0.3688,
     "xg": {
-      "home": 1.11,
-      "away": 1.1
+      "home": 1.12,
+      "away": 1.05
     },
     "scorers": {
       "home": [
@@ -2809,26 +2809,26 @@
     "away": "Ivory Coast",
     "date": "2026-06-20",
     "corners": {
-      "home": 7.1,
+      "home": 7.9,
       "away": 5.1,
-      "total": 12.2
+      "total": 13.0
     },
     "fouls": {
-      "home": 8.9,
-      "away": 11.1,
-      "total": 20.0
+      "home": 8.6,
+      "away": 11.0,
+      "total": 19.6
     },
     "yellow_cards": {
-      "home": 1.7,
+      "home": 1.6,
       "away": 2.1,
-      "total": 3.8
+      "total": 3.7
     },
-    "penalty_prob": 0.245,
-    "btts": 0.47,
-    "over_2_5": 0.4562,
+    "penalty_prob": 0.24,
+    "btts": 0.4436,
+    "over_2_5": 0.46,
     "xg": {
-      "home": 1.64,
-      "away": 0.86
+      "home": 1.77,
+      "away": 0.75
     },
     "scorers": {
       "home": [
@@ -2901,26 +2901,26 @@
     "away": "Curaçao",
     "date": "2026-06-20",
     "corners": {
-      "home": 6.0,
-      "away": 3.9,
-      "total": 9.9
+      "home": 6.3,
+      "away": 3.5,
+      "total": 9.8
     },
     "fouls": {
-      "home": 11.9,
-      "away": 10.9,
-      "total": 22.8
+      "home": 13.3,
+      "away": 10.8,
+      "total": 24.1
     },
     "yellow_cards": {
-      "home": 2.3,
+      "home": 2.5,
       "away": 2.1,
-      "total": 4.4
+      "total": 4.6
     },
-    "penalty_prob": 0.28,
-    "btts": 0.2873,
-    "over_2_5": 0.3452,
+    "penalty_prob": 0.296,
+    "btts": 0.1911,
+    "over_2_5": 0.3245,
     "xg": {
-      "home": 1.65,
-      "away": 0.43
+      "home": 1.75,
+      "away": 0.26
     },
     "scorers": {
       "home": [
@@ -2965,26 +2965,26 @@
     "away": "Sweden",
     "date": "2026-06-20",
     "corners": {
-      "home": 7.3,
-      "away": 5.7,
-      "total": 13.0
+      "home": 8.3,
+      "away": 6.3,
+      "total": 14.6
     },
     "fouls": {
-      "home": 9.2,
-      "away": 9.5,
-      "total": 18.7
+      "home": 8.8,
+      "away": 8.6,
+      "total": 17.4
     },
     "yellow_cards": {
       "home": 1.7,
-      "away": 1.8,
-      "total": 3.5
+      "away": 1.6,
+      "total": 3.3
     },
-    "penalty_prob": 0.229,
-    "btts": 0.5644,
-    "over_2_5": 0.5802,
+    "penalty_prob": 0.213,
+    "btts": 0.6129,
+    "over_2_5": 0.683,
     "xg": {
-      "home": 1.96,
-      "away": 1.06
+      "home": 2.42,
+      "away": 1.1
     },
     "scorers": {
       "home": [
@@ -3091,25 +3091,25 @@
     "date": "2026-06-20",
     "corners": {
       "home": 4.7,
-      "away": 6.4,
-      "total": 11.1
+      "away": 7.0,
+      "total": 11.7
     },
     "fouls": {
-      "home": 11.4,
-      "away": 9.9,
-      "total": 21.3
+      "home": 10.8,
+      "away": 10.1,
+      "total": 20.9
     },
     "yellow_cards": {
-      "home": 2.2,
+      "home": 2.1,
       "away": 1.9,
-      "total": 4.1
+      "total": 4.0
     },
-    "penalty_prob": 0.261,
-    "btts": 0.3804,
-    "over_2_5": 0.3378,
+    "penalty_prob": 0.256,
+    "btts": 0.3543,
+    "over_2_5": 0.3594,
     "xg": {
-      "home": 0.71,
-      "away": 1.35
+      "home": 0.58,
+      "away": 1.55
     },
     "scorers": {
       "home": [
@@ -3183,26 +3183,26 @@
     "away": "Iran",
     "date": "2026-06-21",
     "corners": {
-      "home": 6.6,
-      "away": 5.7,
-      "total": 12.3
+      "home": 7.0,
+      "away": 5.8,
+      "total": 12.8
     },
     "fouls": {
-      "home": 9.6,
-      "away": 10.0,
-      "total": 19.6
+      "home": 9.3,
+      "away": 9.8,
+      "total": 19.1
     },
     "yellow_cards": {
       "home": 1.8,
       "away": 1.9,
       "total": 3.7
     },
-    "penalty_prob": 0.24,
-    "btts": 0.4964,
-    "over_2_5": 0.4526,
+    "penalty_prob": 0.234,
+    "btts": 0.5014,
+    "over_2_5": 0.4646,
     "xg": {
-      "home": 1.47,
-      "away": 1.01
+      "home": 1.55,
+      "away": 0.99
     },
     "scorers": {
       "home": [
@@ -3235,26 +3235,26 @@
     "away": "Egypt",
     "date": "2026-06-21",
     "corners": {
-      "home": 5.0,
-      "away": 5.2,
-      "total": 10.2
+      "home": 4.4,
+      "away": 5.4,
+      "total": 9.8
     },
     "fouls": {
-      "home": 10.5,
+      "home": 11.1,
       "away": 11.6,
-      "total": 22.1
+      "total": 22.7
     },
     "yellow_cards": {
-      "home": 2.0,
+      "home": 2.1,
       "away": 2.2,
-      "total": 4.2
+      "total": 4.3
     },
-    "penalty_prob": 0.271,
-    "btts": 0.3742,
-    "over_2_5": 0.2936,
+    "penalty_prob": 0.278,
+    "btts": 0.3075,
+    "over_2_5": 0.2409,
     "xg": {
-      "home": 0.83,
-      "away": 1.06
+      "home": 0.6,
+      "away": 1.09
     },
     "scorers": {
       "home": [
@@ -3334,26 +3334,26 @@
     "away": "Saudi Arabia",
     "date": "2026-06-21",
     "corners": {
-      "home": 8.0,
-      "away": 4.2,
-      "total": 12.2
+      "home": 9.1,
+      "away": 4.1,
+      "total": 13.2
     },
     "fouls": {
-      "home": 9.3,
-      "away": 11.6,
-      "total": 20.9
+      "home": 8.8,
+      "away": 11.5,
+      "total": 20.3
     },
     "yellow_cards": {
-      "home": 1.8,
+      "home": 1.7,
       "away": 2.2,
-      "total": 4.0
+      "total": 3.9
     },
-    "penalty_prob": 0.256,
-    "btts": 0.3478,
-    "over_2_5": 0.5029,
+    "penalty_prob": 0.249,
+    "btts": 0.3256,
+    "over_2_5": 0.586,
     "xg": {
-      "home": 2.19,
-      "away": 0.49
+      "home": 2.61,
+      "away": 0.43
     },
     "scorers": {
       "home": [
@@ -3421,26 +3421,26 @@
     "away": "Cape Verde",
     "date": "2026-06-21",
     "corners": {
-      "home": 6.2,
-      "away": 4.0,
-      "total": 10.2
+      "home": 6.4,
+      "away": 4.2,
+      "total": 10.6
     },
     "fouls": {
-      "home": 11.4,
-      "away": 11.2,
-      "total": 22.6
+      "home": 11.8,
+      "away": 10.5,
+      "total": 22.3
     },
     "yellow_cards": {
       "home": 2.2,
-      "away": 2.1,
-      "total": 4.3
+      "away": 2.0,
+      "total": 4.2
     },
-    "penalty_prob": 0.277,
-    "btts": 0.2916,
-    "over_2_5": 0.3283,
+    "penalty_prob": 0.274,
+    "btts": 0.2804,
+    "over_2_5": 0.3328,
     "xg": {
-      "home": 1.57,
-      "away": 0.45
+      "home": 1.62,
+      "away": 0.42
     },
     "scorers": {
       "home": [
@@ -3508,26 +3508,26 @@
     "away": "Iraq",
     "date": "2026-06-22",
     "corners": {
-      "home": 7.2,
+      "home": 7.6,
       "away": 4.3,
-      "total": 11.5
+      "total": 11.9
     },
     "fouls": {
-      "home": 9.7,
-      "away": 11.3,
-      "total": 21.0
+      "home": 9.5,
+      "away": 11.4,
+      "total": 20.9
     },
     "yellow_cards": {
       "home": 1.8,
-      "away": 2.1,
-      "total": 3.9
+      "away": 2.2,
+      "total": 4.0
     },
-    "penalty_prob": 0.258,
-    "btts": 0.3684,
-    "over_2_5": 0.4369,
+    "penalty_prob": 0.256,
+    "btts": 0.3384,
+    "over_2_5": 0.4192,
     "xg": {
       "home": 1.86,
-      "away": 0.56
+      "away": 0.5
     },
     "scorers": {
       "home": [
@@ -3588,26 +3588,26 @@
     "away": "Senegal",
     "date": "2026-06-22",
     "corners": {
-      "home": 6.4,
-      "away": 5.8,
-      "total": 12.2
+      "home": 7.8,
+      "away": 6.2,
+      "total": 14.0
     },
     "fouls": {
-      "home": 9.2,
-      "away": 10.6,
-      "total": 19.8
+      "home": 8.6,
+      "away": 9.8,
+      "total": 18.4
     },
     "yellow_cards": {
-      "home": 1.7,
-      "away": 2.0,
-      "total": 3.7
+      "home": 1.6,
+      "away": 1.9,
+      "total": 3.5
     },
-    "penalty_prob": 0.243,
-    "btts": 0.4957,
-    "over_2_5": 0.4332,
+    "penalty_prob": 0.226,
+    "btts": 0.5435,
+    "over_2_5": 0.5169,
     "xg": {
-      "home": 1.25,
-      "away": 1.16
+      "home": 1.66,
+      "away": 1.08
     },
     "scorers": {
       "home": [
@@ -3694,26 +3694,26 @@
     "away": "Austria",
     "date": "2026-06-22",
     "corners": {
-      "home": 7.2,
-      "away": 5.0,
-      "total": 12.2
+      "home": 7.3,
+      "away": 5.3,
+      "total": 12.6
     },
     "fouls": {
-      "home": 10.3,
+      "home": 10.6,
       "away": 10.1,
-      "total": 20.4
+      "total": 20.7
     },
     "yellow_cards": {
       "home": 2.0,
       "away": 1.9,
       "total": 3.9
     },
-    "penalty_prob": 0.25,
-    "btts": 0.3844,
-    "over_2_5": 0.414,
+    "penalty_prob": 0.254,
+    "btts": 0.3272,
+    "over_2_5": 0.3175,
     "xg": {
-      "home": 1.72,
-      "away": 0.62
+      "home": 1.43,
+      "away": 0.55
     },
     "scorers": {
       "home": [
@@ -3767,26 +3767,26 @@
     "away": "Algeria",
     "date": "2026-06-22",
     "corners": {
-      "home": 5.4,
-      "away": 6.3,
-      "total": 11.7
+      "home": 5.7,
+      "away": 6.6,
+      "total": 12.3
     },
     "fouls": {
-      "home": 10.0,
-      "away": 9.8,
-      "total": 19.8
+      "home": 9.3,
+      "away": 9.9,
+      "total": 19.2
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 1.8,
       "away": 1.9,
-      "total": 3.8
+      "total": 3.7
     },
-    "penalty_prob": 0.243,
-    "btts": 0.5151,
-    "over_2_5": 0.4804,
+    "penalty_prob": 0.236,
+    "btts": 0.5138,
+    "over_2_5": 0.4895,
     "xg": {
-      "home": 1.04,
-      "away": 1.56
+      "home": 0.99,
+      "away": 1.64
     },
     "scorers": {
       "home": [
@@ -3847,26 +3847,26 @@
     "away": "Uzbekistan",
     "date": "2026-06-23",
     "corners": {
-      "home": 7.0,
-      "away": 4.7,
-      "total": 11.7
+      "home": 7.5,
+      "away": 4.6,
+      "total": 12.1
     },
     "fouls": {
-      "home": 9.3,
-      "away": 11.6,
+      "home": 8.9,
+      "away": 12.0,
       "total": 20.9
     },
     "yellow_cards": {
-      "home": 1.8,
-      "away": 2.2,
+      "home": 1.7,
+      "away": 2.3,
       "total": 4.0
     },
     "penalty_prob": 0.256,
-    "btts": 0.3901,
-    "over_2_5": 0.383,
+    "btts": 0.3638,
+    "over_2_5": 0.3617,
     "xg": {
-      "home": 1.55,
-      "away": 0.67
+      "home": 1.54,
+      "away": 0.61
     },
     "scorers": {
       "home": [
@@ -3947,26 +3947,26 @@
     "away": "DR Congo",
     "date": "2026-06-23",
     "corners": {
-      "home": 6.7,
-      "away": 4.4,
-      "total": 11.1
+      "home": 7.3,
+      "away": 4.6,
+      "total": 11.9
     },
     "fouls": {
-      "home": 9.9,
-      "away": 11.9,
-      "total": 21.8
+      "home": 8.9,
+      "away": 12.3,
+      "total": 21.2
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 1.7,
       "away": 2.3,
-      "total": 4.2
+      "total": 4.0
     },
-    "penalty_prob": 0.267,
-    "btts": 0.3395,
-    "over_2_5": 0.3358,
+    "penalty_prob": 0.26,
+    "btts": 0.3511,
+    "over_2_5": 0.3257,
     "xg": {
-      "home": 1.48,
-      "away": 0.57
+      "home": 1.4,
+      "away": 0.61
     },
     "scorers": {
       "home": [
@@ -4013,26 +4013,26 @@
     "away": "Ghana",
     "date": "2026-06-23",
     "corners": {
-      "home": 7.3,
+      "home": 7.8,
       "away": 4.4,
-      "total": 11.7
+      "total": 12.2
     },
     "fouls": {
-      "home": 10.3,
-      "away": 10.5,
+      "home": 10.6,
+      "away": 10.2,
       "total": 20.8
     },
     "yellow_cards": {
       "home": 2.0,
-      "away": 2.0,
-      "total": 4.0
+      "away": 1.9,
+      "total": 3.9
     },
     "penalty_prob": 0.255,
-    "btts": 0.3555,
-    "over_2_5": 0.4904,
+    "btts": 0.309,
+    "over_2_5": 0.4725,
     "xg": {
-      "home": 2.12,
-      "away": 0.51
+      "home": 2.14,
+      "away": 0.42
     },
     "scorers": {
       "home": [
@@ -4071,26 +4071,26 @@
     "away": "Croatia",
     "date": "2026-06-23",
     "corners": {
-      "home": 5.0,
-      "away": 6.7,
-      "total": 11.7
+      "home": 5.1,
+      "away": 7.3,
+      "total": 12.4
     },
     "fouls": {
-      "home": 9.9,
-      "away": 10.0,
-      "total": 19.9
+      "home": 9.7,
+      "away": 9.7,
+      "total": 19.4
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 1.9,
-      "total": 3.8
+      "home": 1.8,
+      "away": 1.8,
+      "total": 3.6
     },
-    "penalty_prob": 0.244,
-    "btts": 0.4838,
-    "over_2_5": 0.5124,
+    "penalty_prob": 0.238,
+    "btts": 0.4679,
+    "over_2_5": 0.5392,
     "xg": {
-      "home": 0.83,
-      "away": 1.89
+      "home": 0.75,
+      "away": 2.09
     },
     "scorers": {
       "home": [
@@ -4155,26 +4155,26 @@
     "away": "Mexico",
     "date": "2026-06-24",
     "corners": {
-      "home": 5.2,
-      "away": 5.8,
-      "total": 11.0
+      "home": 5.7,
+      "away": 6.1,
+      "total": 11.8
     },
     "fouls": {
-      "home": 10.0,
-      "away": 10.9,
-      "total": 20.9
+      "home": 9.3,
+      "away": 11.0,
+      "total": 20.3
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 1.8,
       "away": 2.1,
-      "total": 4.0
+      "total": 3.9
     },
-    "penalty_prob": 0.256,
-    "btts": 0.4231,
-    "over_2_5": 0.3641,
+    "penalty_prob": 0.249,
+    "btts": 0.433,
+    "over_2_5": 0.3749,
     "xg": {
       "home": 0.86,
-      "away": 1.29
+      "away": 1.33
     },
     "scorers": {
       "home": [
@@ -4247,26 +4247,26 @@
     "away": "South Korea",
     "date": "2026-06-24",
     "corners": {
-      "home": 4.8,
-      "away": 6.0,
-      "total": 10.8
+      "home": 5.3,
+      "away": 6.4,
+      "total": 11.7
     },
     "fouls": {
-      "home": 11.0,
-      "away": 10.0,
-      "total": 21.0
+      "home": 10.2,
+      "away": 9.6,
+      "total": 19.8
     },
     "yellow_cards": {
-      "home": 2.1,
-      "away": 1.9,
-      "total": 4.0
+      "home": 1.9,
+      "away": 1.8,
+      "total": 3.7
     },
-    "penalty_prob": 0.258,
-    "btts": 0.4345,
-    "over_2_5": 0.3901,
+    "penalty_prob": 0.243,
+    "btts": 0.4878,
+    "over_2_5": 0.4474,
     "xg": {
-      "home": 0.84,
-      "away": 1.41
+      "home": 0.96,
+      "away": 1.51
     },
     "scorers": {
       "home": [
@@ -4313,26 +4313,26 @@
     "away": "Canada",
     "date": "2026-06-24",
     "corners": {
-      "home": 6.4,
-      "away": 5.7,
-      "total": 12.1
+      "home": 7.2,
+      "away": 5.5,
+      "total": 12.7
     },
     "fouls": {
-      "home": 9.6,
-      "away": 10.1,
-      "total": 19.7
+      "home": 9.2,
+      "away": 10.4,
+      "total": 19.6
     },
     "yellow_cards": {
-      "home": 1.8,
-      "away": 1.9,
+      "home": 1.7,
+      "away": 2.0,
       "total": 3.7
     },
-    "penalty_prob": 0.242,
-    "btts": 0.5094,
-    "over_2_5": 0.4597,
+    "penalty_prob": 0.24,
+    "btts": 0.4598,
+    "over_2_5": 0.4249,
     "xg": {
-      "home": 1.42,
-      "away": 1.09
+      "home": 1.51,
+      "away": 0.87
     },
     "scorers": {
       "home": [
@@ -4417,26 +4417,26 @@
     "away": "Qatar",
     "date": "2026-06-24",
     "corners": {
-      "home": 5.1,
-      "away": 5.4,
-      "total": 10.5
+      "home": 5.8,
+      "away": 5.1,
+      "total": 10.9
     },
     "fouls": {
-      "home": 10.8,
-      "away": 9.7,
-      "total": 20.5
+      "home": 10.5,
+      "away": 9.5,
+      "total": 20.0
     },
     "yellow_cards": {
-      "home": 2.1,
+      "home": 2.0,
       "away": 1.8,
-      "total": 3.9
+      "total": 3.8
     },
-    "penalty_prob": 0.252,
-    "btts": 0.5242,
-    "over_2_5": 0.4686,
+    "penalty_prob": 0.245,
+    "btts": 0.5122,
+    "over_2_5": 0.4826,
     "xg": {
-      "home": 1.25,
-      "away": 1.3
+      "home": 1.61,
+      "away": 1.0
     },
     "scorers": {
       "home": [
@@ -4516,26 +4516,26 @@
     "away": "Brazil",
     "date": "2026-06-24",
     "corners": {
-      "home": 4.9,
-      "away": 7.3,
-      "total": 12.2
+      "home": 5.9,
+      "away": 7.6,
+      "total": 13.5
     },
     "fouls": {
-      "home": 10.2,
-      "away": 10.0,
-      "total": 20.2
+      "home": 9.6,
+      "away": 9.3,
+      "total": 18.9
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 1.9,
-      "total": 3.8
+      "home": 1.8,
+      "away": 1.8,
+      "total": 3.6
     },
-    "penalty_prob": 0.248,
-    "btts": 0.405,
-    "over_2_5": 0.4619,
+    "penalty_prob": 0.232,
+    "btts": 0.4952,
+    "over_2_5": 0.4882,
     "xg": {
-      "home": 0.64,
-      "away": 1.88
+      "home": 0.9,
+      "away": 1.73
     },
     "scorers": {
       "home": [
@@ -4590,26 +4590,26 @@
     "away": "Haiti",
     "date": "2026-06-24",
     "corners": {
-      "home": 6.6,
-      "away": 4.4,
-      "total": 11.0
+      "home": 7.2,
+      "away": 4.2,
+      "total": 11.4
     },
     "fouls": {
-      "home": 11.8,
-      "away": 9.6,
-      "total": 21.4
+      "home": 12.2,
+      "away": 9.4,
+      "total": 21.6
     },
     "yellow_cards": {
-      "home": 2.2,
+      "home": 2.3,
       "away": 1.8,
-      "total": 4.0
+      "total": 4.1
     },
-    "penalty_prob": 0.263,
-    "btts": 0.3443,
-    "over_2_5": 0.4708,
+    "penalty_prob": 0.265,
+    "btts": 0.2746,
+    "over_2_5": 0.504,
     "xg": {
-      "home": 2.06,
-      "away": 0.5
+      "home": 2.33,
+      "away": 0.36
     },
     "scorers": {
       "home": [
@@ -4703,26 +4703,26 @@
     "away": "United States",
     "date": "2026-06-25",
     "corners": {
-      "home": 6.1,
+      "home": 7.2,
       "away": 5.8,
-      "total": 11.9
+      "total": 13.0
     },
     "fouls": {
-      "home": 9.3,
-      "away": 10.2,
-      "total": 19.5
+      "home": 9.0,
+      "away": 9.6,
+      "total": 18.6
     },
     "yellow_cards": {
-      "home": 1.8,
-      "away": 1.9,
-      "total": 3.7
+      "home": 1.7,
+      "away": 1.8,
+      "total": 3.5
     },
-    "penalty_prob": 0.239,
-    "btts": 0.5346,
-    "over_2_5": 0.4816,
+    "penalty_prob": 0.228,
+    "btts": 0.5556,
+    "over_2_5": 0.5435,
     "xg": {
-      "home": 1.29,
-      "away": 1.31
+      "home": 1.78,
+      "away": 1.08
     },
     "scorers": {
       "home": [
@@ -4785,26 +4785,26 @@
     "away": "Australia",
     "date": "2026-06-25",
     "corners": {
-      "home": 5.0,
-      "away": 5.6,
-      "total": 10.6
+      "home": 5.5,
+      "away": 5.7,
+      "total": 11.2
     },
     "fouls": {
-      "home": 11.4,
-      "away": 10.5,
-      "total": 21.9
+      "home": 11.0,
+      "away": 10.4,
+      "total": 21.4
     },
     "yellow_cards": {
-      "home": 2.2,
+      "home": 2.1,
       "away": 2.0,
-      "total": 4.2
+      "total": 4.1
     },
-    "penalty_prob": 0.269,
-    "btts": 0.3578,
-    "over_2_5": 0.2751,
+    "penalty_prob": 0.263,
+    "btts": 0.347,
+    "over_2_5": 0.2541,
     "xg": {
-      "home": 0.8,
-      "away": 1.02
+      "home": 0.86,
+      "away": 0.88
     },
     "scorers": {
       "home": [
@@ -4843,26 +4843,26 @@
     "away": "Ivory Coast",
     "date": "2026-06-25",
     "corners": {
-      "home": 4.2,
-      "away": 5.7,
-      "total": 9.9
+      "home": 4.1,
+      "away": 6.1,
+      "total": 10.2
     },
     "fouls": {
-      "home": 10.9,
-      "away": 11.1,
-      "total": 22.0
+      "home": 10.8,
+      "away": 11.0,
+      "total": 21.8
     },
     "yellow_cards": {
       "home": 2.1,
       "away": 2.1,
       "total": 4.2
     },
-    "penalty_prob": 0.27,
-    "btts": 0.3674,
-    "over_2_5": 0.3541,
+    "penalty_prob": 0.267,
+    "btts": 0.349,
+    "over_2_5": 0.376,
     "xg": {
-      "home": 0.63,
-      "away": 1.48
+      "home": 0.55,
+      "away": 1.64
     },
     "scorers": {
       "home": [
@@ -4895,26 +4895,26 @@
     "away": "Germany",
     "date": "2026-06-25",
     "corners": {
-      "home": 5.4,
+      "home": 5.3,
       "away": 6.6,
-      "total": 12.0
+      "total": 11.9
     },
     "fouls": {
-      "home": 11.9,
-      "away": 8.9,
-      "total": 20.8
+      "home": 13.3,
+      "away": 8.6,
+      "total": 21.9
     },
     "yellow_cards": {
-      "home": 2.3,
-      "away": 1.7,
-      "total": 4.0
+      "home": 2.5,
+      "away": 1.6,
+      "total": 4.1
     },
-    "penalty_prob": 0.255,
-    "btts": 0.4208,
-    "over_2_5": 0.3442,
+    "penalty_prob": 0.269,
+    "btts": 0.316,
+    "over_2_5": 0.2211,
     "xg": {
-      "home": 0.96,
-      "away": 1.12
+      "home": 0.8,
+      "away": 0.82
     },
     "scorers": {
       "home": [
@@ -4977,26 +4977,26 @@
     "away": "Sweden",
     "date": "2026-06-25",
     "corners": {
-      "home": 6.8,
-      "away": 5.6,
-      "total": 12.4
+      "home": 7.3,
+      "away": 6.1,
+      "total": 13.4
     },
     "fouls": {
-      "home": 9.9,
-      "away": 9.5,
-      "total": 19.4
+      "home": 10.1,
+      "away": 8.6,
+      "total": 18.7
     },
     "yellow_cards": {
       "home": 1.9,
-      "away": 1.8,
-      "total": 3.7
+      "away": 1.6,
+      "total": 3.5
     },
-    "penalty_prob": 0.238,
-    "btts": 0.5134,
-    "over_2_5": 0.5025,
+    "penalty_prob": 0.229,
+    "btts": 0.5171,
+    "over_2_5": 0.5428,
     "xg": {
-      "home": 1.72,
-      "away": 0.97
+      "home": 1.95,
+      "away": 0.9
     },
     "scorers": {
       "home": [
@@ -5059,26 +5059,26 @@
     "away": "Netherlands",
     "date": "2026-06-25",
     "corners": {
-      "home": 4.8,
-      "away": 6.9,
-      "total": 11.7
+      "home": 5.0,
+      "away": 7.9,
+      "total": 12.9
     },
     "fouls": {
-      "home": 11.4,
-      "away": 9.2,
-      "total": 20.6
+      "home": 10.8,
+      "away": 8.8,
+      "total": 19.6
     },
     "yellow_cards": {
-      "home": 2.2,
+      "home": 2.1,
       "away": 1.7,
-      "total": 3.9
+      "total": 3.8
     },
-    "penalty_prob": 0.253,
-    "btts": 0.4272,
-    "over_2_5": 0.4063,
+    "penalty_prob": 0.24,
+    "btts": 0.4393,
+    "over_2_5": 0.4908,
     "xg": {
-      "home": 0.77,
-      "away": 1.54
+      "home": 0.71,
+      "away": 1.93
     },
     "scorers": {
       "home": [
@@ -5123,26 +5123,26 @@
     "away": "Iran",
     "date": "2026-06-26",
     "corners": {
-      "home": 4.9,
+      "home": 5.1,
       "away": 5.8,
-      "total": 10.7
+      "total": 10.9
     },
     "fouls": {
       "home": 11.6,
-      "away": 10.0,
-      "total": 21.6
+      "away": 9.8,
+      "total": 21.4
     },
     "yellow_cards": {
       "home": 2.2,
       "away": 1.9,
       "total": 4.1
     },
-    "penalty_prob": 0.265,
-    "btts": 0.3878,
-    "over_2_5": 0.3089,
+    "penalty_prob": 0.263,
+    "btts": 0.3707,
+    "over_2_5": 0.282,
     "xg": {
       "home": 0.86,
-      "away": 1.09
+      "away": 0.99
     },
     "scorers": {
       "home": [
@@ -5193,26 +5193,26 @@
     "away": "Belgium",
     "date": "2026-06-26",
     "corners": {
-      "home": 4.9,
-      "away": 7.0,
-      "total": 11.9
+      "home": 4.4,
+      "away": 7.4,
+      "total": 11.8
     },
     "fouls": {
-      "home": 10.5,
-      "away": 9.6,
-      "total": 20.1
+      "home": 11.1,
+      "away": 9.3,
+      "total": 20.4
     },
     "yellow_cards": {
-      "home": 2.0,
+      "home": 2.1,
       "away": 1.8,
-      "total": 3.8
+      "total": 3.9
     },
-    "penalty_prob": 0.247,
-    "btts": 0.4555,
-    "over_2_5": 0.4795,
+    "penalty_prob": 0.25,
+    "btts": 0.3932,
+    "over_2_5": 0.4727,
     "xg": {
-      "home": 0.77,
-      "away": 1.82
+      "home": 0.6,
+      "away": 1.97
     },
     "scorers": {
       "home": [
@@ -5245,26 +5245,26 @@
     "away": "Saudi Arabia",
     "date": "2026-06-26",
     "corners": {
-      "home": 4.5,
-      "away": 4.8,
-      "total": 9.3
+      "home": 4.9,
+      "away": 5.0,
+      "total": 9.9
     },
     "fouls": {
-      "home": 11.2,
-      "away": 11.6,
-      "total": 22.8
+      "home": 10.5,
+      "away": 11.5,
+      "total": 22.0
     },
     "yellow_cards": {
-      "home": 2.1,
+      "home": 2.0,
       "away": 2.2,
-      "total": 4.3
+      "total": 4.2
     },
-    "penalty_prob": 0.28,
-    "btts": 0.3468,
-    "over_2_5": 0.2624,
+    "penalty_prob": 0.27,
+    "btts": 0.3753,
+    "over_2_5": 0.2886,
     "xg": {
-      "home": 0.78,
-      "away": 0.99
+      "home": 0.85,
+      "away": 1.02
     },
     "scorers": {
       "home": [
@@ -5298,25 +5298,25 @@
     "date": "2026-06-26",
     "corners": {
       "home": 5.3,
-      "away": 7.1,
-      "total": 12.4
+      "away": 7.8,
+      "total": 13.1
     },
     "fouls": {
-      "home": 11.4,
-      "away": 9.3,
-      "total": 20.7
+      "home": 11.8,
+      "away": 8.8,
+      "total": 20.6
     },
     "yellow_cards": {
       "home": 2.2,
-      "away": 1.8,
-      "total": 4.0
+      "away": 1.7,
+      "total": 3.9
     },
-    "penalty_prob": 0.254,
-    "btts": 0.393,
-    "over_2_5": 0.3353,
+    "penalty_prob": 0.253,
+    "btts": 0.364,
+    "over_2_5": 0.3136,
     "xg": {
-      "home": 0.77,
-      "away": 1.27
+      "home": 0.68,
+      "away": 1.29
     },
     "scorers": {
       "home": [
@@ -5361,26 +5361,26 @@
     "away": "France",
     "date": "2026-06-26",
     "corners": {
-      "home": 6.1,
-      "away": 7.0,
-      "total": 13.1
+      "home": 7.4,
+      "away": 7.1,
+      "total": 14.5
     },
     "fouls": {
-      "home": 9.2,
-      "away": 9.7,
-      "total": 18.9
+      "home": 8.6,
+      "away": 9.5,
+      "total": 18.1
     },
     "yellow_cards": {
-      "home": 1.7,
+      "home": 1.6,
       "away": 1.8,
-      "total": 3.5
+      "total": 3.4
     },
-    "penalty_prob": 0.232,
-    "btts": 0.5327,
-    "over_2_5": 0.5078,
+    "penalty_prob": 0.222,
+    "btts": 0.5603,
+    "over_2_5": 0.5112,
     "xg": {
-      "home": 1.06,
-      "away": 1.64
+      "home": 1.33,
+      "away": 1.39
     },
     "scorers": {
       "home": [
@@ -5437,26 +5437,26 @@
     "away": "Iraq",
     "date": "2026-06-26",
     "corners": {
-      "home": 6.0,
+      "home": 6.6,
       "away": 4.5,
-      "total": 10.5
+      "total": 11.1
     },
     "fouls": {
-      "home": 10.6,
-      "away": 11.3,
-      "total": 21.9
+      "home": 9.8,
+      "away": 11.4,
+      "total": 21.2
     },
     "yellow_cards": {
-      "home": 2.0,
-      "away": 2.1,
+      "home": 1.9,
+      "away": 2.2,
       "total": 4.1
     },
-    "penalty_prob": 0.269,
-    "btts": 0.3602,
-    "over_2_5": 0.3181,
+    "penalty_prob": 0.26,
+    "btts": 0.363,
+    "over_2_5": 0.3434,
     "xg": {
-      "home": 1.32,
-      "away": 0.66
+      "home": 1.45,
+      "away": 0.62
     },
     "scorers": {
       "home": [
@@ -5490,25 +5490,25 @@
     "date": "2026-06-27",
     "corners": {
       "home": 5.9,
-      "away": 5.8,
-      "total": 11.7
+      "away": 6.2,
+      "total": 12.1
     },
     "fouls": {
-      "home": 9.8,
+      "home": 9.9,
       "away": 10.1,
-      "total": 19.9
+      "total": 20.0
     },
     "yellow_cards": {
       "home": 1.9,
       "away": 1.9,
       "total": 3.8
     },
-    "penalty_prob": 0.244,
-    "btts": 0.4949,
-    "over_2_5": 0.4315,
+    "penalty_prob": 0.245,
+    "btts": 0.4376,
+    "over_2_5": 0.3605,
     "xg": {
-      "home": 1.19,
-      "away": 1.21
+      "home": 0.99,
+      "away": 1.15
     },
     "scorers": {
       "home": [
@@ -5553,26 +5553,26 @@
     "away": "Argentina",
     "date": "2026-06-27",
     "corners": {
-      "home": 4.6,
-      "away": 7.6,
-      "total": 12.2
+      "home": 4.9,
+      "away": 8.2,
+      "total": 13.1
     },
     "fouls": {
-      "home": 10.0,
-      "away": 10.3,
-      "total": 20.3
+      "home": 9.3,
+      "away": 10.6,
+      "total": 19.9
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 1.8,
       "away": 2.0,
-      "total": 3.9
+      "total": 3.8
     },
-    "penalty_prob": 0.249,
-    "btts": 0.3729,
-    "over_2_5": 0.5235,
+    "penalty_prob": 0.244,
+    "btts": 0.3435,
+    "over_2_5": 0.5437,
     "xg": {
-      "home": 0.53,
-      "away": 2.24
+      "home": 0.47,
+      "away": 2.39
     },
     "scorers": {
       "home": [
@@ -5605,26 +5605,26 @@
     "away": "Portugal",
     "date": "2026-06-27",
     "corners": {
-      "home": 6.4,
-      "away": 6.7,
-      "total": 13.1
+      "home": 7.3,
+      "away": 7.4,
+      "total": 14.7
     },
     "fouls": {
-      "home": 9.9,
-      "away": 9.3,
-      "total": 19.2
+      "home": 8.9,
+      "away": 8.9,
+      "total": 17.8
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 1.8,
-      "total": 3.7
+      "home": 1.7,
+      "away": 1.7,
+      "total": 3.4
     },
-    "penalty_prob": 0.236,
-    "btts": 0.5054,
-    "over_2_5": 0.4448,
+    "penalty_prob": 0.218,
+    "btts": 0.5797,
+    "over_2_5": 0.5361,
     "xg": {
-      "home": 1.21,
-      "away": 1.25
+      "home": 1.4,
+      "away": 1.43
     },
     "scorers": {
       "home": [
@@ -5681,26 +5681,26 @@
     "away": "Uzbekistan",
     "date": "2026-06-27",
     "corners": {
-      "home": 4.6,
-      "away": 4.9,
-      "total": 9.5
+      "home": 4.7,
+      "away": 4.6,
+      "total": 9.3
     },
     "fouls": {
-      "home": 11.9,
-      "away": 11.6,
-      "total": 23.5
+      "home": 12.3,
+      "away": 12.0,
+      "total": 24.3
     },
     "yellow_cards": {
       "home": 2.3,
-      "away": 2.2,
-      "total": 4.5
+      "away": 2.3,
+      "total": 4.6
     },
-    "penalty_prob": 0.288,
-    "btts": 0.2892,
-    "over_2_5": 0.1981,
+    "penalty_prob": 0.298,
+    "btts": 0.2262,
+    "over_2_5": 0.1344,
     "xg": {
-      "home": 0.71,
-      "away": 0.82
+      "home": 0.66,
+      "away": 0.61
     },
     "scorers": {
       "home": [
@@ -5727,26 +5727,26 @@
     "away": "England",
     "date": "2026-06-27",
     "corners": {
-      "home": 4.6,
-      "away": 7.4,
-      "total": 12.0
+      "home": 4.5,
+      "away": 8.0,
+      "total": 12.5
     },
     "fouls": {
-      "home": 9.9,
-      "away": 10.3,
-      "total": 20.2
+      "home": 9.7,
+      "away": 10.6,
+      "total": 20.3
     },
     "yellow_cards": {
-      "home": 1.9,
+      "home": 1.8,
       "away": 2.0,
-      "total": 3.9
+      "total": 3.8
     },
-    "penalty_prob": 0.248,
-    "btts": 0.3937,
-    "over_2_5": 0.5404,
+    "penalty_prob": 0.249,
+    "btts": 0.3307,
+    "over_2_5": 0.5575,
     "xg": {
-      "home": 0.57,
-      "away": 2.27
+      "home": 0.44,
+      "away": 2.47
     },
     "scorers": {
       "home": [
@@ -5803,26 +5803,26 @@
     "away": "Ghana",
     "date": "2026-06-27",
     "corners": {
-      "home": 6.6,
-      "away": 4.7,
-      "total": 11.3
+      "home": 7.1,
+      "away": 5.0,
+      "total": 12.1
     },
     "fouls": {
-      "home": 10.0,
-      "away": 10.5,
-      "total": 20.5
+      "home": 9.7,
+      "away": 10.2,
+      "total": 19.9
     },
     "yellow_cards": {
-      "home": 1.9,
-      "away": 2.0,
-      "total": 3.9
+      "home": 1.8,
+      "away": 1.9,
+      "total": 3.7
     },
-    "penalty_prob": 0.252,
-    "btts": 0.4395,
-    "over_2_5": 0.4599,
+    "penalty_prob": 0.244,
+    "btts": 0.435,
+    "over_2_5": 0.4625,
     "xg": {
-      "home": 1.77,
-      "away": 0.74
+      "home": 1.81,
+      "away": 0.72
     },
     "scorers": {
       "home": [
@@ -5861,25 +5861,25 @@
     "away": "Canada",
     "date": "2026-06-28",
     "corners": {
-      "home": 4.8,
-      "away": 6.0,
-      "total": 10.8
+      "home": 5.1,
+      "away": 6.2,
+      "total": 11.3
     },
     "fouls": {
-      "home": 11.0,
-      "away": 10.1,
-      "total": 21.1
+      "home": 10.2,
+      "away": 10.4,
+      "total": 20.6
     },
     "yellow_cards": {
-      "home": 2.1,
-      "away": 1.9,
-      "total": 4.0
+      "home": 1.9,
+      "away": 2.0,
+      "total": 3.9
     },
-    "penalty_prob": 0.259,
-    "btts": 0.4268,
-    "over_2_5": 0.3806,
+    "penalty_prob": 0.253,
+    "btts": 0.4239,
+    "over_2_5": 0.3771,
     "xg": {
-      "home": 0.82,
+      "home": 0.8,
       "away": 1.39
     },
     "scorers": {

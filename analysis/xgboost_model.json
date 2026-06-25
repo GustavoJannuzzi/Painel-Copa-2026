@@ -1,0 +1,28 @@
+{
+  "n_train": 54,
+  "cv_rps": 0.2112,
+  "feature_importance": {
+    "elo_diff": 0.0282,
+    "elo_win_prob": 0.0274,
+    "dc_xg_home": 0.0773,
+    "dc_xg_away": 0.0551,
+    "dc_xg_diff": 0.0657,
+    "p_elo_home": 0.0471,
+    "p_elo_draw": 0.0412,
+    "p_elo_away": 0.0,
+    "p_dc_home": 0.1362,
+    "p_dc_draw": 0.0455,
+    "p_dc_away": 0.12,
+    "form_h_wins": 0.0329,
+    "form_h_gf": 0.0431,
+    "form_h_ga": 0.0624,
+    "form_a_wins": 0.036,
+    "form_a_gf": 0.0439,
+    "form_a_ga": 0.0318,
+    "h2h_home_rate": 0.0458,
+    "days_h": 0.0254,
+    "days_a": 0.035,
+    "round_num": 0.0
+  },
+  "blend_weight": 0.15
+}

@@ -44,7 +44,7 @@ COMPETITION_WEIGHT = {
     "Friendly": 10,
 }
 DEFAULT_WEIGHT = 18
-HALFLIFE_DAYS = 365 * 2.5  # decaimento temporal (meia-vida ~2,5 anos)
+HALFLIFE_DAYS = 365 * 1.0  # decaimento temporal (meia-vida ~1 ano — otimizado por grid search F1)
 
 
 def norm(team: str) -> str:

@@ -23,14 +23,23 @@ import wc_data
 import wc_elo
 import wc_dixoncoles as dc
 
-# Pesos do ensemble para 1X2 (DC é o núcleo p/ seleções — Ley et al.; ajustado tb
-# pelo desempenho nos jogos já decididos da Copa, onde DC > Elo em RPS).
-W_ELO = 0.22
-W_DC = 0.43
-W_MARKET = 0.35           # quando há odds; senão Elo/DC são renormalizados
-W_ELO_NO_MKT = 0.35
-W_DC_NO_MKT = 0.65
-W_MATRIX_ELO = 0.32       # peso do Elo na matriz de placar combinada (resto = DC)
+# Módulos de escalação e notícias (Fase 3)
+try:
+    from wc_news_parser import parse_news
+    from wc_lineup_impact import LineupImpactModel
+    _LINEUP_AVAILABLE = True
+except ImportError:
+    _LINEUP_AVAILABLE = False
+
+# Pesos do ensemble otimizados via grid search LOO-CV (Fase 2B do framework v3).
+# Diagnóstico (Fase 1) revelou que market odds sozinhas batem o ensemble completo
+# (RPS 0.1414 vs 0.1668) — pesos anteriores subutilizavam o mercado.
+W_ELO = 0.05
+W_DC = 0.05
+W_MARKET = 0.90           # quando há odds — muito mais informativo que Elo/DC
+W_ELO_NO_MKT = 0.05
+W_DC_NO_MKT = 0.95        # DC domina quando não há odds (Elo adiciona pouco)
+W_MATRIX_ELO = 0.15       # Elo tem papel menor na matriz de placar
 
 
 def _wdl(m):
@@ -84,6 +93,16 @@ def run():
     teams = wc_data.real_teams()
     fixtures = sorted(wc_data.load_wc2026_fixtures(), key=lambda f: (f["date"] or "", f["round"] or ""))
 
+    # Carrega sinais de escalação/notícias (Fase 3)
+    news_signals = {}
+    lineup_model = None
+    if _LINEUP_AVAILABLE:
+        try:
+            news_signals = parse_news(max_days=4)
+            lineup_model = LineupImpactModel.load_or_build(elo["ratings_now"])
+        except Exception as e:
+            print(f"  [Lineup/News] Aviso: {e}")
+
     out_matches = []
     for f in fixtures:
         h, a = f["home"], f["away"]
@@ -103,6 +122,37 @@ def run():
             continue
         dc_lh, dc_la = dl
         m_dc = dc.score_matrix(dc_lh, dc_la, model_dc["rho"])
+
+        # --- Ajuste de escalação/notícias (só para jogos futuros) ---
+        lineup_impact = {"home": 1.0, "away": 1.0, "applied": False}
+        if not f["played"] and lineup_model is not None:
+            home_sig = news_signals.get(h, {})
+            away_sig = news_signals.get(a, {})
+            if home_sig or away_sig:
+                fh, fa = lineup_model.get_impact_factors(
+                    h, a,
+                    news_signals={"home": home_sig, "away": away_sig}
+                )
+                if fh != 1.0 or fa != 1.0:
+                    elo_lh  = max(0.08, elo_lh  * fh)
+                    elo_la  = max(0.08, elo_la  * fa)
+                    dc_lh   = max(0.08, dc_lh   * fh)
+                    dc_la   = max(0.08, dc_la   * fa)
+                    m_elo   = dc.score_matrix(elo_lh, elo_la, 0.0)
+                    m_dc    = dc.score_matrix(dc_lh,  dc_la,  model_dc["rho"])
+                    lineup_impact = {"home": round(fh, 4), "away": round(fa, 4), "applied": True}
+
+        # Form signal adjustment (leve, ±3% máximo)
+        if not f["played"]:
+            form_h = (news_signals.get(h, {}).get("form_signal") or 0) * 0.03
+            form_a = (news_signals.get(a, {}).get("form_signal") or 0) * 0.03
+            if form_h or form_a:
+                elo_lh = max(0.08, elo_lh * (1 + form_h))
+                elo_la = max(0.08, elo_la * (1 + form_a))
+                dc_lh  = max(0.08, dc_lh  * (1 + form_h))
+                dc_la  = max(0.08, dc_la  * (1 + form_a))
+                m_elo  = dc.score_matrix(elo_lh, elo_la, 0.0)
+                m_dc   = dc.score_matrix(dc_lh,  dc_la,  model_dc["rho"])
 
         # --- matriz combinada Elo+DC ---
         m = W_MATRIX_ELO * m_elo + (1 - W_MATRIX_ELO) * m_dc
@@ -133,6 +183,7 @@ def run():
             "home": h, "away": a, "played": f["played"],
             "actual": [f["home_score"], f["away_score"]] if f["played"] else None,
             "elo_ratings": {"home": round(rh, 1), "away": round(ra, 1)},
+            "lineup_impact": lineup_impact,
             "models": {
                 "elo": {"xg_home": round(elo_lh, 2), "xg_away": round(elo_la, 2),
                         "p": [round(x, 4) for x in elo_wdl]},

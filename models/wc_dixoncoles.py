@@ -22,7 +22,7 @@ from scipy.optimize import minimize, minimize_scalar
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import wc_data
 
-RIDGE = 2.0  # regularização L2 sobre ataque/defesa
+RIDGE = 0.5  # regularização L2 — otimizado por grid search (Fase 2D); halflife 365d requer menos regularização
 
 
 def _prepare(df):

@@ -1,0 +1,1401 @@
+{
+  "players": {
+    "3202": {
+      "name": "Gabriel Fernando de Jesus",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 8
+    },
+    "3280": {
+      "name": "Richarlison de Andrade",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "3295": {
+      "name": "Thiago Emiliano da Silva",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 9
+    },
+    "4372": {
+      "name": "Marcos Aoás Corrêa",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 6
+    },
+    "5539": {
+      "name": "Carlos Henrique Casimiro",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 8
+    },
+    "5547": {
+      "name": "Alisson Ramsés Becker",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 9
+    },
+    "6945": {
+      "name": "Alex Sandro Lobo Silva",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 3
+    },
+    "9904": {
+      "name": "Frederico Rodrigues Santos",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "10595": {
+      "name": "Raphael Dias Belloli",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 5
+    },
+    "11183": {
+      "name": "Alex Nicolao Telles",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 2
+    },
+    "13620": {
+      "name": "Éder Gabriel Militão",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "18395": {
+      "name": "Vinícius José Paixão de Oliveira Júnior",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "22600": {
+      "name": "Lucas Tolentino Coelho de Lima",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "25104": {
+      "name": "Rodrygo Silva de Goes",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 5
+    },
+    "25142": {
+      "name": "Bruno Guimarães Rodriguez Moura",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 2
+    },
+    "25363": {
+      "name": "Antony Matheus dos Santos",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "3500": {
+      "name": "Granit Xhaka",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 2
+    },
+    "3913": {
+      "name": "Edimilson Fernandes",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5543": {
+      "name": "Haris Seferović",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 2
+    },
+    "5544": {
+      "name": "Ricardo Iván Rodríguez Araya",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 2
+    },
+    "5545": {
+      "name": "Breel-Donald Embolo",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 2
+    },
+    "5549": {
+      "name": "Manuel Obafemi Akanji",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 2
+    },
+    "5550": {
+      "name": "Yann Sommer",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 2
+    },
+    "6983": {
+      "name": "Remo Freuler",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "7796": {
+      "name": "Silvan Widmer",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "8561": {
+      "name": "Fabian Frei",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "8814": {
+      "name": "Nico Elvedi",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "12326": {
+      "name": "Renato Steffen",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "16016": {
+      "name": "Michel Aebischer",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "16026": {
+      "name": "Djibril Sow",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "30401": {
+      "name": "Ruben Vargas",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "50436": {
+      "name": "Fabian Rieder",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "3063": {
+      "name": "Danilo Luiz da Silva",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "4320": {
+      "name": "Neymar da Silva Santos Junior",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 8
+    },
+    "29976": {
+      "name": "Gabriel Teodoro Martinelli Silva",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 3
+    },
+    "3831": {
+      "name": "Dušan Tadić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 2
+    },
+    "4269": {
+      "name": "Aleksandar Mitrović",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 2
+    },
+    "5589": {
+      "name": "Sergej Milinković-Savić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 2
+    },
+    "5603": {
+      "name": "Nikola Milenković",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 2
+    },
+    "5833": {
+      "name": "Nemanja Radonjić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 2
+    },
+    "6318": {
+      "name": "Andrija Živković",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 2
+    },
+    "6321": {
+      "name": "Milos Veljkovic",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 2
+    },
+    "6687": {
+      "name": "Saša Lukić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "6901": {
+      "name": "Nemanja Maksimović",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "7145": {
+      "name": "Darko Lazović",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "7993": {
+      "name": "Filip Mladenović",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "16489": {
+      "name": "Nemanja Gudelj",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "18015": {
+      "name": "Dušan Vlahović",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "20600": {
+      "name": "Vanja Milinković Savić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "27719": {
+      "name": "Strahinja Pavlović",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "30179": {
+      "name": "Ivan Ilić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "25305": {
+      "name": "Pedro Guilherme Abreu dos Santos",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 2
+    },
+    "3441": {
+      "name": "Nikola Vlašić",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "3471": {
+      "name": "Dejan Lovren",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "5456": {
+      "name": "Mateo Kovačić",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "5460": {
+      "name": "Andrej Kramarić",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "5463": {
+      "name": "Luka Modrić",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "5469": {
+      "name": "Marcelo Brozović",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "5474": {
+      "name": "Ivan Perišić",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "7693": {
+      "name": "Bruno Petković",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "8654": {
+      "name": "Ante Budimir",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "11603": {
+      "name": "Mario Pašalić",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "12625": {
+      "name": "Borna Sosa",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "16527": {
+      "name": "Mislav Oršić",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "16531": {
+      "name": "Dominik Livaković",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "28914": {
+      "name": "Lovro Majer",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "29163": {
+      "name": "Josip Juranović",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "33018": {
+      "name": "Joško Gvardiol",
+      "teams": [
+        "Croatia"
+      ],
+      "avg_elo": 1951.4,
+      "n_matches": 1
+    },
+    "4324": {
+      "name": "Daniel Alves da Silva",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 2
+    },
+    "11493": {
+      "name": "Gleison Bremer Silva Nascimento",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 2
+    },
+    "25101": {
+      "name": "Weverton Pereira da Silva",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 1
+    },
+    "3083": {
+      "name": "Heung-Min Son",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "5604": {
+      "name": "Young-Gwon Kim",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "5618": {
+      "name": "Woo-Young Jung",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "5620": {
+      "name": "Hee-Chan Hwang",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "5623": {
+      "name": "Jae-Sung Lee",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "5986": {
+      "name": "Chul Hong",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "22740": {
+      "name": "Kang-In Lee",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "23264": {
+      "name": "Seung-Ho Paik",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "23763": {
+      "name": "In-Beom Hwang",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "29966": {
+      "name": "Ui-Jo Hwang",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "37641": {
+      "name": "Seung-Gyu Kim",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "40538": {
+      "name": "Jin-Su Kim",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "40542": {
+      "name": "Gue-Sung Cho",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "40558": {
+      "name": "Jun-Ho Son",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "40672": {
+      "name": "Moon-Hwan Kim",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "43565": {
+      "name": "Min Jae Kim",
+      "teams": [
+        "South Korea"
+      ],
+      "avg_elo": 1829.8,
+      "n_matches": 1
+    },
+    "3067": {
+      "name": "Ederson Santana de Moraes",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 1
+    },
+    "3247": {
+      "name": "Fábio Henrique Tavares",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 1
+    },
+    "25154": {
+      "name": "Éverton Augusto de Barros Ribeiro",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 1
+    },
+    "3141": {
+      "name": "André-Frank Zambo Anguissa",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "3499": {
+      "name": "Jean-Eric Maxim Choupo-Moting",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "3551": {
+      "name": "Karl Brillant Toko Ekambi",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "4935": {
+      "name": "Bryan Mbeumo",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "7551": {
+      "name": "Enzo Ebosse",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "10530": {
+      "name": "Jules Olivier Ntcham",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "11174": {
+      "name": "Vincent Paté Aboubakar",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "12623": {
+      "name": "Pierre Kunde Malong",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "13454": {
+      "name": "Nouhou Tolo",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "15326": {
+      "name": "Devis Rogers Epassy Mboka",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "16015": {
+      "name": "Nicolas Moumi Ngamaleu",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "16346": {
+      "name": "Ngoran Suiru Fai Collins",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "33813": {
+      "name": "Jerome Ngom Mbekeli",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "74588": {
+      "name": "Christopher Wooh",
+      "teams": [
+        "Cameroon"
+      ],
+      "avg_elo": 1721.2,
+      "n_matches": 1
+    },
+    "2954": {
+      "name": "Youri Tielemans",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3077": {
+      "name": "Jan Vertonghen",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3089": {
+      "name": "Kevin De Bruyne",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3101": {
+      "name": "Vincent Kompany",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3176": {
+      "name": "Thomas Meunier",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3289": {
+      "name": "Romelu Lukaku Menama",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3296": {
+      "name": "Marouane Fellaini-Bakkioui",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3509": {
+      "name": "Thibaut Courtois",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3621": {
+      "name": "Eden Hazard",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "4831": {
+      "name": "Nacer Chadli",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "5642": {
+      "name": "Axel Witsel",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "6332": {
+      "name": "Thomas Vermaelen",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "20005": {
+      "name": "Toby Alderweireld",
+      "teams": [
+        "Belgium"
+      ],
+      "avg_elo": 1928.9,
+      "n_matches": 1
+    },
+    "3054": {
+      "name": "Fernando Luiz Roza",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 5
+    },
+    "3472": {
+      "name": "Willian Borges da Silva",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 5
+    },
+    "3501": {
+      "name": "Philippe Coutinho Correia",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 5
+    },
+    "3535": {
+      "name": "Roberto Firmino Barbosa de Oliveira",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "5542": {
+      "name": "José Paulo Bezzera Maciel Júnior",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 5
+    },
+    "5551": {
+      "name": "João Miranda de Souza Filho",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 5
+    },
+    "5552": {
+      "name": "Marcelo Vieira da Silva Júnior",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "5553": {
+      "name": "Renato Soares de Oliveira Augusto",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 3
+    },
+    "5837": {
+      "name": "Douglas Costa de Souza",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 2
+    },
+    "5838": {
+      "name": "Fágner Conserva Lemos",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 4
+    },
+    "5582": {
+      "name": "Celso Borges Mora",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5584": {
+      "name": "Giancarlo González Castro",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5586": {
+      "name": "Marcos Danilo Ureña Porras",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5590": {
+      "name": "Johnny Acosta Zamora",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5592": {
+      "name": "Bryan Ruiz González",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5593": {
+      "name": "Christian Bolaños Navarro",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5595": {
+      "name": "Johan Alberto Venegas Ulloa",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5597": {
+      "name": "Keylor Navas Gamboa",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5598": {
+      "name": "Óscar Esau Duarte Gaitán",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5599": {
+      "name": "David Alberto Guzmán Pérez",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5600": {
+      "name": "Francisco Javier Calvo Quesada",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5602": {
+      "name": "Cristian Gamboa Luna",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5836": {
+      "name": "Bryan Oviedo",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "5839": {
+      "name": "Yeltsin Ignacio Tejeda Valverde",
+      "teams": [
+        "Costa Rica"
+      ],
+      "avg_elo": 1731.1,
+      "n_matches": 1
+    },
+    "6320": {
+      "name": "Filipe Luís Kasmirski",
+      "teams": [
+        "Brazil"
+      ],
+      "avg_elo": 2081.1,
+      "n_matches": 2
+    },
+    "3381": {
+      "name": "Nemanja Matić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "5587": {
+      "name": "Adem Ljajić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "5588": {
+      "name": "Antonio Rukavina",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "5591": {
+      "name": "Filip Kostić",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "5596": {
+      "name": "Aleksandar Kolarov",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "5601": {
+      "name": "Vladimir Stojković",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "6319": {
+      "name": "Luka Jović",
+      "teams": [
+        "Serbia"
+      ],
+      "avg_elo": 1798.4,
+      "n_matches": 1
+    },
+    "3058": {
+      "name": "Javier Hernández Balcázar",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5556": {
+      "name": "Miguel Arturo Layún Prado",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5558": {
+      "name": "Rafael Márquez Álvarez",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5560": {
+      "name": "Carlos Alberto Vela Garrido",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5561": {
+      "name": "Hugo Ayala Castro",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5563": {
+      "name": "José Andrés Guardado Hernández",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5564": {
+      "name": "Carlos Joel Salcedo Hernández",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5567": {
+      "name": "Edson Omar Álvarez Velázquez",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5568": {
+      "name": "Raúl Alonso Jiménez Rodríguez",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5571": {
+      "name": "Hirving Rodrigo Lozano Bahena",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5575": {
+      "name": "Héctor Miguel Herrera López",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5576": {
+      "name": "Jesús Daniel Gallardo Vasconcelos",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "5577": {
+      "name": "Francisco Guillermo Ochoa Magaña",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "6357": {
+      "name": "Jonathan dos Santos Ramírez",
+      "teams": [
+        "Mexico"
+      ],
+      "avg_elo": 2022.2,
+      "n_matches": 1
+    },
+    "3533": {
+      "name": "Xherdan Shaqiri",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5537": {
+      "name": "Fabian Lukas Schär",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5538": {
+      "name": "Denis Lemi Zakaria Lako Lado",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5540": {
+      "name": "Valon Behrami",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5541": {
+      "name": "Stephan Lichtsteiner",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5546": {
+      "name": "Michael Lang",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5548": {
+      "name": "Steven Zuber",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    },
+    "5554": {
+      "name": "Blerim Džemaili",
+      "teams": [
+        "Switzerland"
+      ],
+      "avg_elo": 1974.3,
+      "n_matches": 1
+    }
+  },
+  "team_baselines": {
+    "Brazil": {
+      "avg_xi_elo": 2081.1
+    },
+    "Switzerland": {
+      "avg_xi_elo": 1974.3
+    },
+    "Serbia": {
+      "avg_xi_elo": 1798.4
+    },
+    "Croatia": {
+      "avg_xi_elo": 1951.4
+    },
+    "South Korea": {
+      "avg_xi_elo": 1829.8
+    },
+    "Cameroon": {
+      "avg_xi_elo": 1721.2
+    },
+    "Belgium": {
+      "avg_xi_elo": 1928.9
+    },
+    "Costa Rica": {
+      "avg_xi_elo": 1731.1
+    },
+    "Mexico": {
+      "avg_xi_elo": 2022.2
+    }
+  }
+}

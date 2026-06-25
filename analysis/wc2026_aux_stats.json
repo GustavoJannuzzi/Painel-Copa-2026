@@ -29,20 +29,26 @@
       "home": [
         {
           "name": "Julián Quiñones",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Raúl Jiménez",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Luis Romo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Mateo Chávez",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -50,8 +56,14 @@
         {
           "name": "Teboho Mokoena",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
+        },
+        {
+          "name": "Thapelo Maseko",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
         }
       ]
     },
@@ -103,13 +115,13 @@
         {
           "name": "Hwang In-Beom",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Oh Hyeon-Gyu",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -117,13 +129,13 @@
         {
           "name": "Ladislav Krejcí",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Michal Sadílek",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -183,39 +195,51 @@
         {
           "name": "Jonathan David",
           "goals": 3,
-          "goals_per_game": 1.5,
+          "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Cyle Larin",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Nathan Saliba",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Mohamed Manai",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
-          "name": "Jovo Lukić",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "name": "Ermin Mahmic",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
-          "name": "Ermin Mahmic",
+          "name": "Jovo Lukić",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Kerim Alajbegovic",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Mahmoud Abunada",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -374,33 +398,39 @@
         {
           "name": "Miro Muheim",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Hassan Al-Haydos",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
           "name": "Johan Manzambi",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Rubén Vargas",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Breel Embolo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
-        },
-        {
-          "name": "Rubén Vargas",
-          "goals": 1,
-          "goals_per_game": 0.5,
-          "pen": 0
         },
         {
           "name": "Granit Xhaka",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
         }
       ]
@@ -452,13 +482,13 @@
       "home": [
         {
           "name": "Vinícius Júnior",
-          "goals": 2,
-          "goals_per_game": 1.0,
+          "goals": 4,
+          "goals_per_game": 1.33,
           "pen": 0
         },
         {
           "name": "Matheus Cunha",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
           "pen": 0
         }
@@ -466,8 +496,26 @@
       "away": [
         {
           "name": "Ismael Saibari",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Achraf Hakimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Gessime Yassine",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -518,27 +566,15 @@
     "scorers": {
       "home": [
         {
-          "name": "Duckens Nazon",
-          "goals": 11,
-          "goals_per_game": 0.204,
+          "name": "Yassine Bounou",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Frantzdy Pierrot",
-          "goals": 8,
-          "goals_per_game": 0.148,
-          "pen": 0
-        },
-        {
-          "name": "Carnejy Antoine",
-          "goals": 4,
-          "goals_per_game": 0.074,
-          "pen": 0
-        },
-        {
-          "name": "Danley Jean Jacques",
-          "goals": 3,
-          "goals_per_game": 0.056,
+          "name": "Wilson Isidor",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -546,7 +582,7 @@
         {
           "name": "John McGinn",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2102,13 +2138,13 @@
         {
           "name": "Ladislav Krejcí",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Michal Sadílek",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -2116,8 +2152,14 @@
         {
           "name": "Teboho Mokoena",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
+        },
+        {
+          "name": "Thapelo Maseko",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
         }
       ]
     },
@@ -2168,20 +2210,26 @@
       "home": [
         {
           "name": "Julián Quiñones",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Raúl Jiménez",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Luis Romo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Mateo Chávez",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -2189,13 +2237,13 @@
         {
           "name": "Hwang In-Beom",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Oh Hyeon-Gyu",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2240,40 +2288,52 @@
       "home": [
         {
           "name": "Johan Manzambi",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Rubén Vargas",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Breel Embolo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
-        },
-        {
-          "name": "Rubén Vargas",
-          "goals": 1,
-          "goals_per_game": 0.5,
-          "pen": 0
         },
         {
           "name": "Granit Xhaka",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
         }
       ],
       "away": [
         {
-          "name": "Jovo Lukić",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "name": "Ermin Mahmic",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
-          "name": "Ermin Mahmic",
+          "name": "Jovo Lukić",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Kerim Alajbegovic",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Mahmoud Abunada",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2347,25 +2407,25 @@
         {
           "name": "Jonathan David",
           "goals": 3,
-          "goals_per_game": 1.5,
+          "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Cyle Larin",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Nathan Saliba",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Mohamed Manai",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -2373,7 +2433,13 @@
         {
           "name": "Miro Muheim",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Hassan Al-Haydos",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2454,15 +2520,33 @@
         {
           "name": "John McGinn",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
           "name": "Ismael Saibari",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Achraf Hakimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Gessime Yassine",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2507,40 +2591,28 @@
       "home": [
         {
           "name": "Vinícius Júnior",
-          "goals": 2,
-          "goals_per_game": 1.0,
+          "goals": 4,
+          "goals_per_game": 1.33,
           "pen": 0
         },
         {
           "name": "Matheus Cunha",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
           "pen": 0
         }
       ],
       "away": [
         {
-          "name": "Duckens Nazon",
-          "goals": 11,
-          "goals_per_game": 0.204,
+          "name": "Yassine Bounou",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Frantzdy Pierrot",
-          "goals": 8,
-          "goals_per_game": 0.148,
-          "pen": 0
-        },
-        {
-          "name": "Carnejy Antoine",
-          "goals": 4,
-          "goals_per_game": 0.074,
-          "pen": 0
-        },
-        {
-          "name": "Danley Jean Jacques",
-          "goals": 3,
-          "goals_per_game": 0.056,
+          "name": "Wilson Isidor",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -4072,7 +4144,7 @@
       {
         "team": "Croatia",
         "name": "Ante Budimir",
-        "minute": "55",
+        "minute": "54",
         "penalty": false,
         "own_goal": false
       }
@@ -4109,38 +4181,66 @@
         {
           "name": "Ladislav Krejcí",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Michal Sadílek",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
           "name": "Julián Quiñones",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Raúl Jiménez",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Luis Romo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Mateo Chávez",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Mexico",
+        "name": "Mateo Chávez",
+        "minute": "55",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Mexico",
+        "name": "Julián Quiñones",
+        "minute": "61",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Mexico",
+        "name": "Álvaro Fidalgo",
+        "minute": "90+4",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-24_South Africa_South Korea": {
     "home": "South Africa",
@@ -4173,26 +4273,40 @@
         {
           "name": "Teboho Mokoena",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
+        },
+        {
+          "name": "Thapelo Maseko",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
         }
       ],
       "away": [
         {
           "name": "Hwang In-Beom",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Oh Hyeon-Gyu",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "South Africa",
+        "name": "Thapelo Maseko",
+        "minute": "63",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-24_Switzerland_Canada": {
     "home": "Switzerland",
@@ -4224,26 +4338,26 @@
       "home": [
         {
           "name": "Johan Manzambi",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Rubén Vargas",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Breel Embolo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
-        },
-        {
-          "name": "Rubén Vargas",
-          "goals": 1,
-          "goals_per_game": 0.5,
-          "pen": 0
         },
         {
           "name": "Granit Xhaka",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 1
         }
       ],
@@ -4251,30 +4365,52 @@
         {
           "name": "Jonathan David",
           "goals": 3,
-          "goals_per_game": 1.5,
+          "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Cyle Larin",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Nathan Saliba",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Mohamed Manai",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Switzerland",
+        "name": "Rubén Vargas",
+        "minute": "46",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Switzerland",
+        "name": "Johan Manzambi",
+        "minute": "57",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Canada",
+        "name": "Promise David",
+        "minute": "76",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-24_Bosnia and Herzegovina_Qatar": {
     "home": "Bosnia and Herzegovina",
@@ -4305,15 +4441,27 @@
     "scorers": {
       "home": [
         {
-          "name": "Jovo Lukić",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "name": "Ermin Mahmic",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
-          "name": "Ermin Mahmic",
+          "name": "Jovo Lukić",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Kerim Alajbegovic",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Mahmoud Abunada",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -4321,12 +4469,47 @@
         {
           "name": "Miro Muheim",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Hassan Al-Haydos",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Bosnia and Herzegovina",
+        "name": "Kerim Alajbegovic",
+        "minute": "29",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Bosnia and Herzegovina",
+        "name": "Mahmoud Abunada",
+        "minute": "34",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Qatar",
+        "name": "Hassan Al-Haydos",
+        "minute": "42",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Bosnia and Herzegovina",
+        "name": "Ermin Mahmic",
+        "minute": "80",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-24_Scotland_Brazil": {
     "home": "Scotland",
@@ -4359,26 +4542,48 @@
         {
           "name": "John McGinn",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
           "name": "Vinícius Júnior",
-          "goals": 2,
-          "goals_per_game": 1.0,
+          "goals": 4,
+          "goals_per_game": 1.33,
           "pen": 0
         },
         {
           "name": "Matheus Cunha",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Brazil",
+        "name": "Vinícius Júnior",
+        "minute": "7",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Brazil",
+        "name": "Vinícius Júnior",
+        "minute": "45+3",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Brazil",
+        "name": "Matheus Cunha",
+        "minute": "60",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-24_Morocco_Haiti": {
     "home": "Morocco",
@@ -4410,39 +4615,88 @@
       "home": [
         {
           "name": "Ismael Saibari",
-          "goals": 2,
+          "goals": 3,
           "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Achraf Hakimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Gessime Yassine",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
-          "name": "Duckens Nazon",
-          "goals": 11,
-          "goals_per_game": 0.204,
+          "name": "Yassine Bounou",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Frantzdy Pierrot",
-          "goals": 8,
-          "goals_per_game": 0.148,
-          "pen": 0
-        },
-        {
-          "name": "Carnejy Antoine",
-          "goals": 4,
-          "goals_per_game": 0.074,
-          "pen": 0
-        },
-        {
-          "name": "Danley Jean Jacques",
-          "goals": 3,
-          "goals_per_game": 0.056,
+          "name": "Wilson Isidor",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Haiti",
+        "name": "Yassine Bounou",
+        "minute": "10",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Morocco",
+        "name": "Achraf Hakimi",
+        "minute": "39",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Haiti",
+        "name": "Wilson Isidor",
+        "minute": "43",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Morocco",
+        "name": "Ismael Saibari",
+        "minute": "45+1",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Morocco",
+        "name": "Soufiane Rahimi",
+        "minute": "78",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Morocco",
+        "name": "Gessime Yassine",
+        "minute": "89",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-25_Turkey_United States": {
     "home": "Turkey",
@@ -5596,6 +5850,76 @@
           "name": "Caleb Yirenkyi",
           "goals": 1,
           "goals_per_game": 0.5,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-28_South Africa_Canada": {
+    "home": "South Africa",
+    "away": "Canada",
+    "date": "2026-06-28",
+    "corners": {
+      "home": 4.8,
+      "away": 6.0,
+      "total": 10.8
+    },
+    "fouls": {
+      "home": 11.0,
+      "away": 10.1,
+      "total": 21.1
+    },
+    "yellow_cards": {
+      "home": 2.1,
+      "away": 1.9,
+      "total": 4.0
+    },
+    "penalty_prob": 0.259,
+    "btts": 0.4268,
+    "over_2_5": 0.3806,
+    "xg": {
+      "home": 0.82,
+      "away": 1.39
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Teboho Mokoena",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 1
+        },
+        {
+          "name": "Thapelo Maseko",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Jonathan David",
+          "goals": 3,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Cyle Larin",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Nathan Saliba",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Mohamed Manai",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]

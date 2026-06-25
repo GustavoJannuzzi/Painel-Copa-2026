@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T10:46:21",
+  "generated_at": "2026-06-25T16:22:17",
   "method": "Ensemble Elo + Dixon-Coles ponderado + Mercado (sem vig)",
   "weights": {
     "elo": 0.22,
@@ -21,7 +21,7 @@
     "gamma": 0.24566192150266208,
     "rho": -0.04266010878921974
   },
-  "n_matches": 72,
+  "n_matches": 73,
   "matches": [
     {
       "date": "2026-06-11",
@@ -3630,8 +3630,11 @@
       "group": "Group A",
       "home": "Czech Republic",
       "away": "Mexico",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        0,
+        3
+      ],
       "elo_ratings": {
         "home": 1767.6,
         "away": 2000.4
@@ -3693,6 +3696,13 @@
             "prob": 0.086
           }
         ]
+      },
+      "eval": {
+        "outcome": "away",
+        "predicted": "away",
+        "correct_1x2": true,
+        "exact_score_hit": false,
+        "rps": 0.1383
       }
     },
     {
@@ -3701,8 +3711,11 @@
       "group": "Group A",
       "home": "South Africa",
       "away": "South Korea",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        1,
+        0
+      ],
       "elo_ratings": {
         "home": 1660.3,
         "away": 1876.4
@@ -3764,6 +3777,13 @@
             "prob": 0.0931
           }
         ]
+      },
+      "eval": {
+        "outcome": "home",
+        "predicted": "away",
+        "correct_1x2": false,
+        "exact_score_hit": false,
+        "rps": 0.4903
       }
     },
     {
@@ -3772,8 +3792,11 @@
       "group": "Group B",
       "home": "Switzerland",
       "away": "Canada",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        2,
+        1
+      ],
       "elo_ratings": {
         "home": 1949.0,
         "away": 1894.7
@@ -3835,6 +3858,13 @@
             "prob": 0.0825
           }
         ]
+      },
+      "eval": {
+        "outcome": "home",
+        "predicted": "home",
+        "correct_1x2": true,
+        "exact_score_hit": false,
+        "rps": 0.2096
       }
     },
     {
@@ -3843,8 +3873,11 @@
       "group": "Group B",
       "home": "Bosnia and Herzegovina",
       "away": "Qatar",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        3,
+        1
+      ],
       "elo_ratings": {
         "home": 1657.6,
         "away": 1578.3
@@ -3906,6 +3939,13 @@
             "prob": 0.0708
           }
         ]
+      },
+      "eval": {
+        "outcome": "home",
+        "predicted": "home",
+        "correct_1x2": true,
+        "exact_score_hit": false,
+        "rps": 0.1686
       }
     },
     {
@@ -3914,8 +3954,11 @@
       "group": "Group C",
       "home": "Scotland",
       "away": "Brazil",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        0,
+        3
+      ],
       "elo_ratings": {
         "home": 1842.6,
         "away": 2057.5
@@ -3977,6 +4020,13 @@
             "prob": 0.088
           }
         ]
+      },
+      "eval": {
+        "outcome": "away",
+        "predicted": "away",
+        "correct_1x2": true,
+        "exact_score_hit": false,
+        "rps": 0.0613
       }
     },
     {
@@ -3985,8 +4035,11 @@
       "group": "Group C",
       "home": "Morocco",
       "away": "Haiti",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        4,
+        2
+      ],
       "elo_ratings": {
         "home": 2013.0,
         "away": 1654.4
@@ -4048,6 +4101,13 @@
             "prob": 0.0694
           }
         ]
+      },
+      "eval": {
+        "outcome": "home",
+        "predicted": "home",
+        "correct_1x2": true,
+        "exact_score_hit": false,
+        "rps": 0.0257
       }
     },
     {
@@ -5324,6 +5384,70 @@
           {
             "score": "0-0",
             "prob": 0.0824
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-06-28",
+      "round": "Round of 32",
+      "group": null,
+      "home": "South Africa",
+      "away": "Canada",
+      "played": false,
+      "actual": null,
+      "elo_ratings": {
+        "home": 1706.9,
+        "away": 1869.3
+      },
+      "models": {
+        "elo": {
+          "xg_home": 0.92,
+          "xg_away": 1.81,
+          "p": [
+            0.188,
+            0.2282,
+            0.5837
+          ]
+        },
+        "dixon_coles": {
+          "xg_home": 0.82,
+          "xg_away": 1.39,
+          "p": [
+            0.2178,
+            0.2861,
+            0.4961
+          ]
+        },
+        "market": null
+      },
+      "prediction": {
+        "p_home": 0.2074,
+        "p_draw": 0.2659,
+        "p_away": 0.5268,
+        "xg_home": 0.85,
+        "xg_away": 1.53,
+        "most_likely": "0-1",
+        "top_scores": [
+          {
+            "score": "0-1",
+            "prob": 0.1381
+          },
+          {
+            "score": "1-1",
+            "prob": 0.1228
+          },
+          {
+            "score": "0-2",
+            "prob": 0.1064
+          },
+          {
+            "score": "0-0",
+            "prob": 0.0983
+          },
+          {
+            "score": "1-2",
+            "prob": 0.091
           }
         ]
       }

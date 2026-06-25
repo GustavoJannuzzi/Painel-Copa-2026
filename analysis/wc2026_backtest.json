@@ -1,13 +1,13 @@
 {
-  "n_played": 48,
-  "mean_rps": 0.1649,
-  "mean_logloss": 0.9035,
-  "hit_rate_1x2": 0.6042,
-  "exact_score_hit_rate": 0.0833,
+  "n_played": 54,
+  "mean_rps": 0.1668,
+  "mean_logloss": 0.8876,
+  "hit_rate_1x2": 0.6296,
+  "exact_score_hit_rate": 0.0741,
   "baselines": {
-    "rps_naive_uniform": 0.2292,
-    "rps_elo_only": 0.1761,
-    "rps_dixon_coles_only": 0.1641
+    "rps_naive_uniform": 0.2346,
+    "rps_elo_only": 0.1771,
+    "rps_dixon_coles_only": 0.1677
   },
   "interpretation": {
     "rps_ref_bom_modelo": "0.18-0.21",
@@ -17,21 +17,21 @@
   "calibration_bins": [
     {
       "bin": "0.0-0.1",
-      "n": 8,
-      "pred_mean": 0.054,
+      "n": 9,
+      "pred_mean": 0.055,
       "obs_freq": 0.0
     },
     {
       "bin": "0.1-0.2",
-      "n": 29,
-      "pred_mean": 0.146,
-      "obs_freq": 0.172
+      "n": 32,
+      "pred_mean": 0.147,
+      "obs_freq": 0.188
     },
     {
       "bin": "0.2-0.3",
-      "n": 50,
+      "n": 58,
       "pred_mean": 0.253,
-      "obs_freq": 0.22
+      "obs_freq": 0.19
     },
     {
       "bin": "0.3-0.4",
@@ -41,27 +41,27 @@
     },
     {
       "bin": "0.4-0.5",
-      "n": 10,
-      "pred_mean": 0.444,
-      "obs_freq": 0.5
+      "n": 12,
+      "pred_mean": 0.445,
+      "obs_freq": 0.583
     },
     {
       "bin": "0.5-0.6",
-      "n": 11,
-      "pred_mean": 0.548,
-      "obs_freq": 0.727
+      "n": 13,
+      "pred_mean": 0.547,
+      "obs_freq": 0.692
     },
     {
       "bin": "0.6-0.7",
-      "n": 14,
-      "pred_mean": 0.641,
-      "obs_freq": 0.714
+      "n": 15,
+      "pred_mean": 0.643,
+      "obs_freq": 0.733
     },
     {
       "bin": "0.7-0.8",
-      "n": 4,
-      "pred_mean": 0.767,
-      "obs_freq": 0.25
+      "n": 5,
+      "pred_mean": 0.77,
+      "obs_freq": 0.4
     },
     {
       "bin": "0.8-0.9",
@@ -406,6 +406,48 @@
       "away": "Croatia",
       "rps": 0.0886,
       "cum_rps": 0.1649
+    },
+    {
+      "date": "2026-06-24",
+      "home": "Czech Republic",
+      "away": "Mexico",
+      "rps": 0.1383,
+      "cum_rps": 0.1643
+    },
+    {
+      "date": "2026-06-24",
+      "home": "South Africa",
+      "away": "South Korea",
+      "rps": 0.4903,
+      "cum_rps": 0.1709
+    },
+    {
+      "date": "2026-06-24",
+      "home": "Switzerland",
+      "away": "Canada",
+      "rps": 0.2096,
+      "cum_rps": 0.1716
+    },
+    {
+      "date": "2026-06-24",
+      "home": "Bosnia and Herzegovina",
+      "away": "Qatar",
+      "rps": 0.1686,
+      "cum_rps": 0.1716
+    },
+    {
+      "date": "2026-06-24",
+      "home": "Scotland",
+      "away": "Brazil",
+      "rps": 0.0613,
+      "cum_rps": 0.1695
+    },
+    {
+      "date": "2026-06-24",
+      "home": "Morocco",
+      "away": "Haiti",
+      "rps": 0.0257,
+      "cum_rps": 0.1668
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T18:30:19",
+  "generated_at": "2026-06-25T18:47:33",
   "method": "Ensemble Elo + Dixon-Coles ponderado + Mercado (sem vig)",
   "weights": {
     "elo": 0.05,
@@ -4538,8 +4538,11 @@
       "group": "Group E",
       "home": "Curaçao",
       "away": "Ivory Coast",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        0,
+        2
+      ],
       "elo_ratings": {
         "home": 1608.8,
         "away": 1842.6
@@ -4606,6 +4609,13 @@
             "prob": 0.0613
           }
         ]
+      },
+      "eval": {
+        "outcome": "away",
+        "predicted": "away",
+        "correct_1x2": true,
+        "exact_score_hit": false,
+        "rps": 0.0189
       }
     },
     {
@@ -4614,8 +4624,11 @@
       "group": "Group E",
       "home": "Ecuador",
       "away": "Germany",
-      "played": false,
-      "actual": null,
+      "played": true,
+      "actual": [
+        2,
+        1
+      ],
       "elo_ratings": {
         "home": 1941.8,
         "away": 2036.0
@@ -4682,6 +4695,13 @@
             "prob": 0.0966
           }
         ]
+      },
+      "eval": {
+        "outcome": "home",
+        "predicted": "away",
+        "correct_1x2": false,
+        "exact_score_hit": false,
+        "rps": 0.3886
       }
     },
     {

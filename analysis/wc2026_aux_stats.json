@@ -713,25 +713,25 @@
         {
           "name": "Deniz Undav",
           "goals": 3,
-          "goals_per_game": 1.5,
+          "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Kai Havertz",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 1
         },
         {
           "name": "Felix Nmecha",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Nico Schlotterbeck",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -739,7 +739,7 @@
         {
           "name": "Livano Comenencia",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -832,41 +832,35 @@
     "scorers": {
       "home": [
         {
+          "name": "Nicolas Pepe",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
           "name": "Amad Diallo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Franck Kessié",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
-          "name": "Enner Valencia",
-          "goals": 13,
-          "goals_per_game": 0.169,
-          "pen": 0
-        },
-        {
-          "name": "Michael Estrada",
-          "goals": 6,
-          "goals_per_game": 0.078,
+          "name": "Nilson Angulo",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Gonzalo Plata",
-          "goals": 6,
-          "goals_per_game": 0.078,
-          "pen": 0
-        },
-        {
-          "name": "Ángel Mena",
-          "goals": 4,
-          "goals_per_game": 0.052,
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2835,39 +2829,45 @@
         {
           "name": "Deniz Undav",
           "goals": 3,
-          "goals_per_game": 1.5,
+          "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Kai Havertz",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 1
         },
         {
           "name": "Felix Nmecha",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Nico Schlotterbeck",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
+          "name": "Nicolas Pepe",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
           "name": "Amad Diallo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Franck Kessié",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2925,27 +2925,15 @@
     "scorers": {
       "home": [
         {
-          "name": "Enner Valencia",
-          "goals": 13,
-          "goals_per_game": 0.169,
-          "pen": 0
-        },
-        {
-          "name": "Michael Estrada",
-          "goals": 6,
-          "goals_per_game": 0.078,
+          "name": "Nilson Angulo",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Gonzalo Plata",
-          "goals": 6,
-          "goals_per_game": 0.078,
-          "pen": 0
-        },
-        {
-          "name": "Ángel Mena",
-          "goals": 4,
-          "goals_per_game": 0.052,
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -2953,7 +2941,7 @@
         {
           "name": "Livano Comenencia",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -4869,26 +4857,47 @@
         {
           "name": "Livano Comenencia",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
+          "name": "Nicolas Pepe",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
           "name": "Amad Diallo",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Franck Kessié",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Ivory Coast",
+        "name": "Nicolas Pepe",
+        "minute": "7",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Ivory Coast",
+        "name": "Nicolas Pepe",
+        "minute": "64",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-25_Ecuador_Germany": {
     "home": "Ecuador",
@@ -4919,27 +4928,15 @@
     "scorers": {
       "home": [
         {
-          "name": "Enner Valencia",
-          "goals": 13,
-          "goals_per_game": 0.169,
-          "pen": 0
-        },
-        {
-          "name": "Michael Estrada",
-          "goals": 6,
-          "goals_per_game": 0.078,
+          "name": "Nilson Angulo",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Gonzalo Plata",
-          "goals": 6,
-          "goals_per_game": 0.078,
-          "pen": 0
-        },
-        {
-          "name": "Ángel Mena",
-          "goals": 4,
-          "goals_per_game": 0.052,
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -4947,30 +4944,52 @@
         {
           "name": "Deniz Undav",
           "goals": 3,
-          "goals_per_game": 1.5,
+          "goals_per_game": 1.0,
           "pen": 0
         },
         {
           "name": "Kai Havertz",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 1
         },
         {
           "name": "Felix Nmecha",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Nico Schlotterbeck",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Germany",
+        "name": "Leroy Sane",
+        "minute": "2",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Ecuador",
+        "name": "Nilson Angulo",
+        "minute": "9",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Ecuador",
+        "name": "Gonzalo Plata",
+        "minute": "77",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-25_Japan_Sweden": {
     "home": "Japan",

@@ -292,25 +292,25 @@
         {
           "name": "Folarin Balogun",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Damian Bobadilla",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Giovanni Reyna",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Cameron Burgess",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -318,13 +318,13 @@
         {
           "name": "Mauricio",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Matías Galarza",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -628,39 +628,33 @@
         {
           "name": "Nestory Irankunda",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Connor Metcalfe",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
-          "name": "Kerem Aktürkoğlu",
-          "goals": 14,
-          "goals_per_game": 0.184,
+          "name": "Arda Güler",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Hakan Çalhanoğlu",
-          "goals": 10,
-          "goals_per_game": 0.132,
+          "name": "Barış Alper Yılmaz",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Cengiz Ünder",
-          "goals": 6,
-          "goals_per_game": 0.079,
-          "pen": 0
-        },
-        {
-          "name": "Burak Yılmaz",
-          "goals": 6,
-          "goals_per_game": 0.079,
+          "name": "Kaan Ayhan",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -904,27 +898,27 @@
     "scorers": {
       "home": [
         {
-          "name": "Crysencio Summerville",
-          "goals": 2,
+          "name": "Brian Brobbey",
+          "goals": 3,
           "goals_per_game": 1.0,
           "pen": 0
         },
         {
-          "name": "Brian Brobbey",
+          "name": "Crysencio Summerville",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Cody Gakpo",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Virgil van Dijk",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -932,25 +926,25 @@
         {
           "name": "Daichi Kamada",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Ayase Ueda",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Keito Nakamura",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Junya Ito",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -1017,25 +1011,25 @@
         {
           "name": "Yasin Ayari",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Anthony Elanga",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Alexander Isak",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Viktor Gyökeres",
           "goals": 1,
-          "goals_per_game": 0.5,
-          "pen": 0
-        },
-        {
-          "name": "Mattias Svanberg",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -1043,7 +1037,13 @@
         {
           "name": "Omar Rekik",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Hazem Mastouri",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2666,25 +2666,25 @@
         {
           "name": "Folarin Balogun",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Damian Bobadilla",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Giovanni Reyna",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Cameron Burgess",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -2692,13 +2692,13 @@
         {
           "name": "Nestory Irankunda",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Connor Metcalfe",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2749,27 +2749,21 @@
     "scorers": {
       "home": [
         {
-          "name": "Kerem Aktürkoğlu",
-          "goals": 14,
-          "goals_per_game": 0.184,
+          "name": "Arda Güler",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Hakan Çalhanoğlu",
-          "goals": 10,
-          "goals_per_game": 0.132,
+          "name": "Barış Alper Yılmaz",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Cengiz Ünder",
-          "goals": 6,
-          "goals_per_game": 0.079,
-          "pen": 0
-        },
-        {
-          "name": "Burak Yılmaz",
-          "goals": 6,
-          "goals_per_game": 0.079,
+          "name": "Kaan Ayhan",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -2777,13 +2771,13 @@
         {
           "name": "Mauricio",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Matías Galarza",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -2977,27 +2971,27 @@
     "scorers": {
       "home": [
         {
-          "name": "Crysencio Summerville",
-          "goals": 2,
+          "name": "Brian Brobbey",
+          "goals": 3,
           "goals_per_game": 1.0,
           "pen": 0
         },
         {
-          "name": "Brian Brobbey",
+          "name": "Crysencio Summerville",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Cody Gakpo",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Virgil van Dijk",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -3005,25 +2999,25 @@
         {
           "name": "Yasin Ayari",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Anthony Elanga",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Alexander Isak",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Viktor Gyökeres",
           "goals": 1,
-          "goals_per_game": 0.5,
-          "pen": 0
-        },
-        {
-          "name": "Mattias Svanberg",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -3104,7 +3098,13 @@
         {
           "name": "Omar Rekik",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Hazem Mastouri",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -3112,25 +3112,25 @@
         {
           "name": "Daichi Kamada",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Ayase Ueda",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Keito Nakamura",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Junya Ito",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -4715,27 +4715,21 @@
     "scorers": {
       "home": [
         {
-          "name": "Kerem Aktürkoğlu",
-          "goals": 14,
-          "goals_per_game": 0.184,
+          "name": "Arda Güler",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Hakan Çalhanoğlu",
-          "goals": 10,
-          "goals_per_game": 0.132,
+          "name": "Barış Alper Yılmaz",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
-          "name": "Cengiz Ünder",
-          "goals": 6,
-          "goals_per_game": 0.079,
-          "pen": 0
-        },
-        {
-          "name": "Burak Yılmaz",
-          "goals": 6,
-          "goals_per_game": 0.079,
+          "name": "Kaan Ayhan",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -4743,30 +4737,66 @@
         {
           "name": "Folarin Balogun",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Damian Bobadilla",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Giovanni Reyna",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Cameron Burgess",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "United States",
+        "name": "Auston Trusty",
+        "minute": "3",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Turkey",
+        "name": "Arda Güler",
+        "minute": "10",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Turkey",
+        "name": "Barış Alper Yılmaz",
+        "minute": "31",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "United States",
+        "name": "Sebastian Berhalter",
+        "minute": "49",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Turkey",
+        "name": "Kaan Ayhan",
+        "minute": "90+8",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-25_Paraguay_Australia": {
     "home": "Paraguay",
@@ -4799,13 +4829,13 @@
         {
           "name": "Mauricio",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Matías Galarza",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -4813,13 +4843,13 @@
         {
           "name": "Nestory Irankunda",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Connor Metcalfe",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
@@ -5022,25 +5052,25 @@
         {
           "name": "Daichi Kamada",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Ayase Ueda",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Keito Nakamura",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Junya Ito",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
@@ -5048,30 +5078,45 @@
         {
           "name": "Yasin Ayari",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Anthony Elanga",
+          "goals": 2,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Alexander Isak",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         },
         {
           "name": "Viktor Gyökeres",
           "goals": 1,
-          "goals_per_game": 0.5,
-          "pen": 0
-        },
-        {
-          "name": "Mattias Svanberg",
-          "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Japan",
+        "name": "Daizen Maeda",
+        "minute": "56",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Sweden",
+        "name": "Anthony Elanga",
+        "minute": "62",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-25_Tunisia_Netherlands": {
     "home": "Tunisia",
@@ -5104,38 +5149,73 @@
         {
           "name": "Omar Rekik",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Hazem Mastouri",
+          "goals": 1,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ],
       "away": [
         {
-          "name": "Crysencio Summerville",
-          "goals": 2,
+          "name": "Brian Brobbey",
+          "goals": 3,
           "goals_per_game": 1.0,
           "pen": 0
         },
         {
-          "name": "Brian Brobbey",
+          "name": "Crysencio Summerville",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Cody Gakpo",
           "goals": 2,
-          "goals_per_game": 1.0,
+          "goals_per_game": 0.67,
           "pen": 0
         },
         {
           "name": "Virgil van Dijk",
           "goals": 1,
-          "goals_per_game": 0.5,
+          "goals_per_game": 0.33,
           "pen": 0
         }
       ]
     },
-    "goal_events": []
+    "goal_events": [
+      {
+        "team": "Netherlands",
+        "name": "Ellyes Skhiri",
+        "minute": "3",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Netherlands",
+        "name": "Brian Brobbey",
+        "minute": "7",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Tunisia",
+        "name": "Hazem Mastouri",
+        "minute": "54",
+        "penalty": false,
+        "own_goal": false
+      },
+      {
+        "team": "Netherlands",
+        "name": "Jan Paul van Hecke",
+        "minute": "62",
+        "penalty": false,
+        "own_goal": false
+      }
+    ]
   },
   "2026-06-26_Egypt_Iran": {
     "home": "Egypt",
@@ -5937,6 +6017,158 @@
         },
         {
           "name": "Mohamed Manai",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-29_Netherlands_Morocco": {
+    "home": "Netherlands",
+    "away": "Morocco",
+    "date": "2026-06-29",
+    "corners": {
+      "home": 6.5,
+      "away": 6.0,
+      "total": 12.5
+    },
+    "fouls": {
+      "home": 8.8,
+      "away": 12.2,
+      "total": 21.0
+    },
+    "yellow_cards": {
+      "home": 1.7,
+      "away": 2.3,
+      "total": 4.0
+    },
+    "penalty_prob": 0.258,
+    "btts": 0.3523,
+    "over_2_5": 0.2644,
+    "xg": {
+      "home": 0.79,
+      "away": 0.99
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Brian Brobbey",
+          "goals": 3,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Crysencio Summerville",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Cody Gakpo",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Virgil van Dijk",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Ismael Saibari",
+          "goals": 3,
+          "goals_per_game": 1.0,
+          "pen": 0
+        },
+        {
+          "name": "Achraf Hakimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Soufiane Rahimi",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Gessime Yassine",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        }
+      ]
+    },
+    "goal_events": []
+  },
+  "2026-06-29_Brazil_Japan": {
+    "home": "Brazil",
+    "away": "Japan",
+    "date": "2026-06-29",
+    "corners": {
+      "home": 6.9,
+      "away": 6.4,
+      "total": 13.3
+    },
+    "fouls": {
+      "home": 9.3,
+      "away": 10.1,
+      "total": 19.4
+    },
+    "yellow_cards": {
+      "home": 1.8,
+      "away": 1.9,
+      "total": 3.7
+    },
+    "penalty_prob": 0.238,
+    "btts": 0.4512,
+    "over_2_5": 0.3755,
+    "xg": {
+      "home": 1.16,
+      "away": 1.04
+    },
+    "scorers": {
+      "home": [
+        {
+          "name": "Vinícius Júnior",
+          "goals": 4,
+          "goals_per_game": 1.33,
+          "pen": 0
+        },
+        {
+          "name": "Matheus Cunha",
+          "goals": 3,
+          "goals_per_game": 1.0,
+          "pen": 0
+        }
+      ],
+      "away": [
+        {
+          "name": "Daichi Kamada",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Ayase Ueda",
+          "goals": 2,
+          "goals_per_game": 0.67,
+          "pen": 0
+        },
+        {
+          "name": "Keito Nakamura",
+          "goals": 1,
+          "goals_per_game": 0.33,
+          "pen": 0
+        },
+        {
+          "name": "Junya Ito",
           "goals": 1,
           "goals_per_game": 0.33,
           "pen": 0

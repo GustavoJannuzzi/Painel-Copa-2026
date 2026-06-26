@@ -1,34 +1,27 @@
 {
-  "generated_at": "2026-06-22T19:20:06.872148+00:00",
+  "generated_at": "2026-06-26T00:00:00",
   "source": "openfootball + kaggle + odds_api",
   "brazil_group": "Group C",
+  "brazil_group_final_standing": "1st",
   "brazil_fixtures": [
     {
       "date": "2026-06-13",
       "group": "Group C",
+      "round": "Matchday 3",
       "home": "Brazil",
       "away": "Morocco",
-      "score": [
-        1,
-        1
-      ],
+      "score": [1, 1],
       "played": true,
-      "goals_home": [
-        "Vinícius Júnior 32'"
-      ],
-      "goals_away": [
-        "Ismael Saibari 21'"
-      ]
+      "goals_home": ["Vinícius Júnior 32'"],
+      "goals_away": ["Ismael Saibari 21'"]
     },
     {
       "date": "2026-06-19",
       "group": "Group C",
+      "round": "Matchday 9",
       "home": "Brazil",
       "away": "Haiti",
-      "score": [
-        3,
-        0
-      ],
+      "score": [3, 0],
       "played": true,
       "goals_home": [
         "Matheus Cunha 23'",
@@ -40,79 +33,48 @@
     {
       "date": "2026-06-24",
       "group": "Group C",
+      "round": "Matchday 14",
       "home": "Scotland",
       "away": "Brazil",
-      "score": null,
-      "played": false,
+      "score": [0, 3],
+      "played": true,
       "goals_home": [],
-      "goals_away": []
+      "goals_away": [
+        "Vinícius Júnior 7'",
+        "Vinícius Júnior 45+3'",
+        "Matheus Cunha 60'"
+      ]
     }
   ],
-  "group_standings": [
-    {
-      "team": "Brazil",
-      "P": 2,
-      "W": 1,
-      "D": 1,
-      "L": 0,
-      "GF": 4,
-      "GA": 1,
-      "Pts": 4
-    },
-    {
-      "team": "Morocco",
-      "P": 2,
-      "W": 1,
-      "D": 1,
-      "L": 0,
-      "GF": 2,
-      "GA": 1,
-      "Pts": 4
-    },
-    {
-      "team": "Scotland",
-      "P": 2,
-      "W": 1,
-      "D": 0,
-      "L": 1,
-      "GF": 1,
-      "GA": 1,
-      "Pts": 3
-    },
-    {
-      "team": "Haiti",
-      "P": 2,
-      "W": 0,
-      "D": 0,
-      "L": 2,
-      "GF": 0,
-      "GA": 4,
-      "Pts": 0
-    }
+  "group_standings_final": [
+    {"team": "Brazil",   "P": 3, "W": 2, "D": 1, "L": 0, "GF": 7, "GA": 1, "GD": 6,  "Pts": 7},
+    {"team": "Morocco",  "P": 3, "W": 2, "D": 1, "L": 0, "GF": 6, "GA": 3, "GD": 3,  "Pts": 7},
+    {"team": "Scotland", "P": 3, "W": 1, "D": 0, "L": 2, "GF": 1, "GA": 4, "GD": -3, "Pts": 3},
+    {"team": "Haiti",    "P": 3, "W": 0, "D": 0, "L": 3, "GF": 2, "GA": 8, "GD": -6, "Pts": 0}
+  ],
+  "brazil_top_scorers_wc2026": [
+    {"player": "Vinícius Júnior", "goals": 4, "assists": 0},
+    {"player": "Matheus Cunha",   "goals": 3, "assists": 0}
   ],
   "next_brazil_game": {
-    "date": "2026-06-24",
-    "group": "Group C",
-    "home": "Scotland",
-    "away": "Brazil",
-    "score": null,
+    "date": "2026-06-29",
+    "round": "Round of 32",
+    "home": "Brazil",
+    "away": "Japan",
+    "ground": "Houston",
     "played": false,
-    "goals_home": [],
-    "goals_away": []
+    "prediction": {
+      "p_home": 0.3716,
+      "p_draw": 0.3089,
+      "p_away": 0.3195,
+      "xg_home": 1.17,
+      "xg_away": 1.06,
+      "most_likely": "1-1"
+    }
   },
   "historical_dataset": {
     "total_internationals": 49477,
     "brazil_matches": 1062
   },
-  "odds_relevant": [
-    {
-      "match": "Scotland x Brazil",
-      "commence": "2026-06-24T22:00",
-      "h2h_sample": {
-        "Brazil": 1.33,
-        "Scotland": 8.0,
-        "Draw": 5.1
-      }
-    }
-  ]
+  "odds_relevant": []
 }

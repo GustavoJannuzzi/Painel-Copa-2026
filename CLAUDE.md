@@ -75,12 +75,12 @@ Depois abra `output/index.html`.
 - `models/wc_aux_stats.py` — escanteios, faltas, cartões, BTTS, O/U, artilheiros → `analysis/wc2026_aux_stats.json`
 - `data/collectors/` — coletores (openfootball, kaggle, api_football, odds, newsdata, statsbomb)
 
-**Resultado atual (45 jogos de grupo disputados):** RPS **0.165** · acerto 1X2 **60%** · (bom modelo ≈ 0.18-0.21).
+**Resultado atual (60 jogos disputados):** RPS **0.1627** · acerto 1X2 **63.3%** · acerto placar exato **10.0%** · (bom modelo ≈ 0.18-0.21; abaixo = melhor).
 **Métrica de avaliação:** RPS (padrão científico; Constantinou & Fenton 2012).
 
 ## Contexto Técnico
-- **Escopo**: Copa do Mundo 2026 — todas as 48 seleções (fase de grupos prevista; mata-mata conforme definido)
-- **Data atual**: 23/06/2026
+- **Escopo**: Copa do Mundo 2026 — todas as 48 seleções (fase de grupos praticamente encerrada; mata-mata iniciando 28/06)
+- **Data atual**: 26/06/2026
 - **Língua**: Português (BR)
 
 ## Metodologias Alvo

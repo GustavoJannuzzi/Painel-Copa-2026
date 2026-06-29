@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T10:48:52",
+  "generated_at": "2026-06-29T11:38:14",
   "method": "Ensemble Elo + Dixon-Coles ponderado + Mercado (sem vig)",
   "weights": {
     "elo": 0.05,

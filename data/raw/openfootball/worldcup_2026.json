@@ -751,17 +751,38 @@
       "team1": "Turkey",
       "team2": "USA",
       "score": {
-        "ft": [3, 2],
-        "ht": [2, 1]
+        "ft": [
+          3,
+          2
+        ],
+        "ht": [
+          2,
+          1
+        ]
       },
       "goals1": [
-        {"name": "Arda Güler", "minute": "10"},
-        {"name": "Barış Alper Yılmaz", "minute": "31"},
-        {"name": "Kaan Ayhan", "minute": "90+8"}
+        {
+          "name": "Arda Güler",
+          "minute": "10"
+        },
+        {
+          "name": "Baris Alper Yilmaz",
+          "minute": "31"
+        },
+        {
+          "name": "Kaan Ayhan",
+          "minute": "90+8"
+        }
       ],
       "goals2": [
-        {"name": "Auston Trusty", "minute": "3"},
-        {"name": "Sebastian Berhalter", "minute": "49"}
+        {
+          "name": "Auston Trusty",
+          "minute": "3"
+        },
+        {
+          "name": "Sebastian Berhalter",
+          "minute": "49"
+        }
       ],
       "group": "Group D",
       "ground": "Los Angeles (Inglewood)"
@@ -773,11 +794,15 @@
       "team1": "Paraguay",
       "team2": "Australia",
       "score": {
-        "ft": [0, 0],
-        "ht": [0, 0]
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
       },
-      "goals1": [],
-      "goals2": [],
       "group": "Group D",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
@@ -923,8 +948,6 @@
       "time": "16:00 UTC-4",
       "team1": "Curaçao",
       "team2": "Ivory Coast",
-      "group": "Group E",
-      "ground": "Philadelphia",
       "score": {
         "ft": [
           0,
@@ -938,14 +961,16 @@
       "goals1": [],
       "goals2": [
         {
-          "name": "Nicolas Pepe",
+          "name": "Nicolas Pépé",
           "minute": "7"
         },
         {
-          "name": "Nicolas Pepe",
+          "name": "Nicolas Pépé",
           "minute": "64"
         }
-      ]
+      ],
+      "group": "Group E",
+      "ground": "Philadelphia"
     },
     {
       "round": "Matchday 15",
@@ -953,8 +978,6 @@
       "time": "16:00 UTC-4",
       "team1": "Ecuador",
       "team2": "Germany",
-      "group": "Group E",
-      "ground": "New York/New Jersey (East Rutherford)",
       "score": {
         "ft": [
           2,
@@ -977,10 +1000,12 @@
       ],
       "goals2": [
         {
-          "name": "Leroy Sane",
+          "name": "Leroy Sané",
           "minute": "2"
         }
-      ]
+      ],
+      "group": "Group E",
+      "ground": "New York/New Jersey (East Rutherford)"
     },
     {
       "round": "Matchday 4",
@@ -1160,14 +1185,26 @@
       "team1": "Japan",
       "team2": "Sweden",
       "score": {
-        "ft": [1, 1],
-        "ht": [0, 0]
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          0,
+          0
+        ]
       },
       "goals1": [
-        {"name": "Daizen Maeda", "minute": "56"}
+        {
+          "name": "Daizen Maeda",
+          "minute": "56"
+        }
       ],
       "goals2": [
-        {"name": "Anthony Elanga", "minute": "62"}
+        {
+          "name": "Anthony Elanga",
+          "minute": "62"
+        }
       ],
       "group": "Group F",
       "ground": "Dallas (Arlington)"
@@ -1179,16 +1216,35 @@
       "team1": "Tunisia",
       "team2": "Netherlands",
       "score": {
-        "ft": [1, 3],
-        "ht": [0, 2]
+        "ft": [
+          1,
+          3
+        ],
+        "ht": [
+          0,
+          2
+        ]
       },
       "goals1": [
-        {"name": "Hazem Mastouri", "minute": "54"}
+        {
+          "name": "Hazem Mastouri",
+          "minute": "54"
+        }
       ],
       "goals2": [
-        {"name": "Ellyes Skhiri", "minute": "3", "owngoal": true},
-        {"name": "Brian Brobbey", "minute": "7"},
-        {"name": "Jan Paul van Hecke", "minute": "62"}
+        {
+          "name": "Ellyes Skhiri",
+          "minute": "3",
+          "owngoal": true
+        },
+        {
+          "name": "Brian Brobbey",
+          "minute": "7"
+        },
+        {
+          "name": "Jan Paul van Hecke",
+          "minute": "62"
+        }
       ],
       "group": "Group F",
       "ground": "Kansas City"
@@ -1328,6 +1384,28 @@
       "time": "20:00 UTC-7",
       "team1": "Egypt",
       "team2": "Iran",
+      "score": {
+        "ft": [
+          1,
+          1
+        ],
+        "ht": [
+          1,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Mahmoud Saber",
+          "minute": "5"
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Ramin Rezaeian",
+          "minute": "14"
+        }
+      ],
       "group": "Group G",
       "ground": "Seattle"
     },
@@ -1337,6 +1415,44 @@
       "time": "20:00 UTC-7",
       "team1": "New Zealand",
       "team2": "Belgium",
+      "score": {
+        "ft": [
+          1,
+          5
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Elijah Just",
+          "minute": "84"
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Leandro Trossard",
+          "minute": "28"
+        },
+        {
+          "name": "Leandro Trossard",
+          "minute": "50"
+        },
+        {
+          "name": "Kevin De Bruyne",
+          "minute": "66"
+        },
+        {
+          "name": "Romelu Lukaku",
+          "minute": "86"
+        },
+        {
+          "name": "Alexis Saelemaekers",
+          "minute": "90+4"
+        }
+      ],
       "group": "Group G",
       "ground": "Vancouver"
     },
@@ -1474,6 +1590,16 @@
       "time": "19:00 UTC-5",
       "team1": "Cape Verde",
       "team2": "Saudi Arabia",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
       "group": "Group H",
       "ground": "Houston"
     },
@@ -1483,6 +1609,23 @@
       "time": "18:00 UTC-6",
       "team1": "Uruguay",
       "team2": "Spain",
+      "score": {
+        "ft": [
+          0,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Álex Baena",
+          "minute": "42"
+        }
+      ],
       "group": "Group H",
       "ground": "Guadalajara (Zapopan)"
     },
@@ -1652,6 +1795,40 @@
       "time": "15:00 UTC-4",
       "team1": "Norway",
       "team2": "France",
+      "score": {
+        "ft": [
+          1,
+          4
+        ],
+        "ht": [
+          1,
+          3
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Thelo Aasgaard",
+          "minute": "21"
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Ousmane Dembélé",
+          "minute": "7"
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "minute": "20"
+        },
+        {
+          "name": "Ousmane Dembélé",
+          "minute": "32"
+        },
+        {
+          "name": "Désiré Doué",
+          "minute": "90+4"
+        }
+      ],
       "group": "Group I",
       "ground": "Boston (Foxborough)"
     },
@@ -1661,6 +1838,39 @@
       "time": "15:00 UTC-4",
       "team1": "Senegal",
       "team2": "Iraq",
+      "score": {
+        "ft": [
+          5,
+          0
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Habib Diarra",
+          "minute": "4"
+        },
+        {
+          "name": "Ismaïla Sarr",
+          "minute": "56"
+        },
+        {
+          "name": "Pape Gueye",
+          "minute": "59"
+        },
+        {
+          "name": "Pape Gueye",
+          "minute": "71"
+        },
+        {
+          "name": "Iliman Ndiaye",
+          "minute": "82"
+        }
+      ],
+      "goals2": [],
       "group": "Group I",
       "ground": "Toronto"
     },
@@ -1810,6 +2020,44 @@
       "time": "21:00 UTC-5",
       "team1": "Algeria",
       "team2": "Austria",
+      "score": {
+        "ft": [
+          3,
+          3
+        ],
+        "ht": [
+          1,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Rafik Belghali",
+          "minute": "45"
+        },
+        {
+          "name": "Riyad Mahrez",
+          "minute": "60"
+        },
+        {
+          "name": "Riyad Mahrez",
+          "minute": "90+3"
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Marko Arnautovic",
+          "minute": "28"
+        },
+        {
+          "name": "Marcel Sabitzer",
+          "minute": "55"
+        },
+        {
+          "name": "Sasa Kalajdzic",
+          "minute": "90+6"
+        }
+      ],
       "group": "Group J",
       "ground": "Kansas City"
     },
@@ -1819,6 +2067,37 @@
       "time": "21:00 UTC-5",
       "team1": "Jordan",
       "team2": "Argentina",
+      "score": {
+        "ft": [
+          1,
+          3
+        ],
+        "ht": [
+          0,
+          2
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Mousa Al-Tamari",
+          "minute": "55"
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Giovani Lo Celso",
+          "minute": "19"
+        },
+        {
+          "name": "Lautaro Martínez",
+          "minute": "31",
+          "penalty": true
+        },
+        {
+          "name": "Lionel Messi",
+          "minute": "80"
+        }
+      ],
       "group": "Group J",
       "ground": "Dallas (Arlington)"
     },
@@ -1967,6 +2246,16 @@
       "time": "19:30 UTC-4",
       "team1": "Colombia",
       "team2": "Portugal",
+      "score": {
+        "ft": [
+          0,
+          0
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
       "group": "Group K",
       "ground": "Miami (Miami Gardens)"
     },
@@ -1976,6 +2265,37 @@
       "time": "19:30 UTC-4",
       "team1": "DR Congo",
       "team2": "Uzbekistan",
+      "score": {
+        "ft": [
+          3,
+          1
+        ],
+        "ht": [
+          0,
+          1
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Yoane Wissa",
+          "minute": "68",
+          "penalty": true
+        },
+        {
+          "name": "Fiston Mayele",
+          "minute": "78"
+        },
+        {
+          "name": "Yoane Wissa",
+          "minute": "90+1"
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Eldor Shomurodov",
+          "minute": "10"
+        }
+      ],
       "group": "Group K",
       "ground": "Atlanta"
     },
@@ -2104,6 +2424,27 @@
       "time": "17:00 UTC-4",
       "team1": "Panama",
       "team2": "England",
+      "score": {
+        "ft": [
+          0,
+          2
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Jude Bellingham",
+          "minute": "62"
+        },
+        {
+          "name": "Harry Kane",
+          "minute": "67"
+        }
+      ],
       "group": "Group L",
       "ground": "New York/New Jersey (East Rutherford)"
     },
@@ -2113,6 +2454,32 @@
       "time": "17:00 UTC-4",
       "team1": "Croatia",
       "team2": "Ghana",
+      "score": {
+        "ft": [
+          2,
+          1
+        ],
+        "ht": [
+          1,
+          0
+        ]
+      },
+      "goals1": [
+        {
+          "name": "Petar Sucic",
+          "minute": "31"
+        },
+        {
+          "name": "Nikola Vlasic",
+          "minute": "83"
+        }
+      ],
+      "goals2": [
+        {
+          "name": "Derrick Luckassen",
+          "minute": "73"
+        }
+      ],
       "group": "Group L",
       "ground": "Philadelphia"
     },
@@ -2123,6 +2490,23 @@
       "time": "12:00 UTC-7",
       "team1": "South Africa",
       "team2": "Canada",
+      "score": {
+        "ft": [
+          0,
+          1
+        ],
+        "ht": [
+          0,
+          0
+        ]
+      },
+      "goals1": [],
+      "goals2": [
+        {
+          "name": "Stephan Eustáquio",
+          "minute": "90+2"
+        }
+      ],
       "ground": "Los Angeles (Inglewood)"
     },
     {
@@ -2131,7 +2515,7 @@
       "date": "2026-06-29",
       "time": "16:30 UTC-4",
       "team1": "Germany",
-      "team2": "3A/B/C/D/F",
+      "team2": "Paraguay",
       "ground": "Boston (Foxborough)"
     },
     {
@@ -2157,8 +2541,8 @@
       "num": 77,
       "date": "2026-06-30",
       "time": "17:00 UTC-4",
-      "team1": "1I",
-      "team2": "3C/D/F/G/H",
+      "team1": "France",
+      "team2": "Sweden",
       "ground": "New York/New Jersey (East Rutherford)"
     },
     {
@@ -2167,7 +2551,7 @@
       "date": "2026-06-30",
       "time": "12:00 UTC-5",
       "team1": "Ivory Coast",
-      "team2": "2I",
+      "team2": "Norway",
       "ground": "Dallas (Arlington)"
     },
     {
@@ -2176,7 +2560,7 @@
       "date": "2026-06-30",
       "time": "19:00 UTC-6",
       "team1": "Mexico",
-      "team2": "3C/E/F/H/I",
+      "team2": "Ecuador",
       "ground": "Mexico City"
     },
     {
@@ -2184,8 +2568,8 @@
       "num": 80,
       "date": "2026-07-01",
       "time": "12:00 UTC-4",
-      "team1": "1L",
-      "team2": "3E/H/I/J/K",
+      "team1": "England",
+      "team2": "DR Congo",
       "ground": "Atlanta"
     },
     {
@@ -2194,7 +2578,7 @@
       "date": "2026-07-01",
       "time": "17:00 UTC-7",
       "team1": "USA",
-      "team2": "3B/E/F/I/J",
+      "team2": "Bosnia & Herzegovina",
       "ground": "San Francisco Bay Area (Santa Clara)"
     },
     {
@@ -2202,8 +2586,8 @@
       "num": 82,
       "date": "2026-07-01",
       "time": "13:00 UTC-7",
-      "team1": "1G",
-      "team2": "3A/E/H/I/J",
+      "team1": "Belgium",
+      "team2": "Senegal",
       "ground": "Seattle"
     },
     {
@@ -2211,8 +2595,8 @@
       "num": 83,
       "date": "2026-07-02",
       "time": "19:00 UTC-4",
-      "team1": "2K",
-      "team2": "2L",
+      "team1": "Portugal",
+      "team2": "Croatia",
       "ground": "Toronto"
     },
     {
@@ -2220,8 +2604,8 @@
       "num": 84,
       "date": "2026-07-02",
       "time": "12:00 UTC-7",
-      "team1": "1H",
-      "team2": "2J",
+      "team1": "Spain",
+      "team2": "Austria",
       "ground": "Los Angeles (Inglewood)"
     },
     {
@@ -2230,7 +2614,7 @@
       "date": "2026-07-02",
       "time": "20:00 UTC-7",
       "team1": "Switzerland",
-      "team2": "3E/F/G/I/J",
+      "team2": "Algeria",
       "ground": "Vancouver"
     },
     {
@@ -2238,8 +2622,8 @@
       "num": 86,
       "date": "2026-07-03",
       "time": "18:00 UTC-4",
-      "team1": "1J",
-      "team2": "2H",
+      "team1": "Argentina",
+      "team2": "Cape Verde",
       "ground": "Miami (Miami Gardens)"
     },
     {
@@ -2247,8 +2631,8 @@
       "num": 87,
       "date": "2026-07-03",
       "time": "20:30 UTC-5",
-      "team1": "1K",
-      "team2": "3D/E/I/J/L",
+      "team1": "Colombia",
+      "team2": "Ghana",
       "ground": "Kansas City"
     },
     {
@@ -2257,7 +2641,7 @@
       "date": "2026-07-03",
       "time": "13:00 UTC-5",
       "team1": "Australia",
-      "team2": "2G",
+      "team2": "Egypt",
       "ground": "Dallas (Arlington)"
     },
     {
@@ -2274,7 +2658,7 @@
       "num": 90,
       "date": "2026-07-04",
       "time": "12:00 UTC-5",
-      "team1": "W73",
+      "team1": "Canada",
       "team2": "W75",
       "ground": "Houston"
     },

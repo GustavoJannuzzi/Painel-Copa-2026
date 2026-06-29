@@ -1448,23 +1448,41 @@ const gridColor = 'rgba(255,255,255,.04)';
       next.push({tA:projWinner(ms[i].tA,ms[i].tB),tB:projWinner(ms[i+1].tA,ms[i+1].tB),cA:false,cB:false});
     return next;
   }
-  const r32list=[
-    ['A',1,'B',2],['C',1,'D',2],['E',1,'F',2],['G',1,'H',2],
-    ['I',1,'J',2],['K',1,'L',2],
-    ['B',1,'A',2],['D',1,'C',2],['F',1,'E',2],['H',1,'G',2],
-    ['J',1,'I',2],['L',1,'K',2],
-  ];
   const getT=(g,p)=>qualified[g]?.[p-1]||`${p===1?'1°':'2°'}${g}`;
-  const r32M=r32list.map(([gA,pA,gB,pB])=>({
-    tA:getT(gA,pA),tB:getT(gB,pB),
-    cA:!!grpDone['Group '+gA],cB:!!grpDone['Group '+gB]
-  }));
-  const ex4=[];
-  for(let i=0;i<8;i+=2){
-    const gA=thirdsGrp[i]?.g,gB=thirdsGrp[i+1]?.g;
-    ex4.push({tA:thirds[i]||`3°${i+1}`,tB:thirds[i+1]||`3°${i+2}`,cA:!!(gA&&grpDone[gA]),cB:!!(gB&&grpDone[gB])});
+  const gDone=g=>!!grpDone['Group '+g];
+  // Mapeia grupo → 3° colocado classificado
+  const thirdsMap={};
+  thirdsGrp.forEach(x=>{thirdsMap[x.g.replace('Group ','')]=x.t.team;});
+  const usedThirds=new Set();
+  // Seleciona melhor 3° disponível dos grupos elegíveis (preservando ordem de performance)
+  function get3rd(...grps){
+    for(const t of thirds){if(!usedThirds.has(t)){const g=Object.keys(thirdsMap).find(k=>thirdsMap[k]===t);if(g&&grps.includes(g)){usedThirds.add(t);return t;}}}
+    const fb=thirds.find(t=>!usedThirds.has(t));if(fb)usedThirds.add(fb);return fb||'3°?';
   }
-  const allR32=[...r32M,...ex4];
+  function mk(tA,tB,gA,gB){return{tA,tB,cA:gA?gDone(gA):!isPlh(tA),cB:gB?gDone(gB):!isPlh(tB)};}
+  // FIFA 2026 — R32 chaveamento real (jogos 73-88), ordenado por metade de chave
+  // Metade 1 → QF97+QF98 → SF101 | Metade 2 → QF99+QF100 → SF102
+  // Brasil (1C) na Metade 2; França (1I) na Metade 1 — só se encontram na Final
+  const allR32=[
+    // ── METADE 1 → SF101 ──────────────────────────────────────────────────
+    mk(getT('E',1),get3rd('A','B','C','D','F'),'E',null),  // M74 Germany  vs 3°A/B/C/D/F
+    mk(getT('I',1),get3rd('C','D','F','G','H'),'I',null),  // M77 France   vs 3°C/D/F/G/H
+    mk(getT('A',2),getT('B',2),'A','B'),                    // M73 S.Africa vs Canada
+    mk(getT('F',1),getT('C',2),'F','C'),                    // M75 Netherlands vs Morocco
+    mk(getT('K',2),getT('L',2),'K','L'),                    // M83 Portugal vs Ghana
+    mk(getT('H',1),getT('J',2),'H','J'),                    // M84 Spain    vs Austria
+    mk(getT('D',1),get3rd('B','E','F','I','J'),'D',null),  // M81 USA      vs 3°B/E/F/I/J
+    mk(getT('G',1),get3rd('A','E','H','I','J'),'G',null),  // M82 Egypt    vs 3°A/E/H/I/J
+    // ── METADE 2 → SF102 ──────────────────────────────────────────────────
+    mk(getT('C',1),getT('F',2),'C','F'),                    // M76 Brazil   vs Japan
+    mk(getT('E',2),getT('I',2),'E','I'),                    // M78 Ivory C. vs Norway
+    mk(getT('A',1),get3rd('C','E','F','H','I'),'A',null),  // M79 Mexico   vs 3°C/E/F/H/I
+    mk(getT('L',1),get3rd('E','H','I','J','K'),'L',null),  // M80 England  vs 3°E/H/I/J/K
+    mk(getT('J',1),getT('H',2),'J','H'),                    // M86 Argentina vs Uruguay
+    mk(getT('D',2),getT('G',2),'D','G'),                    // M88 Australia vs Iran
+    mk(getT('B',1),get3rd('E','F','G','I','J'),'B',null),  // M85 Switzerland vs 3°E/F/G/I/J
+    mk(getT('K',1),get3rd('D','E','I','J','L'),'K',null),  // M87 Colombia  vs 3°D/E/I/J/L
+  ];
   const r16M=advRound(allR32);
   const qfM=advRound(r16M);
   const sfM=advRound(qfM);
@@ -1505,25 +1523,36 @@ const gridColor = 'rgba(255,255,255,.04)';
     return `<div class="bkt2-rnd-hdr">${pill?`<span class="bkt2-rnd-pill">${pill}</span>`:''}<span class="bkt2-rnd-name">${name}</span><span class="bkt2-rnd-count">${n} jogo${n!==1?'s':''}</span></div>`;
   }
   const h1=allR32.slice(0,8),h2=allR32.slice(8,16);
+  const r16h1=r16M.slice(0,4),r16h2=r16M.slice(4,8);
+  const qfh1=qfM.slice(0,2),qfh2=qfM.slice(2,4);
   document.getElementById('bracket-view').innerHTML=`
     <div class="bkt2-round-wrap">
       ${rndHdr('R32 — 16 Avos de Final',16,'Copa 2026')}
+      <div style="font-size:11px;color:#8090a0;padding:2px 4px 4px;letter-spacing:.06em">▲ METADE 1 — Chave de cima (SF101)</div>
       <div class="bkt2-grid">${h1.map(m=>mCard2(m)).join('')}</div>
+      <div style="font-size:11px;color:#e8b820;padding:6px 4px 4px;letter-spacing:.06em">▼ METADE 2 — Chave do Brasil (SF102)</div>
       <div class="bkt2-grid" style="margin-top:2px">${h2.map(m=>mCard2(m)).join('')}</div>
     </div>
     <div class="bkt2-arrow">${arrowSVG}</div>
     <div class="bkt2-round-wrap">
       ${rndHdr('R16 — Oitavas-de-Final',8)}
-      <div class="bkt2-grid">${r16M.map(m=>mCard2(m)).join('')}</div>
+      <div style="font-size:11px;color:#8090a0;padding:2px 4px 4px;letter-spacing:.06em">▲ METADE 1</div>
+      <div class="bkt2-grid">${r16h1.map(m=>mCard2(m)).join('')}</div>
+      <div style="font-size:11px;color:#e8b820;padding:6px 4px 4px;letter-spacing:.06em">▼ METADE 2</div>
+      <div class="bkt2-grid">${r16h2.map(m=>mCard2(m)).join('')}</div>
     </div>
     <div class="bkt2-arrow">${arrowSVG}</div>
     <div class="bkt2-round-wrap">
       ${rndHdr('Quartas de Final',4)}
-      <div class="bkt2-grid">${qfM.map(m=>mCard2(m)).join('')}</div>
+      <div style="font-size:11px;color:#8090a0;padding:2px 4px 4px;letter-spacing:.06em">▲ QF97 (M1) · QF98 (M1)</div>
+      <div class="bkt2-grid">${qfh1.map(m=>mCard2(m)).join('')}</div>
+      <div style="font-size:11px;color:#e8b820;padding:6px 4px 4px;letter-spacing:.06em">▼ QF99 (M2) · QF100 (M2) — Chave do Brasil</div>
+      <div class="bkt2-grid">${qfh2.map(m=>mCard2(m)).join('')}</div>
     </div>
     <div class="bkt2-arrow">${arrowSVG}</div>
     <div class="bkt2-round-wrap">
       ${rndHdr('Semifinais',2)}
+      <div style="font-size:11px;color:#c0c8d8;padding:2px 4px 6px;letter-spacing:.06em">SF101 · SF102 — Brasil só encontra França na Final</div>
       <div class="bkt2-grid">${sfM.map(m=>mCard2(m)).join('')}</div>
     </div>
     <div class="bkt2-arrow">${arrowSVG}</div>
